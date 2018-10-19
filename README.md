@@ -1,5 +1,5 @@
 # pemscores
-Built for the LinkedIn Learning and Lynda.com course WordPress: Building Themes From Scratch Using Underscores, pemscores is an accessible content-first theme built around beautiful fonts and large images designed and developed by [Morten Rand-Hendriksen](http://mor10.com) for [LinkedIn Learning](https://www.linkedin.com/learning/instructors/725535) and [Lynda.com - a LinkedIn Company](https://lynda.com/mor10).
+Hecho en el Programa Electrónica Multimedia de la UNED de Costa Rica para cursos de autoaprendizaje.
 ## Features
 
 ### Customizer Options
@@ -24,4 +24,4 @@ pemscores is distributed under the terms of the GNU GPL v2
 pemscores' code base started out as _s (http://underscores.me) as it were on November 28, 2016.
 
 ### Namesake
-Popperscores is named after philosopher David Hume.
+Pem es por las siglas del Programa.

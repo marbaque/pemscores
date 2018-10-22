@@ -45,6 +45,32 @@
 
 		}
 	}
+	.info-menu {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+			}
+
+			a {
+				display: block;
+				padding: .5em 1em;
+				color: white;
+				text-decoration: none;
+				opacity: .6;
+
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+					opacity: 1;
+				}
+			}
+		}
+
+	}
 }
 
 .social-menu {

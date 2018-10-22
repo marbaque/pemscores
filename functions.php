@@ -48,6 +48,7 @@ function pemscores_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Header', 'pemscores' ),
 		'social' => esc_html__( 'Social Media Menu', 'pemscores' ),
+		'info' => esc_html__( 'Info del sitio', 'pemscores' ),
 	) );
 
 	/*

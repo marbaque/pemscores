@@ -10,6 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php
+	if ( has_post_thumbnail() ) { ?>
+	<figure class="featured-image full-bleed">
+		<?php
+		the_post_thumbnail('pemscores-full-bleed');
+		?>
+	</figure><!-- .featured-image full-bleed -->
+	<?php } ?>
+
 	<header class="entry-header">
 		<?php pemscores_the_category_list(); ?>
 		<?php
@@ -26,15 +35,6 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php
-	if ( has_post_thumbnail() ) { ?>
-	<figure class="featured-image full-bleed">
-		<?php
-		the_post_thumbnail('pemscores-full-bleed');
-		?>
-	</figure><!-- .featured-image full-bleed -->
-	<?php } ?>
 
 	<section class="post-content">
 

@@ -1412,7 +1412,7 @@ button.dropdown-toggle {
 .full-bleed {
 	width: 100vw;
 	max-height: 1200px;
-	margin-top: 1em;
+	margin-bottom: 1em;
 	margin-left: -1em;
 	border-top: 1px solid #e6e6e6;
 	border-bottom: 1px solid #e6e6e6;
@@ -1427,7 +1427,7 @@ button.dropdown-toggle {
 
 @media screen and (min-width: 900px) {
 	.full-bleed {
-		margin-top: 1.5em;
+		margin-bottom: 1.5em;
 		margin-right: -2em;
 	}
 }

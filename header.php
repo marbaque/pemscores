@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pemscores' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Omitir e ir al contenido', 'pemscores' ); ?></a>
 
 	<?php if ( get_header_image() && is_front_page() ) : ?>
 	<figure class="header-image">
@@ -30,10 +30,10 @@
 		</a>
 	</figure><!-- .header-image -->
 	<?php endif; // End header image check. ?>
-	
+
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			
+
 			<?php the_custom_logo(); ?>
 			<div class="site-branding__text">
 			<?php

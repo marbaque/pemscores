@@ -14,11 +14,11 @@ function pemscores_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	
+
 	/**
 	 * Custom Customizer Customizations
 	 */
-	
+
 	// Setting for header and footer background color
 	$wp_customize->add_setting( 'theme_bg_color', array(
 		'default'			=> '#002254',
@@ -26,22 +26,22 @@ function pemscores_customize_register( $wp_customize ) {
 		'type'				=> 'theme_mod',
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
-	
+
 	// Control for header and footer background color.
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'theme_bg_color', 
+			'theme_bg_color',
 				array(
-					'label'		=> __( 'Header and footer background color', 'pemscores'),
+					'label'		=> __( 'Color de fondo del header and footer', 'pemscores'),
 					'section'	=> 'colors',
 					'settings'	=> 'theme_bg_color'
 				)
 		)
 	);
-	
+
 	// Create interactive color setting
-	$wp_customize->add_setting( 'interactive_color' , 
+	$wp_customize->add_setting( 'interactive_color' ,
 		array(
 			'default'			=> '#b51c35',
 			'transport'			=> 'postMessage',
@@ -50,29 +50,29 @@ function pemscores_customize_register( $wp_customize ) {
 			'transport'			=> 'postMessage',
 		)
 	);
-	
+
 	// Add the controls
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
 			'interactive_color', array(
-				'label'		=> __( 'Interactive color (links etc)', 'pemscores' ),
+				'label'		=> __( 'Color de interacción (links, etc)', 'pemscores' ),
 				'section'	=> 'colors',
 				'settings'	=> 'interactive_color'
 			)
 		)
 	);
-	
+
 	// Add option to select index content
-	$wp_customize->add_section( 'theme_options', 
+	$wp_customize->add_section( 'theme_options',
 		array(
-			'title'			=> __( 'Theme Options', 'pemscores' ),
+			'title'			=> __( 'Opciones de la plantilla', 'pemscores' ),
 			'priority'		=> 95,
 			'capability'	=> 'edit_theme_options',
-			'description'	=> __( 'Change how much of a post is displayed on index and archive pages.', 'pemscores' )
+			'description'	=> __( 'Cambie cuánto de una entrada se muestra en el index y en la páginas de archivos.', 'pemscores' )
 		)
 	);
-	
+
 	// Create excerpt or full content settings
 	$wp_customize->add_setting(	'length_setting',
 		array(
@@ -87,16 +87,16 @@ function pemscores_customize_register( $wp_customize ) {
 	$wp_customize->add_control(	'pemscores_length_control',
 		array(
 			'type'		=> 'radio',
-			'label'		=> __( 'Index/archive displays', 'pemscores' ),
+			'label'		=> __( 'Mostrar en index/archivos', 'pemscores' ),
 			'section'	=> 'theme_options',
 			'choices'	=> array(
-				'excerpt'		=> __( 'Excerpt (default)', 'pemscores' ),
-				'full-content'	=> __( 'Full content', 'pemscores' )
+				'excerpt'		=> __( 'Resumen (default)', 'pemscores' ),
+				'full-content'	=> __( 'Contenido completo', 'pemscores' )
 			),
 			'settings'	=> 'length_setting' // Matches setting ID from above
 		)
 	);
-	
+
 }
 add_action( 'customize_register', 'pemscores_customize_register' );
 
@@ -182,7 +182,7 @@ function pemscores_header_style() {
 		</style>
 		<?php
 	}
-	
+
 	/*
 	 * Do we have a custom header background color?
 	 */
@@ -195,14 +195,14 @@ function pemscores_header_style() {
 		</style>
 	<?php
 	}
-	
+
 	/*
 	 * Do we have a custom interactive color?
 	 */
 	if ( '#b51c35' != $interactive_color ) { ?>
 		<style type="text/css">
 			a:hover,
-			a:focus, 
+			a:focus,
 			a:active,
 			.page-content a:focus, .page-content a:hover,
 			.entry-content a:focus,
@@ -214,13 +214,13 @@ function pemscores_header_style() {
 			.cat-links a {
 				color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
-			
+
 			.page-content a,
 			.entry-content a,
 			.entry-summary a,
 			.comment-content a,
 			.post-navigation .post-title,
-			.comment-navigation a:hover, 
+			.comment-navigation a:hover,
 			.comment-navigation a:focus,
 			.posts-navigation a:hover,
 			.posts-navigation a:focus,
@@ -228,22 +228,22 @@ function pemscores_header_style() {
 			.post-navigation a:focus,
 			.paging-navigation a:hover,
 			.paging-navigation a:focus,
-			.entry-title a:hover, 
+			.entry-title a:hover,
 			.entry-title a:focus,
-			.entry-meta a:focus, 
+			.entry-meta a:focus,
 			.entry-meta a:hover,
 			.entry-footer a:focus,
 			.entry-footer a:hover,
-			.reply a:hover, 
+			.reply a:hover,
 			.reply a:focus,
-			.comment-form .form-submit input:hover, 
+			.comment-form .form-submit input:hover,
 			.comment-form .form-submit input:focus,
-			.widget a:hover, 
+			.widget a:hover,
 			.widget a:focus {
 				border-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
-			
-			.comment-navigation a:hover, 
+
+			.comment-navigation a:hover,
 			.comment-navigation a:focus,
 			.posts-navigation a:hover,
 			.posts-navigation a:focus,
@@ -251,25 +251,25 @@ function pemscores_header_style() {
 			.post-navigation a:focus,
 			.paging-navigation a:hover,
 			.paging-navigation a:focus,
-			.continue-reading a:focus, 
+			.continue-reading a:focus,
 			.continue-reading a:hover,
-			.cat-links a:focus, 
+			.cat-links a:focus,
 			.cat-links a:hover,
-			.reply a:hover, 
+			.reply a:hover,
 			.reply a:focus,
-			.comment-form .form-submit input:hover, 
+			.comment-form .form-submit input:hover,
 			.comment-form .form-submit input:focus {
 				background-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
-			
+
 			@media screen and (min-width: 900px) {
-				.no-sidebar .post-content__wrap .entry-meta a:hover, 
+				.no-sidebar .post-content__wrap .entry-meta a:hover,
 				.no-sidebar .post-content__wrap .entry-meta a:focus {
 					border-color: <?php echo esc_attr( $interactive_color ); ?>;
 				}
 			}
 		</style>
 	<?php
-	} 
+	}
 }
 endif;

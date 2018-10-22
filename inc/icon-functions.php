@@ -36,12 +36,12 @@ add_action( 'wp_footer', 'pemscores_include_svg_icons', 9999 );
 function pemscores_get_svg( $args = array() ) {
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
-		return __( 'Please define default parameters in the form of an array.', 'pemscores' );
+		return __( 'Por favor, defina los parámetros en forma de array.', 'pemscores' );
 	}
 
 	// Define an icon.
 	if ( false === array_key_exists( 'icon', $args ) ) {
-		return __( 'Please define an SVG icon filename.', 'pemscores' );
+		return __( 'Por favor, defina el nombre de un icono SVG.', 'pemscores' );
 	}
 
 	// Set defaults.

@@ -11,12 +11,12 @@
 <header class="page-header">
 	<h1 class="page-title">
 		<?php
-		if ( is_404() ) { esc_html_e( 'Page not available', 'pemscores' );
+		if ( is_404() ) { esc_html_e( 'Página no disponible', 'pemscores' );
 		} else if ( is_search() ) {
 			/* translators: %s = search query */
-			printf( esc_html__( 'Nothing found for &ldquo;%s&rdquo;', 'pemscores'), get_search_query() );
+			printf( esc_html__( 'Nada encontrado para &ldquo;%s&rdquo;', 'pemscores'), get_search_query() );
 		} else {
-			esc_html_e( 'Nothing Found', 'pemscores' );
+			esc_html_e( 'Nada encontrado', 'pemscores' );
 		}
 		?>
 	</h1>
@@ -28,21 +28,21 @@
 		<div class="page-content">
 			<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-				<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'pemscores' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+				<p><?php printf( wp_kses( __( '¿Quiere hacer su primera publicación? <a href="%1$s">Empieze aquí</a>.', 'pemscores' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 			<?php elseif ( is_search() ) : ?>
 
-				<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'pemscores' ); ?></p>
+				<p><?php esc_html_e( 'Oooops, no se encontró nada con esos términos de búsqueda. Por favor, inténtelo de nuevo con otras palabras clave.', 'pemscores' ); ?></p>
 				<?php get_search_form(); ?>
 
 			<?php elseif ( is_404() ) : ?>
 
-				<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'pemscores' ); ?></p>
+				<p><?php esc_html_e( '¿Se perdió? Para localizar lo que busca, revise los items siguientes o intente una nueva búsqueda:', 'pemscores' ); ?></p>
 				<?php get_search_form(); ?>
 
 			<?php else : ?>
 
-				<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'pemscores' ); ?></p>
+				<p><?php esc_html_e( 'Parece que no encontramos que anda buscando. Inténtelo con una búsqueda.', 'pemscores' ); ?></p>
 				<?php get_search_form(); ?>
 
 			<?php endif; ?>
@@ -51,7 +51,7 @@
 		<?php
 		if ( is_404() || is_search() ) {
 		?>
-			<h2 class="page-title secondary-title"><?php esc_html_e( 'Most recent posts:', 'pemscores' ); ?></h2>
+			<h2 class="page-title secondary-title"><?php esc_html_e( 'Entradas más recientes:', 'pemscores' ); ?></h2>
 			<?php
 			// Get the 6 latest posts
 			$args = array(

@@ -13,7 +13,7 @@ get_header(); ?>
 if ( have_posts() ) : ?>
 
 	<header class="page-header">
-		<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'pemscores' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<h1 class="page-title"><?php printf( esc_html__( 'Resultados de búsqueda para: %s', 'pemscores' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 	</header><!-- .page-header -->
 
 <?php
@@ -41,9 +41,9 @@ endif; ?>
 		endwhile;
 
 		the_posts_pagination( array(
-			'prev_text' => pemscores_get_svg( array( 'icon' => 'arrow-long-left', 'fallback' => true ) ) . __( 'Newer', 'pemscores' ),
-			'next_text' => __( 'Older', 'pemscores' ) . pemscores_get_svg( array( 'icon' => 'arrow-long-right' , 'fallback' => true ) ),
-			'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'pemscores' ) . '</span>',
+			'prev_text' => pemscores_get_svg( array( 'icon' => 'arrow-long-left', 'fallback' => true ) ) . __( 'Recientes', 'pemscores' ),
+			'next_text' => __( 'Anteriores', 'pemscores' ) . pemscores_get_svg( array( 'icon' => 'arrow-long-right' , 'fallback' => true ) ),
+			'before_page_number' => '<span class="screen-reader-text">' . __( 'Página ', 'pemscores' ) . '</span>',
 		));
 
 		?>

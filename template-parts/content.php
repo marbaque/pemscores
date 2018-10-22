@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<?php
 	if ( has_post_thumbnail() ) { ?>
 	<figure class="featured-image index-image">
@@ -21,7 +21,7 @@
 		</a>
 	</figure><!-- .featured-image full-bleed -->
 	<?php } ?>
-	
+
 	<div class="post__content">
 		<header class="entry-header">
 			<?php pemscores_the_category_list(); ?>
@@ -50,20 +50,20 @@
 			}
 			?>
 		</div><!-- .entry-content -->
-		
+
 		<div class="continue-reading">
 			<?php
 			$read_more_link = sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s', 'pemscores' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continuar leyendo %s', 'pemscores' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			);
 			?>
-					
+
 			<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
 				<?php echo $read_more_link; ?>
 			</a>
 		</div><!-- .continue-reading -->
-		
+
 	</div><!-- .post__content -->
 </article><!-- #post-## -->

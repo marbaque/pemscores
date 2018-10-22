@@ -26,7 +26,7 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-	
+
 	<?php
 	if ( has_post_thumbnail() ) { ?>
 	<figure class="featured-image full-bleed">
@@ -37,7 +37,7 @@
 	<?php } ?>
 
 	<section class="post-content">
-		
+
 		<?php
 		if ( !is_active_sidebar( 'sidebar-1' ) ) : ?>
 		<div class="post-content__wrap">
@@ -47,17 +47,17 @@
 			<div class="post-content__body">
 		<?php
 		endif; ?>
-		
+
 		<div class="entry-content">
 			<?php
 				the_content( sprintf(
 					/* translators: %s: Name of current post. */
-					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'pemscores' ), array( 'span' => array( 'class' => array() ) ) ),
+					wp_kses( __( 'Continuar leyendo %s <span class="meta-nav">&rarr;</span>', 'pemscores' ), array( 'span' => array( 'class' => array() ) ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pemscores' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Páginas:', 'pemscores' ),
 					'after'  => '</div>',
 				) );
 			?>
@@ -72,7 +72,7 @@
 			</div><!-- .post-content__body -->
 		</div><!-- .post-content__wrap -->
 		<?php endif; ?>
-		
+
 		<?php
 		pemscores_post_navigation();
 
@@ -82,7 +82,7 @@
 		endif;
 		?>
 	</section><!-- .post-content -->
-	
+
 	<?php
 	get_sidebar();
 	?>

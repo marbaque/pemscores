@@ -44,9 +44,9 @@ endif; ?>
 			endwhile;
 
 			the_posts_pagination( array(
-				'prev_text' => pemscores_get_svg( array( 'icon' => 'arrow-long-left', 'fallback' => true ) ) . __( 'Newer', 'pemscores' ),
-				'next_text' => __( 'Older', 'pemscores' ) . pemscores_get_svg( array( 'icon' => 'arrow-long-right' , 'fallback' => true ) ),
-				'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'pemscores' ) . '</span>',
+				'prev_text' => pemscores_get_svg( array( 'icon' => 'arrow-long-left', 'fallback' => true ) ) . __( 'Recientes', 'pemscores' ),
+				'next_text' => __( 'Anteriores', 'pemscores' ) . pemscores_get_svg( array( 'icon' => 'arrow-long-right' , 'fallback' => true ) ),
+				'before_page_number' => '<span class="screen-reader-text">' . __( 'Página ', 'pemscores' ) . '</span>',
 			));
 
 		?>

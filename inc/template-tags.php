@@ -25,31 +25,31 @@ function pemscores_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Published %s', 'post date', 'pemscores' ),
+		esc_html_x( 'Publicado el %s', 'post date', 'pemscores' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'Written by %s', 'post author', 'pemscores' ),
+		esc_html_x( 'Escrito por %s', 'post author', 'pemscores' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
 	echo '<span class="byline"> ' . $byline . '</span> <span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-	
+
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo ' <span class="comments-link"><span class="extra">Discussion </span>';
+		echo ' <span class="comments-link"><span class="extra">Discusión </span>';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'pemscores' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Haga un comentario<span class="screen-reader-text"> en %s</span>', 'pemscores' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
-	
+
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'pemscores' ),
+			esc_html__( 'Editar %s', 'pemscores' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		' <span class="edit-link"><span class="extra">Admin </span>',
+		' <span class="edit-link"><span class="extra">Administrador </span>',
 		'</span>'
 	);
 
@@ -67,7 +67,7 @@ function pemscores_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'pemscores' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'pemscores' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Etiquetas %1$s', 'pemscores' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
@@ -135,11 +135,11 @@ add_action( 'save_post',     'pemscores_category_transient_flusher' );
  */
 function pemscores_post_navigation() {
 	the_post_navigation( array(
-		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'pemscores' ) . '</span> ' .
-			'<span class="screen-reader-text">' . __( 'Next post:', 'pemscores' ) . '</span> ' .
+		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Siguiente', 'pemscores' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Entrada siguiente:', 'pemscores' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
-		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'pemscores' ) . '</span> ' .
-			'<span class="screen-reader-text">' . __( 'Previous post:', 'pemscores' ) . '</span> ' .
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Anterior', 'pemscores' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Entrada anterior:', 'pemscores' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
 	) );
 }

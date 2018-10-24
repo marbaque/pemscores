@@ -265,10 +265,10 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 18px;
 	font-size: 1.125rem;
-	line-height: 1.5;
+	line-height: 1.6;
 }
 
 @media screen and (min-width: 600px) {
@@ -1131,6 +1131,7 @@ Header Menu
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-weight: 400;
 	clear: left;
+	line-height: 1.2;
 }
 
 .main-navigation ul {
@@ -1308,6 +1309,7 @@ button.dropdown-toggle {
 .entry-title {
 	margin: .125em 0 .25em;
 	font-size: 2.5em;
+	line-height: 1.2;
 }
 
 @media screen and (min-width: 900px) {
@@ -1950,7 +1952,7 @@ button.dropdown-toggle {
 
 .rssSummary {
 	padding: .5em 0;
-	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: .8em;
 	line-height: 1.4em;
 }
@@ -2375,6 +2377,15 @@ SVG Fallbacks
 	position: relative !important;
 	/* overrides previous !important styles */
 	width: auto;
+}
+
+/*--------------------------------------------------------------
+# LearnPress
+--------------------------------------------------------------*/
+.lp-single-course .learn-press-breadcrumb,
+.lp-single-course .learn-press-course-forum-link {
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: .8em;
 }
 
 /*# sourceMappingURL=../pemscores/sass/maps/style.css.map */

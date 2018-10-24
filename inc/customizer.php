@@ -189,7 +189,8 @@ function pemscores_header_style() {
 	if ( '#002254' != $header_bg_color ) { ?>
 		<style type="text/css">
 			.site-header,
-			.site-footer {
+			.site-footer,
+			.search-form .search-field:focus {
 				background-color: <?php echo esc_attr( $header_bg_color ); ?>;
 			}
 		</style>

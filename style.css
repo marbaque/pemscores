@@ -913,7 +913,9 @@ a:hover, a:active {
 }
 
 .archive-view .post,
-.archive-view .page {
+.archive-view .page,
+.archive-view .curso,
+.archive-view .recurso {
 	position: relative;
 	background: white;
 }
@@ -2119,7 +2121,7 @@ button.dropdown-toggle {
 	border-radius: 0;
 	outline-color: #002254;
 	font-style: normal;
-	background: #002254;
+	background-color: #002254;
 	color: #fff;
 }
 

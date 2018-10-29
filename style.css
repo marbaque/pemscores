@@ -851,7 +851,7 @@ a:hover, a:active {
 }
 
 .site-content {
-	max-width: 1080px;
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
@@ -1436,10 +1436,10 @@ button.dropdown-toggle {
 	}
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1440px) {
 	.full-bleed {
-		margin-right: calc( ((-100vw + 1080px)/2) - 2em);
-		margin-left: calc( ((-100vw + 1080px)/2) - 2em);
+		margin-right: calc( ((-100vw + 1440px)/2) - 2em);
+		margin-left: calc( ((-100vw + 1440px)/2) - 2em);
 	}
 }
 
@@ -1462,6 +1462,61 @@ button.dropdown-toggle {
 .entry-footer {
 	margin: 1.5em 0;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+/*--------------------------------------------------------------
+# LearnPress
+--------------------------------------------------------------*/
+.lp-single-course .learn-press-breadcrumb,
+.lp-single-course .learn-press-course-forum-link {
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: .8em;
+}
+
+.archive-view.learnpress .site .site-content article.page {
+	background: none;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
+	position: relative;
+	background: white;
+	padding: 2em 2em 3em;
+	margin: 1em 0;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-permalink {
+	border: none;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info {
+	display: block;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info .course-price {
+	display: block;
+	float: none;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info .course-instructor {
+	display: block;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons {
+	display: block;
+}
+
+@media screen and (min-width: 900px) {
+	.archive-view.learnpress .site .site-content article.page .learn-press-courses {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+	.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
+		width: 48%;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1553,7 +1608,7 @@ button.dropdown-toggle {
 	}
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1440px) {
 	.no-sidebar .children {
 		margin-left: 3em;
 	}
@@ -1722,7 +1777,7 @@ button.dropdown-toggle {
 }
 
 .site-footer__wrap {
-	max-width: 1080px;
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
@@ -2377,15 +2432,6 @@ SVG Fallbacks
 	position: relative !important;
 	/* overrides previous !important styles */
 	width: auto;
-}
-
-/*--------------------------------------------------------------
-# LearnPress
---------------------------------------------------------------*/
-.lp-single-course .learn-press-breadcrumb,
-.lp-single-course .learn-press-course-forum-link {
-	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: .8em;
 }
 
 /*# sourceMappingURL=../pemscores/sass/maps/style.css.map */

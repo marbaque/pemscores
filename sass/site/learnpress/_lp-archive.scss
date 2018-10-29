@@ -1,0 +1,57 @@
+.archive-view {
+    &.learnpress {
+        .site {
+            .site-content {
+
+                article.page {
+                    background: none;
+
+                    .learn-press-courses {
+
+                        .lp_course {
+                            position: relative;
+                    		background: white;
+                            padding: 2em 2em 3em;
+                            margin: 1em 0;
+
+                            .course-permalink {
+                                border: none;
+                            }
+                            .course-info {
+                                display: block;
+
+                                .course-price {
+                                    display: block;
+                                    float: none;
+                                }
+                                .course-instructor {
+                                    display: block;
+                                }
+                            }
+
+                            .lp-course-buttons {
+                                display: block;
+                            }
+                        }
+
+                        @media screen and (min-width: $query__medium) {
+                            display: flex;
+            				justify-content: space-between;
+            				flex-wrap: wrap;
+
+                            .lp_course {
+                                width: 48%;
+
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}

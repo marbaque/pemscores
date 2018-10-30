@@ -94,21 +94,21 @@ function pemscores_fonts_url() {
 	 * supported by Source Sans Pro and PT Serif, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'pemscores' );
-	$pt_serif = _x( 'on', 'PT Serif font: on or off', 'pemscores' );
+	$lato = _x( 'on', 'Lato font: on or off', 'pemscores' );
+	$alegreya = _x( 'on', 'PT Serif font: on or off', 'pemscores' );
 
 	$font_families = array();
 
-	if ( 'off' !== $source_sans_pro ) {
-		$font_families[] = 'Source Sans Pro:400,400i,700,900';
+	if ( 'off' !== $lato ) {
+		$font_families[] = 'Lato:400,400i,700,900';
 	}
 
-	if ( 'off' !== $pt_serif ) {
-		$font_families[] = 'PT Serif:400,400i,700,700i';
+	if ( 'off' !== $alegreya ) {
+		$font_families[] = 'Alegreya:400,400i,700,700i';
 	}
 
 
-	if ( in_array( 'on', array($source_sans_pro, $pt_serif) ) ) {
+	if ( in_array( 'on', array($lato, $alegreya) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -236,9 +236,9 @@ add_filter( 'wp_get_attachment_image_attributes', 'pemscores_post_thumbnail_size
  */
 function pemscores_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'pemscores' ),
+		'name'          => esc_html__( 'Barra lateral', 'pemscores' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add sidebar widgets here.', 'pemscores' ),
+		'description'   => esc_html__( 'Agregue widgets al blog.', 'pemscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -246,9 +246,9 @@ function pemscores_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Page Sidebar', 'pemscores' ),
+		'name'          => esc_html__( 'Barra lateral de páginas', 'pemscores' ),
 		'id'            => 'sidebar-2',
-		'description'   => esc_html__( 'Add page sidebar widgets here.', 'pemscores' ),
+		'description'   => esc_html__( 'Agregue widgets a las páginas.', 'pemscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -256,9 +256,9 @@ function pemscores_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widgets', 'pemscores' ),
+		'name'          => esc_html__( 'Widgets de footer', 'pemscores' ),
 		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add footer widgets here.', 'pemscores' ),
+		'description'   => esc_html__( 'Agregue widgets al footer.', 'pemscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

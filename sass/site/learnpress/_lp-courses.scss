@@ -5,6 +5,10 @@
     .learn-press-course-forum-link {
         font-family: $font__sans;
         font-size: .8em;
+        border: none;
+        a {
+            border: none;
+        }
     }
 }
 
@@ -17,11 +21,15 @@
 }
 
 .learn-press-course-results-progress{
+    background: #eee;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     display: block;
     padding: 1em 0;
     font-family: $font__sans;
+    .items-progress, .course-progress {
+        padding: 0 1em;
+    }
     h4 {
         font-size: 1em;
         line-height: 1.2;
@@ -29,12 +37,52 @@
 }
 .course-remaining-time {
     font-family: $font__sans;
+    font-size: 80%;
+    margin: 1em 0;
     .lp-label.label-enrolled, .lp-label.label-started {
-        background: $color__interactive;
+        background: hsla(180, 100%, 35%, 1);
+        border-radius: 0;
+        padding: .4em;
+        margin-right: .25em;
+
     }
 }
 
 .course-meta,
 .price {
     font-family: $font__sans;
+}
+
+.learnpress-page .lp-button {
+    line-height: inherit!important;
+    height: auto!important;
+}
+
+
+//lecciones
+#course-item-content-header {
+    background: white!important;
+
+     a, button {
+
+     }
+     button {
+         font-size: 80%;
+         border: none;
+         background: #eee;
+     }
+
+     .course-item-search  {
+         background: #eee;
+         input {
+             font-size: 80%;
+             &:focus {
+
+             }
+         }
+         button {
+
+         }
+     }
+
 }

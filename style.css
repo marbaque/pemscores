@@ -226,7 +226,7 @@ input,
 select,
 textarea {
   color: #000;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Alegreya", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6; }
@@ -242,7 +242,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   margin-top: .75em;
   margin-bottom: .25em;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   clear: both; }
 
 h1 {
@@ -281,7 +281,7 @@ blockquote {
     top: -.2em;
     left: -.13em;
     content: "“";
-    font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
     font-size: 12em;
     line-height: 100%;
     color: white; }
@@ -413,7 +413,7 @@ input[type="submit"] {
   border-color: black;
   background: transparent;
   color: black;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1;
@@ -515,7 +515,7 @@ a {
 .post-navigation,
 .paging-navigation {
   padding: 2em 0;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   text-align: left;
   overflow: hidden; }
   .comment-navigation a,
@@ -585,7 +585,7 @@ a {
   border-bottom-color: white; }
 
 .pagination {
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
   .pagination .nav-links {
     display: flex;
     justify-content: center;
@@ -754,7 +754,7 @@ a {
       width: 30%; } }
 
 .page-header {
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
 
 .page-title {
   margin: 0 0 .5em; }
@@ -767,7 +767,7 @@ a {
 .error-404 .page-content {
   margin-bottom: 2em;
   padding: 1em 2em;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   color: white;
   background: #b51c35; }
 .search input[type="search"],
@@ -805,7 +805,7 @@ a {
   position: absolute;
   right: 0;
   bottom: 0;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
   .continue-reading a, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button a {
     display: block;
     padding: .5em 1em;
@@ -829,7 +829,7 @@ a {
 .site-header {
   position: relative;
   padding: 1em;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   color: #fff;
   background-color: #002254; }
   @media screen and (min-width: 600px) {
@@ -887,7 +887,7 @@ Header Menu
 */
 .main-navigation {
   display: block;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   font-weight: 400;
   clear: left;
   line-height: 1.2; }
@@ -1000,7 +1000,7 @@ button.dropdown-toggle {
   margin: 0 0 1.5em; }
 
 .entry-header {
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
 
 .cat-links {
   font-size: 90%;
@@ -1028,7 +1028,7 @@ button.dropdown-toggle {
 
 .entry-meta,
 .entry-footer {
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   font-size: 90%; }
   .entry-meta a,
   .entry-footer a {
@@ -1127,49 +1127,76 @@ button.dropdown-toggle {
 
 .entry-footer {
   margin: 1.5em 0;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
 
 /*--------------------------------------------------------------
 # LearnPress
 --------------------------------------------------------------*/
 .lp-single-course .learn-press-breadcrumb,
 .lp-single-course .learn-press-course-forum-link {
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-  font-size: .8em; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: .8em;
+  border: none; }
+  .lp-single-course .learn-press-breadcrumb a,
+  .lp-single-course .learn-press-course-forum-link a {
+    border: none; }
 
 .lp_course.has-post-thumbnail .full-bleed {
   margin-top: -2em; }
 
 .learn-press-course-results-progress {
+  background: #eee;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   display: block;
   padding: 1em 0;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  .learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
+    padding: 0 1em; }
   .learn-press-course-results-progress h4 {
     font-size: 1em;
     line-height: 1.2; }
 
 .course-remaining-time {
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 80%;
+  margin: 1em 0; }
   .course-remaining-time .lp-label.label-enrolled, .course-remaining-time .lp-label.label-started {
-    background: #b51c35; }
+    background: #00b3b3;
+    border-radius: 0;
+    padding: .4em;
+    margin-right: .25em; }
 
 .course-meta,
 .price {
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+
+.learnpress-page .lp-button {
+  line-height: inherit !important;
+  height: auto !important; }
+
+#course-item-content-header {
+  background: white !important; }
+  #course-item-content-header button {
+    font-size: 80%;
+    border: none;
+    background: #eee; }
+  #course-item-content-header .course-item-search {
+    background: #eee; }
+    #course-item-content-header .course-item-search input {
+      font-size: 80%; }
 
 .archive-view.learnpress .site .site-content article.page {
   background: none; }
   .archive-view.learnpress .site .site-content article.page .learn-press-breadcrumb {
-    font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
     font-size: 80%; }
   .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
     position: relative;
     background: white;
     padding: 2em 2em 3em;
     margin: 1em 0;
-    font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
     .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-permalink {
       border: none; }
     .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-thumbnail {
@@ -1231,7 +1258,7 @@ button.dropdown-toggle {
 .comment-meta {
   position: relative;
   margin-left: 70px;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   font-size: 80%; }
 
 .comment-meta a,
@@ -1307,7 +1334,7 @@ button.dropdown-toggle {
   .reply a {
     display: inline-block;
     padding: .5em 1.4em;
-    font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
     font-size: 85%;
     color: #000;
     line-height: 1.3em;
@@ -1337,7 +1364,7 @@ button.dropdown-toggle {
   text-align: left; }
 
 .comment-form {
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   line-height: 1.3em; }
   .comment-form a {
     font-weight: 500; }
@@ -1363,7 +1390,7 @@ button.dropdown-toggle {
     color: #D54E21; }
 
 .pingback {
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
   .pingback .comment-body {
     padding: 1em 0; }
   .pingback a {
@@ -1376,7 +1403,7 @@ button.dropdown-toggle {
 .site-footer {
   position: relative;
   padding: 1em;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   color: #fff;
   background-color: #002254;
   text-align: center; }
@@ -1455,7 +1482,7 @@ button.dropdown-toggle {
 .widget {
   margin: 0 0 2em;
   padding: 0 0 2em;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   /* Make sure select elements fit in widgets. */ }
   .widget ul,
   .widget ol {
@@ -1486,7 +1513,7 @@ button.dropdown-toggle {
     width: 100%;
     height: 2.5em;
     padding: 10px;
-    font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
     border: 1px solid #ccc; }
 
 .widget-title {
@@ -1554,7 +1581,7 @@ button.dropdown-toggle {
 
 .rssSummary {
   padding: .5em 0;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Alegreya", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: .8em;
   line-height: 1.4em; }
 
@@ -1664,7 +1691,7 @@ button.dropdown-toggle {
     -webkit-border-radius: 0;
     border-radius: 0;
     background: rgba(0, 0, 0, 0.2);
-    font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
     font-size: 95%;
     font-weight: 400;
     color: #fff;
@@ -1742,7 +1769,7 @@ object {
 .wp-caption {
   margin-bottom: 2em;
   max-width: 100%;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   font-size: 90%;
   color: #666666;
   text-align: center; }
@@ -1827,7 +1854,7 @@ object {
 .gallery-caption {
   display: block;
   margin: 0;
-  font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   border: none; }
 
 /*--------------------------------------------------------------

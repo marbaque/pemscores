@@ -24,7 +24,7 @@ function pemscores_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 		$classes[] = 'archive-view';
 	}
-	
+
 	// Add a class telling us if the sidebar is in use.
 	if ( is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'has-sidebar';
@@ -35,8 +35,8 @@ function pemscores_body_classes( $classes ) {
 	// Add a class telling us if the page sidebar is in use.
 	if ( is_active_sidebar( 'sidebar-2' ) ) {
 		$classes[] = 'has-page-sidebar';
-	}
-	
+	} 
+
 	return $classes;
 }
 add_filter( 'body_class', 'pemscores_body_classes' );

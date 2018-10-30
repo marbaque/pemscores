@@ -1,8 +1,40 @@
 .lp-single-course {
 
+
     .learn-press-breadcrumb,
     .learn-press-course-forum-link {
         font-family: $font__sans;
         font-size: .8em;
     }
+}
+
+.lp_course {
+    &.has-post-thumbnail {
+        .full-bleed {
+            margin-top: -2em;
+        }
+    }
+}
+
+.learn-press-course-results-progress{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: block;
+    padding: 1em 0;
+    font-family: $font__sans;
+    h4 {
+        font-size: 1em;
+        line-height: 1.2;
+    }
+}
+.course-remaining-time {
+    font-family: $font__sans;
+    .lp-label.label-enrolled, .lp-label.label-started {
+        background: $color__interactive;
+    }
+}
+
+.course-meta,
+.price {
+    font-family: $font__sans;
 }

@@ -5,7 +5,10 @@
 
                 article.page {
                     background: none;
-
+                    .learn-press-breadcrumb {
+                        font-family: $font__sans;
+                        font-size: 80%;
+                    }
                     .learn-press-courses {
 
                         .lp_course {
@@ -13,16 +16,26 @@
                     		background: white;
                             padding: 2em 2em 3em;
                             margin: 1em 0;
+                            font-family: $font__sans;
 
                             .course-permalink {
                                 border: none;
                             }
+
+                            .course-thumbnail {
+                                width: calc(100% + 4em);
+                                height: auto;
+                                margin-left: -2em;
+                                margin-right: -2em;
+                                margin-top: -2em;
+                            }
                             .course-info {
                                 display: block;
+                                width: 100%;
 
                                 .course-price {
                                     display: block;
-                                    float: none;
+
                                 }
                                 .course-instructor {
                                     display: block;
@@ -31,6 +44,19 @@
 
                             .lp-course-buttons {
                                 display: block;
+                                button {
+                                    @extend .continue-reading;
+                                    width: auto;
+                                    background: hsl(0, 0%, 85%);
+                                    border: 0;
+                                    font-size: 90%;
+
+                                    &:focus,
+                            		&:hover {
+                            			color: white;
+                            			background: $color__interactive;
+                            		}
+                                }
                             }
                         }
 

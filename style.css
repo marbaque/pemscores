@@ -879,11 +879,11 @@ a:hover, a:active {
 	}
 	.single.has-sidebar .hentry .post-content,
 	.page .hentry .post-content {
-		width: 60%;
+		width: 63%;
 	}
 	.single.has-sidebar .hentry .widget-area,
 	.page .hentry .widget-area {
-		width: 30%;
+		width: 33%;
 	}
 	.page.has-page-sidebar .hentry {
 		-ms-flex-direction: row-reverse;
@@ -944,10 +944,10 @@ a:hover, a:active {
 		    flex: 1 0 100%;
 	}
 	.archive-view.has-sidebar .content-area {
-		width: 60%;
+		width: 63%;
 	}
 	.archive-view.has-sidebar .widget-area {
-		width: 30%;
+		width: 33%;
 	}
 }
 

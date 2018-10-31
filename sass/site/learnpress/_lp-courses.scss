@@ -1,3 +1,12 @@
+
+//pagina de descripción
+.course {
+    .post-content {
+        background: white!important;
+        padding: 2em 2em 3em;
+    }
+}
+
 .lp-single-course {
 
 
@@ -10,12 +19,27 @@
             border: none;
         }
     }
+
+
 }
 
 .lp_course {
     &.has-post-thumbnail {
         .full-bleed {
             margin-top: -2em;
+        }
+    }
+}
+
+.widget {
+    .learn-press-course-results-progress {
+        background: inherit;
+        border: none;
+        padding: 0;
+        width: 100%;
+        .items-progress, .course-progress {
+            padding: 0;
+            margin: 0 0 1em;
         }
     }
 }
@@ -27,6 +51,7 @@
     display: block;
     padding: 1em 0;
     font-family: $font__sans;
+    width: 100%;
     .items-progress, .course-progress {
         padding: 0 1em;
     }
@@ -54,16 +79,15 @@
 }
 
 .learnpress-page .lp-button {
-    line-height: inherit!important;
+    line-height: 1;
     height: auto!important;
 }
 
 
 //lecciones
-#course-item-content-header {
-    background: white!important;
+.course-header-lp {
 
-     a, button {
+    a, button {
 
      }
      button {
@@ -72,10 +96,27 @@
          background: #eee;
      }
 
+     .lp-button-back {
+         display: none;
+         button {
+             background: inherit;
+             &:hover {
+                 background: hsla(0, 100%, 100%, 0.1)
+             }
+         }
+
+         @media screen and (min-width: $query__medium) {
+             display: block;
+         }
+     }
+
      .course-item-search  {
-         background: #eee;
+
+         z-index: 99;
+         background: white;
          input {
              font-size: 80%;
+             font-family: $font__sans;
              &:focus {
 
              }
@@ -85,4 +126,110 @@
          }
      }
 
+     .course-title {
+         display: none; //esconder título cuando está la barra lateral y en móviles
+
+         a {
+            text-decoration: none;
+         }
+
+         @media screen and (min-width: $query__medium) {
+             max-width: 90%;
+             display: block;
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;
+         }
+     }
+
+}
+
+.full-screen-content-item {
+    .course-title {
+        display: block;
+        max-width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+h3.course-item-title {
+    border-bottom: 3px solid #eee;
+    padding-bottom: 1em;
+}
+
+.content-item-wrap {
+    @media screen and (min-width: $query__small) {
+        margin: 3em auto!important;
+    }
+
+    ol {
+        counter-reset: list;
+        list-style-type: none;
+        padding-left: 0px;
+
+        li {
+            text-indent: -40px;
+            margin-left: 40px;
+            counter-increment: list;
+            &:before {
+                background-color: $color__skin;
+                width: 24px;
+                text-indent: 2px;
+                padding-left: 0px;
+                height: 24px;
+                line-height: 24px;
+                vertical-align: top;
+                -webkit-border-radius: 12px;
+                -moz-border-radius: 12px;
+                border-radius: 12px;
+                -moz-background-clip: padding;
+                -webkit-background-clip: padding-box;
+                background-clip: padding-box;
+                color: #fff;
+                display: inline-block;
+                font-weight: 700;
+                content: counter(list);
+                margin-right: 15px;
+                margin-top: 4px;
+                font-size: 14px;
+                font-family: $font__sans;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.curriculum-sections {
+    font-family: $font__sans;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+form[name="learn-press-form-complete-lesson"] {
+    margin-top: 4em;
+    padding: 2em 0;
+    border-top: 3px solid #eee;
+    border-bottom: 3px solid #eee;
+    width: 100%;
+    text-align: center;
+    font-size: 80%;
+    position: relative;
+    height: 3em;
+
+    p {
+        color: #777;
+        font-family: $font__sans;
+    }
+    button {
+        margin: 0;
+
+        &:focus,
+        &:hover {
+
+        }
+    }
 }

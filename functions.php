@@ -95,7 +95,7 @@ function pemscores_fonts_url() {
 	 * into your own language.
 	 */
 	$lato = _x( 'on', 'Lato font: on or off', 'pemscores' );
-	$alegreya = _x( 'on', 'PT Serif font: on or off', 'pemscores' );
+	$lora = _x( 'on', 'PT Serif font: on or off', 'pemscores' );
 
 	$font_families = array();
 
@@ -103,12 +103,12 @@ function pemscores_fonts_url() {
 		$font_families[] = 'Lato:400,400i,700,900';
 	}
 
-	if ( 'off' !== $alegreya ) {
-		$font_families[] = 'Alegreya:400,400i,700,700i';
+	if ( 'off' !== $lora ) {
+		$font_families[] = 'Lora:400,400i,700,700i';
 	}
 
 
-	if ( in_array( 'on', array($lato, $alegreya) ) ) {
+	if ( in_array( 'on', array($lato, $lora) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -239,8 +239,8 @@ function pemscores_widgets_init() {
 		'name'          => esc_html__( 'Barra lateral', 'pemscores' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Agregue widgets al blog.', 'pemscores' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+		'after_widget'  => '</div></section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
@@ -249,8 +249,8 @@ function pemscores_widgets_init() {
 		'name'          => esc_html__( 'Barra lateral de páginas', 'pemscores' ),
 		'id'            => 'sidebar-2',
 		'description'   => esc_html__( 'Agregue widgets a las páginas.', 'pemscores' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+		'after_widget'  => '</div></section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );

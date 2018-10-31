@@ -14,20 +14,20 @@
                         .lp_course {
                             position: relative;
                     		background: white;
-                            padding: 2em 2em 3em;
+                            padding: 1em 1em 2em;
                             margin: 1em 0;
                             font-family: $font__sans;
 
                             .course-permalink {
                                 border: none;
+                                height: auto;
                             }
 
                             .course-thumbnail {
-                                width: calc(100% + 4em);
-                                height: auto;
-                                margin-left: -2em;
-                                margin-right: -2em;
-                                margin-top: -2em;
+                                text-align: center;
+                                img {
+                                    margin: 0 auto;
+                                }
                             }
                             .course-info {
                                 display: block;
@@ -44,12 +44,14 @@
 
                             .lp-course-buttons {
                                 display: block;
+                                margin-top: 1em;
                                 button {
                                     @extend .continue-reading;
                                     width: auto;
                                     background: hsl(0, 0%, 85%);
                                     border: 0;
                                     font-size: 90%;
+                                    padding: .5em 1em;
 
                                     &:focus,
                             		&:hover {

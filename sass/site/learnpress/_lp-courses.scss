@@ -113,7 +113,7 @@
      .course-item-search  {
 
          z-index: 99;
-         background: white;
+         //background: white;
          input {
              font-size: 80%;
              font-family: $font__sans;
@@ -232,4 +232,8 @@ form[name="learn-press-form-complete-lesson"] {
 
         }
     }
+}
+
+a.toggle-content-item {
+    text-decoration: none;
 }

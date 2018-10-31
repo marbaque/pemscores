@@ -5,9 +5,11 @@
 
                 article.page {
                     background: none;
+
                     .learn-press-breadcrumb {
                         font-family: $font__sans;
                         font-size: 80%;
+                        color: #eee!important;
                     }
                     .learn-press-courses {
 
@@ -15,7 +17,7 @@
                             position: relative;
                     		background: white;
                             padding: 1em 1em 2em;
-                            margin: 1em 0;
+                            margin-bottom: 1em;
                             font-family: $font__sans;
 
                             .course-permalink {

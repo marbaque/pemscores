@@ -879,11 +879,11 @@ a:hover, a:active {
 	}
 	.single.has-sidebar .hentry .post-content,
 	.page .hentry .post-content {
-		width: 63%;
+		width: 60%;
 	}
 	.single.has-sidebar .hentry .widget-area,
 	.page .hentry .widget-area {
-		width: 33%;
+		width: 30%;
 	}
 	.page.has-page-sidebar .hentry {
 		-ms-flex-direction: row-reverse;
@@ -944,10 +944,10 @@ a:hover, a:active {
 		    flex: 1 0 100%;
 	}
 	.archive-view.has-sidebar .content-area {
-		width: 63%;
+		width: 60%;
 	}
 	.archive-view.has-sidebar .widget-area {
-		width: 33%;
+		width: 30%;
 	}
 }
 
@@ -1573,7 +1573,6 @@ button.dropdown-toggle {
 
 .course-header-lp .course-item-search {
 	z-index: 99;
-	background: white;
 }
 
 .course-header-lp .course-item-search input {
@@ -1680,6 +1679,10 @@ form[name="learn-press-form-complete-lesson"] button {
 	margin: 0;
 }
 
+a.toggle-content-item {
+	text-decoration: none;
+}
+
 .archive-view.learnpress .site .site-content article.page {
 	background: none;
 }
@@ -1687,13 +1690,14 @@ form[name="learn-press-form-complete-lesson"] button {
 .archive-view.learnpress .site .site-content article.page .learn-press-breadcrumb {
 	font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 80%;
+	color: #eee !important;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
 	position: relative;
 	background: white;
 	padding: 1em 1em 2em;
-	margin: 1em 0;
+	margin-bottom: 1em;
 	font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 

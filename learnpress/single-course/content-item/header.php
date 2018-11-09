@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit();
 $course = LP_Global::course();
 ?>
 
-<div id="course-item-content-header">
+<div id="course-item-content-header" class="course-header-lp">
 
     <div class="course-item-search">
         <form>

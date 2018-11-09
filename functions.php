@@ -94,28 +94,28 @@ function pemscores_fonts_url() {
 	 * supported by Source Sans Pro and PT Serif, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$lato = _x( 'on', 'Lato font: on or off', 'pemscores' );
-	$alegreya = _x( 'on', 'PT Serif font: on or off', 'pemscores' );
+	$futura = _x( 'on', 'Futura font: on or off', 'pemscores' );
+	$metaSerif = _x( 'on', 'Meta Serif Pro: on or off', 'pemscores' );
 
 	$font_families = array();
 
-	if ( 'off' !== $lato ) {
-		$font_families[] = 'Lato:400,400i,700,900';
+	if ( 'off' !== $futura ) {
+		$font_families[] = 'futura-pt:400,400i,600,600i';
 	}
 
-	if ( 'off' !== $alegreya ) {
-		$font_families[] = 'Alegreya:400,400i,700,700i';
+	if ( 'off' !== $metaSerif ) {
+		$font_families[] = 'ff-meta-serif-web-pro:450,450i,700,700i';
 	}
 
 
-	if ( in_array( 'on', array($lato, $alegreya) ) ) {
+	if ( in_array( 'on', array($futura, $metaSerif) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
 
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+		$fonts_url = add_query_arg( $query_args, 'https://use.typekit.net/oma6nzd.css' );
 	}
 
 	return esc_url_raw( $fonts_url );

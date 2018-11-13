@@ -91,7 +91,7 @@ function pemscores_fonts_url() {
 
 	/**
 	 * Translators: If there are characters in your language that are not
-	 * supported by Source Sans Pro and PT Serif, translate this to 'off'. Do not translate
+	 * supported by Futura Pro and Meta Serif Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
 	$futura = _x( 'on', 'Futura font: on or off', 'pemscores' );

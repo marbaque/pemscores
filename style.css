@@ -2512,6 +2512,19 @@ a.toggle-content-item {
 	display: none;
 }
 
+.widget.bbp_widget_login form.bbp-login-form fieldset {
+	border: none;
+}
+
+.widget.bbp_widget_login form.bbp-login-form fieldset label[for="user_login"] {
+	width: 100%;
+}
+
+.widget.bbp_widget_login form.bbp-login-form fieldset input[type="text"],
+.widget.bbp_widget_login form.bbp-login-form fieldset input[type="password"] {
+	width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

@@ -374,3 +374,24 @@
         display: none;
     }
 }
+
+
+//widgets de bbpress y learn-press
+.widget{
+	&.bbp_widget_login{
+		form.bbp-login-form {
+			fieldset {
+				border: none;
+				//padding: 0;
+
+				label[for="user_login"] {
+					width: 100%;
+				}
+				input[type="text"],
+				input[type="password"] {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

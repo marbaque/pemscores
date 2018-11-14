@@ -3,11 +3,12 @@
 .post-navigation,
 .paging-navigation,
 .course-item-nav {
-	padding: 2em 0;
 	font-family: $font__sans;
 	text-align: left;
 	overflow: hidden;
 	font-size: 80%;
+	width: 90%;
+	margin: 2em auto;
 
 	a {
 		display: block;
@@ -84,6 +85,7 @@
 	.post-title {
 		font-size: 1.2em;
 		font-weight: 600;
+		line-height: 1.2;
 		//border-bottom: 3px solid $color__interactive;
 	}
 

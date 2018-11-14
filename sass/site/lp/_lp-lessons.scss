@@ -1,5 +1,6 @@
 //lecciones
 .course-header-lp {
+    background-color: $color__skin!important;
 
     a, button {
 
@@ -14,6 +15,8 @@
          display: none;
          button {
              background: inherit;
+
+
              &:hover {
                  background: hsla(0, 100%, 100%, 0.1)
              }
@@ -27,7 +30,8 @@
      .course-item-search  {
 
          z-index: 99;
-         //background: white;
+         color: hsla(0, 100%, 100%, 0.5);
+
          input {
              font-size: 80%;
              font-family: $font__sans;
@@ -36,15 +40,17 @@
              }
          }
          button {
-
+             //color: white;
          }
      }
 
      .course-title {
          display: none; //esconder título cuando está la barra lateral y en móviles
 
+
          a {
             text-decoration: none;
+            //color: hsla(0, 100%, 100%, 0.5);
          }
 
          @media screen and (min-width: $query__medium) {
@@ -74,6 +80,9 @@ h3.course-item-title {
 }
 
 .content-item-wrap {
+
+    max-width: 780px!important;
+
     @media screen and (min-width: $query__small) {
         margin: 3em auto!important;
     }
@@ -163,11 +172,10 @@ h3.course-item-title {
 
 form[name="learn-press-form-complete-lesson"] {
     margin-top: 4em;
-    padding: 2em 0;
-    border-top: 3px solid #eee;
-    border-bottom: 3px solid #eee;
+    padding: 2em 0 0 40px;
+    //background: #eee;
     width: 100%;
-    text-align: center;
+    //text-align: center;
     font-size: 80%;
     position: relative;
     height: 3em;
@@ -188,4 +196,13 @@ form[name="learn-press-form-complete-lesson"] {
 
 a.toggle-content-item {
     text-decoration: none;
+}
+
+
+//sidebar
+.course-curriculum {
+    background: $color__skin;
+    .curriculum-sections {
+
+    }
 }

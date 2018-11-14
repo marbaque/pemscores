@@ -266,8 +266,8 @@ select,
 textarea {
 	color: #333;
 	font-family: "ff-meta-serif-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.76;
 }
 
@@ -287,6 +287,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: .25em;
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	clear: both;
+	text-rendering: optimizeLegibility;
+	line-height: 1.2;
 }
 
 h1 {
@@ -617,11 +619,12 @@ a:hover, a:active {
 .post-navigation,
 .paging-navigation,
 .course-item-nav {
-	padding: 2em 0;
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	text-align: left;
 	overflow: hidden;
 	font-size: 80%;
+	width: 90%;
+	margin: 2em auto;
 }
 
 .comment-navigation a,
@@ -707,6 +710,7 @@ a:hover, a:active {
 .post-navigation .post-title {
 	font-size: 1.2em;
 	font-weight: 600;
+	line-height: 1.2;
 }
 
 .post-navigation a:hover .post-title,
@@ -1632,6 +1636,10 @@ button.dropdown-toggle {
 	}
 }
 
+.course-header-lp {
+	background-color: #002254 !important;
+}
+
 .course-header-lp button {
 	font-size: 80%;
 	border: none;
@@ -1658,6 +1666,7 @@ button.dropdown-toggle {
 
 .course-header-lp .course-item-search {
 	z-index: 99;
+	color: rgba(255, 255, 255, 0.5);
 }
 
 .course-header-lp .course-item-search input {
@@ -1694,6 +1703,10 @@ button.dropdown-toggle {
 h3.course-item-title {
 	border-bottom: 3px solid #eee;
 	padding-bottom: 1em;
+}
+
+.content-item-wrap {
+	max-width: 780px !important;
 }
 
 @media screen and (min-width: 600px) {
@@ -1787,11 +1800,8 @@ h3.course-item-title {
 
 form[name="learn-press-form-complete-lesson"] {
 	margin-top: 4em;
-	padding: 2em 0;
-	border-top: 3px solid #eee;
-	border-bottom: 3px solid #eee;
+	padding: 2em 0 0 40px;
 	width: 100%;
-	text-align: center;
 	font-size: 80%;
 	position: relative;
 	height: 3em;
@@ -1808,6 +1818,10 @@ form[name="learn-press-form-complete-lesson"] button {
 
 a.toggle-content-item {
 	text-decoration: none;
+}
+
+.course-curriculum {
+	background: #002254;
 }
 
 /*--------------------------------------------------------------

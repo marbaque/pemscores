@@ -2308,14 +2308,6 @@ a.toggle-content-item {
 }
 
 /* Search widget */
-.widget_search input[type="search"] {
-	box-sizing: border-box;
-	width: 100%;
-	padding: .5em 1em;
-	border: 1px solid #c3c3c3;
-	border-radius: 0;
-}
-
 /* Calendar widget */
 .widget_calendar {
 	font-weight: 400;
@@ -2438,6 +2430,20 @@ a.toggle-content-item {
 	position: relative;
 }
 
+.search-form:before {
+	font-family: FontAwesome;
+	content: "\f002";
+	height: 40px;
+	display: inline-block;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 1em;
+	z-index: 1;
+	line-height: 2;
+	font-size: 100%;
+}
+
 .search-form label {
 	height: 40px;
 	width: 80%;
@@ -2454,7 +2460,7 @@ a.toggle-content-item {
 	    flex-grow: 1;
 	outline: 0;
 	border: 0 none;
-	padding-left: 3em;
+	padding: .5em 2.5em .5em;
 	-webkit-appearance: none;
 	border-radius: 0;
 	background: rgba(0, 0, 0, 0.2);

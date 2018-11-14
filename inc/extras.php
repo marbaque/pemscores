@@ -35,7 +35,7 @@ function pemscores_body_classes( $classes ) {
 	// Add a class telling us if the page sidebar is in use.
 	if ( is_active_sidebar( 'sidebar-2' ) ) {
 		$classes[] = 'has-page-sidebar';
-	} 
+	}
 
 	return $classes;
 }
@@ -50,3 +50,24 @@ function pemscores_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'pemscores_pingback_header' );
+
+
+//Edit the Dashboard Footer
+function change_admin_footer(){
+	 echo '<span id="footer-note">Desarrollado por <a href="http://multimedia.uned.ac.cr/" target="_blank">Multimedia UNED</a>.</span>';
+	}
+add_filter('admin_footer_text', 'change_admin_footer');
+
+
+/* * ********************************************************************* */
+// Dar a categorias del curso el mismo template de archivo de cursos page-capacitacion.php
+/* * ********************************************************************* */
+add_filter('template_include', function( $template ) {
+	if (is_category('course-category')) {
+		$locate = locate_template('page-capacitacion.php', false, false);
+		if (!empty($locate)) {
+			$template = $locate;
+		}
+	}
+	return $template;
+});

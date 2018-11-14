@@ -290,6 +290,13 @@ function pemscores_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_register_script('pemscores-fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
+    wp_register_script('pemscores-my-fitvids', get_template_directory_uri() . '/js/my-fitvids.js', array('pemscores-fitvids'),'', true);
+    if(! is_admin() ) {
+        wp_enqueue_script('pemscores-fitvids');
+        wp_enqueue_script('pemscores-my-fitvids');
+    }
 }
 add_action( 'wp_enqueue_scripts', 'pemscores_scripts' );
 

@@ -1550,6 +1550,12 @@ button.dropdown-toggle {
 	font-size: 1.2em !important;
 }
 
+.archive-view.learnpress .site .site-content .page-header {
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	width: 100%;
+}
+
 .archive-view.learnpress .site .site-content article.page {
 	background: none;
 }
@@ -1612,7 +1618,7 @@ button.dropdown-toggle {
 	background: #b51c35;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
 	.archive-view.learnpress .site .site-content article.page .learn-press-courses {
 		display: -ms-flexbox;
 		display: flex;

@@ -1,11 +1,11 @@
 .archive-view {
     &.learnpress {
-
-
-        
-
         .site {
             .site-content {
+                .page-header {
+                    flex-shrink: 0;
+                    width: 100%;
+                }
 
                 article.page {
                     background: none;
@@ -68,7 +68,7 @@
                             }
                         }
 
-                        @media screen and (min-width: $query__medium) {
+                        @media screen and (min-width: $query__small) {
                             display: flex;
             				justify-content: space-between;
             				flex-wrap: wrap;

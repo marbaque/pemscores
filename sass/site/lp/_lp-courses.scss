@@ -2,8 +2,33 @@
 //pagina de descripción
 .course {
     .post-content {
-        background: white!important;
-        padding: 2em 2em 3em;
+
+        .course-tabs{
+            ul.course-nav-tabs {
+                margin-bottom: 0;
+                font-family: $font__sans;
+                font-size: 80%;
+                border-color: #f4f4f4;
+
+                li.course-nav {
+                    background: white;
+                    border-radius: 4px 4px 0 0;
+                    margin: 0 .3em;
+                    border-color: white;
+                    opacity: .5;
+
+                    &.active {
+                        @include altura1;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .course-tab-panel {
+            background: white;
+            padding: 2em 2em 3em;
+            font-size: 90%;
+        }
     }
 }
 
@@ -83,9 +108,53 @@
     height: auto!important;
 }
 
+//programa de curso y sadiebar en lecciones
 .course-curriculum
 ul.curriculum-sections
 .section-header
 .section-title {
-    font-size: 1.2em!important;
+    font-weight: 750!important;
+}
+
+.course-curriculum ul.curriculum-sections .section-content .course-item {
+    font-size: .9em!important;
+
+}
+
+.course-curriculum
+ul.curriculum-sections
+.section-header {
+
+}
+
+
+.learn-press-course-results-progress{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: block;
+    padding: 0;
+    margin-right: 0!important;
+    font-family: $font__sans;
+    width: 100%;
+    .items-progress, .course-progress {
+        padding: 0 1em;
+        background: white;
+        padding: 1em;
+    }
+    h4 {
+        font-size: 1em;
+        line-height: 1.2;
+    }
+}
+.course-remaining-time {
+    font-family: $font__sans;
+    font-size: 80%;
+    margin: 1em 0;
+    .lp-label.label-enrolled, .lp-label.label-started {
+        background: hsla(180, 100%, 35%, 1);
+        border-radius: 0;
+        padding: .4em;
+        margin-right: .25em;
+
+    }
 }

@@ -16,7 +16,6 @@
 @media screen and (min-width: $query__medium) {
 	.single.has-sidebar,
 	.page {
-
 		.hentry {
 			display: flex;
 			flex-wrap: wrap;
@@ -50,6 +49,8 @@
 			}
 		}
 	}
+
+	
 }
 
 

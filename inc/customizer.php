@@ -170,7 +170,8 @@ function pemscores_header_style() {
 			.course-item-search button,
 			.course-header-lp .lp-button-back button,
 			.course-header-lp .toggle-content-item,
-			.course-header-lp .course-item-search input[type="text"] {
+			.course-header-lp .course-item-search input[type="text"],
+			.course-title a {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 

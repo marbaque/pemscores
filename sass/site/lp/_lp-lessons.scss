@@ -117,41 +117,13 @@ h3.course-item-title {
                 margin-right: 15px;
                 margin-top: 4px;
                 font-size: 14px;
-                font-family: $font__sans;
                 text-align: center;
             }
         }
     }
 }
 
-.learn-press-course-results-progress{
-    background: #eee;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    display: block;
-    padding: 1em 0;
-    font-family: $font__sans;
-    width: 100%;
-    .items-progress, .course-progress {
-        padding: 0 1em;
-    }
-    h4 {
-        font-size: 1em;
-        line-height: 1.2;
-    }
-}
-.course-remaining-time {
-    font-family: $font__sans;
-    font-size: 80%;
-    margin: 1em 0;
-    .lp-label.label-enrolled, .lp-label.label-started {
-        background: hsla(180, 100%, 35%, 1);
-        border-radius: 0;
-        padding: .4em;
-        margin-right: .25em;
 
-    }
-}
 
 .course-meta,
 .price {
@@ -198,11 +170,18 @@ a.toggle-content-item {
     text-decoration: none;
 }
 
+//Mensajes
+.learn-press-message {
+    font-family: $font__sans;
+    font-size: 80%;
+}
 
-//sidebar
-.course-curriculum {
-    background: $color__skin;
-    .curriculum-sections {
+#popup_container {
+    font-family: $font__sans;
+    font-size: 90%;
+    font-style: italic;
 
+    input[type="button"] {
+        line-height: 15px
     }
 }

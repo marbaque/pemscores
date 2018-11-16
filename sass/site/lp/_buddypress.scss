@@ -1,0 +1,16 @@
+@media screen and (min-width: $query__medium) {
+    .buddypress {
+        .page .post-content {
+            width: $size__ratio-large!important;
+            background: white;
+            padding: 1em;
+        }
+    }
+}
+
+
+.buddypress {
+    nav {
+        font-family: $font__sans;
+    }
+}

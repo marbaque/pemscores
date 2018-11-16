@@ -4,13 +4,23 @@ input,
 select,
 textarea {
 	color: $color__text-main;
-	font-family: $font__serif;
-	@include font-size(.8);
+	@include font-size(.9);
 	line-height: $font__line-height-body;
 
 	@media screen and (min-width: $query__small) {
 		@include font-size(1);
 	}
+}
+
+body {
+	font-family: $font__serif;
+}
+
+button,
+input,
+select,
+textarea {
+	font-family: $font__sans;
 }
 
 @import "headings";

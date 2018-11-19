@@ -165,13 +165,7 @@ function pemscores_header_style() {
 			button.dropdown-toggle,
 			.menu-toggle,
 			.site-footer,
-			.site-footer a,
-			.course-header-lp .course-title a,
-			.course-item-search button,
-			.course-header-lp .lp-button-back button,
-			.course-header-lp .toggle-content-item,
-			.course-header-lp .course-item-search input[type="text"],
-			.course-title a {
+			.site-footer a {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 
@@ -196,8 +190,7 @@ function pemscores_header_style() {
 		<style type="text/css">
 			.site-header,
 			.site-footer,
-			.search-form .search-field:focus,
-			.course-header-lp  {
+			.search-form .search-field:focus {
 				background-color: <?php echo esc_attr( $header_bg_color ); ?>!important;
 			}
 		</style>

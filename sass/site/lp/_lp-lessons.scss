@@ -1,6 +1,6 @@
 //lecciones
 .course-header-lp {
-    background-color: $color__skin!important;
+
 
     a, button {
 
@@ -30,7 +30,7 @@
      .course-item-search  {
 
          z-index: 99;
-         color: hsla(0, 100%, 100%, 0.5);
+         //color: hsla(0, 100%, 100%, 0.5);
 
          input {
              font-size: 80%;
@@ -144,7 +144,6 @@ h3.course-item-title {
 
 form[name="learn-press-form-complete-lesson"] {
     margin-top: 4em;
-    padding: 2em 0 0 40px;
     //background: #eee;
     width: 100%;
     //text-align: center;

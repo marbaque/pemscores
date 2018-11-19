@@ -95,7 +95,7 @@ function pemscores_fonts_url() {
 	 * into your own language.
 	 */
 	$futura = _x( 'on', 'Futura font: on or off', 'pemscores' );
-	$metaSerif = _x( 'on', 'Meta Serif Pro: on or off', 'pemscores' );
+	$expoSerif = _x( 'on', 'Expo Serif Pro: on or off', 'pemscores' );
 
 	$font_families = array();
 
@@ -103,12 +103,12 @@ function pemscores_fonts_url() {
 		$font_families[] = 'futura-pt:400,400i,600,600i';
 	}
 
-	if ( 'off' !== $metaSerif ) {
-		$font_families[] = 'ff-meta-serif-web-pro:450,450i,700,700i';
+	if ( 'off' !== $expoSerif ) {
+		$font_families[] = 'expo-serif-pro:400,400i,700,700i';
 	}
 
 
-	if ( in_array( 'on', array($futura, $metaSerif) ) ) {
+	if ( in_array( 'on', array($futura, $expoSerif) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -272,7 +272,7 @@ add_action( 'widgets_init', 'pemscores_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pemscores_scripts() {
-	// Enqueue Google Fonts: Source Sans Pro and PT Serif
+	// Enqueue Typekit Fonts: Futura and Expo Serif Pro
 	wp_enqueue_style( 'pemscores-fonts', pemscores_fonts_url() );
 
 	wp_enqueue_style( 'pemscores-style', get_stylesheet_uri() );

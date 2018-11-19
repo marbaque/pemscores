@@ -1,7 +1,7 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 20) * 1px;
-	font-size: $sizeValue * 1.25rem;
+	font-size: ($sizeValue * 18) * 1px;
+	font-size: $sizeValue * 1.2rem;
 }
 
 // Center block
@@ -26,4 +26,10 @@
 
 @mixin altura1() {
 	box-shadow: 0px 0px 4px rgba(0,0,0,.2);
+}
+
+@mixin borde-redondeado($radio) {
+	-webkit-border-radius: $radio;
+	-moz-border-radius: $radio;
+	border-radius: $radio;
 }

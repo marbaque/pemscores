@@ -1558,25 +1558,6 @@ button.dropdown-toggle {
 	border-radius: 50%;
 }
 
-.learn-press-course-results-progress {
-	background: #eee;
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-	display: block;
-	padding: 1em 0;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	width: 100%;
-}
-
-.learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
-	padding: 0 1em;
-}
-
-.learn-press-course-results-progress h4 {
-	font-size: 1em;
-	line-height: 1.2;
-}
-
 .course-remaining-time {
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 80%;
@@ -1609,24 +1590,34 @@ button.dropdown-toggle {
 }
 
 .learn-press-course-results-progress {
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
 	display: block;
 	padding: 0;
 	margin-right: 0 !important;
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	width: 100%;
 }
 
 .learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
-	padding: 0 1em;
+	padding: 1em;
 	background: white;
 	padding: 1em;
+	margin: 0 !important;
 }
 
 .learn-press-course-results-progress h4 {
 	font-size: 1em;
 	line-height: 1.2;
+}
+
+@media screen and (min-width: 600px) {
+	.learn-press-course-results-progress {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
+	}
+	.learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
+		float: none !important;
+	}
 }
 
 .course-remaining-time {
@@ -1882,18 +1873,6 @@ a.toggle-content-item {
 
 #popup_container input[type="button"] {
 	line-height: 15px;
-}
-
-@media screen and (min-width: 900px) {
-	.buddypress .page .post-content {
-		width: 60% !important;
-		background: white;
-		padding: 1em;
-	}
-}
-
-.buddypress nav {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 /*--------------------------------------------------------------

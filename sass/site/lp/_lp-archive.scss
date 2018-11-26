@@ -71,11 +71,20 @@
 
                         @media screen and (min-width: $query__small) {
                             display: flex;
-            				justify-content: space-between;
+            				justify-content: flex-start;
             				flex-wrap: wrap;
 
                             .lp_course {
                                 width: 48%;
+
+                            }
+
+                        }
+
+                        @media screen and (min-width: $query__medium) {
+
+                            .lp_course {
+                                width: 30%;
 
                             }
 

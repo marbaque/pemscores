@@ -503,9 +503,10 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 2px solid;
+	width: auto;
+	background: #d9d9d9;
+	border: 0;
 	border-color: black;
-	background: transparent;
 	color: black;
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 18px;
@@ -524,7 +525,7 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	background: white;
+	background: #b51c35;
 	color: black;
 }
 
@@ -1705,13 +1706,19 @@ button.dropdown-toggle {
 	.archive-view.learnpress .site .site-content article.page .learn-press-courses {
 		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-pack: justify;
-		    justify-content: space-between;
+		-ms-flex-pack: start;
+		    justify-content: flex-start;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
 	.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
 		width: 48%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
+		width: 30%;
 	}
 }
 

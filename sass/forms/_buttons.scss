@@ -2,9 +2,11 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 2px solid;
+
+	width: auto;
+    background: #d9d9d9;
+    border: 0;
 	border-color: black;
-	background: transparent;
 	color: black;
 	font-family: $font__sans;
 	@include font-size(1);
@@ -14,7 +16,7 @@ input[type="submit"] {
 	&:hover ,
 	&:active,
 	&:focus {
-		background: white;
+		background: $color__interactive;
 		color: black;
 	}
 }

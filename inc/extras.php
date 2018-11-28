@@ -71,3 +71,11 @@ add_filter('template_include', function( $template ) {
 	}
 	return $template;
 });
+
+
+//Quita las metaboxes de autores y organizaciones en recursos
+function remove_tags_fields() {
+	remove_meta_box( 'tagsdiv-autor_tag' , 'recursos' , 'side' );
+	remove_meta_box( 'tagsdiv-organizacion_tag' , 'recursos' , 'side' );
+}
+add_action( 'admin_menu' , 'remove_tags_fields' );

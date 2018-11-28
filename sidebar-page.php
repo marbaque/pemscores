@@ -7,7 +7,8 @@
  * @package pemscores
  */
 
-if ( ! is_active_sidebar( 'sidebar-2' ) or ! is_page( 'capacitacion' ) ) {
+if ( ! is_active_sidebar( 'sidebar-2' ) || is_post_type_archive( 'lp-course' )  )
+{
 	return;
 }
 ?>

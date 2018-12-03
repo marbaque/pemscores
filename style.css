@@ -1716,12 +1716,6 @@ button.dropdown-toggle {
 	}
 }
 
-@media screen and (min-width: 900px) {
-	.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
-		width: 30%;
-	}
-}
-
 .course-header-lp button {
 	font-size: 80%;
 	border: none;

@@ -1223,8 +1223,8 @@ button.dropdown-toggle {
 	border: none;
 	background: inherit;
 	color: white;
-	line-height: 1.5em;
-	padding: .4em 1em .4em .5em;
+	line-height: 1em;
+	padding: .4em .75em;
 }
 
 .menu-toggle {
@@ -1487,6 +1487,49 @@ button.dropdown-toggle {
 .entry-footer {
 	margin: 1.5em 0;
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.recurso-wrap {
+	width: 100%;
+	max-width: 1440px;
+	height: auto;
+	background-color: tomato;
+}
+
+.recurso-wrap .recurso-media {
+	background-color: cyan;
+}
+
+.recurso-wrap .recurso-media .recurso-image {
+	width: 100%;
+}
+
+.recurso-wrap .recurso-content {
+	padding: 1em 2em 2em;
+	font-size: 90%;
+}
+
+.recurso-wrap .recurso-content h1.entry-title {
+	font-size: 1.5em;
+}
+
+.recurso-wrap .recurso-content .termino {
+	margin: 0 .15em;
+}
+
+@media screen and (min-width: 900px) {
+	.recurso-wrap {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-line-pack: stretch;
+		    align-content: stretch;
+	}
+	.recurso-wrap .recurso-media {
+		width: 40%;
+	}
+	.recurso-wrap .recurso-content {
+		width: 58%;
+	}
 }
 
 /*--------------------------------------------------------------

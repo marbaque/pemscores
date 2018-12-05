@@ -198,3 +198,46 @@
 	margin: 1.5em 0;
 	font-family: $font__sans;
 }
+
+
+//content-recurso
+.recurso-wrap{
+	width: 100%;
+	max-width: $size__max-width;
+	height: auto;
+	background-color: tomato;
+
+	.recurso-media {
+		background-color: cyan;
+
+		.recurso-image {
+			width: 100%
+		}
+
+	}
+	.recurso-content {
+		padding: 1em 2em 2em;
+		font-size: 90%;
+
+		h1.entry-title {
+			font-size: 1.5em;
+		}
+
+		.termino {
+			margin: 0 .15em;
+		}
+
+	}
+
+	@media screen and (min-width: $query__medium) {
+		display: flex;
+		align-content: stretch;
+
+		.recurso-media {
+			width: 40%;
+		}
+		.recurso-content {
+			width: 58%;
+		}
+	}
+}

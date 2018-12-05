@@ -75,7 +75,11 @@ add_filter('template_include', function( $template ) {
 
 //Quita las metaboxes de autores y organizaciones en recursos
 function remove_tags_fields() {
-	remove_meta_box( 'tagsdiv-autor_tag' , 'recursos' , 'side' );
-	remove_meta_box( 'tagsdiv-organizacion_tag' , 'recursos' , 'side' );
+	remove_meta_box( 'tagsdiv-autor_tag' , 'recurso' , 'side' );
+	remove_meta_box( 'tagsdiv-organizacion_tag' , 'recurso' , 'side' );
+	remove_meta_box( 'coberturadiv' , 'recurso' , 'side' );
+	remove_meta_box( 'tagsdiv-tipo_recurso' , 'recurso' , 'side' );
+	remove_meta_box( 'tagsdiv-tipo_medio' , 'recurso' , 'side' );
+	remove_meta_box( 'tagsdiv-interaccion' , 'recurso' , 'side' );
 }
 add_action( 'admin_menu' , 'remove_tags_fields' );

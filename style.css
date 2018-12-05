@@ -1493,20 +1493,31 @@ button.dropdown-toggle {
 	width: 100%;
 	max-width: 1440px;
 	height: auto;
-	background-color: tomato;
-}
-
-.recurso-wrap .recurso-media {
-	background-color: cyan;
+	background-color: white;
+	border: 1px solid #c3c3c3;
+	border-radius: 4px;
+	padding: 0;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
 }
 
 .recurso-wrap .recurso-media .recurso-image {
 	width: 100%;
+	height: auto;
+}
+
+.recurso-wrap .recurso-media .recurso-image img {
+	padding: 0;
+}
+
+.recurso-wrap .recurso-media .recurso-image figcaption {
+	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 90%;
+	padding: 0 .5em;
 }
 
 .recurso-wrap .recurso-content {
-	padding: 1em 2em 2em;
-	font-size: 90%;
+	padding: 2em 1em;
 }
 
 .recurso-wrap .recurso-content h1.entry-title {
@@ -1523,12 +1534,19 @@ button.dropdown-toggle {
 		display: flex;
 		-ms-flex-line-pack: stretch;
 		    align-content: stretch;
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
 	}
 	.recurso-wrap .recurso-media {
-		width: 40%;
+		width: 50%;
+		padding: 1em;
+		background-color: #d1d1d1;
 	}
 	.recurso-wrap .recurso-content {
-		width: 58%;
+		width: 50%;
+		padding: 2em;
 	}
 }
 

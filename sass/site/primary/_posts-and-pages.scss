@@ -205,19 +205,32 @@
 	width: 100%;
 	max-width: $size__max-width;
 	height: auto;
-	background-color: tomato;
+	background-color: white;
+	border: 1px solid #c3c3c3;
+	border-radius: 4px;
+	padding: 0;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+	overflow: hidden;
 
 	.recurso-media {
-		background-color: cyan;
-
 		.recurso-image {
-			width: 100%
+			width: 100%;
+			height: auto;
+
+			img {
+				padding: 0;
+			}
+			figcaption {
+				font-family: $font__sans;
+				font-size: 90%;
+				padding: 0 .5em;
+			}
 		}
 
 	}
 	.recurso-content {
-		padding: 1em 2em 2em;
-		font-size: 90%;
+		padding: 2em 1em;
+		//font-size: 90%;
 
 		h1.entry-title {
 			font-size: 1.5em;
@@ -227,17 +240,26 @@
 			margin: 0 .15em;
 		}
 
+		.recurso_tags {
+
+		}
+
 	}
 
 	@media screen and (min-width: $query__medium) {
 		display: flex;
 		align-content: stretch;
+		justify-content: space-between;
+		flex-wrap: nowrap;
 
 		.recurso-media {
-			width: 40%;
+			width: 50%;
+			padding: 1em;
+			background-color: #d1d1d1;
 		}
 		.recurso-content {
-			width: 58%;
+			width: 50%;
+			padding: 2em;
 		}
 	}
 }

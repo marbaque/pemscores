@@ -19,7 +19,7 @@ global $post, $wp_query, $lp_tax_query, $wp_query;
 /**
  * @since 3.0.0
  */
-do_action( 'learn-press/before-main-content' );
+//do_action( 'learn-press/before-main-content' );
 
 /**
  * @since 3.0.0

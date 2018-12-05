@@ -2202,6 +2202,13 @@ a.toggle-content-item {
 	padding: 0;
 }
 
+@media screen and (min-width: 900px) {
+	.social-menu ul {
+		-ms-flex-pack: start;
+		    justify-content: flex-start;
+	}
+}
+
 .social-menu ul a {
 	display: block;
 	padding: .5em 1em;

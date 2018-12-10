@@ -207,10 +207,8 @@
 	height: auto;
 	background-color: white;
 	border: 1px solid #c3c3c3;
-	border-radius: 4px;
 	padding: 0;
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
-	overflow: hidden;
 
 	.recurso-media {
 		.recurso-image {
@@ -241,7 +239,7 @@
 		}
 
 		.recurso_tags {
-
+			font-family: $font__sans;
 		}
 
 	}

@@ -190,7 +190,9 @@ function pemscores_header_style() {
 		<style type="text/css">
 			.site-header,
 			.site-footer,
-			.search-form .search-field:focus {
+			.search-form .search-field:focus,
+			.search .page-content,
+			.error-404 .page-content {
 				background-color: <?php echo esc_attr( $header_bg_color ); ?>!important;
 			}
 		</style>

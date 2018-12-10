@@ -1,12 +1,78 @@
-.header-image {
-	max-height: 60vh;
-	overflow: hidden;
+//hero-banner
+.hero-banner {
+	position: relative;
+	width: 100vw;
+	height: auto;
+	overflow: auto;
+	background: url(images/gplaypattern_@2X.png) repeat;
 
-	img {
-		display: block;
-		width: 100vw;
+	&.custom-image {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.home-search {
+		width: 100%;
+	    max-width: 620px;
+	    margin: 0px auto;
+		padding: 75px 1em 110px;
+		text-align: center;
+
+
+		.searchandfilter {
+			position: relative;
+			margin-bottom: 30px;
+			ul {
+				width: 100%;
+				padding: 0;
+				margin: 0;
+
+				li:nth-child(1) {
+					width: 100%;
+					display: block;
+				}
+				input[type="text"],{
+					width: 100%;
+					position: relative;
+					margin-bottom: 1em;
+
+					border: 0px;
+					padding: 20px 20px 20px 60px;
+					line-height: 22px;
+					font-size: 17.1px;
+					box-shadow: 0px 9px 14px 0px rgba(0, 0, 0, 0.1);
+					border-radius: 8px;
+					transition-property: all;
+					transition-duration: 120ms;
+					color: #2C2D30;
+
+					&:before {
+						font-family: FontAwesome;
+			            content: "\f002";
+			            height: 40px;
+			            display: inline-block;
+			            position: absolute;
+			            top: 0;
+			            left: 1em;
+			            z-index: 1;
+			            line-height: 2;
+			            font-size: 100%;
+						opacity: 1;
+						color: black;
+					}
+					&:focus {
+					  box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.25);
+					}
+				}
+			}
+
+		}
+
+
 	}
 }
+
 .site-header {
 	position: relative;
 	padding: 1em;
@@ -80,6 +146,10 @@
 		width: 55%;
 	}
 }
+
+
+//hero-banner
+
 
 /*
 Header Menu

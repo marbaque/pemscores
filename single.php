@@ -16,7 +16,7 @@ get_header(); ?>
 		while ( have_posts() ) : the_post();
 
 			if ( is_singular('recurso') ) {
-				get_template_part( 'template-parts/content', 'recurso' );
+				get_template_part( 'template-parts/content', 'single-recurso' );
 			} else {
 				get_template_part( 'template-parts/content', 'single' );
 			}

@@ -8,7 +8,7 @@
  */
 
 ?>
-
+<div class="recurso_tags">
 <!-- metadatos: autoria -->
 <?php
     $personas = get_field('persona');
@@ -28,7 +28,7 @@
         </p>
 
 <?php endif; ?>
-
+</div>
 <!-- descipción -->
 <?php
     $content = get_the_content( sprintf(
@@ -37,12 +37,7 @@
         the_title( '<span class="screen-reader-text">"', '"</span>', false )
     ) );
 
-    mb_strimwidth($content, 0, 400, '...');
-
-    wp_link_pages( array(
-        'before' => '<div class="page-links">' . esc_html__( 'Páginas:', 'pemscores' ),
-        'after'  => '</div>',
-    ) );
+    echo mb_strimwidth($content, 0, 400, '...');
     ?>
 
 <div class="recurso_tags">

@@ -292,7 +292,7 @@
         content: "\f002";
         height: 40px;
         display: inline-block;
-        color: #fff;
+        //color: #fff;
         position: absolute;
         top: 0;
         left: 1em;
@@ -348,22 +348,21 @@
             border: 0 none;
             font-weight: normal;
             font-style: italic;
-            color: #fff;
+            //color: #fff;
         }
         &:-moz-placeholder {
             outline: 0;
             border: 0 none;
             font-weight: normal;
             font-style: italic;
-            color: #fff;
+            //color: #fff;
         }
         &:-ms-input-placeholder {
-            color: $color__skin;
             outline: 0;
             border: 0 none;
             font-weight: normal;
             font-style: italic;
-            color: #ccc;
+            //color: #ccc;
         }
 
 

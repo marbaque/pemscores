@@ -50,12 +50,25 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<?php if ( get_header_image() && is_front_page() ) : ?>
-	<figure class="header-image">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-		</a>
-	</figure><!-- .header-image -->
-	<?php endif; // End header image check. ?>
+	<?php if ( is_front_page() ): ?>
+
+		<?php if ( get_header_image() ) : ?>
+		<div class="hero-banner custom-image" style="background-image: url(<?php header_image(); ?>);" aria-role="banner">
+
+
+		<?php else : ?>
+			<div class="hero-banner" aria-role="banner">
+
+		<?php endif; // End header image check. ?>
+
+		<div class="home-search">
+			<h2><?php echo __( 'Buscar recursos', 'pemscores'); ?></h2>
+			<?php echo do_shortcode( '[searchandfilter fields="search,cobertura,tipo_recurso,tipo_medio" post_types="recurso" search_placeholder="Buscar recursos por cobertura, tipo de recurso o formato."]' ); ?>
+		</div>
+
+		</div><!-- .hero-banner -->
+
+	<?php endif; // End fornt-page check. ?>
+
 
 	<div id="content" class="site-content">

@@ -63,7 +63,7 @@ add_filter('admin_footer_text', 'change_admin_footer');
 // Dar a categorias del curso el mismo template de archivo de cursos page-capacitacion.php
 /* * ********************************************************************* */
 add_filter('template_include', function( $template ) {
-	if (is_tax('course_category')) {
+	if ( is_tax('course_category') ) {
 		$locate = locate_template('page-capacitacion.php', false, false);
 		if (!empty($locate)) {
 			$template = $locate;
@@ -71,7 +71,6 @@ add_filter('template_include', function( $template ) {
 	}
 	return $template;
 });
-
 
 //Quita las metaboxes de autores y organizaciones en recursos
 function remove_tags_fields() {

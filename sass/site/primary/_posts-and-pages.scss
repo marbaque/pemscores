@@ -211,6 +211,9 @@
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
 
 	.recurso-media {
+		padding: 0 0 1em;
+		background-color: #d1d1d1;
+
 		.recurso-image {
 			width: 100%;
 			height: auto;
@@ -237,11 +240,23 @@
 		.termino {
 			margin: 0 .15em;
 		}
+	}
 
-		.recurso_tags {
-			font-family: $font__sans;
+	.recurso_tags {
+		font-family: $font__sans;
+
+		&.recurso-link {
+			background: white;
+			padding: .5em 1em;
+			margin: 1em 0;
+			border-radius: 8px;
+			box-shadow: 1px 2px rgba(0,0,0,.2);
+
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
 		}
-
 	}
 
 	@media screen and (min-width: $query__medium) {
@@ -253,7 +268,6 @@
 		.recurso-media {
 			width: 50%;
 			padding: 1em;
-			background-color: #d1d1d1;
 		}
 		.recurso-content {
 			width: 50%;

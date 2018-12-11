@@ -25,6 +25,10 @@
 				</figcaption>
 			</figure><!-- .featured-image full-bleed -->
 			<?php } ?>
+
+
+				<?php get_template_part( 'template-parts/recurso', 'link' ); ?>
+
 		</div>
 
 		<div class="recurso-content">
@@ -32,9 +36,7 @@
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<div class="recurso-descripcion">
 
-				<?php
-					get_template_part( 'template-parts/recurso', 'meta' );
-				?>
+				<?php get_template_part( 'template-parts/recurso', 'meta' ); ?>
 
 			</div>
 		</div> <!-- recurso-content -->

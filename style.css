@@ -1603,6 +1603,11 @@ button.dropdown-toggle {
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+.recurso-wrap .recurso-media {
+	padding: 0 0 1em;
+	background-color: #d1d1d1;
+}
+
 .recurso-wrap .recurso-media .recurso-image {
 	width: 100%;
 	height: auto;
@@ -1630,8 +1635,21 @@ button.dropdown-toggle {
 	margin: 0 .15em;
 }
 
-.recurso-wrap .recurso-content .recurso_tags {
+.recurso-wrap .recurso_tags {
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.recurso-wrap .recurso_tags.recurso-link {
+	background: white;
+	padding: .5em 1em;
+	margin: 1em 0;
+	border-radius: 8px;
+	box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.recurso-wrap .recurso_tags.recurso-link a {
+	text-decoration: none;
+	color: inherit;
 }
 
 @media screen and (min-width: 900px) {
@@ -1648,7 +1666,6 @@ button.dropdown-toggle {
 	.recurso-wrap .recurso-media {
 		width: 50%;
 		padding: 1em;
-		background-color: #d1d1d1;
 	}
 	.recurso-wrap .recurso-content {
 		width: 50%;

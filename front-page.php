@@ -20,6 +20,8 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 		<div class="paginas-destacadas">
+			<div class="paginas-inner">
+
 			<?php
 
 			$pagina1 = get_field('pagina_1');
@@ -79,6 +81,7 @@ get_header(); ?>
 			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
 			<?php endif; ?>
+			</div>
 		</div><!-- .paginas-destacadas-->
 
 	</main><!-- #main -->

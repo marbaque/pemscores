@@ -280,24 +280,40 @@
 //pagina de inicio
 //paginas-destacadas
 .paginas-destacadas {
+	overflow-x: scroll;
+	max-width: 100%;
+	position: relative;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 
+	.paginas-inner {
+		display: flex;
+		flex-wrap: nowrap;
+		padding: 40px 1em;
+		justify-content: space-between;
+		min-width: $query__medium;
+	}
 
 	.pagina {
 		background: white;
 		padding: 1em;
 		margin-bottom: 24px;
+		width: 30%;
+		flex-shrink: 0;
+
+		h3 {
+			font-size: 1.5em;
+			text-align: center;
+			margin: .5em;
+			a {
+				text-decoration: none;
+			}
+		}
+
 		p {
 			font-size: 80%;
 		}
 	}
-	@media screen and (min-width: $query__medium) {
-		display: flex;
-		flex-wrap: nowrap;
-		padding: 40px 1em;
-		justify-content: space-between;
 
-		.pagina {
-			width: 30%;
-		}
-	}
 }

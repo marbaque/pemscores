@@ -50,7 +50,7 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<?php if ( is_front_page() ): ?>
+	<?php if ( is_front_page() || is_post_type_archive('recurso') ): ?>
 
 		<?php if ( get_header_image() ) : ?>
 		<div class="hero-banner custom-image" style="background-image: url(<?php header_image(); ?>);" aria-role="banner">
@@ -63,7 +63,7 @@
 
 		<div class="home-search">
 			<h2><?php echo __( 'Buscar recursos', 'pemscores'); ?></h2>
-			<?php echo do_shortcode( '[searchandfilter fields="search,cobertura,tipo_recurso,tipo_medio" post_types="recurso" search_placeholder="Buscar recursos por cobertura, tipo de recurso o formato."]' ); ?>
+			<?php echo do_shortcode( '[searchandfilter fields="search,cobertura,tipo_recurso,tipo_medio" search_placeholder="Buscar recursos por cobertura, tipo de recurso o formato." submit_label="Buscar" post_types="recurso"]' ); ?>
 		</div>
 
 		</div><!-- .hero-banner -->

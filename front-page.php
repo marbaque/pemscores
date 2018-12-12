@@ -14,31 +14,75 @@
 
 get_header(); ?>
 
-<?php if ( have_posts() ) : ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-		<?php
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header class="">
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+		<div class="paginas-destacadas">
+			<?php
+
+			$pagina1 = get_field('pagina_1');
+
+			if( $pagina1 ):
+
+				// override $post
+				$post = $pagina1;
+				setup_postdata( $post );
+
+				?>
+			    <div class="pagina">
+			    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			    	<div class="excerpt"><?php the_excerpt(); ?></div>
+			    </div>
+
+			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
 			<?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			<?php
+
+			$pagina2 = get_field('pagina_2');
+
+			if( $pagina2 ):
+
+				// override $post
+				$post = $pagina2;
+				setup_postdata( $post );
+
+				?>
+			    <div class="pagina">
+			    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<div class="excerpt"><?php the_excerpt(); ?></div>
+			    </div>
+
+			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+
+			<?php endif; ?>
+
+			<?php
+
+			$pagina3 = get_field('pagina_3');
+
+			if( $pagina3 ):
+
+				// override $post
+				$post = $pagina3;
+				setup_postdata( $post );
+
+				?>
+			    <div class="pagina">
+			    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<div class="excerpt"><?php the_excerpt(); ?></div>
+			    </div>
+
+			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+
+			<?php endif; ?>
+		</div><!-- .paginas-destacadas-->
+
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
-//get_sidebar();
 get_footer();
-
-
-else :
-
-	get_template_part( 'template-parts/content', 'none' );
-	return;
-
-endif;

@@ -273,6 +273,31 @@
 			width: 50%;
 			padding: 2em;
 		}
-		
+
+	}
+}
+
+//pagina de inicio
+//paginas-destacadas
+.paginas-destacadas {
+
+
+	.pagina {
+		background: white;
+		padding: 1em;
+		margin-bottom: 24px;
+		p {
+			font-size: 80%;
+		}
+	}
+	@media screen and (min-width: $query__medium) {
+		display: flex;
+		flex-wrap: nowrap;
+		padding: 40px 1em;
+		justify-content: space-between;
+
+		.pagina {
+			width: 30%;
+		}
 	}
 }

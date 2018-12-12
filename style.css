@@ -1673,6 +1673,31 @@ button.dropdown-toggle {
 	}
 }
 
+.paginas-destacadas .pagina {
+	background: white;
+	padding: 1em;
+	margin-bottom: 24px;
+}
+
+.paginas-destacadas .pagina p {
+	font-size: 80%;
+}
+
+@media screen and (min-width: 900px) {
+	.paginas-destacadas {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+		padding: 40px 1em;
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
+	}
+	.paginas-destacadas .pagina {
+		width: 30%;
+	}
+}
+
 /*--------------------------------------------------------------
 # LearnPress
 --------------------------------------------------------------*/

@@ -82,3 +82,9 @@ function remove_tags_fields() {
 	remove_meta_box( 'tagsdiv-interaccion' , 'recurso' , 'side' );
 }
 add_action( 'admin_menu' , 'remove_tags_fields' );
+
+//tamaño del excerpt
+function wpse_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpse_excerpt_length', 999 );

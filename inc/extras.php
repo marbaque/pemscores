@@ -100,8 +100,8 @@ add_shortcode( 'snapshot', function ( $atts ) {
 	$atts = shortcode_atts( array(
 		'alt'    => '',
 		'url'    => 'http://www.wordpress.org',
-		'width'  => '400',
-		'height' => '300'
+		'width'  => '600',
+		'height' => '440'
 	), $atts );
 	$params = array(
 		'w' => $atts['width'],

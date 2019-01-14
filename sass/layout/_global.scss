@@ -48,7 +48,14 @@
 				justify-content: flex-end;
 			}
 		}
+		&.profile {
+			.post-content {
+				width: 100%;
+			}
+		}
 	}
+
+
 
 
 }

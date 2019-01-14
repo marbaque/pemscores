@@ -991,6 +991,9 @@ a:hover, a:active {
 		-ms-flex-pack: end;
 		    justify-content: flex-end;
 	}
+	.page.profile .post-content {
+		width: 100%;
+	}
 }
 
 @media screen and (min-width: 900px) {
@@ -1748,6 +1751,27 @@ button.dropdown-toggle {
 
 .paginas-destacadas .pagina p {
 	font-size: 80%;
+}
+
+.profile .lp-user-profile {
+	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.profile .lp-profile-avatar {
+	position: relative;
+}
+
+.profile .lp-profile-avatar img {
+	border-radius: 50% !important;
+}
+
+.profile .lp-profile-avatar .profile-name {
+	position: absolute;
+	text-align: left;
+	left: 120%;
+	top: 20%;
+	width: 100%;
+	min-width: 200px;
 }
 
 /*--------------------------------------------------------------

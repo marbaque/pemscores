@@ -9,18 +9,18 @@
 
 ?>
 
+<?php
+	$fuente = get_field('fuente');
+	$url = get_field('url_externo');
+	$file = get_field('subir_arch');
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php
-	if ( has_post_thumbnail() ) { ?>
-	<figure class="recurso-index-img">
-		<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
-			<?php
-			the_post_thumbnail('recurso-thumb');
-			?>
-		</a>
-	</figure><!-- .featured-image full-bleed -->
-	<?php } ?>
+	<?php if( $fuente == 'ext' ): ?>
+		<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="200" height="200"]'); ?>
+	<?php elseif( $fuente == 'int' ): ?>
+		<?php echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200" height="200"]'); ?>
+	<?php endif; ?>
 
 	<div class="recurso__content">
 		<header class="entry-header">

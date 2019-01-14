@@ -63,7 +63,7 @@
 
 		<div class="home-search">
 			<h2><?php echo __( 'Buscar recursos', 'pemscores'); ?></h2>
-			<?php echo do_shortcode( '[searchandfilter fields="search,cobertura,tipo_recurso,tipo_medio" search_placeholder="Buscar recursos por cobertura, tipo de recurso o formato." submit_label="Buscar" post_types="recurso"]' ); ?>
+			<?php echo do_shortcode( '[searchandfilter post_types="recurso" fields="search,cobertura,tipo_recurso,tipo_medio" search_placeholder="Buscar recursos por cobertura, tipo de recurso o formato." submit_label="Buscar" headings=",Cobertura,Tipo de recurso,Formato"]' ); ?>
 		</div>
 
 		</div><!-- .hero-banner -->

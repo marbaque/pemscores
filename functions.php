@@ -238,7 +238,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'pemscores_post_thumbnail_size
  */
 function pemscores_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Barra lateral', 'pemscores' ),
+		'name'          => esc_html__( 'Sidebar de blog', 'pemscores' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Agregue widgets al blog.', 'pemscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
@@ -248,7 +248,7 @@ function pemscores_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Barra lateral de páginas', 'pemscores' ),
+		'name'          => esc_html__( 'Sidebar de páginas', 'pemscores' ),
 		'id'            => 'sidebar-2',
 		'description'   => esc_html__( 'Agregue widgets a las páginas.', 'pemscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',

@@ -8,24 +8,23 @@
  */
 
 ?>
+<?php
+$fuente = get_field('fuente');
+$url = get_field('url_externo');
+$file = get_field('subir_arch');
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="recurso-wrap">
 
 		<div class="recurso-media">
-			<?php
-			if ( has_post_thumbnail() ) { ?>
-			<figure class="recurso-image">
-				<?php
-				the_post_thumbnail('pemscores-index-img');
-				?>
-				<figcaption>
-					<?php echo get_the_post_thumbnail_caption(); ?>
-				</figcaption>
-			</figure><!-- .featured-image full-bleed -->
-			<?php } ?>
 
+			<?php if( $fuente == 'ext' ): ?>
+				<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="600" height="440"]'); ?>
+			<?php elseif( $fuente == 'int' ): ?>
+				<?php echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="600" height="440"]'); ?>
+			<?php endif; ?>
 
 				<?php get_template_part( 'template-parts/recurso', 'link' ); ?>
 

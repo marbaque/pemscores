@@ -21,9 +21,9 @@ $file = get_field('subir_arch');
 		<div class="recurso-media">
 
 			<?php if( $fuente == 'ext' ): ?>
-				<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="600" height="440"]'); ?>
+				<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="440"]'); ?>
 			<?php elseif( $fuente == 'int' ): ?>
-				<?php echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="600" height="440"]'); ?>
+				<?php echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]'); ?>
 			<?php endif; ?>
 
 				<?php get_template_part( 'template-parts/recurso', 'link' ); ?>

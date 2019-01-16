@@ -71,7 +71,7 @@
 
                         @media screen and (min-width: $query__small) {
                             display: flex;
-            				justify-content: flex-start;
+            				justify-content: space-around;
             				flex-wrap: wrap;
 
                             .lp_course {
@@ -79,6 +79,12 @@
 
                             }
 
+                        }
+                        @media screen and (min-width: $query__medium) {
+                            .lp_course {
+                                width: 30%;
+
+                            }
                         }
 
                         // @media screen and (min-width: $query__medium) {

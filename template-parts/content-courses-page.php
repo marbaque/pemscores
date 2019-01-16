@@ -23,7 +23,6 @@
 	</header><!-- .entry-header -->
 
 
-
 	<div class="entry-content post-content">
 		<?php
 			the_content();
@@ -36,7 +35,13 @@
 	</div><!-- .entry-content .post-content -->
 
 	<?php
-	//get_sidebar( 'page' );
+	get_sidebar( 'page' );
 	?>
 
+	<?php
+	// If comments are open or we have at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) :
+		comments_template();
+	endif;
+	?>
 </article><!-- #post-## -->

@@ -63,7 +63,20 @@
 
 		<div class="home-search">
 			<h2><?php echo __( 'Buscar recursos', 'pemscores'); ?></h2>
-			<?php echo do_shortcode( '[searchandfilter post_types="recurso" fields="search,cobertura,tipo_recurso,tipo_medio" search_placeholder="Buscar recursos por cobertura, tipo de recurso o formato." submit_label="Buscar" headings=",Cobertura,Tipo de recurso,Formato"]' ); ?>
+
+			<form role="search" method="get" id="searchform" class="search-form searchandfilter" action="<?php echo get_site_url(); ?>">
+				<div>
+
+					<!-- <label for="s">Search for:</label> -->
+					<input type="text" class="search-field" value="" name="s" id="s" />
+					<!-- <input type="hidden" value="1" name="sentence" /> -->
+					<input type="hidden" value="recurso" name="post_type" />
+					<!-- <input type="hidden" value="product_cat" name="magazines,books" /> -->
+					<input type="hidden" id="searchsubmit" value="Search" />
+
+				</div>
+			</form>
+
 		</div>
 
 		</div><!-- .hero-banner -->

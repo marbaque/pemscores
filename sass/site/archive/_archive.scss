@@ -1,4 +1,4 @@
-.archive-view {
+.archive-view:not(.learnpress) {
 	background-color: #eee;
 
 	.post,
@@ -38,6 +38,7 @@
 		}
 	}
 }
+
 
 .page-header {
 	font-family: $font__sans;

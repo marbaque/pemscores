@@ -34,7 +34,6 @@
 
          input {
              font-size: 80%;
-             font-family: $font__sans;
              &:focus {
 
              }
@@ -127,7 +126,7 @@ h3.course-item-title {
 
 .course-meta,
 .price {
-    font-family: $font__sans;
+    font-family: $font__system;
 }
 
 .learnpress-page .lp-button {
@@ -135,8 +134,7 @@ h3.course-item-title {
     height: auto!important;
 }
 .curriculum-sections {
-    font-family: $font__sans;
-
+    font-family: $font__system;
     a {
         text-decoration: none;
     }
@@ -153,7 +151,6 @@ form[name="learn-press-form-complete-lesson"] {
 
     p {
         color: #777;
-        font-family: $font__sans;
     }
     button {
         margin: 0;
@@ -171,12 +168,12 @@ a.toggle-content-item {
 
 //Mensajes
 .learn-press-message {
-    font-family: $font__sans;
+    font-family: $font__system;
     font-size: 80%;
 }
 
 #popup_container {
-    font-family: $font__sans;
+    font-family: $font__system;
     font-size: 90%;
     font-style: italic;
 

@@ -42,6 +42,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/* Define the "system" font family */
+@font-face {
+	font-family: system;
+	font-style: normal;
+	font-weight: 300;
+	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -508,7 +516,7 @@ input[type="submit"] {
 	border: 2px solid black;
 	border-color: black;
 	color: black;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "system";
 	font-size: 18px;
 	font-size: 1.2rem;
 	line-height: 1;
@@ -549,6 +557,7 @@ textarea {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
+	font-family: "system";
 }
 
 input[type="text"]:focus,
@@ -572,6 +581,7 @@ textarea:focus {
 
 select {
 	border: 1px solid #ccc;
+	font-family: "system";
 }
 
 textarea {
@@ -2040,7 +2050,6 @@ button.dropdown-toggle {
 
 .course-header-lp .course-item-search input {
 	font-size: 80%;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .course-header-lp .course-title {
@@ -2118,7 +2127,7 @@ h3.course-item-title {
 
 .course-meta,
 .price {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "system";
 }
 
 .learnpress-page .lp-button {
@@ -2127,7 +2136,7 @@ h3.course-item-title {
 }
 
 .curriculum-sections {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "system";
 }
 
 .curriculum-sections a {
@@ -2144,7 +2153,6 @@ form[name="learn-press-form-complete-lesson"] {
 
 form[name="learn-press-form-complete-lesson"] p {
 	color: #777;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 form[name="learn-press-form-complete-lesson"] button {
@@ -2156,12 +2164,12 @@ a.toggle-content-item {
 }
 
 .learn-press-message {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "system";
 	font-size: 80%;
 }
 
 #popup_container {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "system";
 	font-size: 90%;
 	font-style: italic;
 }

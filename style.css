@@ -974,6 +974,7 @@ a:hover, a:active {
 	.page .hentry .entry-header,
 	.learnpress-page .hentry .entry-header {
 		width: 100%;
+		max-width: 1440px;
 		-ms-flex: 1 0 100%;
 		    flex: 1 0 100%;
 	}

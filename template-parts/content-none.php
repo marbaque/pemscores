@@ -33,17 +33,16 @@
 			<?php elseif ( is_search() ) : ?>
 
 				<p><?php esc_html_e( 'Oooops, no se encontró nada con esos términos de búsqueda. Por favor, inténtelo de nuevo con otras palabras clave.', 'pemscores' ); ?></p>
-				<?php get_search_form(); ?>
+
 
 			<?php elseif ( is_404() ) : ?>
 
 				<p><?php esc_html_e( '¿Se perdió? Para localizar lo que busca, revise los items siguientes o intente una nueva búsqueda:', 'pemscores' ); ?></p>
-				<?php get_search_form(); ?>
+
 
 			<?php else : ?>
 
 				<p><?php esc_html_e( 'Parece que no encontramos que anda buscando. Inténtelo con una búsqueda.', 'pemscores' ); ?></p>
-				<?php get_search_form(); ?>
 
 			<?php endif; ?>
 		</div><!-- .page-content -->
@@ -51,11 +50,12 @@
 		<?php
 		if ( is_404() || is_search() ) {
 		?>
-			<h2 class="page-title secondary-title"><?php esc_html_e( 'Entradas más recientes:', 'pemscores' ); ?></h2>
+			<h2 class="page-title secondary-title"><?php esc_html_e( 'Recursos recientes:', 'pemscores' ); ?></h2>
 			<?php
 			// Get the 6 latest posts
 			$args = array(
-				'posts_per_page' => 6
+				'posts_per_page' => 6,
+				'post_type'	=> array('recurso', 'lp_course'),
 			);
 			$latest_posts_query = new WP_Query( $args );
 			// The Loop
@@ -63,7 +63,11 @@
 					while ( $latest_posts_query->have_posts() ) {
 						$latest_posts_query->the_post();
 						// Get the standard index page content
-						get_template_part( 'template-parts/content', get_post_format() );
+						if ( get_post_type() =='recurso' ) {
+			 				get_template_part( 'template-parts/content', 'recurso' );
+			 			} else {
+			 				get_template_part( 'template-parts/content', get_post_format() );
+			 			}
 					}
 			}
 			/* Restore original Post Data */

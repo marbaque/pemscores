@@ -50,7 +50,7 @@
 		<?php
 		if ( is_404() || is_search() ) {
 		?>
-			<h2 class="page-title secondary-title"><?php esc_html_e( 'Recursos recientes:', 'pemscores' ); ?></h2>
+			<h2 class="page-title secondary-title"><?php esc_html_e( 'Otros recursos:', 'pemscores' ); ?></h2>
 			<?php
 			// Get the 6 latest posts
 			$args = array(

@@ -55,16 +55,11 @@
                                 button {
                                     @extend .continue-reading;
                                     width: auto;
-                                    background: hsl(0, 0%, 85%);
+                                    //background: hsl(0, 0%, 85%);
                                     border: 0;
                                     font-size: 90%;
                                     padding: .5em 1em;
 
-                                    &:focus,
-                            		&:hover {
-                            			color: white;
-                            			background: $color__interactive;
-                            		}
                                 }
                             }
                         }

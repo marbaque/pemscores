@@ -193,7 +193,7 @@ function pemscores_header_style() {
 			.search-form .search-field:focus,
 			.search .page-content,
 			.error-404 .page-content {
-				background-color: <?php echo esc_attr( $header_bg_color ); ?>!important;
+				background-color: <?php echo esc_attr( $header_bg_color ); ?>;
 			}
 		</style>
 	<?php
@@ -261,7 +261,9 @@ function pemscores_header_style() {
 			.reply a:hover,
 			.reply a:focus,
 			.comment-form .form-submit input:hover,
-			.comment-form .form-submit input:focus {
+			.comment-form .form-submit input:focus,
+			.lp_course .lp-course-buttons button:hover,
+			.lp_course .lp-course-buttons button:focus {
 				background-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 

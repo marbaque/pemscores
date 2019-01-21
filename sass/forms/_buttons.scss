@@ -16,7 +16,8 @@ input[type="submit"] {
 	&:hover ,
 	&:active,
 	&:focus {
-		background: $color__interactive;
+		//background: $color__interactive;
+		opacity: .8;
 		color: black;
 	}
 }

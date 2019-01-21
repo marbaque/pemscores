@@ -15,7 +15,8 @@
 /* Single posts */
 @media screen and (min-width: $query__medium) {
 	.single.has-sidebar,
-	.page {
+	.page,
+	.learnpress-page {
 		.hentry {
 			display: flex;
 			flex-wrap: wrap;
@@ -37,7 +38,8 @@
 
 	}
 
-	.page {
+	.page,
+	.learnpress-page {
 		&.has-page-sidebar {
 			.hentry {
 				flex-direction: row-reverse;

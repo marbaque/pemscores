@@ -533,7 +533,7 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	background: #b51c35;
+	opacity: .8;
 	color: black;
 }
 
@@ -971,7 +971,8 @@ a:hover, a:active {
 /* Single posts */
 @media screen and (min-width: 900px) {
 	.single.has-sidebar .hentry,
-	.page .hentry {
+	.page .hentry,
+	.learnpress-page .hentry {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-wrap: wrap;
@@ -980,28 +981,35 @@ a:hover, a:active {
 		    justify-content: space-between;
 	}
 	.single.has-sidebar .hentry .entry-header,
-	.page .hentry .entry-header {
+	.page .hentry .entry-header,
+	.learnpress-page .hentry .entry-header {
 		width: 100%;
+		max-width: 1440px;
 		-ms-flex: 1 0 100%;
 		    flex: 1 0 100%;
 	}
 	.single.has-sidebar .hentry .post-content,
-	.page .hentry .post-content {
+	.page .hentry .post-content,
+	.learnpress-page .hentry .post-content {
 		width: 60%;
 	}
 	.single.has-sidebar .hentry .widget-area,
-	.page .hentry .widget-area {
+	.page .hentry .widget-area,
+	.learnpress-page .hentry .widget-area {
 		width: 30%;
 	}
-	.page.has-page-sidebar .hentry {
+	.page.has-page-sidebar .hentry,
+	.learnpress-page.has-page-sidebar .hentry {
 		-ms-flex-direction: row-reverse;
 		    flex-direction: row-reverse;
 	}
-	.page:not(.has-page-sidebar) .hentry {
+	.page:not(.has-page-sidebar) .hentry,
+	.learnpress-page:not(.has-page-sidebar) .hentry {
 		-ms-flex-pack: end;
 		    justify-content: flex-end;
 	}
-	.page.profile .post-content {
+	.page.profile .post-content,
+	.learnpress-page.profile .post-content {
 		width: 100%;
 	}
 }
@@ -1192,7 +1200,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .hero-banner {
 	position: relative;
-	max-width: 100vw;
+	width: 100vw;
 	height: auto;
 	overflow: auto;
 	background: url(images/gplaypattern_@2X.png) repeat;
@@ -1611,7 +1619,6 @@ button.dropdown-toggle {
 	.full-bleed {
 		margin-right: calc( ((-100vw + 1440px)/2) - 2em);
 		margin-left: calc( ((-100vw + 1440px)/2) - 2em);
-		max-width: 100vw;
 	}
 }
 
@@ -1989,15 +1996,9 @@ button.dropdown-toggle {
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button {
 	width: auto;
-	background: #d9d9d9;
 	border: 0;
 	font-size: 90%;
 	padding: .5em 1em;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:focus, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:hover {
-	color: white;
-	background: #b51c35;
 }
 
 @media screen and (min-width: 600px) {
@@ -2011,12 +2012,6 @@ button.dropdown-toggle {
 	}
 	.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
 		width: 48%;
-	}
-}
-
-@media screen and (min-width: 900px) {
-	.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
-		width: 30%;
 	}
 }
 

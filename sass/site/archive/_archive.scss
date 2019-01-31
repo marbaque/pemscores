@@ -110,7 +110,7 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	font-family: $font__sans;
+	//font-family: $font__sans;
 
 	a {
 		display: block;
@@ -149,7 +149,7 @@
 				margin-bottom: 0.5em;
 			}
 			.recurso-content {
-				font-family: $font__sans;
+				font-family: $font__system;
 				font-size: 0.9em;
 				p {
 					margin: 0;

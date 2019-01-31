@@ -273,7 +273,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-size: 16.2px;
+	font-size: 14.4px;
 	font-size: 1.08rem;
 	line-height: 1.66;
 }
@@ -284,7 +284,7 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 18px;
+		font-size: 16px;
 		font-size: 1.2rem;
 	}
 }
@@ -368,7 +368,7 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 16.875px;
+	font-size: 15px;
 	font-size: 1.125rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -379,7 +379,7 @@ pre {
 
 code, kbd, tt, var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 16.875px;
+	font-size: 15px;
 	font-size: 1.125rem;
 }
 
@@ -517,7 +517,7 @@ input[type="submit"] {
 	border-color: black;
 	color: black;
 	font-family: "system";
-	font-size: 18px;
+	font-size: 16px;
 	font-size: 1.2rem;
 	line-height: 1;
 	padding: .5em 1em;
@@ -883,7 +883,7 @@ a:hover, a:active {
 	clip: auto !important;
 	color: #000;
 	display: block;
-	font-size: 15.75px;
+	font-size: 14px;
 	font-size: 1.05rem;
 	font-weight: bold;
 	height: auto;
@@ -1008,10 +1008,6 @@ a:hover, a:active {
 		-ms-flex-pack: end;
 		    justify-content: flex-end;
 	}
-	.page.profile .post-content,
-	.learnpress-page.profile .post-content {
-		width: 100%;
-	}
 }
 
 @media screen and (min-width: 900px) {
@@ -1134,7 +1130,6 @@ a:hover, a:active {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .continue-reading a, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button a {
@@ -1170,7 +1165,7 @@ a:hover, a:active {
 }
 
 .archive-view .recurso .recurso__content .recurso-content {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "system";
 	font-size: 0.9em;
 }
 
@@ -1522,6 +1517,11 @@ button.dropdown-toggle {
 .entry-footer a:hover {
 	color: black;
 	border-bottom: 3px solid #b51c35;
+}
+
+.migajas {
+	font-family: "system";
+	font-size: .8rem;
 }
 
 .byline::after {
@@ -1950,7 +1950,7 @@ button.dropdown-toggle {
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-breadcrumb {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "system";
 	font-size: 80%;
 	color: #eee !important;
 }
@@ -1960,7 +1960,7 @@ button.dropdown-toggle {
 	background: white;
 	padding: 1em 1em 2em;
 	margin-bottom: 1em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "system";
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-permalink {
@@ -2723,7 +2723,7 @@ a.toggle-content-item {
 
 /* Text widget */
 .textwidget {
-	font-size: 90%;
+	font-size: .9rem;
 	font-family: "expo-serif-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
@@ -2731,7 +2731,9 @@ a.toggle-content-item {
 .footer-widgets {
 	margin: 2em 0 0;
 	padding: 1em 0;
-	background-color: #1a1a1a;
+	background-color: #333333;
+	width: 100% !important;
+	font-size: 1rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -2772,8 +2774,8 @@ a.toggle-content-item {
 		display: flex;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
-		-ms-flex-pack: distribute;
-		    justify-content: space-around;
+		-ms-flex-pack: start;
+		    justify-content: flex-start;
 		/* If only one widget is displayed, make it full width. */
 		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
 		/* If 4 or more widgets are displayed, show three across when available. */

@@ -19,6 +19,14 @@
 	</figure><!-- .featured-image full-bleed -->
 	<?php } ?>
 
+	<div class="migajas">
+		<?php
+			if ( function_exists('yoast_breadcrumb') ) {
+			  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+			}
+		?>
+	</div>
+
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->

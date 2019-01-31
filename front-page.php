@@ -33,9 +33,10 @@ get_header(); ?>
 				setup_postdata( $post );
 
 				?>
-			    <div class="pagina">
-			    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			    	<div class="excerpt"><?php the_excerpt(); ?></div>
+				<div class="pagina">
+			    	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+					<div class="excerpt"><?php the_excerpt(); ?></div>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más‣', 'pemscores'); ?></a>
 			    </div>
 
 			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
@@ -53,9 +54,10 @@ get_header(); ?>
 				setup_postdata( $post );
 
 				?>
-			    <div class="pagina">
-			    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<div class="pagina">
+			    	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 					<div class="excerpt"><?php the_excerpt(); ?></div>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más‣', 'pemscores'); ?></a>
 			    </div>
 
 			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
@@ -74,8 +76,9 @@ get_header(); ?>
 
 				?>
 			    <div class="pagina">
-			    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			    	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 					<div class="excerpt"><?php the_excerpt(); ?></div>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más‣', 'pemscores'); ?></a>
 			    </div>
 
 			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>

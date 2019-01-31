@@ -23,7 +23,7 @@
 
     <?php elseif( $autoria == 'Organización' ): ?>
 
-        <p><strong><?php echo __('Organización:', 'pemscores'); ?></strong>
+        <p><strong><?php echo __('Hecho por:', 'pemscores'); ?></strong>
             <?php echo get_the_term_list( $post->ID, 'organizacion_tag', ' ', ', ', '' ); ?>
         </p>
 
@@ -43,9 +43,7 @@
 <div class="recurso_tags">
 <!-- coberturas -->
 <?php
- $cobertura = get_field('cobertura_field');
-
-    if( $cobertura ): ?>
+ $cobertura = get_field('cobertura_field'); ?>
         <p><strong><?php echo __('Cobertura:', 'pemscores'); ?></strong>
         <?php echo get_the_term_list(
             $post->ID,
@@ -56,50 +54,45 @@
         ); ?>
     </p>
 
-<?php endif; ?>
-
-
 <!-- tipos de recurso -->
-<?php
-    $tipos_recurso = get_field('tipo_recurso_field');
 
-    if( $tipos_recurso ): ?>
 
-    <p><strong><?php echo __('Tipo de recurso:', 'pemscores'); ?></strong>
+<p><strong><?php echo __('Tipo de recurso:', 'pemscores'); ?></strong>
 
+    <?php echo get_the_term_list(
+        $post->ID,
+        'tipo_recurso',
+        ' ',
+        ', ',
+        ''
+    ); ?>
+</p>
+
+
+<!-- Formato -->
+<p><strong>Formato:</strong>
+
+    <?php echo get_the_term_list(
+        $post->ID,
+        'tipo_medio',
+        ' ',
+        ', ',
+        ''
+    ); ?>
+</p>
+
+
+<!-- Interacciones -->
+
+	<p><strong>Tipo de interacción:</strong>
         <?php echo get_the_term_list(
             $post->ID,
-            'tipo_recurso',
+            'interaccion',
             ' ',
             ', ',
             ''
         ); ?>
     </p>
-
-<?php endif; ?>
-
-
-<!-- Formato -->
-<?php
-
-    $medio = get_field('medio_field');
-
-    if( $medio ): ?>
-
-    	<p><strong>Formato:</strong> <a href="<?php echo get_term_link( $medio ); ?>"><?php echo $medio->name; ?></a></p>
-
-<?php endif; ?>
-
-<!-- Interacciones -->
-<?php
-    $interaccion = get_field('interaccion_field');
-
-    if( $interaccion ): ?>
-
-    	<p><strong>Tipo de interacción:</strong> <a href="<?php echo get_term_link( $interaccion ); ?>"><?php echo $interaccion->name; ?></a></p>
-
-
-<?php endif; ?>
 
 
 <!-- Metadatos fecha 1 -->

@@ -58,7 +58,7 @@ function cptui_register_my_cpts() {
 		"query_var" => true,
 		"menu_position" => 4,
 		"menu_icon" => "dashicons-paperclip",
-		"supports" => array( "title", "editor" ),
+		"supports" => array( "title", "editor", "excerpt" ),
 		"taxonomies" => array( "post_tag" ),
 	);
 

@@ -42,57 +42,23 @@
 
 <div class="recurso_tags">
 <!-- coberturas -->
-<?php
- $cobertura = get_field('cobertura_field'); ?>
-        <p><strong><?php echo __('Cobertura:', 'pemscores'); ?></strong>
-        <?php echo get_the_term_list(
-            $post->ID,
-            'cobertura',
-            ' ',
-            ', ',
-            ''
-        ); ?>
-    </p>
+    <?php echo get_the_term_list(
+            $post->ID, 'cobertura', __('<p><strong>Cobertura:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
 
 <!-- tipos de recurso -->
-
-
-<p><strong><?php echo __('Tipo de recurso:', 'pemscores'); ?></strong>
-
     <?php echo get_the_term_list(
-        $post->ID,
-        'tipo_recurso',
-        ' ',
-        ', ',
-        ''
-    ); ?>
-</p>
-
+        $post->ID, 'tipo_recurso', __('<p><strong>Tipo de recurso:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
 
 <!-- Formato -->
-<p><strong>Formato:</strong>
-
     <?php echo get_the_term_list(
-        $post->ID,
-        'tipo_medio',
-        ' ',
-        ', ',
-        ''
-    ); ?>
-</p>
+        $post->ID, 'tipo_medio', __('<p><strong>Formato:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
+
 
 
 <!-- Interacciones -->
+    <?php echo get_the_term_list(
+        $post->ID, 'interaccion', __('<p><strong>Interacción:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
 
-	<p><strong>Tipo de interacción:</strong>
-        <?php echo get_the_term_list(
-            $post->ID,
-            'interaccion',
-            ' ',
-            ', ',
-            ''
-        ); ?>
-    </p>
 
 
 <!-- Metadatos fecha 1 -->

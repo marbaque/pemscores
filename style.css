@@ -1130,6 +1130,8 @@ a:hover, a:active {
 	position: absolute;
 	right: 0;
 	bottom: 0;
+	font-family: "system";
+	font-size: .9rem;
 }
 
 .continue-reading a, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button a {
@@ -1147,8 +1149,9 @@ a:hover, a:active {
 
 .archive-view .recurso figure.recurso-index-img {
 	width: 100%;
-	height: auto;
+	height: 200px;
 	overflow: hidden;
+	background: #002254;
 }
 
 .archive-view .recurso figure.recurso-index-img img {
@@ -1164,12 +1167,12 @@ a:hover, a:active {
 	margin-bottom: 0.5em;
 }
 
-.archive-view .recurso .recurso__content .recurso-content {
+.archive-view .recurso .recurso__content .recurso-cats {
 	font-family: "system";
-	font-size: 0.9em;
+	font-size: 0.9rem;
 }
 
-.archive-view .recurso .recurso__content .recurso-content p {
+.archive-view .recurso .recurso__content .recurso-cats p {
 	margin: 0;
 }
 
@@ -1182,6 +1185,7 @@ a:hover, a:active {
 	}
 	.archive-view .recurso figure.recurso-index-img {
 		width: 30%;
+		height: auto;
 	}
 	.archive-view .recurso .recurso__content {
 		width: 60%;

@@ -110,7 +110,8 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	//font-family: $font__sans;
+	font-family: $font__system;
+	font-size: .9rem;
 
 	a {
 		display: block;
@@ -135,8 +136,9 @@
 
 		figure.recurso-index-img {
 			width: 100%;
-			height: auto;
+			height: 200px;
 			overflow: hidden;
+			background: $color__skin;
 			img {
 				width: 100%;
 			}
@@ -148,14 +150,15 @@
 				font-size: 1.25em;
 				margin-bottom: 0.5em;
 			}
-			.recurso-content {
+			.recurso-cats {
 				font-family: $font__system;
-				font-size: 0.9em;
+				font-size: 0.9rem;
 				p {
 					margin: 0;
 				}
 			}
 		}
+
 
 		@media screen and (min-width: $query__small) {
 			display: flex;
@@ -163,6 +166,7 @@
 
 			figure.recurso-index-img {
 				width: $size__ratio-small;
+				height: auto;
 			}
 
 			.recurso__content {

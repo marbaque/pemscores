@@ -59,7 +59,7 @@
 	.page-content {
 		margin-bottom: 2em;
 		padding: 1em 2em;
-		font-family: $font__sans;
+		font-family: $font__system;
 		color: white;
 		background: $color__interactive;
 	}
@@ -175,4 +175,26 @@
 			}
 		}
 	}
+}
+
+//Beautiful taxonomy filter  - plugin
+.beautiful-taxonomy-filters,
+.beautiful-taxonomy-filters-active-filter {
+	margin: 0 0 2em!important;
+	font-family: $font__system;
+	font-size: .9rem;
+
+}
+
+.beautiful-taxonomy-filters {
+	.filter-count-many {
+		margin-bottom: .5em;
+	}
+	button {
+		background-color: $color__interactive;
+		&:hover {
+			color: white;
+		}
+	}
+
 }

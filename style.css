@@ -1085,7 +1085,7 @@ a:hover, a:active {
 .error-404 .page-content {
 	margin-bottom: 2em;
 	padding: 1em 2em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "system";
 	color: white;
 	background: #b51c35;
 }
@@ -1192,6 +1192,25 @@ a:hover, a:active {
 		-ms-flex-positive: 2;
 		    flex-grow: 2;
 	}
+}
+
+.beautiful-taxonomy-filters,
+.beautiful-taxonomy-filters-active-filter {
+	margin: 0 0 2em !important;
+	font-family: "system";
+	font-size: .9rem;
+}
+
+.beautiful-taxonomy-filters .filter-count-many {
+	margin-bottom: .5em;
+}
+
+.beautiful-taxonomy-filters button {
+	background-color: #b51c35;
+}
+
+.beautiful-taxonomy-filters button:hover {
+	color: white;
 }
 
 /*--------------------------------------------------------------

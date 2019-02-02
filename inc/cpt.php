@@ -54,7 +54,7 @@ function cptui_register_my_cpts() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"rewrite" => array( "slug" => "recurso", "with_front" => true ),
+		"rewrite" => array( "slug" => "recursos", "with_front" => true ),
 		"query_var" => true,
 		"menu_position" => 4,
 		"menu_icon" => "dashicons-paperclip",

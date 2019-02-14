@@ -1,0 +1,97 @@
+{
+    "key": "group_5bfefedcae817",
+    "title": "Recurso",
+    "fields": [
+        {
+            "key": "field_5bfeff0939a76",
+            "label": "Fuente",
+            "name": "fuente",
+            "type": "button_group",
+            "instructions": "Seleccione Enlace externo si el recurso se encuentra en otro sitio web y tiene la URL, o Subir archivo, si tiene el recurso en su computadora o en la biblioteca de medios. Para archivos muy pesados se recomienda utilizar un servicio de almacenamiento externo como Dropbox o OneDrive.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "ext": "Enlace externo",
+                "int": "Subir archivo"
+            },
+            "allow_null": 0,
+            "default_value": "ext",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5bff001f39a77",
+            "label": "Enlace externo",
+            "name": "url_externo",
+            "type": "url",
+            "instructions": "Ingrese el URL en este espacio.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bfeff0939a76",
+                        "operator": "==",
+                        "value": "ext"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "www.ejemplo.com"
+        },
+        {
+            "key": "field_5bff007839a78",
+            "label": "Subir archivo",
+            "name": "subir_arch",
+            "type": "file",
+            "instructions": "Cargue un archivo de su computadora o seleccione uno de la biblioteca de medios.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bfeff0939a76",
+                        "operator": "==",
+                        "value": "int"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "uploadedTo",
+            "min_size": "",
+            "max_size": 10,
+            "mime_types": "pdf,doc,jpeg,pptx,jpg,ppt,png,git,mp4,ogg,webm,zip"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "recurso"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1550184445
+}

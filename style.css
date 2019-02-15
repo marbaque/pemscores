@@ -1545,6 +1545,8 @@ button.dropdown-toggle {
 .migajas {
 	font-family: "system";
 	font-size: .8rem;
+	display: block;
+	width: 100%;
 }
 
 .byline::after {

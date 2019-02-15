@@ -5,7 +5,6 @@
         .course-tabs{
             ul.course-nav-tabs {
                 margin-bottom: 0;
-                font-family: $font__sans;
                 font-size: 80%;
                 border-color: #f4f4f4;
 
@@ -83,7 +82,6 @@
 
 
 .course-remaining-time {
-    font-family: $font__sans;
     font-size: 80%;
     margin: 1em 0;
     .lp-label.label-enrolled, .lp-label.label-started {
@@ -129,7 +127,6 @@ ul.curriculum-sections
     display: block;
     padding: 0;
     margin-right: 0!important;
-    font-family: $font__sans;
 
     .items-progress, .course-progress {
         padding: 1em;

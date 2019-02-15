@@ -96,13 +96,13 @@ function pemscores_fonts_url() {
 	 * supported by Futura Pro and Meta Serif Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$futura = _x( 'on', 'Futura font: on or off', 'pemscores' );
+	$benton = _x( 'on', 'Benton font: on or off', 'pemscores' );
 	$expoSerif = _x( 'on', 'Expo Serif Pro: on or off', 'pemscores' );
 
 	$font_families = array();
 
-	if ( 'off' !== $futura ) {
-		$font_families[] = 'futura-pt:400,400i,600,600i';
+	if ( 'off' !== $benton ) {
+		$font_families[] = 'benton-sans:400,400i,700,700i';
 	}
 
 	if ( 'off' !== $expoSerif ) {
@@ -110,7 +110,7 @@ function pemscores_fonts_url() {
 	}
 
 
-	if ( in_array( 'on', array($futura, $expoSerif) ) ) {
+	if ( in_array( 'on', array($benton, $expoSerif) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),

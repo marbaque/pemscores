@@ -6,10 +6,6 @@
 	margin: 0 0 1.5em;
 }
 
-.entry-header {
-	font-family: $font__sans;
-}
-
 .cat-links {
 	font-size: 90%;
 	font-weight: 700;
@@ -64,7 +60,6 @@
 	}
 }
 .migajas {
-	font-family: $font__system;
 	font-size: .8rem;
 	display: block;
 	width: 100%;
@@ -233,7 +228,6 @@
 				padding: 0;
 			}
 			figcaption {
-				font-family: $font__sans;
 				font-size: 90%;
 				padding: 0 .5em;
 			}
@@ -333,9 +327,6 @@
 .profile {
 	#learn-press-profile-header {
 		//background: none;
-	}
-	.lp-user-profile {
-		font-family: $font__sans;
 	}
 	.lp-profile-avatar  {
 		position: relative;

@@ -290,20 +290,19 @@ textarea {
 }
 
 body {
-	font-family: "expo-serif-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 button,
 input,
 select,
 textarea {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	margin-top: .75em;
 	margin-bottom: .25em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	clear: both;
 	text-rendering: optimizeLegibility;
 	line-height: 1.2;
@@ -355,7 +354,6 @@ blockquote:before {
 	top: -.2em;
 	left: -.13em;
 	content: "“";
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 12em;
 	line-height: 100%;
 	color: white;
@@ -516,7 +514,7 @@ input[type="submit"] {
 	border: 2px solid black;
 	border-color: black;
 	color: black;
-	font-family: "system";
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 16px;
 	font-size: 1.2rem;
 	line-height: 1;
@@ -557,7 +555,7 @@ textarea {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
-	font-family: "system";
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 input[type="text"]:focus,
@@ -581,7 +579,7 @@ textarea:focus {
 
 select {
 	border: 1px solid #ccc;
-	font-family: "system";
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 textarea {
@@ -723,7 +721,6 @@ a:hover, a:active {
 .post-navigation,
 .paging-navigation,
 .course-item-nav {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	text-align: left;
 	overflow: hidden;
 	font-size: 80%;
@@ -824,7 +821,7 @@ a:hover, a:active {
 }
 
 .pagination {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .pagination .nav-links {
@@ -1068,10 +1065,6 @@ a:hover, a:active {
 	}
 }
 
-.page-header {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
 .page-title {
 	margin: 0 0 .5em;
 }
@@ -1085,7 +1078,6 @@ a:hover, a:active {
 .error-404 .page-content {
 	margin-bottom: 2em;
 	padding: 1em 2em;
-	font-family: "system";
 	color: white;
 	background: #b51c35;
 }
@@ -1130,7 +1122,6 @@ a:hover, a:active {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	font-family: "system";
 	font-size: .9rem;
 }
 
@@ -1197,7 +1188,6 @@ a:hover, a:active {
 .beautiful-taxonomy-filters,
 .beautiful-taxonomy-filters-active-filter {
 	margin: 0 0 2em !important;
-	font-family: "system";
 	font-size: .9rem;
 }
 
@@ -1241,7 +1231,6 @@ a:hover, a:active {
 .site-header {
 	position: relative;
 	padding: 1em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: #fff;
 	background-color: #002254;
 }
@@ -1282,7 +1271,7 @@ a:hover, a:active {
 	margin: 0;
 	padding: 0;
 	font-size: 1.6em;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1em;
 }
 
@@ -1324,7 +1313,6 @@ Header Menu
 */
 .main-navigation {
 	display: block;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-weight: 400;
 	clear: left;
 	line-height: 1.2;
@@ -1482,10 +1470,6 @@ button.dropdown-toggle {
 	margin: 0 0 1.5em;
 }
 
-.entry-header {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
 .cat-links {
 	font-size: 90%;
 	font-weight: 700;
@@ -1524,7 +1508,7 @@ button.dropdown-toggle {
 
 .entry-meta,
 .entry-footer {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 90%;
 }
 
@@ -1543,7 +1527,6 @@ button.dropdown-toggle {
 }
 
 .migajas {
-	font-family: "system";
 	font-size: .8rem;
 	display: block;
 	width: 100%;
@@ -1672,7 +1655,7 @@ button.dropdown-toggle {
 
 .entry-footer {
 	margin: 1.5em 0;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .recurso-wrap {
@@ -1700,7 +1683,6 @@ button.dropdown-toggle {
 }
 
 .recurso-wrap .recurso-media .recurso-image figcaption {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 90%;
 	padding: 0 .5em;
 }
@@ -1718,7 +1700,7 @@ button.dropdown-toggle {
 }
 
 .recurso-wrap .recurso_tags {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .recurso-wrap .recurso_tags.recurso-link {
@@ -1798,10 +1780,6 @@ button.dropdown-toggle {
 	font-size: 80%;
 }
 
-.profile .lp-user-profile {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
 .profile .lp-profile-avatar {
 	position: relative;
 }
@@ -1824,7 +1802,6 @@ button.dropdown-toggle {
 --------------------------------------------------------------*/
 .course .post-content .course-tabs ul.course-nav-tabs {
 	margin-bottom: 0;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 80%;
 	border-color: #f4f4f4;
 }
@@ -1850,7 +1827,7 @@ button.dropdown-toggle {
 
 .lp-single-course .learn-press-breadcrumb,
 .lp-single-course .learn-press-course-forum-link {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: .8em;
 	border: none;
 }
@@ -1890,7 +1867,6 @@ button.dropdown-toggle {
 }
 
 .course-remaining-time {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 80%;
 	margin: 1em 0;
 }
@@ -1904,7 +1880,7 @@ button.dropdown-toggle {
 
 .course-meta,
 .price {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .learnpress-page .lp-button {
@@ -1924,7 +1900,6 @@ button.dropdown-toggle {
 	display: block;
 	padding: 0;
 	margin-right: 0 !important;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
@@ -1952,7 +1927,7 @@ button.dropdown-toggle {
 }
 
 .course-remaining-time {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 80%;
 	margin: 1em 0;
 }
@@ -1975,7 +1950,6 @@ button.dropdown-toggle {
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-breadcrumb {
-	font-family: "system";
 	font-size: 80%;
 	color: #eee !important;
 }
@@ -2145,11 +2119,6 @@ h3.course-item-title {
 	text-align: center;
 }
 
-.course-meta,
-.price {
-	font-family: "system";
-}
-
 .learnpress-page .lp-button {
 	line-height: 1;
 	height: auto !important;
@@ -2184,7 +2153,6 @@ a.toggle-content-item {
 }
 
 .learn-press-message {
-	font-family: "system";
 	font-size: 80%;
 }
 
@@ -2232,7 +2200,6 @@ a.toggle-content-item {
 .comment-meta {
 	position: relative;
 	margin-left: 70px;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 80%;
 }
 
@@ -2337,7 +2304,7 @@ a.toggle-content-item {
 .reply a {
 	display: inline-block;
 	padding: .5em 1.4em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 85%;
 	color: #000;
 	line-height: 1.3em;
@@ -2376,7 +2343,6 @@ a.toggle-content-item {
 }
 
 .comment-form {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	line-height: 1.3em;
 }
 
@@ -2415,7 +2381,7 @@ a.toggle-content-item {
 }
 
 .pingback {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .pingback .comment-body {
@@ -2433,7 +2399,6 @@ a.toggle-content-item {
 .site-footer {
 	position: relative;
 	padding: 1em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: #fff;
 	background-color: #002254;
 	text-align: center;
@@ -2560,7 +2525,6 @@ a.toggle-content-item {
 
 .widget {
 	margin: 0 0 2em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	/* Make sure select elements fit in widgets. */
 }
 
@@ -2606,7 +2570,7 @@ a.toggle-content-item {
 	width: 100%;
 	height: 2.5em;
 	padding: 10px;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "benton-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	border: 1px solid #ccc;
 }
 
@@ -2697,7 +2661,6 @@ a.toggle-content-item {
 
 .rssSummary {
 	padding: .5em 0;
-	font-family: "expo-serif-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: .8em;
 	line-height: 1.4em;
 }
@@ -2860,7 +2823,6 @@ a.toggle-content-item {
 	-webkit-appearance: none;
 	border-radius: 0;
 	background: rgba(0, 0, 0, 0.2);
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 95%;
 	font-weight: 400;
 	color: #fff;
@@ -2957,7 +2919,6 @@ object {
 .wp-caption {
 	margin-bottom: 2em;
 	max-width: 100%;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 90%;
 	color: #666666;
 	text-align: center;
@@ -3079,7 +3040,6 @@ object {
 .gallery-caption {
 	display: block;
 	margin: 0;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	border: none;
 }
 

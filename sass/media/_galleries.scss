@@ -10,25 +10,25 @@
 	vertical-align: top;
 	width: 100%;
 	padding: 1em;
-	
+
 	img {
 		display: block;
 	}
-	
+
 	a {
 		display: inline-block;
 		border-bottom: none;
-		
+
 		&:hover,
 		&:focus {
 			border-bottom: none;
 			box-shadow: none;
-			
+
 			img {
 				border-color: $color__interactive;
 			}
 		}
-		
+
 		img {
 			padding: .5em;
 			margin: 0 auto;
@@ -73,6 +73,5 @@
 .gallery-caption {
 	display: block;
 	margin: 0;
-	font-family: $font__sans;
 	border: none;
 }

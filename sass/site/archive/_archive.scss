@@ -40,10 +40,6 @@
 }
 
 
-.page-header {
-	font-family: $font__sans;
-}
-
 .page-title {
 	margin: 0 0 .5em;
 }
@@ -59,7 +55,6 @@
 	.page-content {
 		margin-bottom: 2em;
 		padding: 1em 2em;
-		font-family: $font__system;
 		color: white;
 		background: $color__interactive;
 	}
@@ -110,7 +105,6 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	font-family: $font__system;
 	font-size: .9rem;
 
 	a {
@@ -181,7 +175,6 @@
 .beautiful-taxonomy-filters,
 .beautiful-taxonomy-filters-active-filter {
 	margin: 0 0 2em!important;
-	font-family: $font__system;
 	font-size: .9rem;
 
 }

@@ -20,7 +20,7 @@
         <?php if( $url ): ?>
         <div class="recurso_tags recurso-link">
             <p><strong><?php echo __('Enlace:', 'pemscores'); ?></strong>
-                <a href="<?php echo $url; ?>"><?php echo $url; ?></a>
+                <a href="<?php echo $url; ?>" target="_blank" title="<?php echo __('Enlace a recurso', 'pemscores'); ?>"><?php echo $url; ?></a>
             </p>
         </div>
         <?php endif; ?>

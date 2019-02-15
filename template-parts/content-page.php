@@ -10,25 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-	if ( has_post_thumbnail() ) { ?>
-	<figure class="featured-image full-bleed">
-		<?php
-		the_post_thumbnail('pemscores-full-bleed');
-		?>
-	</figure><!-- .featured-image full-bleed -->
-	<?php } ?>
-
+	
 
 
 	<header class="entry-header">
-		<div class="migajas">
-			<?php
-				if ( function_exists('yoast_breadcrumb') && !( 'lp_course' == get_post_type() ) ) {
-				  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-				}
-			?>
-		</div>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 

@@ -85,3 +85,17 @@
 
 
 	<div id="content" class="site-content">
+		<?php
+		if ( has_post_thumbnail() ) { ?>
+		<figure class="featured-image full-bleed">
+			<?php
+			the_post_thumbnail('pemscores-full-bleed');
+			?>
+		</figure><!-- .featured-image full-bleed -->
+		<?php } ?>
+
+		<?php
+		if ( function_exists('yoast_breadcrumb') ) {
+		  yoast_breadcrumb( '<p id="breadcrumbs" class="migajas">','</p>' );
+		}
+		?>

@@ -29,7 +29,7 @@
 			<?php the_custom_logo(); ?>
 			<div class="site-branding__text">
 			<?php
-			if ( is_front_page() && is_home() ) : ?>
+			if ( is_home() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
@@ -54,11 +54,8 @@
 
 		<?php if ( get_header_image() ) : ?>
 		<div class="hero-banner custom-image" style="background-image: url(<?php header_image(); ?>);" aria-role="banner">
-
-
 		<?php else : ?>
 			<div class="hero-banner" aria-role="banner">
-
 		<?php endif; // End header image check. ?>
 
 		<div class="home-search">
@@ -66,7 +63,6 @@
 
 			<form role="search" method="get" id="searchform" class="search-form searchandfilter" action="<?php echo get_site_url(); ?>">
 				<div>
-
 					<!-- <label for="s">Search for:</label> -->
 					<input type="text" class="search-field" value="" name="s" id="s" />
 					<!-- <input type="hidden" value="1" name="sentence" /> -->
@@ -86,13 +82,13 @@
 
 	<div id="content" class="site-content">
 		<?php
-		if ( has_post_thumbnail() ) { ?>
-		<figure class="featured-image full-bleed">
-			<?php
-			the_post_thumbnail('pemscores-full-bleed');
-			?>
-		</figure><!-- .featured-image full-bleed -->
-		<?php } ?>
+		if ( has_post_thumbnail() ) : ?>
+			<figure class="featured-image full-bleed">
+				<?php
+				the_post_thumbnail('pemscores-full-bleed');
+				?>
+			</figure><!-- .featured-image full-bleed -->
+		<?php endif; ?>
 
 		<?php
 		if ( function_exists('yoast_breadcrumb') ) {

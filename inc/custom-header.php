@@ -27,7 +27,7 @@ function pemscores_custom_header_setup() {
 		'width'                  => 2000,
 		'height'                 => 850,
 		'flex-height'            => true,
-		//'wp-head-callback'       => 'pemscores_header_style',
+		'wp-head-callback'       => 'pemscores_header_style',
 	) ) );
 }
 add_action( 'after_setup_theme', 'pemscores_custom_header_setup' );

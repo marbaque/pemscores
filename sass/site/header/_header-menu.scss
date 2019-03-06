@@ -1,18 +1,18 @@
 .main-navigation {
 	display: block;
 	font-weight: 400;
-	//clear: left;
+	clear: left;
 	line-height: 1.2;
-
-	ul { //first level items
+	ul.menu {
+		margin-top: 1em;
+	}
+	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
-		padding-top: 1em;
 		padding-left: 0;
-
-		ul { //second level - submenu
-			//display: none;
+		ul {
+			display: none;
 			top: 1.5em;
 			z-index: 99999;
 
@@ -30,7 +30,7 @@
 			}
 
 			a {
-				width: 200px;
+				//width: 200px;
 			}
 		}
 
@@ -47,9 +47,10 @@
 	a {
 		display: inline-block;
 		width: 100%;
-		padding: .5em 1em .5em 0;
+		padding: 1em;
 		text-decoration: none;
-		color: #fff;
+		color: $color__interactive;
+		font-weight: 600;
 	}
 
 	a:hover,
@@ -78,7 +79,7 @@ button.dropdown-toggle {
 	right: 0;
 	border: none;
 	background: inherit;
-	color: white;
+	color: currentcolor;
 	line-height: 1em;
 	padding: .4em .75em;
 }
@@ -102,36 +103,33 @@ button.dropdown-toggle {
 	display: block;
 }
 
-@media screen and (min-width: $query__small) {
+@media screen and (min-width: $query__medium) {
 	.menu-toggle {
 		display: none;
 	}
+	button.dropdown-toggle {
+		line-height: 2;
+	}
 
 	.main-navigation {
-		position: relative;
 
 		.menu-item-has-children > a,
 		.page_item_has_children > a {
-			//padding-right: 2em;
+			padding-right: 2em;
+			background: hsla(0, 0%, 100%, .1);
 		}
-
-		ul { //first level menu items
+		ul.menu {
+			margin-top: 0;
+		}
+		ul {
 			display: block;
-			width: 100%;
-			position: inherit;
+			display: flex;
+			flex-wrap: wrap;
 
-			li {
-				display: inline-block;
-				a {
-					padding: .4em 1em;
-				}
-			}
-
-			ul { //submenu en desktop
-				position: absolute;
-				left: 0;
-				top: 0;
-
+			ul {
+				flex-direction: column;
+				background: hsla(0, 0%, 100%, .1);
+				margin-left: 0;
 
 				li {
 					padding-left: 0;
@@ -143,28 +141,33 @@ button.dropdown-toggle {
 				}
 			}
 
+			li {
 
+				a {
+					padding: .75em 1em;
+				}
+			}
 		}
 
 	}
 
 }
 
-// @media screen and (min-width: $query__medium) {
-// 	.main-navigation {
-//
-// 		ul {
-// 			justify-content: flex-end;
-// 			padding-top: 0;
-//
-// 			/* If you want dropdowns to open on hover, uncomment this: */
-// 			/*
-// 			li:hover > ul,
-// 				li:focus > ul {
-// 				display: block;
-// 			}
-// 			*/
-// 		}
-//
-// 	}
-// }
+@media screen and (min-width: $query__medium) {
+	.main-navigation {
+
+		ul {
+			justify-content: flex-end;
+			padding-top: 0;
+
+			/* If you want dropdowns to open on hover, uncomment this: */
+			/*
+			li:hover > ul,
+				li:focus > ul {
+				display: block;
+			}
+			*/
+		}
+
+	}
+}

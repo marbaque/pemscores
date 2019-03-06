@@ -7,7 +7,7 @@
  * @package pemscores
  */
 
-if ( ! is_active_sidebar( 'sidebar-2' ) || is_post_type_archive( 'lp-course' )  )
+if ( ! is_active_sidebar( 'sidebar-2' ) || is_post_type_archive( 'lp-course' ) || is_page( 'perfil' )  )
 {
 	return;
 }

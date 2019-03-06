@@ -23,29 +23,14 @@ defined( 'ABSPATH' ) || exit();
 
 <div id="learn-press-course-tabs" class="course-tabs">
 
-    <ul class="learn-press-nav-tabs course-nav-tabs">
+    <!-- <ul class="learn-press-nav-tabs course-nav-tabs"> -->
 
-        <?php foreach ( $tabs as $key => $tab ) { ?>
-
-            <?php $classes = array( 'course-nav course-nav-tab-' . esc_attr( $key ) );
-			if ( ! empty( $tab['active'] ) && $tab['active'] ) {
-				$classes[] = 'active default';
-			} ?>
-
-            <li class="<?php echo join( ' ', $classes ); ?>">
-                <a href="?tab=<?php echo esc_attr( $tab['id'] ); ?>"
-                   data-tab="#<?php echo esc_attr( $tab['id'] ); ?>"><?php echo $tab['title']; ?></a>
-            </li>
-
-		<?php } ?>
-
-    </ul>
+    <!-- </ul> -->
 
 	<?php foreach ( $tabs as $key => $tab ) { ?>
 
-        <div class="course-tab-panel-<?php echo esc_attr( $key ); ?> course-tab-panel<?php echo ! empty( $tab['active'] ) && $tab['active'] ? ' active' : ''; ?>"
-             id="<?php echo esc_attr( $tab['id'] ); ?>">
-
+        <div class="course-overview_section">
+			<h3><?= $tab['title']; ?></h3>
 			<?php
 			if ( apply_filters( 'learn_press_allow_display_tab_section', true, $key, $tab ) ) {
 				if ( is_callable( $tab['callback'] ) ) {

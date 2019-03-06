@@ -2,31 +2,49 @@
 .course {
     .post-content {
 
-        .course-tabs{
-            ul.course-nav-tabs {
-                margin-bottom: 0;
-                font-size: 80%;
-                border-color: #f4f4f4;
+        .course-overview_section {
+            margin-bottom: 1em;
+            background: white;
+            padding: 1em 1em 2em;
 
-                li.course-nav {
-                    background: white;
-                    border-radius: 4px 4px 0 0;
-                    margin: 0 .3em;
-                    border-color: white;
-                    opacity: .5;
+            .course-author>h3 {
+                display: none;
+            }
 
-                    &.active {
-                        @include altura1;
-                        opacity: 1;
-                    }
-                }
+            &:first-of-type {
+                margin-top: 1em;
+            }
+
+            @media screen and (min-width: $query__small) {
+                padding: 1em 2em 2em;
             }
         }
-        .course-tab-panel {
-            background: white;
-            padding: 2em 2em 3em;
-            font-size: 90%;
-        }
+
+        // .course-tabs{
+        //     ul.course-nav-tabs {
+        //         margin-bottom: 0;
+        //         font-size: 80%;
+        //         border-color: #f4f4f4;
+        //
+        //         li.course-nav {
+        //             background: white;
+        //             border-radius: 4px 4px 0 0;
+        //             margin: 0 .3em;
+        //             border-color: white;
+        //             opacity: .5;
+        //
+        //             &.active {
+        //                 @include altura1;
+        //                 opacity: 1;
+        //             }
+        //         }
+        //     }
+        // }
+        // .course-tab-panel {
+        //     background: white;
+        //     padding: 2em 2em 3em;
+        //     font-size: 90%;
+        // }
     }
 }
 

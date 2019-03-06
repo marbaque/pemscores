@@ -32,7 +32,7 @@
 				<?php if ( has_custom_logo() ) : ?>
 					<div class="site-logo"><?php the_custom_logo(); ?></div>
 
-				<?php else: ?>	
+				<?php else: ?>
 					<?php if ( ! empty( $blog_info ) ) : ?>
 						<?php if ( is_front_page() && is_home() ) : ?>
 							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -75,7 +75,7 @@
 			<form role="search" method="get" id="searchform" class="search-form searchandfilter" action="<?php echo get_site_url(); ?>">
 				<div>
 					<!-- <label for="s">Search for:</label> -->
-					<input type="text" class="search-field" value="" name="s" id="s" />
+					<input type="text" class="search-field" value="" name="s" id="s" placeholder="Buscar recursos, capacitación, ..." />
 					<!-- <input type="hidden" value="1" name="sentence" /> -->
 					<input type="hidden" value="recurso,lp_course" name="post_type" />
 					<!-- <input type="hidden" value="product_cat" name="magazines,books" /> -->

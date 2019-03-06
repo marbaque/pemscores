@@ -190,7 +190,6 @@ function pemscores_header_style() {
 		<style type="text/css">
 			.site-header,
 			.site-footer,
-			.search-form .search-field:focus,
 			.search .page-content,
 			.error-404 .page-content {
 				background-color: <?php echo esc_attr( $header_bg_color ); ?>;
@@ -238,11 +237,7 @@ function pemscores_header_style() {
 			.entry-footer a:focus,
 			.entry-footer a:hover,
 			.reply a:hover,
-			.reply a:focus,
-			.comment-form .form-submit input:hover,
-			.comment-form .form-submit input:focus,
-			.widget a:hover,
-			.widget a:focus {
+			.reply a:focus {
 				border-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 
@@ -259,11 +254,7 @@ function pemscores_header_style() {
 			.cat-links a:focus,
 			.cat-links a:hover,
 			.reply a:hover,
-			.reply a:focus,
-			.comment-form .form-submit input:hover,
-			.comment-form .form-submit input:focus,
-			.lp_course .lp-course-buttons button:hover,
-			.lp_course .lp-course-buttons button:focus {
+			.reply a:focus, {
 				background-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 

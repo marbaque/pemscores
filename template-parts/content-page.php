@@ -14,7 +14,9 @@
 
 
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php if ( !is_singular('lp_course') ): ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 

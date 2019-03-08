@@ -94,15 +94,20 @@
 	<div id="content" class="site-content">
 		<?php
 		if ( has_post_thumbnail() ) : ?>
-			<figure class="featured-image full-bleed">
+		<div class="full-bleed">
+			<figure class="featured-image">
 				<?php
 				the_post_thumbnail('pemscores-full-bleed');
 				?>
-			</figure><!-- .featured-image full-bleed -->
+			</figure><!-- .featured-image -->
+			<?php if ( is_singular('lp_course') ): ?>
+				<?php the_title( '<h1 class="course-title">', '</h1>' ); ?>
+			<?php endif; ?>
+		</div><!-- .full-bleed -->
 		<?php endif; ?>
 
 		<?php
-			if(function_exists('bcn_display')) {
+			if( function_exists('bcn_display') && !is_singular('lp_course') ) {
 				echo '<div class="migajas">';
 				bcn_display();
 				echo '</div>';

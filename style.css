@@ -1499,13 +1499,14 @@ button.dropdown-toggle {
 /* Single Post Featured Images */
 .full-bleed {
 	width: 100vw;
-	max-height: 600px;
+	max-height: 700px;
 	margin-bottom: 1em;
 	margin-left: -1em;
 	border-top: 1px solid #e6e6e6;
 	border-bottom: 1px solid #e6e6e6;
 	overflow: hidden;
 	margin-top: -1em;
+	position: relative;
 }
 
 @media screen and (min-width: 600px) {
@@ -1529,11 +1530,44 @@ button.dropdown-toggle {
 	}
 }
 
+.full-bleed figure.featured-image {
+	overflow: hidden;
+	max-height: 700px;
+}
+
 .full-bleed img {
 	display: block;
 	margin: 0 auto;
 	width: 100%;
 	height: auto;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.full-bleed h1.course-title {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: 0 1em 1em;
+	display: block;
+	z-index: 99;
+	font-size: 2rem;
+	width: auto;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 0.1em .2em;
+}
+
+@media screen and (min-width: 600px) {
+	.full-bleed h1.course-title {
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.full-bleed h1.course-title {
+		font-size: 3rem;
+		width: 740px;
+	}
 }
 
 .page-content,

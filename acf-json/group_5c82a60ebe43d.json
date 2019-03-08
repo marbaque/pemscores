@@ -1,12 +1,12 @@
 {
-    "key": "group_5c8131e42518c",
-    "title": "Campos de registro LP",
+    "key": "group_5c82a60ebe43d",
+    "title": "Datos de usuario",
     "fields": [
         {
-            "key": "field_5c8131ee1a685",
+            "key": "field_5c82a6391cf77",
             "label": "Lugar de residencia",
             "name": "lugar_residencia",
-            "type": "text",
+            "type": "google_map",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,10 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
+            "height": ""
         }
     ],
     "location": [
@@ -27,7 +26,7 @@
             {
                 "param": "user_form",
                 "operator": "==",
-                "value": "register"
+                "value": "all"
             }
         ]
     ],
@@ -39,5 +38,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1551970883
+    "modified": 1552081258
 }

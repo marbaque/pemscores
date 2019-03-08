@@ -878,7 +878,7 @@ a:hover, a:active {
 }
 
 .site-content {
-	max-width: 1440px;
+	max-width: 1280px;
 	margin: 0 auto;
 }
 
@@ -898,7 +898,7 @@ a:hover, a:active {
 	.page .hentry .entry-header,
 	.learnpress-page .hentry .entry-header {
 		width: 100%;
-		max-width: 1440px;
+		max-width: 1280px;
 		-ms-flex: 1 0 100%;
 		    flex: 1 0 100%;
 	}
@@ -1522,10 +1522,10 @@ button.dropdown-toggle {
 	}
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
 	.full-bleed {
-		margin-right: calc( ((-100vw + 1440px)/2) - 2em);
-		margin-left: calc( ((-100vw + 1440px)/2) - 2em);
+		margin-right: calc( ((-100vw + 1280px)/2) - 2em);
+		margin-left: calc( ((-100vw + 1280px)/2) - 2em);
 	}
 }
 
@@ -1559,7 +1559,7 @@ button.dropdown-toggle {
 
 .recurso-wrap {
 	width: 100%;
-	max-width: 1440px;
+	max-width: 1280px;
 	height: auto;
 	background-color: white;
 	border: 1px solid #c3c3c3;
@@ -2064,6 +2064,40 @@ a.toggle-content-item {
 	line-height: 15px;
 }
 
+@media screen and (min-width: 900px) {
+	.profile .page .post-content {
+		width: 100;
+		background: white;
+		padding: 1em;
+	}
+}
+
+.profile .learnpress .lp-profile-avatar img {
+	border-radius: 50% !important;
+}
+
+.profile .learnpress .lp-profile-header {
+	background-color: white !important;
+}
+
+.profile a {
+	border: 0;
+}
+
+.profile #learn-press-profile-nav:before {
+	background: none;
+}
+
+.profile #learn-press-profile-nav {
+	background: none;
+}
+
+@media screen and (min-width: 900px) {
+	body.buddypress .entry-content {
+		width: 66% !important;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -2152,7 +2186,7 @@ a.toggle-content-item {
 	}
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
 	.no-sidebar .children {
 		margin-left: 3em;
 	}
@@ -2319,7 +2353,7 @@ a.toggle-content-item {
 }
 
 .site-footer__wrap {
-	max-width: 1440px;
+	max-width: 1280px;
 	margin: 0 auto;
 }
 
@@ -2615,16 +2649,29 @@ a.toggle-content-item {
 
 /* Footer widget stylings */
 .footer-widgets {
-	margin: 2em 0 0;
+	margin: 2em auto 0;
 	padding: 1em 0;
-	background-color: #333333;
+	background-color: #4d4d4d;
 	width: 100% !important;
+	max-width: 1280px !important;
 	font-size: 1rem;
+	position: relative;
+	z-index: 2;
 }
 
 @media screen and (min-width: 600px) {
 	.footer-widgets {
 		padding: 2em 1em;
+	}
+	.footer-widgets:before {
+		content: "";
+		position: absolute;
+		background-color: inherit;
+		left: calc((50%) - 50vw);
+		top: 0;
+		width: 100vw;
+		height: 100%;
+		z-index: -1;
 	}
 }
 

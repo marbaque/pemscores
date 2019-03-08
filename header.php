@@ -102,7 +102,9 @@
 		<?php endif; ?>
 
 		<?php
-		if ( function_exists('yoast_breadcrumb') ) {
-		  yoast_breadcrumb( '<div class="migajas"><p id="breadcrumbs">','</p></div>' );
-		}
-		?>
+			if(function_exists('bcn_display')) {
+				echo '<div class="migajas">';
+				bcn_display();
+				echo '</div>';
+			}
+			?>

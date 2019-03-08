@@ -35,3 +35,10 @@
         background: none;
     }
 }
+
+
+@media screen and (min-width: $query__medium) {
+  body.buddypress .entry-content {
+      width: $size__ratio-large!important;
+  }
+}

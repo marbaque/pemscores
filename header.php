@@ -56,37 +56,25 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'pemscores' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<?php echo pemscores_get_svg( array( 'icon' => 'list' ) ); ?>
+				<span class="skip-link screen-reader-text"><?php esc_html_e( 'Primary Menu</span>', 'pemscores' ); ?></span>
+			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<?php if ( is_front_page() || is_post_type_archive('recurso') ): ?>
+	<?php if ( is_front_page() ): ?>
 
 		<?php if ( get_header_image() ) : ?>
-		<div class="hero-banner custom-image" style="background-image: url(<?php header_image(); ?>);" aria-role="banner">
+		<section class="hero-banner custom-image" style="background-image: url(<?php header_image(); ?>);" aria-role="banner">
 		<?php else : ?>
-			<div class="hero-banner" aria-role="banner">
+			<section class="hero-banner" aria-role="banner">
 		<?php endif; // End header image check. ?>
 
-		<div class="home-search">
-			<h2><?php echo __( 'Buscar recursos', 'pemscores'); ?></h2>
+			<h1 class="hero-title">Academia Municipal</h1>
 
-			<form role="search" method="get" id="searchform" class="search-form searchandfilter" action="<?php echo get_site_url(); ?>">
-				<div>
-					<!-- <label for="s">Search for:</label> -->
-					<input type="text" class="search-field" value="" name="s" id="s" placeholder="Buscar recursos, capacitación, ..." />
-					<!-- <input type="hidden" value="1" name="sentence" /> -->
-					<input type="hidden" value="recurso,lp_course" name="post_type" />
-					<!-- <input type="hidden" value="product_cat" name="magazines,books" /> -->
-					<input type="hidden" id="searchsubmit" value="Search" />
-
-				</div>
-			</form>
-
-		</div>
-
-		</div><!-- .hero-banner -->
+		</section><!-- .hero-banner -->
 
 	<?php endif; // End fornt-page check. ?>
 

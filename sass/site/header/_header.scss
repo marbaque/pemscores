@@ -1,11 +1,12 @@
 .site-header {
 	padding: 1em;
-	color: $color__interactive;
-	background-color: $color__skin;
+	color: $color__main-bordes;
+	background-color: $color__main-claro;
+	font-family: $font__sans;
 
 
 	@media screen and (min-width: $query__small) {
-		padding: 24px 16px;
+		padding: 1em 1.5em;
 	}
 }
 
@@ -67,7 +68,8 @@
 
 	height: auto;
 	overflow: auto;
-	background: url(images/gplaypattern_@2X.png) repeat;
+	background: url(images/fondo-ilustrado.svg) repeat-x center bottom $color__main-claro;
+	background-size: auto 70%;
 
 	&.custom-image {
 		background-repeat: no-repeat;
@@ -75,14 +77,34 @@
 		background-position: center;
 	}
 
+	.hero-title {
+		width: 410px;
+		height: 201px;
+		max-width: 80%;
+		background: url("images/logo-full.svg") no-repeat;
+		margin: 50px auto 65px;
+		@include hideText();
+	}
+}
+
+// Más estilos de la pagina principal front-page
+.search-section {
+
 	.home-search {
 		width: 100%;
-	    max-width: 620px;
-	    margin: 0px auto;
-		padding: 75px 1em 110px;
+    max-width: $query__small;
+    margin: 0 auto;
 		text-align: center;
+		padding: 1em 0 2em;
 
 	}
+}
+
+.fp-content {
+	max-width: $query__small;
+	margin: 0 auto;
+	font-size: 1.2em;
+	padding: 1em 0;
 }
 
 /*

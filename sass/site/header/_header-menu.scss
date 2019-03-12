@@ -1,16 +1,19 @@
 .main-navigation {
 	display: block;
-	font-weight: 400;
 	clear: left;
 	line-height: 1.2;
+	font-size: 1rem;
+
 	ul.menu {
 		margin-top: 1em;
 	}
+
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+
 		ul {
 			display: none;
 			top: 1.5em;
@@ -47,15 +50,15 @@
 	a {
 		display: inline-block;
 		width: 100%;
-		padding: 1em;
+		padding: .75em 1em;
 		text-decoration: none;
-		color: $color__interactive;
-		font-weight: 600;
+		color: $color__main-bordes;
 	}
 
 	a:hover,
 	a:focus {
 		text-decoration: underline;
+		background: hsla(0, 0%, 100%, .4);
 	}
 
 	.current_page_item > a,
@@ -91,10 +94,13 @@ button.dropdown-toggle {
 	display: block;
 	margin: 1.2em 1.2em 0 0;
 	padding: .6em .8em;
-	font-size: 80%;
-	text-transform: uppercase;
-	color: white;
-	border: 1px solid hsla(0, 0%, 100%, .3);
+	font-size: 1.2em;
+	color: $color__main-bordes;
+	border: 2px solid $color__main-bordes;
+
+	&:hover {
+		color: currentcolor;
+	}
 }
 
 /* Toggle small menu and children on */
@@ -116,10 +122,17 @@ button.dropdown-toggle {
 		.menu-item-has-children > a,
 		.page_item_has_children > a {
 			padding-right: 2em;
-			background: hsla(0, 0%, 100%, .1);
 		}
 		ul.menu {
 			margin-top: 0;
+
+			>li:not(last-child):after {
+				content: "|";
+				position: absolute;
+				right: 0;
+				top: .75em;
+			}
+
 		}
 		ul {
 			display: block;
@@ -138,13 +151,6 @@ button.dropdown-toggle {
 						width: 218px;
 						background: none;
 					}
-				}
-			}
-
-			li {
-
-				a {
-					padding: .75em 1em;
 				}
 			}
 		}

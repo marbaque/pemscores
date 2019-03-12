@@ -156,7 +156,7 @@ add_filter( 'excerpt_more', 'pemscores_excerpt_more' );
  * Filter excerpt length to 100 words.
  */
 function pemscores_excerpt_length( $length ) {
-	return 100;
+	return 40;
 }
 add_filter( 'excerpt_length', 'pemscores_excerpt_length');
 

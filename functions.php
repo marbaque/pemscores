@@ -93,31 +93,31 @@ function pemscores_fonts_url() {
 
 	/**
 	 * Translators: If there are characters in your language that are not
-	 * supported by Futura Pro and Meta Serif Pro, translate this to 'off'. Do not translate
+	 * supported by Roboto and Crimson, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$benton = _x( 'on', 'Benton font: on or off', 'pemscores' );
-	$expoSerif = _x( 'on', 'Expo Serif Pro: on or off', 'pemscores' );
+	$sansSerif = _x( 'on', 'Roboto font: on or off', 'pemscores' );
+	$serif = _x( 'on', 'Crimson: on or off', 'pemscores' );
 
 	$font_families = array();
 
-	if ( 'off' !== $benton ) {
-		$font_families[] = 'benton-sans:400,400i,700,700i';
+	if ( 'off' !== $sansSerif ) {
+		$font_families[] = '$roboto:400,400i,700,700i';
 	}
 
-	if ( 'off' !== $expoSerif ) {
-		$font_families[] = 'expo-serif-pro:400,400i,700,700i';
+	if ( 'off' !== $serif ) {
+		$font_families[] = 'Crimson+Text:400,400i,700,700i';
 	}
 
 
-	if ( in_array( 'on', array($benton, $expoSerif) ) ) {
+	if ( in_array( 'on', array($sansSerif, $serif) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
 
-		$fonts_url = add_query_arg( $query_args, 'https://use.typekit.net/oma6nzd.css' );
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 	}
 
 	return esc_url_raw( $fonts_url );
@@ -305,7 +305,7 @@ add_action( 'wp_enqueue_scripts', 'pemscores_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -320,7 +320,7 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+//require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Custom post types y taxonomies

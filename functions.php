@@ -73,8 +73,8 @@ function pemscores_setup() {
 
 	// Add theme support for Custom Logo
 	add_theme_support( 'custom-logo', array(
-		'width' => 90,
-		'height' => 90,
+		'width' => 311,
+		'height' => 56,
 		'flex-width' => true,
 	));
 

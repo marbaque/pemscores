@@ -1,5 +1,5 @@
 .archive-view:not(.learnpress) {
-	background-color: #eee;
+	background-color: $color__gris-claro;
 
 	.post,
 	.page,
@@ -9,10 +9,10 @@
 	.lp_course {
 		position: relative;
 		background: white;
-	}
-
-	.post__content {
-		padding: 2em 2em 3em;
+		border: 1px solid $color__main;
+		border-radius: 4px;
+		padding: 1em 1em 3em;
+		overflow: hidden;
 	}
 
 	@media screen and (min-width: $query__medium) {
@@ -106,18 +106,19 @@
 	right: 0;
 	bottom: 0;
 	font-size: .9rem;
+	width: 100%;
+	font-family: $font__sans;
 
 	a {
 		display: block;
 		padding: .5em 1em;
-		font-size: 90%;
 		text-decoration: none;
-		background: hsl(0, 0%, 85%);
+		background: $color__main-claro;
+		border: 0;
+		border-top: 1px solid $color__main-bordes;
 
-		&:focus,
-		&:hover {
-			color: white;
-			background: $color__interactive;
+		.icon {
+			position: absolute
 		}
 	}
 
@@ -126,6 +127,7 @@
 
 //Archivo de recursos
 .archive-view {
+
 	.recurso {
 
 		figure.recurso-index-img {
@@ -138,36 +140,37 @@
 			}
 		}
 		.recurso__content {
-			padding: 1em 2em 3em;
+
 
 			h2.entry-title {
 				font-size: 1.25em;
 				margin-bottom: 0.5em;
 			}
 			.recurso-cats {
-				font-family: $font__system;
 				font-size: 0.9rem;
 				p {
 					margin: 0;
 				}
 			}
+
+			@media screen and (min-width: $query__small) {
+				display: flex;
+				align-items: stretch;
+
+				figure.recurso-index-img {
+					width: $size__ratio-small;
+					height: auto;
+				}
+				.recurso__text {
+					padding: 0 2em;
+					width: $size__ratio-large;
+					flex-grow: 2;
+				}
+			}
 		}
 
 
-		@media screen and (min-width: $query__small) {
-			display: flex;
-			align-items: stretch;
 
-			figure.recurso-index-img {
-				width: $size__ratio-small;
-				height: auto;
-			}
-
-			.recurso__content {
-				width: $size__ratio-large;
-				flex-grow: 2;
-			}
-		}
 	}
 }
 

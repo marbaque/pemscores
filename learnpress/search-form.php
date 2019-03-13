@@ -22,9 +22,9 @@ defined( 'ABSPATH' ) || exit();
 <form method="get" name="search-course" class="learn-press-search-course-form"
       action="<?php echo learn_press_get_page_link( 'courses' ); ?>">
 
-    <input type="text" name="s" class="search-course-input" value="<?php echo esc_attr($s); ?>"
+    <input type="text" name="s" class="search-field" value="<?php echo esc_attr($s); ?>"
            placeholder="<?php _e( 'Search course...', 'learnpress' ); ?>"/>
     <input type="hidden" name="ref" value="course"/>
 
-    <button class="lp-button button search-course-button"><?php _e( 'Search', 'learnpress' ); ?></button>
+    <button type="hidden" class="lp-button button search-course-button"><?php _e( 'Search', 'learnpress' ); ?></button>
 </form>

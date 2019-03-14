@@ -32,7 +32,7 @@ get_header(); ?>
 		<section class="search-section">
 			<div class="home-search">
 				<!-- <h3> -->
-					<!-- <?php //echo __( 'Buscar recursos', 'pemscores'); ?> -->
+					<?php //echo __( 'Buscar recursos', 'pemscores'); ?>
 				<!-- </h3> -->
 
 				<form role="search" method="get" id="searchform" class="search-form searchandfilter" action="<?php echo get_site_url(); ?>">

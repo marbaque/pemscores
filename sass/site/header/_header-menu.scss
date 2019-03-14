@@ -57,8 +57,7 @@
 
 	a:hover,
 	a:focus {
-		text-decoration: underline;
-		background: hsla(0, 0%, 100%, .4);
+		color: $color__main-oscuro;
 	}
 
 	.current_page_item > a,
@@ -69,7 +68,7 @@
 
 	.menu-item-has-children,
 	.page_item_has_children {
-		min-width: 218px;
+		//min-width: 218px;
 	}
 	.menu-item-has-children > a,
 	.page_item_has_children > a {
@@ -92,7 +91,7 @@ button.dropdown-toggle {
 	top: 0;
 	right: 0;
 	display: block;
-	margin: 1.2em 1.2em 0 0;
+	margin: 1.2em 1em 0 0;
 	padding: .6em .8em;
 	font-size: 1.2em;
 	color: $color__main-bordes;
@@ -107,6 +106,7 @@ button.dropdown-toggle {
 .toggled-on ul,
 .sub-menu.toggled-on {
 	display: block;
+
 }
 
 @media screen and (min-width: $query__medium) {
@@ -124,9 +124,8 @@ button.dropdown-toggle {
 			padding-right: 2em;
 		}
 		ul.menu {
-			margin-top: 0;
 
-			>li:not(last-child):after {
+			>li:not(:last-child):after {
 				content: "|";
 				position: absolute;
 				right: 0;

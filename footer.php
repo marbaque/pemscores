@@ -13,13 +13,14 @@
 
 	</div><!-- #content -->
 
-	<?php get_sidebar( 'footer' ); ?>
+	<div class="footer-container">
+		<div class="footer-widgets__wrap">
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-footer__wrap">
+			<?php get_sidebar( 'footer' ); ?>
+
 			<?php
 			// Make sure there is a social menu to display.
-			if ( has_nav_menu( 'social' ) ) { ?>
+			if ( has_nav_menu( 'social' ) ): ?>
 			<nav class="social-menu">
 				<?php
 					wp_nav_menu( array(
@@ -28,10 +29,16 @@
 						'depth'          => 1,
 						'link_before'    => '<span class="screen-reader-text">',
 						'link_after'     => '</span>' . pemscores_get_svg( array( 'icon' => 'chain' ) ),
+						'items_wrap' => '<p class="title">' . __( 'Academia Municipal', 'pemscores') . '</p><ul class="%2$s">%3$s</ul>'
 					) );
 				?>
 			</nav><!-- .social-menu -->
-			<?php } ?>
+		<?php endif; ?>
+		</div><!-- .footer-widgets__wrap -->
+	</div>
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-footer__wrap">
 
 			<div class="site-info">
 				<nav class="info-menu">

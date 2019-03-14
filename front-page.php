@@ -50,7 +50,7 @@ get_header(); ?>
 			</div>
 		</section>
 
-		<div class="paginas-destacadas">
+		<section class="paginas-destacadas">
 			<div class="paginas-inner">
 
 			<?php
@@ -65,10 +65,10 @@ get_header(); ?>
 
 				?>
 				<div class="pagina">
-			    	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-					<div class="excerpt"><?php the_excerpt(); ?></div>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más‣', 'pemscores'); ?></a>
-			    </div>
+					<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+				<div class="excerpt"><?php the_excerpt(); ?></div>
+				<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más', 'pemscores') . pemscores_get_svg( array( 'icon' => 'arrow-right' , 'fallback' => true ) ); ?></a>
+				</div>
 
 			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
@@ -86,10 +86,10 @@ get_header(); ?>
 
 				?>
 				<div class="pagina">
-			    	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-					<div class="excerpt"><?php the_excerpt(); ?></div>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más‣', 'pemscores'); ?></a>
-			    </div>
+					<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+				<div class="excerpt"><?php the_excerpt(); ?></div>
+				<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más', 'pemscores') . pemscores_get_svg( array( 'icon' => 'arrow-right' , 'fallback' => true ) ); ?></a>
+				</div>
 
 			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
@@ -109,14 +109,44 @@ get_header(); ?>
 			    <div class="pagina">
 			    	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 					<div class="excerpt"><?php the_excerpt(); ?></div>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más‣', 'pemscores'); ?></a>
+					<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más', 'pemscores') . pemscores_get_svg( array( 'icon' => 'arrow-right' , 'fallback' => true ) ); ?></a>
 			    </div>
 
 			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
 			<?php endif; ?>
 			</div>
-		</div><!-- .paginas-destacadas-->
+		</section><!-- .paginas-destacadas-->
+
+		<section class="cursos-destacados">
+			<?php
+
+				$args = array(
+				    'post_type' => 'lp-course'
+				);
+
+				// Custom query.
+				$query = new WP_Query( $args );
+
+				// Check that we have query results.
+				if ( $query->have_posts() ) {
+
+				    // Start looping over the query results.
+				    while ( $query->have_posts() ) {
+
+				        $query->the_post();
+
+				        get_template_part( 'template-parts/content', get_post_format() );
+
+				    }
+
+				}
+
+				// Restore original post data.
+				wp_reset_postdata();
+
+				?>
+		</section><!-- .cursos-destacados -->
 
 	</main><!-- #main -->
 </div><!-- #primary -->

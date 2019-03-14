@@ -15,14 +15,14 @@
 		width: 100%;
 		text-decoration: none;
 		padding: 1em;
-		//border: 1px solid hsl(0, 0%, 80%);
+		border: 1px solid $color__main;
 		color: black;
 
 		&:hover,
 		&:focus {
-			color: white;
-			border-color: $color__interactive;
-			background: $color__interactive;
+			//color: white;
+			border-color: $color__main-claro;
+			background: $color__main-claro;
 		}
 	}
 
@@ -87,12 +87,12 @@
 		font-size: 1em;
 		font-weight: 600;
 		line-height: 1!important;
-		//border-bottom: 3px solid $color__interactive;
+		//border-bottom: 3px solid $color__main-claro;
 	}
 
 	a:hover .post-title,
 	a:focus .post-title{
-		border-bottom-color: white;
+		//border-bottom-color: white;
 	}
 
 }
@@ -111,6 +111,9 @@
 	span {
 		padding: .5em 1em;
 		background: white;
+		border: 1px solid $color__main;
+		margin: 0 2px;
+		border-radius: 2px;
 	}
 
 	a {
@@ -118,14 +121,14 @@
 
 		&:focus,
 		&:hover {
-			color: white;
-			background: $color__interactive;
+			//color: white;
+			background: $color__main-claro;
 		}
 	}
 
 	.current {
 		font-weight: 600;
-		color: $color__interactive;
+		color: $color__main-claro;
 	}
 
 	.prev .icon {

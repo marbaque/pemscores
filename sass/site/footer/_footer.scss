@@ -6,10 +6,9 @@
 	font-size: 1rem;
 	z-index: 2;
 }
-.footer-widgets__wrap {
-
+.footer-widgets__wrap { // wraps widgets and social menu
 	margin: 1em auto;
-	max-width: $query__medium;
+	max-width: $query__small;
 
 	@media screen and(min-width: $query__small) {
 		display: flex;
@@ -17,7 +16,7 @@
 		justify-content: center;
 
 		.footer-widgets {
-			width: $size__ratio-large;
+			width: $size__ratio-large!important;
 		}
 
 		.social-menu {

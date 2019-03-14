@@ -15,14 +15,13 @@
 		width: 100%;
 		text-decoration: none;
 		padding: 1em;
-		border: 1px solid $color__main;
-		color: black;
+		border: 1px solid $color__main-bordes;
+		color: $color__main-bordes;
 
 		&:hover,
 		&:focus {
 			//color: white;
-			border-color: $color__main-claro;
-			background: $color__main-claro;
+
 		}
 	}
 
@@ -87,7 +86,7 @@
 		font-size: 1em;
 		font-weight: 600;
 		line-height: 1!important;
-		//border-bottom: 3px solid $color__main-claro;
+		//border-bottom: 3px solid $color__main-bordes;
 	}
 
 	a:hover .post-title,
@@ -111,24 +110,24 @@
 	span {
 		padding: .5em 1em;
 		background: white;
-		border: 1px solid $color__main;
-		margin: 0 2px;
+		border: 1px solid $color__main-bordes;
+		margin: 0 2px 4px;
 		border-radius: 2px;
 	}
 
 	a {
 		text-decoration: none;
+		color: $color__main-bordes;
 
 		&:focus,
 		&:hover {
-			//color: white;
-			background: $color__main-claro;
+			background: $color__main-superclaro;
 		}
 	}
 
 	.current {
 		font-weight: 600;
-		color: $color__main-claro;
+		color: $color__main-bordes;
 	}
 
 	.prev .icon {

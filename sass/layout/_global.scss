@@ -1,3 +1,8 @@
+/* Show only default top level items */
+// #wp-toolbar > ul > li {
+// 	display: inline-block!important;
+// 	margin: 0 .5em!important;
+// }
 .site-content {
 	padding: 0 1em 1em;
 
@@ -42,7 +47,12 @@
 				width: $size__ratio-small;
 			}
 		}
-
+		.learnpress-page {
+			.page-sidebar {
+				float: left!important;
+				position: relative;
+			}
+		}
 	}
 
 	.page,
@@ -64,28 +74,12 @@
 		}
 	}
 
-
-
-
 }
 
 
 @media screen and (min-width: $query__medium) {
 	.single {
 		&.no-sidebar {
-
-			.post-content__wrap {
-				display: flex;
-				justify-content: space-between;
-
-				.entry-meta {
-					width: 20%;
-				}
-
-				.post-content__body {
-					width: 70%;
-				}
-			}
 
 		}
 	}

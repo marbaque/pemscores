@@ -13,11 +13,13 @@
 
 
 
-	<header class="entry-header">
-		<?php if ( !is_singular('lp_course') ): ?>
+
+	<?php if ( !is_singular('lp_course') ): ?>
+		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		</header><!-- .entry-header -->
+	<?php endif; ?>
+
 
 	<?php
 		if( function_exists('bcn_display') && !is_singular('lp_course') ) {

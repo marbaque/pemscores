@@ -82,14 +82,16 @@
 	<div id="content" class="site-content">
 		<?php
 		if ( has_post_thumbnail() ) : ?>
-		<div class="full-bleed">
-			<figure class="featured-image">
+
+			<div class="full-bleed featured-image">
 				<?php
-				the_post_thumbnail('pemscores-full-bleed');
-				?>
-			</figure><!-- .featured-image -->
-			<?php if ( is_singular('lp_course') ): ?>
-				<?php the_title( '<h1 class="course-title">', '</h1>' ); ?>
-			<?php endif; ?>
-		</div><!-- .full-bleed -->
-		<?php endif; ?>
+					the_post_thumbnail('pemscores-full-bleed');
+					?>
+				<?php if ( is_singular('lp_course') ): ?>
+					<?php the_title( '<h1 class="course-title">', '</h1>' ); ?>
+				<?php endif; ?>
+			</div><!-- .full-bleed -->
+
+		<?php elseif ( !has_post_thumbnail() && is_singular('lp_course') ) : ?>
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<?php endif; ?>

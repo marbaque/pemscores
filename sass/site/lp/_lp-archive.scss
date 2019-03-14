@@ -8,98 +8,103 @@
           width: 100%;
         }
 
-          article.page {
-            background: none;
+        article.page {
+          background: none;
 
-            .learn-press-breadcrumb {
-              font-size: 80%;
-              color: #eee!important;
-            }
-            .learn-press-courses {
+          .learn-press-breadcrumb {
+            font-size: 80%;
+            color: #eee!important;
+          }
 
-              .lp_course {
-                position: relative;
-      		      background: $color__gris-claro;
-                border: 1px solid $color__main;
-                padding: 1em 1em 4em;
-                margin-bottom: 1em;
-                font-family: $font__system;
+          .post-content {
+            margin: 0 auto;
+          }
 
-                .course-permalink {
-                  border: none;
-                  height: auto;
-                }
+          .learn-press-courses {
 
-                .course-thumbnail {
-                    text-align: center;
-                    img {
-                        margin: 0 auto;
-                    }
-                }
-                .course-info {
-                    display: block;
+            .lp_course {
+              position: relative;
+    		      background: $color__gris-claro;
+              border: 1px solid $color__main;
+              padding: 1em 1em 4em;
+              margin-bottom: 1em;
+              font-family: $font__system;
+
+              .course-permalink {
+                border: none;
+                height: auto;
+              }
+
+              .course-thumbnail {
+                  text-align: center;
+                  img {
+                      margin: 0 auto;
+                  }
+              }
+              .course-info {
+                  display: block;
+                  width: 100%;
+
+                  .course-price {
+                      display: block;
+
+                  }
+                  .course-instructor {
+                      display: block;
+                  }
+              }
+
+              .lp-course-buttons {
+                  display: block;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+
+                  form {
+                    margin: 0;
                     width: 100%;
-
-                    .course-price {
-                        display: block;
-
-                    }
-                    .course-instructor {
-                        display: block;
-                    }
-                }
-
-                .lp-course-buttons {
                     display: block;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
+                  }
 
-                    form {
-                      margin: 0;
+                  button {
+                      @extend .read-more;
                       width: 100%;
                       display: block;
-                    }
+                      background: $color__main-claro;
+                      border: 0;
+                      border-top: 1px solid $color__main-bordes;
+                      font-size: 90%;
+                      padding: .5em 1em;
+                      text-align: left;
+                      color: $color__main-bordes;
 
-                    button {
-                        @extend .read-more;
-                        width: 100%;
-                        display: block;
-                        background: $color__main-claro;
-                        border: 0;
-                        border-top: 1px solid $color__main-bordes;
-                        font-size: 90%;
-                        padding: .5em 1em;
-                        text-align: left;
-                        color: $color__main-bordes;
-
-                    }
-                }
+                  }
               }
+            }
 
-              @media screen and (min-width: $query__small) {
-                display: flex;
-        				justify-content: space-around;
-        				flex-wrap: wrap;
+            @media screen and (min-width: $query__small) {
+              display: flex;
+      				justify-content: space-around;
+      				flex-wrap: wrap;
 
-                .lp_course {
-                    width: 48%;
-
-                }
+              .lp_course {
+                  width: 48%;
 
               }
-              // @media screen and (min-width: $query__medium) {
-              //
-              //     .lp_course {
-              //         width: 30%;
-              //
-              //     }
-              //
-              // }
 
             }
+            // @media screen and (min-width: $query__medium) {
+            //
+            //     .lp_course {
+            //         width: 30%;
+            //
+            //     }
+            //
+            // }
+
           }
+        }
       }
     }
   }

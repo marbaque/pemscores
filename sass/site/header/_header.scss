@@ -4,6 +4,7 @@
 	background-color: $color__main-claro;
 	font-family: $font__sans;
 	border-bottom: 1px solid $color__main-bordes;
+	position: relative;
 
 
 	@media screen and (min-width: $query__small) {
@@ -32,8 +33,6 @@
 	font-size: 1.6em;
 	font-weight: 700;
 	line-height: 1em;
-
-
 
 	a {
 		color: $color__interactive;
@@ -65,32 +64,6 @@
 
 	.site-navigation {
 
-	}
-}
-
-//hero-banner
-.hero-banner {
-	position: relative;
-	//width: 100vw;
-
-	height: auto;
-	overflow: auto;
-	background: url(images/fondo-ilustrado.svg) repeat-x center bottom $color__main-superclaro;
-	background-size: auto 70%;
-
-	&.custom-image {
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-	}
-
-	.hero-title {
-		width: 410px;
-		height: 201px;
-		max-width: 80%;
-		background: url("images/logo-full.svg") no-repeat;
-		margin: 50px auto 65px;
-		@include hideText();
 	}
 }
 

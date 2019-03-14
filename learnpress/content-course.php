@@ -36,7 +36,6 @@ $user = LP_Global::user();
         // @since 3.0.0
         do_action( 'learn-press/courses-loop-item-title' );
         ?>
-
     </a>
 
 	<?php

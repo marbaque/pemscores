@@ -4,15 +4,15 @@
 }
 
 /* Footer widgets for archive pages */
-.archive-view {
-	@media screen and (min-width: $query__medium) {
-		&.has-sidebar {
-			.footer-widgets {
-				width: 100%;
-			}
-		}
-	}
-}
+// .archive-view {
+// 	@media screen and (min-width: $query__medium) {
+// 		&.has-sidebar {
+// 			.footer-widgets {
+// 				width: 100%;
+// 			}
+// 		}
+// 	}
+// }
 
 .widget {
 	margin: 0 0 2em;
@@ -224,8 +224,6 @@
 	.widget {
 		flex: 1;
 		margin: 0 .5em 0;
-		padding-right: 1em;
-		border-right: 1px solid $color__main-bordes;
 
 		.original-title {
 
@@ -263,11 +261,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
+		align-items: flex-start;
 
-		.widget {
-			&:not(:last-child):after {
-				border-right: 1px solid $color__main-bordes;
-			}
+		.widget:not(:last-child):after {
+			padding-right: 1em;
+			border-right: 1px solid $color__main-bordes;
 		}
 
 		/* If only one widget is displayed, make it full width. */

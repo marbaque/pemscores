@@ -3,6 +3,7 @@
 	clear: left;
 	line-height: 1.2;
 	font-size: 1rem;
+	text-rendering: optimizeLegibility;
 
 	ul.menu {
 		margin-top: 1em;
@@ -109,6 +110,7 @@ button.dropdown-toggle {
 
 }
 
+//menu en pantallas grandes
 @media screen and (min-width: $query__medium) {
 	.menu-toggle {
 		display: none;
@@ -124,6 +126,7 @@ button.dropdown-toggle {
 			padding-right: 2em;
 		}
 		ul.menu {
+			text-align: center;
 
 			>li:not(:last-child):after {
 				content: "|";
@@ -132,11 +135,16 @@ button.dropdown-toggle {
 				top: .75em;
 			}
 
+			a {
+				width: 180px;
+			}
+
 		}
 		ul {
 			display: block;
 			display: flex;
 			flex-wrap: wrap;
+			text-align: left;
 
 			ul {
 				flex-direction: column;

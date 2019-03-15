@@ -23,16 +23,6 @@
 	}
 }
 
-.entry-title {
-	a {
-
-		&:focus,
-		&:hover {
-
-		}
-	}
-}
-
 .entry-meta,
 .entry-footer {
 	font-family: $font__sans;
@@ -43,12 +33,19 @@
 
 	}
 }
-.migajas {
+.migajas,
+.learn-press-breadcrumb {
 	font-size: 80%;
 	display: block;
 	width: 100%;
 	font-family: $font__sans;
 	margin: 1em 0;
+	color: $color__gris;
+
+	a {
+		color: $color__gris;
+		border: none;
+	}
 }
 
 .byline {
@@ -129,12 +126,11 @@
 	width: 100vw;
 	min-height: 400px;
 	max-height: 1000px;
-	margin-bottom: 1em;
 	margin-left: -1em;
 	border-bottom: 1px solid $color__main-claro;
 	overflow: hidden;
 	position: relative;
-	background-color: $color__main-claro;
+	background-color: $color__gris;
 
 	@media screen and (min-width: $query__small) {
 		margin-left: -2em;
@@ -183,8 +179,8 @@
 		}
 	}
 }
-.page .entry-header,
-.single .entry-header {
+.page-header,
+.entry-header {
 	background: $color__gris-claro;
 	padding: 2em 1em;
 	margin-left: -1em;
@@ -217,9 +213,13 @@
 		}
 	}
 
-	.entry-title {
-		border-bottom: 1px solid $color__main-bordes;
+	.entry-title,
+	.page-title {
+		border-bottom: 1px solid $color__main-oscuro;
 		margin-bottom: .5em;
+		color: $color__main-oscuro;
+		font-weight: 400;
+		margin-top: 0;
 	}
 }
 .page-content,
@@ -247,20 +247,26 @@
 	font-family: $font__sans;
 }
 
+.hentry {
+	&.recurso {
+		margin: 0;
+	}
+}
+
 
 //content-recurso
-.recurso-wrap{
+.recurso-wrap {
 	width: 100%;
 	max-width: $size__max-width;
 	height: auto;
-	background-color: white;
-	border: 1px solid #c3c3c3;
 	padding: 0;
-	box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+	margin-bottom: 0;
+	position: relative;
+	@extend .sticky;
+	background: $color__main-superclaro;
 
 	.recurso-media {
 		padding: 0 0 1em;
-		background-color: #d1d1d1;
 
 		.recurso-image {
 			width: 100%;
@@ -282,6 +288,7 @@
 
 		h1.entry-title {
 			font-size: 1.5em;
+			color: $color__main-oscuro;
 		}
 
 		.termino {
@@ -292,17 +299,17 @@
 	.recurso_tags {
 		font-family: $font__sans;
 
+		a {
+			@include etiqueta($color__naranja, $color__naranja-claro);
+			text-decoration: none;
+		}
+
 		&.recurso-link {
 			background: white;
 			padding: .5em 1em;
 			margin: 1em 0;
 			//border-radius: 8px;
 			box-shadow: 1px 2px rgba(0,0,0,.2);
-
-			a {
-				text-decoration: none;
-				color: inherit;
-			}
 		}
 	}
 
@@ -321,6 +328,22 @@
 			padding: 2em;
 		}
 
+	}
+}
+.relacionados {
+	padding: 1em;
+	font-family: $font__sans;
+
+	@media screen and (min-width: $query__small) {
+		padding: 2em;
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			margin-bottom: .2em;
+		}
 	}
 }
 

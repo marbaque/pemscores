@@ -6,6 +6,38 @@
             margin-bottom: 1em;
             background: white;
             padding: 1em 1em 2em;
+            border: 1px solid $color__main-claro;
+            box-shadow: -1px 2px 2px hsla(0, 0%, 10%, .1);
+            border-radius: 4px;
+
+            .curriculum-sections {
+
+              li.section {
+                border-radius: 4px;
+                border: 1px solid $color__main;
+                overflow: hidden;
+                margin-bottom: 1em;
+
+                .section-header {
+                  border: none;
+                  background-color: $color__main-claro;
+                  color: $color__main;
+                  padding: .5em 1em;
+
+                  h5{
+                    font-weight: 400;
+                  }
+                }
+                .section-content {
+                  margin: 0;
+
+                  a {
+                    padding: 0 1em;
+                  }
+                }
+              }
+            }
+
 
             .course-author>h3 {
                 display: none;
@@ -73,28 +105,29 @@
 }
 
 .widget {
-    .learn-press-course-results-progress {
-        background: inherit;
-        border: none;
-        padding: 0;
-        width: 100%;
-        .items-progress, .course-progress {
-            padding: 0;
-            margin: 0 0 1em;
-        }
-    }
-    .avatar-cont {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1em;
-        .avatar {
-            width: 80px;
-            height: auto;
-            @include borde-redondeado(50%);
+  .learn-press-course-results-progress {
+    background: inherit;
+    border: none;
+    padding: 0;
+    width: 100%;
 
-        }
+    .items-progress, .course-progress {
+      padding: 0;
+      margin: 0 0 1em;
     }
+  }
+  .avatar-cont {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+
+    .avatar {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
 
 }
 
@@ -124,9 +157,9 @@
 //programa de curso y sadiebar en lecciones
 .course-curriculum
 ul.curriculum-sections
-.section-header
-.section-title {
-    font-weight: 750!important;
+.section-header .section-title {
+
+
 }
 
 .course-curriculum ul.curriculum-sections .section-content .course-item {
@@ -177,4 +210,15 @@ ul.curriculum-sections
         margin-right: .25em;
 
     }
+}
+
+.course-price {
+  margin: 1em 0;
+
+  span.price {
+    @include etiqueta(
+      $color__naranja-claro,
+      $color__naranja
+      );
+  }
 }

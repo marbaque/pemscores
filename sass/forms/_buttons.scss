@@ -1,23 +1,25 @@
 button,
+.lp-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 
 	width: auto;
-    background: white;
-    border: 2px solid black;
-	border-color: black;
-	color: black;
+  background: $color__verde-claro;
+  border: 2px solid $color__verde;
+	border-color: $color__verde;
+	color: $color__verde;
 	font-family: $font__sans;
 	@include font-size(1);
 	line-height: 1;
 	padding: .5em 1em;
+	border-radius: .2em;
 
 	&:hover ,
 	&:active,
 	&:focus {
 		//background: $color__interactive;
 		opacity: .8;
-		color: black;
+		//color: black;
 	}
 }

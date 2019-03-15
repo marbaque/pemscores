@@ -1,3 +1,5 @@
+//estilos para bbpress y buddypress
+
 @media screen and (min-width: $query__medium) {
     .profile {
         .page .post-content {
@@ -40,5 +42,15 @@
 @media screen and (min-width: $query__medium) {
   body.buddypress .entry-content {
       width: $size__ratio-large!important;
+  }
+}
+
+// register form sections
+@media screen and(max-width:$query__small) {
+  .register-section {
+    display: block;
+    width: 100%!important;
+    float: none!important;
+    clear: both;
   }
 }

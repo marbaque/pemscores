@@ -16,6 +16,14 @@ $file = get_field('subir_arch');
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<header class="entry-header">
+		<?php
+		if ( is_single() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		endif; ?>
+
+	</header><!-- .entry-header -->
+
 	<div class="recurso-wrap">
 
 		<div class="recurso-media">
@@ -31,15 +39,33 @@ $file = get_field('subir_arch');
 		</div>
 
 		<div class="recurso-content">
-
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<div class="recurso-descripcion">
-
 				<?php get_template_part( 'template-parts/recurso', 'meta' ); ?>
-
 			</div>
 		</div> <!-- recurso-content -->
 
 	</div>
 
 </article><!-- #post-## -->
+
+<section class="relacionados">
+	<h4><?= __( 'Recursos relacionados', 'pemscores' ); ?></h4>
+	<ul>
+	<?php
+	$related = get_posts( array(
+		'category__in' => wp_get_post_categories($post->ID),
+		'numberposts' => 	5, 'post__not_in' => array($post->ID),
+		'post_type'		=>	'recurso'
+	) );
+
+	if( $related ) foreach( $related as $post ) {
+	setup_postdata($post); ?>
+
+	        <li>
+	        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+	        </li>
+
+	<?php } ?>
+	</ul>
+	<?php wp_reset_postdata(); ?>
+</section>

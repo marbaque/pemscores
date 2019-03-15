@@ -34,8 +34,19 @@
 	border-radius: $radio;
 }
 
-@mixin hideText {
+@mixin hideText() {
   	overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
+}
+
+@mixin etiqueta($color, $fondo) {
+	font-size: 1rem!important;
+	padding: .2em .4em;
+	background-color: $fondo;
+	color: $color;
+	border-radius: .2em;
+	&:hover {
+		opacity: .8;
+	}
 }

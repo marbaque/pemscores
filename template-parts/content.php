@@ -23,7 +23,6 @@
 	<?php } ?>
 
 	<div class="post__content">
-		<header class="entry-header">
 			<?php pemscores_the_category_list(); ?>
 			<?php
 			if ( is_single() ) :
@@ -38,7 +37,6 @@
 			</div><!-- .entry-meta -->
 			<?php
 			endif; ?>
-		</header><!-- .entry-header -->
 
 		<div class="entry-content">
 			<?php
@@ -60,8 +58,8 @@
 			);
 			?>
 
-			<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
-				<?php echo $read_more_link; ?>
+			<a href="<?php echo esc_url( get_permalink() ) ?>" class="read-more" rel="bookmark">
+				<?php echo $read_more_link . pemscores_get_svg( array('icon' => 'arrow-right', 'fallback' => true ) ); ?>
 			</a>
 		</div><!-- .continue-reading -->
 

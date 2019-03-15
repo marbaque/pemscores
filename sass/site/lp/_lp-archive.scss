@@ -21,7 +21,9 @@
           }
 
           .learn-press-courses {
-
+            width: 100%;
+            margin: 2em 0 0;
+            
             .lp_course {
               position: relative;
     		      background: $color__gris-claro;
@@ -83,13 +85,14 @@
               }
             }
 
-            @media screen and (min-width: $query__small) {
+            @media screen and (min-width: $query__small) { // learn-press-courses
               display: flex;
       				justify-content: space-around;
       				flex-wrap: wrap;
 
               .lp_course {
-                  width: 48%;
+                  width: 46%;
+                  margin: 0 0 .5em;
 
               }
 

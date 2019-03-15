@@ -15,9 +15,10 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-	padding: 3px;
+	border: 1px solid $color__main-bordes;
+	background-color: $color__main-superclaro;
+	border-radius: 4px;
+	padding: 4px;
 	font-family: $font__sans;
 
 	&:focus {
@@ -26,10 +27,66 @@ textarea {
 }
 
 select {
-	border: 1px solid $color__border-input;
+	border: 1px solid $color__main-bordes;
 	font-family: $font__sans;
 }
 
 textarea {
 	width: 100%;
+}
+
+label,
+fieldset {
+	font-family: $font__sans;
+}
+
+
+#buddypress {
+	form.standard-form {
+		input[type="checkbox"] {
+			margin-right: .5em;
+		}
+		input[type="email"],
+		input[type="password"],
+		input[type="text"] {
+			width: 100%!important;
+			color: $color__text-input;
+			border: 1px solid $color__main-bordes;
+			background-color: $color__main-superclaro;
+			border-radius: 4px;
+			padding: 4px;
+			font-family: $font__sans;
+		}
+		select {
+			border: 1px solid $color__main-bordes;
+			font-family: $font__sans;
+			background-color: $color__main-superclaro;
+			padding: 4px;
+		}
+		fieldset {
+			margin-bottom: 1em;
+		}
+		label,
+		legend {
+			font-size: 90%!important;
+		}
+		p.field-visibility-settings-toggle {
+			font-size: 80%;
+			color: $color__gris;
+		}
+		button.visibility-toggle-link {
+			@include etiqueta($color__naranja, $color__naranja-claro);
+		}
+		input[type="submit"] {
+			width: auto;
+		  background: $color__naranja-claro;
+		  border: 2px solid $color__naranja;
+			border-color: $color__naranja;
+			color: $color__naranja;
+			@include font-size(1);
+			line-height: 1;
+			padding: .5em 1em;
+			border-radius: .2em;
+		}
+	}
 }

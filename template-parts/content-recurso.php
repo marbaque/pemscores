@@ -30,32 +30,29 @@
 		<?php endif; ?>
 
 		<div class="recurso__text">
-			<header class="entry-header">
 				<?php
-
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-					?>
-
-			</header><!-- .entry-header -->
+				?>
+				<?php the_excerpt(); ?>
 
 			<div class="recurso-cats">
 				<!-- coberturas -->
 				    <?php echo get_the_term_list(
-				            $post->ID, 'cobertura', __('<p><strong>Cobertura:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
+				            $post->ID, 'cobertura', __('<span>', 'pemscores'), ', ', '</span>' ); ?>
 
 				<!-- tipos de recurso -->
 				    <?php echo get_the_term_list(
-				        $post->ID, 'tipo_recurso', __('<p><strong>Tipo de recurso:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
+				        $post->ID, 'tipo_recurso', __('<span> ', 'pemscores'), ', ', '</span>' ); ?>
 
 				<!-- Formato -->
 				    <?php echo get_the_term_list(
-				        $post->ID, 'tipo_medio', __('<p><strong>Formato:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
+				        $post->ID, 'tipo_medio', __('<span> ', 'pemscores'), ', ', '</span>' ); ?>
 
 
 
 				<!-- Interacciones -->
 				    <?php echo get_the_term_list(
-				        $post->ID, 'interaccion', __('<p><strong>Interacción:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
+				        $post->ID, 'interaccion', __('<span> ', 'pemscores'), ', ', '</span>' ); ?>
 
 			</div><!-- .recurso-cats -->
 		</div><!-- .recurso__content -->

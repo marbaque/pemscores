@@ -247,13 +247,6 @@
 	font-family: $font__sans;
 }
 
-.hentry {
-	&.recurso {
-		margin: 0;
-	}
-}
-
-
 //content-recurso
 .recurso-wrap {
 	width: 100%;
@@ -267,6 +260,7 @@
 
 	.recurso-media {
 		padding: 0 0 1em;
+		background-color: $color__main-oscuro;
 
 		.recurso-image {
 			width: 100%;

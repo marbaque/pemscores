@@ -1853,10 +1853,6 @@ a.read-more .icon {
 	font-family: "Roboto", sans-serif;
 }
 
-.hentry.recurso {
-	margin: 0;
-}
-
 .recurso-wrap {
 	width: 100%;
 	max-width: 1280px;
@@ -1869,6 +1865,7 @@ a.read-more .icon {
 
 .recurso-wrap .recurso-media {
 	padding: 0 0 1em;
+	background-color: #00529a;
 }
 
 .recurso-wrap .recurso-media .recurso-image {

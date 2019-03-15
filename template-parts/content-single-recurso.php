@@ -21,6 +21,13 @@ $file = get_field('subir_arch');
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		endif; ?>
+		<?php
+			if( function_exists('bcn_display') && !is_singular('lp_course') ) {
+				echo '<div class="migajas">';
+				bcn_display();
+				echo '</div>';
+			}
+			?>
 
 	</header><!-- .entry-header -->
 
@@ -61,9 +68,9 @@ $file = get_field('subir_arch');
 	if( $related ) foreach( $related as $post ) {
 	setup_postdata($post); ?>
 
-	        <li>
-	        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-	        </li>
+    <li>
+    <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+    </li>
 
 	<?php } ?>
 	</ul>

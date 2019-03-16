@@ -131,6 +131,7 @@
 	overflow: hidden;
 	position: relative;
 	background-color: $color__gris;
+	background-attachment: fixed;
 
 	@media screen and (min-width: $query__small) {
 		margin-left: -2em;

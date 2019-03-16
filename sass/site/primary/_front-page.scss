@@ -1,24 +1,27 @@
 // Más estilos de la pagina principal front-page
 //hero-banner
+@keyframes paneo {
+  0%   { background-position-x: 1344px; }
+  100% { background-position-x: 0; }
+}
+
 .hero-banner {
 	position: relative;
-	height: auto;
+	height: 500px;
 	overflow: auto;
-	background: url(images/fondo-ilustrado.svg) repeat-x center bottom $color__main-superclaro;
-	background-size: auto 70%;
-
-	&.custom-image {
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-	}
+	background: url(images/fondo-ilustrado.svg) repeat-x center 40% $color__main-superclaro;
+	background-size: auto 45%;
+	animation: paneo 120s infinite; /* IE 10+, Fx 29+ */
+	animation-timing-function: linear;
+	background-attachment: fixed;
+	border-bottom: 1px solid $color__main-bordes;
 
 	.hero-title {
 		width: 410px;
 		height: 201px;
 		max-width: 80%;
 		background: url("images/logo-full.svg") no-repeat;
-		margin: 80px auto 100px;
+		margin: 100px auto 80px;
 		@include hideText();
 	}
 }
@@ -40,6 +43,7 @@
 	margin: 1em auto;
 	font-size: 1.2em;
 	font-family: $font__sans;
+	color: $color__main-bordes;
 
 	@media screen and (min-width: $query__small) {
 		margin: 3em auto 1em;

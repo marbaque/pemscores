@@ -130,7 +130,7 @@
 	border-bottom: 1px solid $color__main-claro;
 	overflow: hidden;
 	position: relative;
-	background-color: $color__gris;
+	background-color: white;
 	background-attachment: fixed;
 
 	@media screen and (min-width: $query__small) {
@@ -218,7 +218,6 @@
 	.page-title {
 		border-bottom: 1px solid $color__main-oscuro;
 		margin-bottom: .5em;
-		color: $color__main-oscuro;
 		font-weight: 400;
 		margin-top: 0;
 	}
@@ -254,10 +253,11 @@
 	max-width: $size__max-width;
 	height: auto;
 	padding: 0;
+	margin-top: 1em;
 	margin-bottom: 0;
 	position: relative;
 	@extend .sticky;
-	background: $color__main-superclaro;
+	border: 1px solid $color__main-bordes;
 
 	.recurso-media {
 		padding: 0 0 1em;
@@ -370,4 +370,5 @@
 //avatar
 .avatar-circular {
 	border-radius: 50%;
+	border: 2px solid $color__main;
 }

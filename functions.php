@@ -92,11 +92,11 @@ function pemscores_fonts_url() {
 
 	/**
 	 * Translators: If there are characters in your language that are not
-	 * supported by Roboto and Crimson, translate this to 'off'. Do not translate
+	 * supported by Roboto and Lora, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
 	$sansSerif = _x( 'on', 'Roboto font: on or off', 'pemscores' );
-	$serif = _x( 'on', 'Crimson: on or off', 'pemscores' );
+	$serif = _x( 'on', 'Lora: on or off', 'pemscores' );
 
 	$font_families = array();
 
@@ -105,7 +105,7 @@ function pemscores_fonts_url() {
 	}
 
 	if ( 'off' !== $serif ) {
-		$font_families[] = 'Crimson+Text:400,400i,700,700i';
+		$font_families[] = 'Lora:400,400i,700,700i';
 	}
 
 

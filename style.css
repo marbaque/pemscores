@@ -291,7 +291,7 @@ textarea {
 }
 
 body {
-	font-family: Georgia, Times, serif;
+	font-family: "Lora", Georgia, Times, serif;
 }
 
 button,
@@ -302,8 +302,6 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin-top: .75em;
-	margin-bottom: .25em;
 	clear: both;
 	font-family: "Roboto", sans-serif;
 	text-rendering: optimizeLegibility;
@@ -407,6 +405,11 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+hr {
+	background-color: #6696c7;
+	margin: 2em 0;
 }
 
 /*--------------------------------------------------------------
@@ -525,7 +528,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	width: auto;
-	background: #def2cc;
+	background: #eaf7df;
 	border: 2px solid #5abe00;
 	border-color: #5abe00;
 	color: #5abe00;
@@ -551,6 +554,10 @@ input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
 	opacity: .8;
+}
+
+.wp-block-button a {
+	font-family: "Roboto", sans-serif;
 }
 
 input[type="text"],
@@ -650,7 +657,7 @@ fieldset {
 #buddypress form.standard-form button.visibility-toggle-link {
 	font-size: 1rem !important;
 	padding: .2em .4em;
-	background-color: #ffead2;
+	background-color: #f9f2ea;
 	color: #ff961e;
 	border-radius: .2em;
 }
@@ -661,7 +668,7 @@ fieldset {
 
 #buddypress form.standard-form input[type="submit"] {
 	width: auto;
-	background: #ffead2;
+	background: #f9f2ea;
 	border: 2px solid #ff961e;
 	border-color: #ff961e;
 	color: #ff961e;
@@ -1173,7 +1180,7 @@ a:hover, a:active {
 .archive-view .recurso .recurso__content .recurso-cats a {
 	font-size: 1rem !important;
 	padding: .2em .4em;
-	background-color: #ffead2;
+	background-color: #f9f2ea;
 	color: #ff961e;
 	border-radius: .2em;
 	text-decoration: none;
@@ -1700,7 +1707,7 @@ a.read-more .icon {
 	border-bottom: 1px solid #cce2f8;
 	overflow: hidden;
 	position: relative;
-	background-color: #888;
+	background-color: white;
 	background-attachment: fixed;
 }
 
@@ -1807,7 +1814,6 @@ a.read-more .icon {
 .entry-header .page-title {
 	border-bottom: 1px solid #00529a;
 	margin-bottom: .5em;
-	color: #00529a;
 	font-weight: 400;
 	margin-top: 0;
 }
@@ -1838,9 +1844,10 @@ a.read-more .icon {
 	max-width: 1280px;
 	height: auto;
 	padding: 0;
+	margin-top: 1em;
 	margin-bottom: 0;
 	position: relative;
-	background: #ebf3fc;
+	border: 1px solid #6696c7;
 }
 
 .recurso-wrap .recurso-media {
@@ -1882,7 +1889,7 @@ a.read-more .icon {
 .recurso-wrap .recurso_tags a {
 	font-size: 1rem !important;
 	padding: .2em .4em;
-	background-color: #ffead2;
+	background-color: #f9f2ea;
 	color: #ff961e;
 	border-radius: .2em;
 	text-decoration: none;
@@ -1959,6 +1966,7 @@ a.read-more .icon {
 
 .avatar-circular {
 	border-radius: 50%;
+	border: 2px solid #006edc;
 }
 
 /*--------------------------------------------------------------
@@ -2131,7 +2139,7 @@ a.read-more .icon {
 	font-size: 1rem !important;
 	padding: .2em .4em;
 	background-color: #ff961e;
-	color: #ffead2;
+	color: #f9f2ea;
 	border-radius: .2em;
 }
 
@@ -2298,7 +2306,7 @@ a.read-more .icon {
 }
 
 h3.course-item-title {
-	border-bottom: 3px solid #eee;
+	border-bottom: 2px solid #6696c7;
 	padding-bottom: 1em;
 }
 
@@ -2310,6 +2318,14 @@ h3.course-item-title {
 	.content-item-wrap {
 		margin: 3em auto !important;
 	}
+}
+
+.content-item-wrap ol, .content-item-wrap ul {
+	margin: 1em 0;
+}
+
+.content-item-wrap ol li, .content-item-wrap ul li {
+	margin-bottom: 1em;
 }
 
 .content-item-wrap ol {
@@ -2325,7 +2341,8 @@ h3.course-item-title {
 }
 
 .content-item-wrap ol li:before {
-	background-color: #BBE0F4;
+	background-color: #5abe00;
+	font-family: "Roboto", sans-serif;
 	width: 24px;
 	text-indent: 2px;
 	padding-left: 0px;
@@ -2389,6 +2406,15 @@ a.toggle-content-item {
 
 #popup_container input[type="button"] {
 	line-height: 15px;
+}
+
+.learn-press-content-protected-message {
+	background-color: #f9f2ea !important;
+	font-family: "Roboto", sans-serif;
+}
+
+.learn-press-content-protected-message .icon {
+	display: none;
 }
 
 @media screen and (min-width: 900px) {
@@ -2804,7 +2830,6 @@ a.toggle-content-item {
 .widget {
 	margin: 0 0 2em;
 	font-family: "Roboto", sans-serif;
-	border: 1px solid #6696c7;
 	background: #ebf3fc;
 	border-radius: 8px;
 	/* Make sure select elements fit in widgets. */
@@ -2812,7 +2837,7 @@ a.toggle-content-item {
 
 .widget ul,
 .widget ol {
-	padding: .7em 0 0;
+	padding: .5em 0 0;
 	margin-bottom: 0;
 	list-style-type: none;
 }
@@ -2820,7 +2845,7 @@ a.toggle-content-item {
 .widget ul li,
 .widget ol li {
 	display: block;
-	line-height: 2em;
+	line-height: 1.2;
 }
 
 .widget ul li ul,
@@ -2840,7 +2865,6 @@ a.toggle-content-item {
 }
 
 .widget a {
-	font-weight: 600;
 	text-decoration: none;
 }
 
@@ -2890,16 +2914,15 @@ a.toggle-content-item {
 .widget_pages a,
 .widget_nav_menu a {
 	display: block;
-	padding: 1em 0;
+	padding: .5em 0;
 	text-decoration: none;
-	border-bottom: 1px dashed gray;
 }
 
 .widget_pages a:hover, .widget_pages a:focus,
 .widget_nav_menu a:hover,
 .widget_nav_menu a:focus {
 	text-decoration: none;
-	border-bottom: 1px dashed gray;
+	border-bottom: none;
 }
 
 .widget_pages li,
@@ -3149,6 +3172,10 @@ a.toggle-content-item {
 
 .widget.bbp_widget_login form.bbp-login-form fieldset input[type="text"],
 .widget.bbp_widget_login form.bbp-login-form fieldset input[type="password"] {
+	width: 100%;
+}
+
+.widget.buddypress input, .widget.buddypress label {
 	width: 100%;
 }
 

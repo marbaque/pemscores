@@ -17,19 +17,19 @@
 .widget {
 	margin: 0 0 2em;
 	font-family: $font__sans;
-	border: 1px solid $color__main-bordes;
+	//border: 1px solid $color__main-bordes;
 	background: $color__main-superclaro;
 	border-radius: 8px;
 
 	ul,
 	ol {
-		padding: .7em 0 0;
+		padding: .5em 0 0;
 		margin-bottom: 0;
 		list-style-type: none;
 
 		li {
 			display: block;
-			line-height: 2em;
+			line-height: 1.2;
 
 			ul,
 			ol {
@@ -44,8 +44,8 @@
 	}
 
 	a {
-		font-weight: 600;
 		text-decoration: none;
+
 
 		&:hover,
 		&:focus {
@@ -98,14 +98,14 @@
 
 	a {
 		display: block;
-		padding: 1em 0;
+		padding: .5em 0;
 		text-decoration: none;
-		border-bottom: 1px dashed hsl(0, 0%, 50%);
+		//border-bottom: 1px dashed hsl(0, 0%, 50%);
 
 		&:hover,
 		&:focus {
 			text-decoration: none;
-			border-bottom: 1px dashed hsl(0, 0%, 50%);
+			border-bottom: none;
 		}
 	}
 
@@ -391,6 +391,12 @@
 					width: 100%;
 				}
 			}
+		}
+	}
+
+	&.buddypress {
+		input, label {
+			width: 100%;
 		}
 	}
 }

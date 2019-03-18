@@ -15,8 +15,21 @@ get_header(); ?>
 	<?php
 		the_archive_title( '<h1 class="page-title">', '</h1>' );
 		the_archive_description( '<div class="archive-description">', '</div>' );
+
+		if ( get_post_type() =='recurso' ) {
+			echo do_shortcode( '[searchandfilter fields="search,cobertura,organizacion_tag,tipo_recurso,tipo_medio" post_types="recurso" hide_empty=1 search_placeholder="Buscar recursos..." types=",date" submit_label="Filtrar"]' );
+
+		}
 	?>
 </header><!-- .page-header -->
+
+<?php
+	if( function_exists('bcn_display') && !is_singular('lp_course') ) {
+		echo '<div class="migajas">';
+		bcn_display();
+		echo '</div>';
+	}
+	?>
 
 
 	<div id="primary" class="content-area">

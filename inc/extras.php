@@ -177,7 +177,7 @@ add_action( 'template_redirect', function() {
 
     if( ( is_page('perfil-buddypress') ) ) {
         if (!is_user_logged_in() ) {
-            wp_redirect( site_url( '/registro-buddypress' ) );        // redirect all...
+            wp_redirect( site_url( '/registro-buddypress' ) ); // redirect all...
             exit();
         }
 

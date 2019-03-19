@@ -20,8 +20,8 @@
 
                 .section-header {
                   border: none;
-                  background-color: $color__main-claro;
-                  color: $color__main;
+                  background-color: $color__main-superclaro;
+                  color: $color__main-oscuro;
                   padding: .5em 1em;
 
                   h5{
@@ -93,6 +93,10 @@
         }
     }
 
+    .course-students {
+      @include etiqueta($color__main-superclaro, $color__main-oscuro);
+    }
+
 
 }
 
@@ -154,7 +158,7 @@
     height: auto!important;
 }
 
-//programa de curso y sadiebar en lecciones
+//programa de curso y sidebar en lecciones
 .course-curriculum
 ul.curriculum-sections
 .section-header .section-title {

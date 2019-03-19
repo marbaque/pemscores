@@ -40,10 +40,10 @@
 	width: 100%;
 	font-family: $font__sans;
 	margin: 1em 0;
-	color: $color__gris;
+	color: $color__text-main;
 
 	a {
-		color: $color__gris;
+		color: $color__text-main;
 		border: none;
 	}
 }
@@ -125,7 +125,7 @@
 .full-bleed {
 	width: 100vw;
 	min-height: 400px;
-	max-height: 1000px;
+	max-height: 780px;
 	margin-left: -1em;
 	border-bottom: 1px solid $color__main-claro;
 	overflow: hidden;

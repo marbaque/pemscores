@@ -541,7 +541,8 @@ input[type="submit"] {
 	font-size: 1rem;
 	line-height: 1;
 	padding: .5em 1em;
-	border-radius: .2em;
+	border-radius: 4px;
+	letter-spacing: .5px;
 }
 
 button:hover, button:active, button:focus,
@@ -557,7 +558,7 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	opacity: .8;
+	opacity: .7;
 }
 
 .wp-block-button a {
@@ -653,7 +654,8 @@ fieldset {
 	font-size: 90% !important;
 }
 
-#buddypress form.standard-form p.field-visibility-settings-toggle {
+#buddypress form.standard-form p.field-visibility-settings-toggle,
+#buddypress form.standard-form p.field-visibility-settings-notoggle {
 	font-size: 80%;
 	color: #888;
 }
@@ -1670,12 +1672,12 @@ a.read-more .icon {
 	width: 100%;
 	font-family: "Roboto", sans-serif;
 	margin: 1em 0;
-	color: #888;
+	color: #444;
 }
 
 .migajas a,
 .learn-press-breadcrumb a {
-	color: #888;
+	color: #444;
 	border: none;
 }
 
@@ -1744,7 +1746,7 @@ a.read-more .icon {
 .full-bleed {
 	width: 100vw;
 	min-height: 400px;
-	max-height: 1000px;
+	max-height: 780px;
 	margin-left: -1em;
 	border-bottom: 1px solid #cce2f8;
 	overflow: hidden;
@@ -2036,8 +2038,8 @@ a.read-more .icon {
 
 .course .post-content .course-overview_section .curriculum-sections li.section .section-header {
 	border: none;
-	background-color: #cce2f8;
-	color: #006edc;
+	background-color: #ebf3fc;
+	color: #00529a;
 	padding: .5em 1em;
 }
 
@@ -2077,6 +2079,18 @@ a.read-more .icon {
 .lp-single-course .learn-press-breadcrumb q a,
 .lp-single-course .learn-press-course-forum-link q a {
 	border: none;
+}
+
+.lp-single-course .course-students {
+	font-size: 1rem !important;
+	padding: .2em .4em;
+	background-color: #00529a;
+	color: #ebf3fc;
+	border-radius: .2em;
+}
+
+.lp-single-course .course-students:hover {
+	opacity: .8;
 }
 
 .lp_course.has-post-thumbnail .full-bleed {
@@ -3250,13 +3264,21 @@ a.toggle-content-item {
 	display: none;
 }
 
-.searchandfilter select {
+.searchandfilter select,
+.searchandfilter input.postform {
 	border: 2px solid #6696c7;
 	font-family: "Roboto", sans-serif;
 	background-color: #ebf3fc;
 	padding: 8px;
 	font-size: 1rem;
 	height: 40px;
+}
+
+.searchandfilter li h4 {
+	margin: 2px 0;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: .8rem;
 }
 
 .searchandfilter.home-searchandfilter ul {
@@ -3289,6 +3311,9 @@ a.toggle-content-item {
 	    flex-wrap: wrap;
 	-ms-flex-pack: distribute;
 	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .searchandfilter.recursos-searchandfilter ul li:first-child {
@@ -3296,6 +3321,11 @@ a.toggle-content-item {
 	    -ms-flex: 1 1 100%;
 	        flex: 1 1 100%;
 	margin-bottom: 1em;
+}
+
+.searchandfilter.recursos-searchandfilter ul li:last-child {
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
 }
 
 .widget.bbp_widget_login form.bbp-login-form fieldset {
@@ -3311,8 +3341,27 @@ a.toggle-content-item {
 	width: 100%;
 }
 
-.widget.buddypress input, .widget.buddypress label {
+.widget.buddypress input[type="text"],
+.widget.buddypress input[type="password"] {
 	width: 100%;
+	background-color: white;
+}
+
+.widget.buddypress .bp-login-widget-register-link a {
+	font-size: 1rem !important;
+	padding: .2em .4em;
+	background-color: white;
+	color: #ff961e;
+	border-radius: .2em;
+	border: none;
+}
+
+.widget.buddypress .bp-login-widget-register-link a:hover {
+	opacity: .8;
+}
+
+.widget.buddypress #bp-login-widget-form label {
+	font-size: .9em;
 }
 
 /*--------------------------------------------------------------

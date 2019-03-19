@@ -9,11 +9,11 @@
 	position: relative;
 	height: 500px;
 	overflow: auto;
-	background: url(images/fondo-ilustrado.svg) repeat-x center bottom $color__main-superclaro;
-	background-size: auto;
+	background: url(images/fondo-ilustrado.svg) repeat-x center 45% $color__main-superclaro;
+	background-size: auto 40%;
 	animation: paneo 120s infinite; /* IE 10+, Fx 29+ */
 	animation-timing-function: linear;
-	//background-attachment: fixed;
+	background-attachment: fixed;
 	border-bottom: 1px solid $color__main-bordes;
 
 	.hero-title {
@@ -21,7 +21,7 @@
 		height: 201px;
 		max-width: 80%;
 		background: url("images/logo-full.svg") no-repeat;
-		margin: 100px auto 80px;
+		margin: 140px auto 80px;
 		@include hideText();
 	}
 }

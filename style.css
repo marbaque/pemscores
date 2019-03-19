@@ -3133,18 +3133,21 @@ a.toggle-content-item {
 ** Estilos para la search bar
 ------------------------------------------*/
 .search-form,
-.learn-press-search-course-form {
+.learn-press-search-course-form,
+.searchandfilter {
 	position: relative;
 }
 
 .search-form .search-course-button,
-.learn-press-search-course-form .search-course-button {
+.learn-press-search-course-form .search-course-button,
+.searchandfilter .search-course-button {
 	visibility: hidden;
 	display: none;
 }
 
 .search-form label,
-.learn-press-search-course-form label {
+.learn-press-search-course-form label,
+.searchandfilter label {
 	height: 40px;
 	width: 80%;
 	-webkit-box-flex: 1;
@@ -3153,7 +3156,8 @@ a.toggle-content-item {
 }
 
 .search-form:before,
-.learn-press-search-course-form:before {
+.learn-press-search-course-form:before,
+.searchandfilter:before {
 	font-family: 'FontAwesome';
 	content: "\f002";
 	font-size: 24px;
@@ -3168,7 +3172,11 @@ a.toggle-content-item {
 }
 
 .search-form .search-field,
-.learn-press-search-course-form .search-field {
+.search-form input[name="ofsearch"],
+.learn-press-search-course-form .search-field,
+.learn-press-search-course-form input[name="ofsearch"],
+.searchandfilter .search-field,
+.searchandfilter input[name="ofsearch"] {
 	width: 100%;
 	height: 40px;
 	border: 2px solid #006edc;
@@ -3189,7 +3197,11 @@ a.toggle-content-item {
 }
 
 .search-form .search-field:focus,
-.learn-press-search-course-form .search-field:focus {
+.search-form input[name="ofsearch"]:focus,
+.learn-press-search-course-form .search-field:focus,
+.learn-press-search-course-form input[name="ofsearch"]:focus,
+.searchandfilter .search-field:focus,
+.searchandfilter input[name="ofsearch"]:focus {
 	width: 100%;
 	outline: 2;
 	-webkit-box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4);
@@ -3197,7 +3209,11 @@ a.toggle-content-item {
 }
 
 .search-form .search-field::-webkit-input-placeholder,
-.learn-press-search-course-form .search-field::-webkit-input-placeholder {
+.search-form input[name="ofsearch"]::-webkit-input-placeholder,
+.learn-press-search-course-form .search-field::-webkit-input-placeholder,
+.learn-press-search-course-form input[name="ofsearch"]::-webkit-input-placeholder,
+.searchandfilter .search-field::-webkit-input-placeholder,
+.searchandfilter input[name="ofsearch"]::-webkit-input-placeholder {
 	outline: 0;
 	border: 0 none;
 	font-weight: normal;
@@ -3205,7 +3221,11 @@ a.toggle-content-item {
 }
 
 .search-form .search-field:-moz-placeholder,
-.learn-press-search-course-form .search-field:-moz-placeholder {
+.search-form input[name="ofsearch"]:-moz-placeholder,
+.learn-press-search-course-form .search-field:-moz-placeholder,
+.learn-press-search-course-form input[name="ofsearch"]:-moz-placeholder,
+.searchandfilter .search-field:-moz-placeholder,
+.searchandfilter input[name="ofsearch"]:-moz-placeholder {
 	outline: 0;
 	border: 0 none;
 	font-weight: normal;
@@ -3213,7 +3233,11 @@ a.toggle-content-item {
 }
 
 .search-form .search-field:-ms-input-placeholder,
-.learn-press-search-course-form .search-field:-ms-input-placeholder {
+.search-form input[name="ofsearch"]:-ms-input-placeholder,
+.learn-press-search-course-form .search-field:-ms-input-placeholder,
+.learn-press-search-course-form input[name="ofsearch"]:-ms-input-placeholder,
+.searchandfilter .search-field:-ms-input-placeholder,
+.searchandfilter input[name="ofsearch"]:-ms-input-placeholder {
 	outline: 0;
 	border: 0 none;
 	font-weight: normal;
@@ -3221,8 +3245,57 @@ a.toggle-content-item {
 }
 
 .search-form .search-submit,
-.learn-press-search-course-form .search-submit {
+.learn-press-search-course-form .search-submit,
+.searchandfilter .search-submit {
 	display: none;
+}
+
+.searchandfilter select {
+	border: 2px solid #6696c7;
+	font-family: "Roboto", sans-serif;
+	background-color: #ebf3fc;
+	padding: 8px;
+	font-size: 1rem;
+	height: 40px;
+}
+
+.searchandfilter.home-searchandfilter ul {
+	display: block;
+	padding: 0;
+	width: 100%;
+}
+
+.searchandfilter.home-searchandfilter ul li {
+	width: 100%;
+	padding: 0;
+}
+
+.searchandfilter.home-searchandfilter ul input[value="Submit"] {
+	display: none;
+}
+
+.searchandfilter.recursos-searchandfilter {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.searchandfilter.recursos-searchandfilter ul {
+	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+
+.searchandfilter.recursos-searchandfilter ul li:first-child {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 100%;
+	        flex: 1 1 100%;
+	margin-bottom: 1em;
 }
 
 .widget.bbp_widget_login form.bbp-login-form fieldset {

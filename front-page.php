@@ -35,17 +35,8 @@ get_header(); ?>
 					<?php //echo __( 'Buscar recursos', 'pemscores'); ?>
 				<!-- </h3> -->
 
-				<form role="search" method="get" id="searchform" class="search-form searchandfilter" action="<?php echo get_site_url(); ?>">
-					<div>
-						<!-- <label for="s">Search for:</label> -->
-						<input type="text" class="search-field" value="" name="s" id="s" placeholder="Buscar recursos, capacitación, ..." />
-						<!-- <input type="hidden" value="1" name="sentence" /> -->
-						<input type="hidden" value="recurso,lp_course" name="post_type" />
-						<!-- <input type="hidden" value="product_cat" name="magazines,books" /> -->
-						<input type="hidden" id="searchsubmit" value="Search" />
-
-					</div>
-				</form>
+				<?php
+				echo do_shortcode( '[searchandfilter fields="search" post_types="recurso,lp-course,page" search_placeholder="Buscar curso, recursos..." class="home-searchandfilter"]' ); ?>
 
 			</div>
 		</section>

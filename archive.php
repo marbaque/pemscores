@@ -17,7 +17,7 @@ get_header(); ?>
 		the_archive_description( '<div class="archive-description">', '</div>' );
 
 		if ( get_post_type() =='recurso' ) {
-			echo do_shortcode( '[searchandfilter fields="search,cobertura,organizacion_tag,tipo_recurso,tipo_medio" post_types="recurso" hide_empty=1 search_placeholder="Buscar recursos..." types=",date" submit_label="Filtrar"]' );
+			echo do_shortcode( '[searchandfilter fields="search,cobertura,organizacion_tag,tipo_recurso,tipo_medio" post_types="recurso" hide_empty=1 search_placeholder="Buscar recursos..." types=",date" submit_label="Filtrar" class="recursos-searchandfilter"]' );
 
 		}
 	?>

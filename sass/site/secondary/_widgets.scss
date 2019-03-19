@@ -296,7 +296,8 @@
 ** Estilos para la search bar
 ------------------------------------------*/
 .search-form,
-.learn-press-search-course-form {
+.learn-press-search-course-form,
+.searchandfilter {
   position: relative;
 
 	.search-course-button {
@@ -325,7 +326,8 @@
 		color: $color__main;
 	}
 
-  .search-field {
+  .search-field,
+	input[name="ofsearch"] { //agregar input de searchsandfilter plugin
       width: 100%;
       height: 40px;
       border: 2px solid $color__main;
@@ -373,6 +375,55 @@
         display: none;
     }
 }
+
+.searchandfilter {
+
+	select {
+		border: 2px solid $color__main-bordes;
+		font-family: $font__sans;
+		background-color: $color__main-superclaro;
+		padding: 8px;
+		font-size: 1rem;
+		height: 40px;
+	}
+
+	&.home-searchandfilter ul {
+	  display: block;
+	  padding: 0;
+	  width: 100%;
+
+		li {
+			width: 100%;
+			padding: 0;
+		}
+
+		input[value="Submit"] {
+			display: none;
+		}
+	}
+
+	&.recursos-searchandfilter {
+		width: 100%;
+		max-width: $query__medium;
+		margin: 0 auto;
+		ul {
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+			li:first-child {
+				flex: 1 1 100%;
+				margin-bottom: 1em;
+			}
+
+			li:not(:first-child) {
+				//margin: .5em;
+			}
+		}
+	}
+}
+
 
 
 //widgets de bbpress y learn-press

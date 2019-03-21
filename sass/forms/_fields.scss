@@ -44,6 +44,47 @@ fieldset {
 #buddypress {
 
 	form.standard-form {
+
+		.layout-wrap {
+
+			.register-section {
+				background-color: $color__main-claro;
+				border-radius: 1em;
+				padding: 1em 1em 2em;
+
+				h2.bp-heading {
+					font-size: 1.5em;
+					text-align: center;
+					color: $color__main-bordes;
+
+					&:before {
+						content: "\f2be";
+						font-family: 'FontAwesome';
+						font-size: 2em;
+						display: block;
+						clear: both;
+						margin: 0 auto;
+					}
+				}
+			}
+
+			@media screen and(min-width: $query__small) {
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: space-around;
+				align-items: flex-start;
+
+				.register-section {
+					flex: 1 1 50%;
+					margin: 0 .5em 1em;
+				}
+			}
+		}
+
+		div.show {
+			font-family: $font__sans;
+		}
+
 		input[type="checkbox"] {
 			margin-right: .5em;
 		}
@@ -54,7 +95,7 @@ fieldset {
 			width: 100%!important;
 			color: $color__text-input;
 			border: 1px solid $color__main-bordes;
-			background-color: $color__main-superclaro;
+			background-color: white;
 			border-radius: 4px;
 			padding: 4px;
 			font-family: $font__sans;

@@ -21,10 +21,10 @@ $user = LP_Global::user();
 
 	<?php
     // @deprecated
-    do_action( 'learn_press_before_courses_loop_item' );
+    //do_action( 'learn_press_before_courses_loop_item' );
 
     // @since 3.0.0
-    do_action( 'learn-press/before-courses-loop-item' );
+    //do_action( 'learn-press/before-courses-loop-item' );
     ?>
 
     <a href="<?php the_permalink(); ?>" class="course-permalink">

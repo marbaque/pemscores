@@ -172,12 +172,17 @@ function pemscores_setup_theme_supported_features() {
 
 add_action( 'after_setup_theme', 'pemscores_setup_theme_supported_features' );
 
-// Esconder perfil de buddypress si no esta registrado como usuario
+/*
+*	Esconder perfil de buddypress si no esta registrado como usuario
+*	las página correspondienes se deben tener el siguiente slug:
+*	perfil-academia
+* regsitro-academia
+*/
 add_action( 'template_redirect', function() {
 
-    if( ( is_page('perfil-buddypress') ) ) {
+    if( ( is_page('perfil-academia') ) ) {
         if (!is_user_logged_in() ) {
-            wp_redirect( site_url( '/registro-buddypress' ) ); // redirect all...
+            wp_redirect( site_url( '/registro-academia' ) ); // redirect all...
             exit();
         }
 

@@ -261,10 +261,11 @@ function pemscores_scripts() {
 	wp_enqueue_style( 'pemscores-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'pemscores-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+
 	wp_localize_script( 'pemscores-navigation', 'pemscoresScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'pemscores'),
 		'collapse' => __( 'Collapse child menu', 'pemscores'),
-	));
+	)); 
 
 	wp_enqueue_script( 'pemscores-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20161201', true );
 

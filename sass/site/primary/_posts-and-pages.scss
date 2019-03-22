@@ -25,7 +25,7 @@
 
 .entry-meta,
 .entry-footer {
-	font-family: $font__sans;
+	//font-family: $font__sans;
 	font-size: 90%;
 
 	a {
@@ -38,7 +38,7 @@
 	font-size: 80%;
 	display: block;
 	width: 100%;
-	font-family: $font__sans;
+	//font-family: $font__sans;
 	margin: 1em 0;
 	color: $color__text-main;
 
@@ -218,7 +218,7 @@
 
 	.entry-title,
 	.page-title {
-		color: $color__main-oscuro!important;
+		color: $color__main-oscuro;
 		font-weight: 700;
 		border-bottom: 2px solid $color__main-oscuro;
 		margin-bottom: .5em;

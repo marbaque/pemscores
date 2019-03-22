@@ -24,10 +24,6 @@
     }
   }
 
-  a {
-      border: 0;
-  }
-
   #learn-press-profile-nav:before {
       background: none;
   }
@@ -62,6 +58,16 @@ body.buddypress {
 
   .bp-feedback,
   .bp-messages {
-    font-family: $font__sans;
+    //font-family: $font__sans;
   }
+}
+
+
+// Perfil de buddypress
+#buddypress #header-cover-image {
+  background-color: $color__verde-claro;
+  background-image: url("images/fondo-perfil.png");
+  background-size: auto 80%;
+  background-position: left bottom;
+  background-repeat: repeat-x;
 }

@@ -537,15 +537,12 @@ input[type="submit"] {
 	width: auto;
 	background: #eaf7df;
 	border: 2px solid #5abe00;
-	border-color: #5abe00;
 	color: #5abe00;
-	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1;
 	padding: .5em 1em;
 	border-radius: 4px;
-	letter-spacing: .5px;
 }
 
 button:hover, button:active, button:focus,
@@ -1321,7 +1318,7 @@ a:hover, a:active {
 	color: #6696c7;
 	background-color: #cce2f8;
 	font-family: "Roboto", sans-serif;
-	border-bottom: 1px solid #6696c7;
+	border-bottom: 1px solid #006edc;
 	position: relative;
 }
 
@@ -1437,13 +1434,12 @@ Header Menu
 	width: 100%;
 	padding: .75em 1em;
 	text-decoration: none;
-	color: #00529a;
-	font-weight: 700;
+	color: #006edc;
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	color: #006edc;
+	color: #6696c7;
 }
 
 .main-navigation .menu-item-has-children > a,
@@ -1456,9 +1452,10 @@ button.dropdown-toggle {
 	right: 0;
 	border: none;
 	background: inherit;
-	color: currentcolor;
+	color: #006edc;
 	line-height: 1em;
 	padding: .4em .75em;
+	font-weight: 700;
 }
 
 .menu-toggle {
@@ -1481,6 +1478,18 @@ button.dropdown-toggle {
 .toggled-on ul,
 .sub-menu.toggled-on {
 	display: block;
+}
+
+.bp-login-nav a:after {
+	font-family: 'FontAwesome';
+	content: "\f090";
+	margin-left: .5em;
+}
+
+.bp-profile-nav a:after {
+	font-family: 'FontAwesome';
+	content: "\f2be";
+	margin-left: .5em;
 }
 
 @media screen and (min-width: 900px) {
@@ -1726,7 +1735,6 @@ a.read-more .icon {
 
 .entry-meta,
 .entry-footer {
-	font-family: "Roboto", sans-serif;
 	font-size: 90%;
 }
 
@@ -1740,7 +1748,6 @@ a.read-more .icon {
 	font-size: 80%;
 	display: block;
 	width: 100%;
-	font-family: "Roboto", sans-serif;
 	margin: 1em 0;
 	color: #444;
 }
@@ -1926,7 +1933,7 @@ a.read-more .icon {
 .page-header .page-title,
 .entry-header .entry-title,
 .entry-header .page-title {
-	color: #00529a !important;
+	color: #00529a;
 	font-weight: 700;
 	border-bottom: 2px solid #00529a;
 	margin-bottom: .5em;
@@ -2142,7 +2149,6 @@ a.read-more .icon {
 
 .lp-single-course .learn-press-breadcrumb,
 .lp-single-course .learn-press-course-forum-link {
-	font-family: "Roboto", sans-serif;
 	font-size: .8em;
 	border: none;
 }
@@ -2567,10 +2573,6 @@ a.toggle-content-item {
 	background-color: white !important;
 }
 
-.profile a {
-	border: 0;
-}
-
 .profile #learn-press-profile-nav:before {
 	background: none;
 }
@@ -2600,9 +2602,12 @@ body.buddypress .site-content .entry-header {
 	}
 }
 
-body.buddypress .bp-feedback,
-body.buddypress .bp-messages {
-	font-family: "Roboto", sans-serif;
+#buddypress #header-cover-image {
+	background-color: #eaf7df;
+	background-image: url("images/fondo-perfil.png");
+	background-size: auto 80%;
+	background-position: left bottom;
+	background-repeat: repeat-x;
 }
 
 /*--------------------------------------------------------------
@@ -2981,7 +2986,6 @@ body.buddypress .bp-messages {
 /* Footer widgets for archive pages */
 .widget {
 	margin: 0 0 2em;
-	font-family: "Roboto", sans-serif;
 	background: #ebf3fc;
 	border-radius: 8px;
 	/* Make sure select elements fit in widgets. */
@@ -3029,7 +3033,6 @@ body.buddypress .bp-messages {
 	width: 100%;
 	height: 2.5em;
 	padding: 10px;
-	font-family: "Roboto", sans-serif;
 	border: 1px solid #ccc;
 }
 
@@ -3436,6 +3439,11 @@ body.buddypress .bp-messages {
 .widget.buddypress input[type="password"] {
 	width: 100%;
 	background-color: white;
+	margin-bottom: 1em;
+}
+
+.widget.buddypress .forgetmenot {
+	margin-bottom: .5em;
 }
 
 .widget.buddypress .bp-login-widget-register-link a {

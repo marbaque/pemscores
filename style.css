@@ -1683,7 +1683,7 @@ button.dropdown-toggle {
 	font-size: .9em;
 }
 
-a.read-more {
+a.read-more, #member-front-widgets .widget.widget_lp-widget-recent-courses .widget-footer a {
 	background: #cce2f8;
 	position: absolute;
 	bottom: 0;
@@ -1699,7 +1699,7 @@ a.read-more {
 	border-top: 1px solid #006edc;
 }
 
-a.read-more .icon {
+a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses .widget-footer a .icon {
 	right: 1em;
 	top: .75em;
 	position: absolute;
@@ -2608,6 +2608,60 @@ body.buddypress .site-content .entry-header {
 	background-size: auto 80%;
 	background-position: left bottom;
 	background-repeat: repeat-x;
+}
+
+.buddypress-wrap .bp-navs.tabbed-links {
+	font-size: .9em;
+}
+
+.leanpress-buddpress-list-filters,
+.lp-sub-menu {
+	font-size: .8em;
+}
+
+.leanpress-buddpress-list-filters li a,
+.lp-sub-menu li a {
+	border: none;
+}
+
+.leanpress-buddpress-list-filters li a.active,
+.lp-sub-menu li a.active {
+	padding-bottom: 0 !important;
+}
+
+#member-front-widgets .widget {
+	padding: 1em;
+	background: white;
+}
+
+#member-front-widgets .widget.widget_lp-widget-recent-courses .entrada {
+	border: 1px solid #6696c7;
+	padding: 1em 1em 3em;
+	position: relative;
+}
+
+@media screen and (min-width: 900px) {
+	#member-front-widgets {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		width: 100%;
+	}
+	#member-front-widgets .widget {
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 1 50%;
+		        flex: 0 1 50%;
+	}
+}
+
+#member-front-widgets .course-cover a {
+	border: none;
+}
+
+#member-front-widgets .course-cover img {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------

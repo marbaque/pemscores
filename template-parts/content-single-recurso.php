@@ -38,11 +38,9 @@ $file = get_field('subir_arch');
 			<?php if( $fuente == 'ext' ): ?>
 				<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="440"]'); ?>
 			<?php elseif( $fuente == 'int' ): ?>
-				<?php //echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]'); ?>
-
 				<?php
 				if( $file['type'] == 'image' ) {
-					echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '">';
+					echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200px" height"auto">';
 				} else {
 					echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]');
 				}?>

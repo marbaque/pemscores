@@ -25,7 +25,12 @@
 			</figure>
 		<?php elseif( $fuente == 'int' ): ?>
 			<figure>
-				<?php echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200" height="200"]'); ?>
+				<?php
+				if( $file['type'] == 'image' ) {
+					echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '">';
+				} else {
+					echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200" height="200"]');
+				}?>
 			</figure>
 		<?php endif; ?>
 

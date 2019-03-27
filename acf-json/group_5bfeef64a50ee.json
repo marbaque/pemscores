@@ -29,7 +29,29 @@
             "label": "Tipo de recurso",
             "name": "tipo_recurso_field",
             "type": "taxonomy",
-            "instructions": "Selecciones el tipo de recurso de acuerdo a su contenido. Puede seleccionar más de uno.",
+            "instructions": "Seleccione el tipo de recurso de acuerdo a su contenido. Puede seleccionar más de uno.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "tipo_recurso",
+            "field_type": "checkbox",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
+            "key": "field_5c9b869d39d8f",
+            "label": "Eje temático",
+            "name": "eje_tematico",
+            "type": "taxonomy",
+            "instructions": "Seleccione el eje temático. Puede seleccionar más de uno.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -165,6 +187,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1550184494
+    "description": "Elija las categorías correspondientes a este recurso.",
+    "modified": 1553696542
 }

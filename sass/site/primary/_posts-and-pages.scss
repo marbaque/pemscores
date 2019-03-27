@@ -25,7 +25,7 @@
 
 .entry-meta,
 .entry-footer {
-	font-family: $font__sans;
+	//font-family: $font__sans;
 	font-size: 90%;
 
 	a {
@@ -38,7 +38,7 @@
 	font-size: 80%;
 	display: block;
 	width: 100%;
-	font-family: $font__sans;
+	//font-family: $font__sans;
 	margin: 1em 0;
 	color: $color__text-main;
 
@@ -180,16 +180,19 @@
 		}
 	}
 }
+
+// Títulos de páginas
 .page-header,
 .entry-header {
-	padding: 2em 1em!important;
+
+	padding: 2em 1em;
 	margin-left: -1em;
 	margin-right: -1em;
 	max-width: $size__max-width;
 	background: $color__main-superclaro;
 
 	@media screen and (min-width: $query__small) {
-		padding: 4em 1em;
+		padding: 4em 1em 2em;
 		position: relative;
 
 		&:before {
@@ -216,7 +219,7 @@
 
 	.entry-title,
 	.page-title {
-		color: $color__main-oscuro!important;
+		color: $color__main-oscuro;
 		font-weight: 700;
 		border-bottom: 2px solid $color__main-oscuro;
 		margin-bottom: .5em;
@@ -294,7 +297,7 @@
 	}
 
 	.recurso_tags {
-		font-family: $font__sans;
+		//font-family: $font__sans;
 
 		a {
 			@include etiqueta($color__naranja, $color__naranja-claro);

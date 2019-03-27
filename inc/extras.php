@@ -196,3 +196,49 @@ function pemscores_admin_bar_remove_logo() {
     $wp_admin_bar->remove_menu( 'wp-logo' );
 }
 add_action( 'wp_before_admin_bar_render', 'pemscores_admin_bar_remove_logo', 0 );
+
+
+// Login page personalizada
+function my_login_logo() { ?>
+    <style type="text/css">
+			body.login {
+				background-color: #ebf3fc;
+			}
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo-full.png);
+						height:100px;
+						width:320px;
+						background-size: contain;
+						background-repeat: no-repeat;
+	        	padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+// Redireccionar logo a inicio del sitio
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'Academia Municipal';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+// Redireccionar despues de login
+function admin_default_page() {
+  return '/perfil-academia';
+}
+
+add_filter('login_redirect', 'admin_default_page');
+
+// No permitir que usuarios vayan a escritorio
+function disable_dashboard() {
+    if (current_user_can('subscriber') && is_admin()) {
+        wp_redirect(home_url());
+        exit;
+    }
+}
+add_action('admin_init', 'disable_dashboard');

@@ -6,14 +6,10 @@ textarea {
 	color: $color__text-main;
 	@include font-size(1);
 	line-height: $font__line-height-body;
-
+	font-family: $font__system;
 	@media screen and (min-width: $query__small) {
 		@include font-size(1.125);
 	}
-}
-
-body {
-	font-family: $font__serif;
 }
 
 button,

@@ -12,6 +12,7 @@ Text Domain: pemscores
 GitHub Theme URI: https://github.com/marbaque/pemscores
 Tags: Translation-ready, responsive, accessibility, customizable, LearnPress
 
+
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
@@ -277,6 +278,7 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.6;
+	font-family: "system";
 }
 
 @media screen and (min-width: 600px) {
@@ -288,10 +290,6 @@ textarea {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
-}
-
-body {
-	font-family: "Lora", Georgia, Times, serif;
 }
 
 button,
@@ -535,15 +533,12 @@ input[type="submit"] {
 	width: auto;
 	background: #eaf7df;
 	border: 2px solid #5abe00;
-	border-color: #5abe00;
 	color: #5abe00;
-	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1;
 	padding: .5em 1em;
 	border-radius: 4px;
-	letter-spacing: .5px;
 }
 
 button:hover, button:active, button:focus,
@@ -1126,6 +1121,10 @@ a:hover, a:active {
 		width: 30%;
 		margin-top: 2em;
 	}
+	.archive-view:not(.learnpress):not(.site-content) .content-area {
+		max-width: 66%;
+		margin: 0 auto;
+	}
 }
 
 .page-title {
@@ -1297,7 +1296,7 @@ a:hover, a:active {
 	color: #6696c7;
 	background-color: #cce2f8;
 	font-family: "Roboto", sans-serif;
-	border-bottom: 1px solid #6696c7;
+	border-bottom: 1px solid #006edc;
 	position: relative;
 }
 
@@ -1416,7 +1415,7 @@ Header Menu
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	color: #006edc;
+	color: #6696c7;
 }
 
 .main-navigation .menu-item-has-children > a,
@@ -1429,9 +1428,10 @@ button.dropdown-toggle {
 	right: 0;
 	border: none;
 	background: inherit;
-	color: currentcolor;
+	color: #006edc;
 	line-height: 1em;
 	padding: .4em .75em;
+	font-weight: 700;
 }
 
 .menu-toggle {
@@ -1454,6 +1454,18 @@ button.dropdown-toggle {
 .toggled-on ul,
 .sub-menu.toggled-on {
 	display: block;
+}
+
+.bp-login-nav a:after {
+	font-family: 'FontAwesome';
+	content: "\f090";
+	margin-left: .5em;
+}
+
+.bp-profile-nav a:after {
+	font-family: 'FontAwesome';
+	content: "\f2be";
+	margin-left: .5em;
 }
 
 @media screen and (min-width: 900px) {
@@ -1631,7 +1643,7 @@ button.dropdown-toggle {
 	font-size: .9em;
 }
 
-a.read-more {
+a.read-more, #member-front-widgets .widget.widget_lp-widget-recent-courses .widget-footer a, #member-front-widgets .widget.widget_lp-widget-featured-courses .widget-footer a, #member-front-widgets .widget.widget_lp-widget-popular-courses .widget-footer a {
 	background: #cce2f8;
 	position: absolute;
 	bottom: 0;
@@ -1647,7 +1659,7 @@ a.read-more {
 	border-top: 1px solid #006edc;
 }
 
-a.read-more .icon {
+a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses .widget-footer a .icon, #member-front-widgets .widget.widget_lp-widget-featured-courses .widget-footer a .icon, #member-front-widgets .widget.widget_lp-widget-popular-courses .widget-footer a .icon {
 	right: 1em;
 	top: .75em;
 	position: absolute;
@@ -1683,7 +1695,6 @@ a.read-more .icon {
 
 .entry-meta,
 .entry-footer {
-	font-family: "Roboto", sans-serif;
 	font-size: 90%;
 }
 
@@ -1697,7 +1708,6 @@ a.read-more .icon {
 	font-size: 80%;
 	display: block;
 	width: 100%;
-	font-family: "Roboto", sans-serif;
 	margin: 1em 0;
 	color: #444;
 }
@@ -1842,7 +1852,7 @@ a.read-more .icon {
 
 .page-header,
 .entry-header {
-	padding: 2em 1em !important;
+	padding: 2em 1em;
 	margin-left: -1em;
 	margin-right: -1em;
 	max-width: 1280px;
@@ -1852,7 +1862,7 @@ a.read-more .icon {
 @media screen and (min-width: 600px) {
 	.page-header,
 	.entry-header {
-		padding: 4em 1em;
+		padding: 4em 1em 2em;
 		position: relative;
 	}
 	.page-header:before,
@@ -1883,7 +1893,7 @@ a.read-more .icon {
 .page-header .page-title,
 .entry-header .entry-title,
 .entry-header .page-title {
-	color: #00529a !important;
+	color: #00529a;
 	font-weight: 700;
 	border-bottom: 2px solid #00529a;
 	margin-bottom: .5em;
@@ -1952,10 +1962,6 @@ a.read-more .icon {
 
 .recurso-wrap .recurso-content .termino {
 	margin: 0 .15em;
-}
-
-.recurso-wrap .recurso_tags {
-	font-family: "Roboto", sans-serif;
 }
 
 .recurso-wrap .recurso_tags a {
@@ -2095,7 +2101,6 @@ a.read-more .icon {
 
 .lp-single-course .learn-press-breadcrumb,
 .lp-single-course .learn-press-course-forum-link {
-	font-family: "Roboto", sans-serif;
 	font-size: .8em;
 	border: none;
 }
@@ -2550,9 +2555,64 @@ body.buddypress .site-content .entry-header {
 	}
 }
 
-body.buddypress .bp-feedback,
-body.buddypress .bp-messages {
-	font-family: "Roboto", sans-serif;
+#buddypress #header-cover-image {
+	background-color: #eaf7df;
+	background-image: url("images/fondo-perfil.png");
+	background-size: auto 80%;
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+
+.buddypress-wrap .bp-navs.tabbed-links {
+	font-size: .9em;
+}
+
+.leanpress-buddpress-list-filters,
+.lp-sub-menu {
+	font-size: .8em;
+}
+
+.leanpress-buddpress-list-filters li a,
+.lp-sub-menu li a {
+	border: none;
+}
+
+.leanpress-buddpress-list-filters li a.active,
+.lp-sub-menu li a.active {
+	padding-bottom: 0 !important;
+}
+
+#member-front-widgets .widget {
+	padding: 1em;
+	background: white;
+}
+
+#member-front-widgets .widget.widget_lp-widget-recent-courses .archive-course-widget-outer, #member-front-widgets .widget.widget_lp-widget-featured-courses .archive-course-widget-outer, #member-front-widgets .widget.widget_lp-widget-popular-courses .archive-course-widget-outer {
+	border: 1px solid #6696c7;
+	padding: 1em 1em 3em;
+	position: relative;
+}
+
+@media screen and (min-width: 900px) {
+	#member-front-widgets {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		width: 100%;
+	}
+	#member-front-widgets .widget {
+		-ms-flex: 0 1 50%;
+		    flex: 0 1 50%;
+	}
+}
+
+#member-front-widgets .course-cover a {
+	border: none;
+}
+
+#member-front-widgets .course-cover img {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -2925,7 +2985,6 @@ body.buddypress .bp-messages {
 /* Footer widgets for archive pages */
 .widget {
 	margin: 0 0 2em;
-	font-family: "Roboto", sans-serif;
 	background: #ebf3fc;
 	border-radius: 8px;
 	/* Make sure select elements fit in widgets. */
@@ -2973,7 +3032,6 @@ body.buddypress .bp-messages {
 	width: 100%;
 	height: 2.5em;
 	padding: 10px;
-	font-family: "Roboto", sans-serif;
 	border: 1px solid #ccc;
 }
 
@@ -3369,6 +3427,11 @@ body.buddypress .bp-messages {
 .widget.buddypress input[type="password"] {
 	width: 100%;
 	background-color: white;
+	margin-bottom: 1em;
+}
+
+.widget.buddypress .forgetmenot {
+	margin-bottom: .5em;
 }
 
 .widget.buddypress .bp-login-widget-register-link a {

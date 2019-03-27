@@ -79,7 +79,7 @@ function cptui_register_my_taxes() {
 		"name" => __( "Organizaciones", "pemscores" ),
 		"singular_name" => __( "Organización", "pemscores" ),
 		"menu_name" => __( "Organizaciones", "pemscores" ),
-		"all_items" => __( "Todas las organizaciones", "pemscores" ),
+		"all_items" => __( "Todas", "pemscores" ),
 		"edit_item" => __( "Editar organización", "pemscores" ),
 		"view_item" => __( "Ver organización", "pemscores" ),
 		"update_item" => __( "Actualizar nombre de organización", "pemscores" ),
@@ -171,7 +171,7 @@ function cptui_register_my_taxes() {
 		"name" => __( "Coberturas", "pemscores" ),
 		"singular_name" => __( "Cobertura", "pemscores" ),
 		"menu_name" => __( "Cobertura", "pemscores" ),
-		"all_items" => __( "Toda cobertura", "pemscores" ),
+		"all_items" => __( "Todas", "pemscores" ),
 		"edit_item" => __( "Editar cobertura", "pemscores" ),
 		"view_item" => __( "Ver cobertura", "pemscores" ),
 		"update_item" => __( "Actualizar cobertura", "pemscores" ),
@@ -217,7 +217,7 @@ function cptui_register_my_taxes() {
 		"name" => __( "Tipos de recurso", "pemscores" ),
 		"singular_name" => __( "Tipo de recurso", "pemscores" ),
 		"menu_name" => __( "Tipos de recurso", "pemscores" ),
-		"all_items" => __( "Todo tipo", "pemscores" ),
+		"all_items" => __( "Todos", "pemscores" ),
 		"edit_item" => __( "Editar tipo de recurso", "pemscores" ),
 		"view_item" => __( "Ver tipo de recurso", "pemscores" ),
 		"update_item" => __( "Actualizar atributo", "pemscores" ),
@@ -262,9 +262,9 @@ function cptui_register_my_taxes() {
 	$labels = array(
 		"name" => __( "Formato", "pemscores" ),
 		"singular_name" => __( "Formato", "pemscores" ),
-        "plural_name" => __( "Formatos", "pemscores" ),
+    "plural_name" => __( "Formatos", "pemscores" ),
 		"menu_name" => __( "Formato", "pemscores" ),
-		"all_items" => __( "Todo formato", "pemscores" ),
+		"all_items" => __( "Todos", "pemscores" ),
 		"edit_item" => __( "Editar formato", "pemscores" ),
 		"view_item" => __( "Ver formato", "pemscores" ),
 		"update_item" => __( "Actualizar nombre de formato", "pemscores" ),
@@ -309,7 +309,7 @@ function cptui_register_my_taxes() {
 	$labels = array(
 		"name" => __( "Tipos de interacción", "pemscores" ),
 		"singular_name" => __( "Tipo de interacción", "pemscores" ),
-		"all_items" => __( "Toda interacción", "pemscores" ),
+		"all_items" => __( "Todas", "pemscores" ),
 	);
 
 	$args = array(
@@ -330,5 +330,34 @@ function cptui_register_my_taxes() {
 		"show_in_quick_edit" => false,
 		);
 	register_taxonomy( "interaccion", array( "recurso" ), $args );
+
+	/**
+	 * Taxonomy: Ejes Temáticos
+	 */
+
+	$labels = array(
+		"name" => __( "Ejes temáticos", "pemscores" ),
+		"singular_name" => __( "Eje temático", "pemscores" ),
+		"all_items" => __( "Todos", "pemscores" ),
+	);
+
+	$args = array(
+		"label" => __( "Ejes temáticos", "pemscores" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => false,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => array( 'slug' => 'temas', 'with_front' => true, ),
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"rest_base" => "interaccion",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => false,
+		);
+	register_taxonomy( "temas", array( "recurso" ), $args );
 }
 add_action( 'init', 'cptui_register_my_taxes' );

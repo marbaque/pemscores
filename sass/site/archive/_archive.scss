@@ -45,6 +45,14 @@
 			}
 
 		}
+
+		&:not(.site-content) {
+
+			.content-area {
+				max-width: $size__ratio-large;
+				margin: 0 auto;
+			}
+		}
 	}
 }
 

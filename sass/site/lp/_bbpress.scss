@@ -62,6 +62,81 @@ body.buddypress {
 
   .bp-feedback,
   .bp-messages {
-    font-family: $font__sans;
+    //font-family: $font__sans;
+  }
+}
+
+
+// Perfil de buddypress
+#buddypress #header-cover-image {
+  background-color: $color__verde-claro;
+  background-image: url("images/fondo-perfil.png");
+  background-size: auto 80%;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+}
+
+.buddypress-wrap .bp-navs.tabbed-links {
+  font-size: .9em;
+}
+
+.leanpress-buddpress-list-filters,
+.lp-sub-menu {
+  font-size: .8em;
+
+  li a {
+    border: none;
+  }
+  li a.active {
+      padding-bottom: 0!important;
+  }
+}
+
+#member-front-widgets {
+
+  .widget {
+    padding: 1em;
+    background: white;
+
+    &.widget_lp-widget-recent-courses,
+    &.widget_lp-widget-featured-courses,
+    &.widget_lp-widget-popular-courses {
+
+
+      .archive-course-widget-outer {
+        border:  1px solid $color__main-bordes;
+        padding: 1em 1em 3em;
+        position: relative;
+
+      }
+
+      .widget-footer a {
+        @extend .read-more;
+      }
+    }
+
+  }
+
+
+
+
+  @media screen and (min-width: $query__medium) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .widget {
+        flex: 0 1 50%;
+    }
+  }
+
+  .course-cover {
+    a {
+      border: none;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 }

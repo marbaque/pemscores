@@ -16,7 +16,7 @@
 
 .widget {
 	margin: 0 0 2em;
-	font-family: $font__sans;
+	//font-family: $font__sans;
 	//border: 1px solid $color__main-bordes;
 	background: $color__main-superclaro;
 	border-radius: 8px;
@@ -59,7 +59,7 @@
 		width: 100%;
 		height: 2.5em;
 		padding: 10px;
-		font-family: $font__sans;
+		//font-family: $font__sans;
 		border: 1px solid #ccc;
 	}
 
@@ -467,6 +467,10 @@
 		input[type="password"] {
 			width: 100%;
 			background-color: white;
+			margin-bottom: 1em;
+		}
+		.forgetmenot {
+			margin-bottom: .5em;
 		}
 
 		.bp-login-widget-register-link a {

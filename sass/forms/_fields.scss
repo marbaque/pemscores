@@ -19,7 +19,7 @@ textarea {
 	background-color: $color__main-superclaro;
 	border-radius: 4px;
 	padding: 4px;
-	font-family: $font__sans;
+	font-family: $font__system;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -28,7 +28,7 @@ textarea {
 
 select {
 	border: 1px solid $color__main-bordes;
-	font-family: $font__sans;
+	font-family: $font__system;
 }
 
 textarea {
@@ -37,7 +37,7 @@ textarea {
 
 label,
 fieldset {
-	font-family: $font__sans;
+	font-family: $font__system;
 }
 
 
@@ -51,6 +51,7 @@ fieldset {
 				background-color: $color__main-claro;
 				border-radius: 1em;
 				padding: 1em 1em 2em;
+				margin-bottom: 1em;
 
 				h2.bp-heading {
 					font-size: 1.5em;
@@ -70,19 +71,24 @@ fieldset {
 
 			@media screen and(min-width: $query__small) {
 				display: flex;
-				flex-wrap: nowrap;
+				flex-wrap: wrap;
 				justify-content: space-around;
 				align-items: flex-start;
 
+				.fbl-button { // si Facebook login está activado
+					flex: 1 0 100%;
+					order: 3;
+				}
+
 				.register-section {
-					flex: 1 1 50%;
+					flex: 1 1 45%;
 					margin: 0 .5em 1em;
 				}
 			}
 		}
 
 		div.show {
-			font-family: $font__sans;
+			font-family: $font__system;
 		}
 
 		input[type="checkbox"] {
@@ -98,12 +104,12 @@ fieldset {
 			background-color: white;
 			border-radius: 4px;
 			padding: 4px;
-			font-family: $font__sans;
+			font-family: $font__system;
 		}
 
 		select {
 			border: 1px solid $color__main-bordes;
-			font-family: $font__sans;
+			font-family: $font__system;
 			background-color: $color__main-superclaro;
 			padding: 4px;
 		}

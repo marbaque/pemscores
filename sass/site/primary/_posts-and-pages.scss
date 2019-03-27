@@ -25,7 +25,7 @@
 
 .entry-meta,
 .entry-footer {
-	//font-family: $font__sans;
+	//font-family: $font__system;
 	font-size: 90%;
 
 	a {
@@ -38,7 +38,7 @@
 	font-size: 80%;
 	display: block;
 	width: 100%;
-	//font-family: $font__sans;
+	font-family: $font__system;
 	margin: 1em 0;
 	color: $color__text-main;
 
@@ -250,7 +250,7 @@
 
 .entry-footer {
 	margin: 1.5em 0;
-	font-family: $font__sans;
+	font-family: $font__system;
 }
 
 //content-recurso
@@ -298,7 +298,7 @@
 	}
 
 	.recurso_tags {
-		//font-family: $font__sans;
+		//font-family: $font__system;
 
 		a {
 			color: $color__naranja;
@@ -341,7 +341,7 @@
 }
 .relacionados {
 	padding: 1em;
-	font-family: $font__sans;
+	font-family: $font__system;
 
 	@media screen and (min-width: $query__small) {
 		padding: 2em;

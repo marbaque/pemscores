@@ -62,7 +62,7 @@ body.buddypress {
 
   .bp-feedback,
   .bp-messages {
-    //font-family: $font__sans;
+    //font-family: $font__system;
   }
 }
 
@@ -78,6 +78,11 @@ body.buddypress {
 
 .buddypress-wrap .bp-navs.tabbed-links {
   font-size: .9em;
+}
+
+.bp_members .post-content {
+  font-family: $font__system;
+  font-size: .8em;
 }
 
 .leanpress-buddpress-list-filters,

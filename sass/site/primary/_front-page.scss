@@ -46,7 +46,7 @@
 	max-width: 780px;
 	margin: 1em auto;
 	font-size: 1.2em;
-	font-family: $font__sans;
+	font-family: $font__system;
 	color: $color__main-bordes;
 
 	@media screen and (min-width: $query__small) {
@@ -93,7 +93,7 @@
 		}
 
 		p {
-			font-family: $font__sans;
+			font-family: $font__system;
       font-size: .9em;
 		}
 
@@ -109,7 +109,7 @@ a.read-more {
   display: block;
   width: 100%;
   padding: .75em;
-  font-family: $font__sans;
+  font-family: $font__system;
   font-size: .8em;
   color: $color__main-bordes;
   text-decoration: none;

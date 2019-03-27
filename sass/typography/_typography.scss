@@ -6,7 +6,7 @@ textarea {
 	color: $color__text-main;
 	@include font-size(1);
 	line-height: $font__line-height-body;
-	font-family: $font__system;
+	font-family: $font__serif;
 	@media screen and (min-width: $query__small) {
 		@include font-size(1.125);
 	}
@@ -16,7 +16,7 @@ button,
 input,
 select,
 textarea {
-	font-family: $font__sans;
+	font-family: $font__system;
 }
 
 @import "headings";

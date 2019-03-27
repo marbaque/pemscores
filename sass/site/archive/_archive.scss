@@ -12,7 +12,7 @@
 		border-radius: 4px;
 		padding: 1em 1em 3em;
 		overflow: hidden;
-		font-family: $font__sans;
+		font-family: $font__system;
 
 		.entry-title {
 
@@ -63,7 +63,7 @@
 
 .archive-description {
 	//margin: -1em 0 2em;
-	font-family: $font__sans;
+	font-family: $font__system;
 }
 
 /* For content-none.php */
@@ -125,7 +125,7 @@
 	bottom: 0;
 	font-size: .9rem;
 	width: 100%;
-	font-family: $font__sans;
+	font-family: $font__system;
 
 	a {
 		display: block;

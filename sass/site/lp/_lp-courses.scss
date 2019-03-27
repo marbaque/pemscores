@@ -90,7 +90,7 @@
 
     .learn-press-breadcrumb,
     .learn-press-course-forum-link {
-        //font-family: $font__sans;
+        //font-family: $font__system;
         font-size: .8em;
         border: none;q
         a {
@@ -155,7 +155,7 @@
 
 .course-meta,
 .price {
-    font-family: $font__sans;
+    font-family: $font__system;
 }
 
 .learnpress-page .lp-button {
@@ -209,7 +209,7 @@ ul.curriculum-sections
     }
 }
 .course-remaining-time {
-    font-family: $font__sans;
+    font-family: $font__system;
     font-size: 80%;
     margin: 1em 0;
     .lp-label.label-enrolled, .lp-label.label-started {

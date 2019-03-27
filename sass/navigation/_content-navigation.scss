@@ -8,7 +8,7 @@
 	font-size: 80%;
 	width: 100%;
 	margin: 2em auto;
-	font-family: $font__sans;
+	font-family: $font__system;
 
 	a {
 		display: block;
@@ -99,7 +99,7 @@
 
 .pagination {
 
-	font-family: $font__sans;
+	font-family: $font__system;
 
 	.nav-links {
 		display: flex;

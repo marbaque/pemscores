@@ -79,7 +79,7 @@
 
 	p.title {
 		font-family: $font__sans;
-		color: $color__main-bordes;
+		color: $color__main-oscuro;
 		margin: 0;
 		text-align: center;
 		font-weight: 700;
@@ -108,7 +108,7 @@
 			margin-right: .5em;
 			color: white;
 			text-decoration: none;
-			color: $color__main-bordes;
+			color: $color__main-oscuro;
 			font-size: 1.6em;
 
 			&:hover,

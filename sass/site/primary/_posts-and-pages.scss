@@ -182,11 +182,11 @@
 }
 .page-header,
 .entry-header {
-	background: $color__gris-claro;
-	padding: 2em 1em;
+	padding: 2em 1em!important;
 	margin-left: -1em;
 	margin-right: -1em;
 	max-width: $size__max-width;
+	background: $color__main-superclaro;
 
 	@media screen and (min-width: $query__small) {
 		padding: 4em 1em;
@@ -195,7 +195,7 @@
 		&:before {
 			content: "";
 			position: absolute;
-			background: $color__gris-claro;
+			background: $color__main-superclaro;
 			display: block;
 			height: 100%;
 			width: 100vw;
@@ -216,12 +216,14 @@
 
 	.entry-title,
 	.page-title {
-		border-bottom: 1px solid $color__main-oscuro;
+		color: $color__main-oscuro!important;
+		font-weight: 700;
+		border-bottom: 2px solid $color__main-oscuro;
 		margin-bottom: .5em;
-		font-weight: 400;
 		margin-top: 0;
 	}
 }
+
 .page-content,
 .entry-content,
 .entry-summary {

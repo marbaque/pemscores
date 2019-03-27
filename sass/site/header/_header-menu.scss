@@ -46,6 +46,7 @@
 
 	li {
 		position: relative;
+		color: $color__main-oscuro;
 	}
 
 	a {
@@ -53,7 +54,7 @@
 		width: 100%;
 		padding: .75em 1em;
 		text-decoration: none;
-		color: $color__main-bordes;
+		color: $color__main-oscuro;
 	}
 
 	a:hover,
@@ -148,8 +149,9 @@ button.dropdown-toggle {
 
 			ul {
 				flex-direction: column;
-				background: hsla(0, 0%, 100%, .1);
+				background: hsla(0, 0%, 100%, .5);
 				margin-left: 0;
+				font-size: .9rem;
 
 				li {
 					padding-left: 0;

@@ -1,6 +1,6 @@
 .widget-area {
 	margin-top: 1.5em;
-
+	position: relative;
 }
 
 /* Footer widgets for archive pages */
@@ -30,6 +30,7 @@
 		li {
 			display: block;
 			line-height: 1.2;
+			margin-bottom: .5em;
 
 			ul,
 			ol {
@@ -224,7 +225,6 @@
 
 	.widget {
 		flex: 1;
-		margin: 0 .5em 0;
 		border: none;
 		background: none;
 
@@ -413,12 +413,13 @@
 		width: 100%;
 		max-width: $query__medium;
 		margin: 0 auto;
+
 		ul {
 			padding: 0;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-around;
-			align-items: center;
+			align-items: flex-end;
 
 			li:first-child {
 				flex: 1 1 100%;
@@ -426,7 +427,11 @@
 			}
 
 			li:not(:first-child) {
-				//margin: .5em;
+				margin-bottom: .5em;
+
+				select {
+					min-width: 200px;
+				}
 			}
 			li:last-child {
 				align-self: flex-end;

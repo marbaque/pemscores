@@ -19,8 +19,8 @@ global $post, $wp_query, $lp_tax_query, $wp_query;
 /**
  * @since 3.0.0
  */
-do_action( 'learn-press/before-main-content' );
-
+// do_action( 'learn-press/before-main-content' ); 	//quitar comentario para mostrar 
+																										//la barra de búsqueda de cursos
 /**
  * @since 3.0.0
  */

@@ -9,19 +9,24 @@
 	position: relative;
 	height: 500px;
 	overflow: auto;
-	background: url(images/fondo-ilustrado.svg) repeat-x center 45% $color__main-superclaro;
-	background-size: auto 40%;
-	animation: paneo 120s infinite; /* IE 10+, Fx 29+ */
-	animation-timing-function: linear;
-	background-attachment: fixed;
+	background-image: url("images/fondo-ilustrado.svg");
+  background-repeat: repeat-x;
+  background-color: $color__main-superclaro;
+  background-position: left bottom;
+  background-size: auto 370px;
 	border-bottom: 1px solid $color__main-bordes;
+
+  @media screen and (min-width: $query__small) {
+    animation: paneo 120s infinite; /* IE 10+, Fx 29+ */
+  	animation-timing-function: linear;
+  }
 
 	.hero-title {
 		width: 410px;
 		height: 201px;
 		max-width: 80%;
 		background: url("images/logo-full.svg") no-repeat;
-		margin: 140px auto 80px;
+		margin: 140px auto 40px;
 		@include hideText();
 	}
 }
@@ -34,7 +39,6 @@
     margin: 0 auto;
 		text-align: center;
 		padding: 1em 0 2em;
-
 	}
 }
 

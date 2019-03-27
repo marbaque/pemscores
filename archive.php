@@ -17,7 +17,13 @@ get_header(); ?>
 		the_archive_description( '<div class="archive-description">', '</div>' );
 
 		if ( get_post_type() =='recurso' ) {
-			echo do_shortcode( '[searchandfilter fields="search,cobertura,tipo_recurso,tipo_medio,post_date" post_types="recurso" types=",daterange" search_placeholder="Buscar recursos..." types=",date" submit_label="Filtrar" class="recursos-searchandfilter" headings=",Cobertura,Contenido,Formato,Fecha"]' );
+			echo do_shortcode( '[searchandfilter fields="search,cobertura,tipo_recurso,tipo_medio"
+				post_types="recurso"
+				search_placeholder="Buscar recursos..."
+				types=",select,select,select"
+				submit_label="Filtrar"
+				class="recursos-searchandfilter"
+				headings=",Cobertura,Tipo de contenido,Formato de archivo"]' );
 
 		}
 	?>
@@ -38,7 +44,6 @@ get_header(); ?>
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
-
 				/*
 				 * Include the Post-Format-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
@@ -47,7 +52,7 @@ get_header(); ?>
 				if ( get_post_type() =='recurso' ) {
 	 				get_template_part( 'template-parts/content', 'recurso' );
 	 			} else {
-				get_template_part( 'template-parts/content', get_post_format() );
+					get_template_part( 'template-parts/content', get_post_format() );
 				}
 
 			endwhile;

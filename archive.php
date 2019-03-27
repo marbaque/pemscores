@@ -17,13 +17,13 @@ get_header(); ?>
 		the_archive_description( '<div class="archive-description">', '</div>' );
 
 		if ( get_post_type() =='recurso' ) {
-			echo do_shortcode( '[searchandfilter fields="search,cobertura,tipo_recurso,tipo_medio"
+			echo do_shortcode( '[searchandfilter fields="search,temas,cobertura,tipo_recurso,tipo_medio"
 				post_types="recurso"
 				search_placeholder="Buscar recursos..."
 				types=",select,select,select"
 				submit_label="Filtrar"
 				class="recursos-searchandfilter"
-				headings=",Cobertura,Tipo de contenido,Formato de archivo"]' );
+				headings=",Ejes temáticos,Cobertura,Tipo de contenido,Formato de archivo"]' );
 
 		}
 	?>

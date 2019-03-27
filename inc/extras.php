@@ -242,3 +242,23 @@ function disable_dashboard() {
     }
 }
 add_action('admin_init', 'disable_dashboard');
+
+
+// Permitir sólo ciertos bloques para recursos
+add_filter( 'allowed_block_types', 'misha_allowed_block_types', 10, 2 );
+
+function misha_allowed_block_types( $allowed_blocks, $post ) {
+
+	$allowed_blocks = array(
+		'core/paragraph',
+		'core/heading',
+		'core/list'
+	);
+
+	if( $post->post_type === 'recurso' ) {
+		$allowed_blocks[] = 'core/shortcode';
+	}
+
+	return $allowed_blocks;
+
+}

@@ -36,23 +36,18 @@
 				<?php the_excerpt(); ?>
 
 			<div class="recurso-cats">
+				<!-- Ejes temáticos -->
+				    <?php echo get_the_term_list(
+				            $post->ID, 'temas', __('<p>', 'pemscores'), ' ', '</p>' ); ?>
 				<!-- coberturas -->
 				    <?php echo get_the_term_list(
-				            $post->ID, 'cobertura', __('<span>', 'pemscores'), ', ', '</span>' ); ?>
-
+				            $post->ID, 'cobertura', __('<p>', 'pemscores'), ' ', '</p>' ); ?>
 				<!-- tipos de recurso -->
 				    <?php echo get_the_term_list(
-				        $post->ID, 'tipo_recurso', __('<span> ', 'pemscores'), ', ', '</span>' ); ?>
-
+				        $post->ID, 'tipo_recurso', __('<p> ', 'pemscores'), ' ', '</p>' ); ?>
 				<!-- Formato -->
 				    <?php echo get_the_term_list(
-				        $post->ID, 'tipo_medio', __('<span> ', 'pemscores'), ', ', '</span>' ); ?>
-
-
-
-				<!-- Interacciones -->
-				    <?php echo get_the_term_list(
-				        $post->ID, 'interaccion', __('<span> ', 'pemscores'), ', ', '</span>' ); ?>
+				        $post->ID, 'tipo_medio', __('<p> ', 'pemscores'), ' ', '</p>' ); ?>
 
 			</div><!-- .recurso-cats -->
 		</div><!-- .recurso__content -->

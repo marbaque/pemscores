@@ -383,3 +383,12 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header {
 #forums-list-0 .bbp-forum-info .bbp-forum-content {
 	display: none;
 }
+
+#subscription-toggle {
+  margin: .5em 0 1em;
+  display: block;
+}
+a.subscription-toggle {
+  @include etiqueta($color__main-oscuro, $color__main-claro);
+  margin: 0 .5em;
+}

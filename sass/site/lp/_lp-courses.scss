@@ -17,6 +17,7 @@
                 border: 1px solid $color__main;
                 overflow: hidden;
                 margin-bottom: 1em;
+                font-size: .8em;
 
                 .section-header {
                   border: none;
@@ -30,6 +31,10 @@
                 }
                 .section-content {
                   margin: 0;
+
+                  .course-item a {
+                    font-size: 1.1em;
+                  }
 
                   a {
                     padding: 0 1em;

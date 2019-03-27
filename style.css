@@ -1072,13 +1072,13 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Archives
 --------------------------------------------------------------*/
-.archive-view:not(.learnpress) .post,
-.archive-view:not(.learnpress) .page,
-.archive-view:not(.learnpress) .curso,
-.archive-view:not(.learnpress) .recurso,
-.archive-view:not(.learnpress) .lp_quiz,
-.archive-view:not(.learnpress) .lp_course,
-.archive-view:not(.learnpress) .hentry {
+.archive-view:not(.learnpress):not(.forum-archive) .post,
+.archive-view:not(.learnpress):not(.forum-archive) .page,
+.archive-view:not(.learnpress):not(.forum-archive) .curso,
+.archive-view:not(.learnpress):not(.forum-archive) .recurso,
+.archive-view:not(.learnpress):not(.forum-archive) .lp_quiz,
+.archive-view:not(.learnpress):not(.forum-archive) .lp_course,
+.archive-view:not(.learnpress):not(.forum-archive) .hentry {
 	position: relative;
 	background: white;
 	border: 1px solid #006edc;
@@ -1088,18 +1088,18 @@ a:hover, a:active {
 	font-family: "Roboto", sans-serif;
 }
 
-.archive-view:not(.learnpress) .post .entry-title a,
-.archive-view:not(.learnpress) .page .entry-title a,
-.archive-view:not(.learnpress) .curso .entry-title a,
-.archive-view:not(.learnpress) .recurso .entry-title a,
-.archive-view:not(.learnpress) .lp_quiz .entry-title a,
-.archive-view:not(.learnpress) .lp_course .entry-title a,
-.archive-view:not(.learnpress) .hentry .entry-title a {
+.archive-view:not(.learnpress):not(.forum-archive) .post .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive) .page .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive) .curso .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive) .recurso .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive) .lp_quiz .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive) .lp_course .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive) .hentry .entry-title a {
 	text-decoration: none;
 }
 
 @media screen and (min-width: 900px) {
-	.archive-view:not(.learnpress).has-sidebar .site-content {
+	.archive-view:not(.learnpress):not(.forum-archive).has-sidebar .site-content {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-pack: justify;
@@ -1107,20 +1107,20 @@ a:hover, a:active {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
-	.archive-view:not(.learnpress).has-sidebar .page-header {
+	.archive-view:not(.learnpress):not(.forum-archive).has-sidebar .page-header {
 		width: 100%;
 		-ms-flex: 1 0 100%;
 		    flex: 1 0 100%;
 	}
-	.archive-view:not(.learnpress).has-sidebar .content-area {
+	.archive-view:not(.learnpress):not(.forum-archive).has-sidebar .content-area {
 		width: 66%;
 		margin-top: 2em;
 	}
-	.archive-view:not(.learnpress).has-sidebar .widget-area {
+	.archive-view:not(.learnpress):not(.forum-archive).has-sidebar .widget-area {
 		width: 30%;
 		margin-top: 2em;
 	}
-	.archive-view:not(.learnpress):not(.site-content) .content-area {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.site-content) .content-area {
 		max-width: 66%;
 		margin: 0 auto;
 	}
@@ -1534,7 +1534,7 @@ button.dropdown-toggle {
 --------------------------------------------------------------*/
 @keyframes paneo {
 	0% {
-		background-position-x: 1344px;
+		background-position-x: 3173px;
 	}
 	100% {
 		background-position-x: 0;
@@ -2066,6 +2066,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	border: 1px solid #006edc;
 	overflow: hidden;
 	margin-bottom: 1em;
+	font-size: .8em;
 }
 
 .course .post-content .course-overview_section .curriculum-sections li.section .section-header {
@@ -2081,6 +2082,10 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 
 .course .post-content .course-overview_section .curriculum-sections li.section .section-content {
 	margin: 0;
+}
+
+.course .post-content .course-overview_section .curriculum-sections li.section .section-content .course-item a {
+	font-size: 1.1em;
 }
 
 .course .post-content .course-overview_section .curriculum-sections li.section .section-content a {
@@ -2417,39 +2422,6 @@ h3.course-item-title {
 
 .content-item-wrap ol li, .content-item-wrap ul li {
 	margin-bottom: 1em;
-}
-
-.content-item-wrap ol {
-	counter-reset: list;
-	list-style-type: none;
-	padding-left: 0px;
-}
-
-.content-item-wrap ol li {
-	text-indent: -40px;
-	margin-left: 40px;
-	counter-increment: list;
-}
-
-.content-item-wrap ol li:before {
-	background-color: #5abe00;
-	font-family: "Roboto", sans-serif;
-	width: 24px;
-	text-indent: 2px;
-	padding-left: 0px;
-	height: 24px;
-	line-height: 24px;
-	vertical-align: top;
-	border-radius: 12px;
-	background-clip: padding-box;
-	color: #fff;
-	display: inline-block;
-	font-weight: 700;
-	content: counter(list);
-	margin-right: 15px;
-	margin-top: 4px;
-	font-size: 14px;
-	text-align: center;
 }
 
 .learnpress-page .lp-button {
@@ -3008,6 +2980,24 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header {
 
 #forums-list-0 .bbp-forum-info .bbp-forum-content {
 	display: none;
+}
+
+#subscription-toggle {
+	margin: .5em 0 1em;
+	display: block;
+}
+
+a.subscription-toggle {
+	font-size: 1rem !important;
+	padding: .2em .4em;
+	background-color: #cce2f8;
+	color: #00529a;
+	border-radius: .2em;
+	margin: 0 .5em;
+}
+
+a.subscription-toggle:hover {
+	opacity: .8;
 }
 
 /*--------------------------------------------------------------

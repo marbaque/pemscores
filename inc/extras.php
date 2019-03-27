@@ -72,7 +72,8 @@ add_filter('template_include', function( $template ) {
 	return $template;
 });
 
-//Quita las metaboxes de autores y organizaciones en recursos
+// Quita las metaboxes de autores y organizaciones en recursos
+// No sirve con gutenberg
 function remove_tags_fields() {
 	remove_meta_box( 'tagsdiv-autor_tag' , 'recurso' , 'side' );
 	remove_meta_box( 'tagsdiv-organizacion_tag' , 'recurso' , 'side' );
@@ -245,18 +246,16 @@ add_action('admin_init', 'disable_dashboard');
 
 
 // Permitir sólo ciertos bloques para recursos
-add_filter( 'allowed_block_types', 'misha_allowed_block_types', 10, 2 );
+add_filter( 'allowed_block_types', 'academia_allowed_block_types', 10, 2 );
 
-function misha_allowed_block_types( $allowed_blocks, $post ) {
-
-	$allowed_blocks = array(
-		'core/paragraph',
-		'core/heading',
-		'core/list'
-	);
+function academia_allowed_block_types( $allowed_blocks, $post ) {
 
 	if( $post->post_type === 'recurso' ) {
-		$allowed_blocks[] = 'core/shortcode';
+		$allowed_blocks = array(
+			'core/paragraph',
+			'core/heading',
+			'core/list'
+		);
 	}
 
 	return $allowed_blocks;

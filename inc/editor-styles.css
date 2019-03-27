@@ -3,49 +3,59 @@
  * Editor styles for TinyMCE
  */
 
+ /* Define the "system" font family */
+ @font-face {
+ 	font-family: system;
+ 	font-style: normal;
+ 	font-weight: 300;
+ 	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+ }
+
 html {
 	padding: 0 2em;
 }
 
-body {
-	max-width: 1080px;
-	margin: 0 auto;
-	color: black;
-	font-family: "Crimson Text", Georgia, Cambria, "Times New Roman", Times, serif;
-	font-size: 18px;
-	font-size: 1.125rem;
-	line-height: 1.5;
+.edit-post-visual-editor .editor-block-list__block-edit,
+.edit-post-visual-editor {
+	font-family: "system";
+}
+.editor-post-title .editor-post-title__input,
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-family: "Roboto", sans-serif;
+	text-rendering: optimizeLegibility;
+	line-height: 1.2;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin-top: .75em;
-	margin-bottom: .25em;
-	font-family: "Roboto", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	clear: both;
+.edit-post-visual-editor p,
+.edit-post-visual-editor,
+.blocks-rich-text__tinymce.mce-content-body {
+	line-height: inherit;
+	font-size: inherit;
 }
 
 h1 {
-	font-size: 3em;
-}
-
-h2 {
-	font-size: 2.6em;
-}
-
-h3 {
 	font-size: 2.2em;
 }
 
-h4 {
+h2 {
 	font-size: 2em;
 }
 
-h5 {
+h3 {
 	font-size: 1.8em;
 }
 
-h6 {
+h4 {
 	font-size: 1.6em;
+}
+
+h5 {
+	font-size: 1.4em;
+}
+
+h6 {
+	font-size: 1.2em;
 }
 
 p {

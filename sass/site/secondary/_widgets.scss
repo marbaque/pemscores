@@ -30,7 +30,7 @@
 		li {
 			display: block;
 			line-height: 1.2;
-			margin-bottom: .5em;
+			margin-bottom: 0;
 
 			ul,
 			ol {
@@ -387,6 +387,9 @@
 		font-size: 1rem;
 		height: 40px;
 	}
+	li {
+		padding-right: 0;
+	}
 	li h4 {
 		margin: 2px 0;
 		font-weight: 400;
@@ -412,7 +415,7 @@
 	&.recursos-searchandfilter {
 		width: 100%;
 		max-width: $query__medium;
-		margin: 0 auto;
+		margin: 40px auto;
 
 		ul {
 			padding: 0;
@@ -423,7 +426,7 @@
 
 			li:first-child {
 				flex: 1 1 100%;
-				margin-bottom: 1em;
+				margin: 0 0 20;
 			}
 
 			li:not(:first-child) {
@@ -433,8 +436,13 @@
 					min-width: 200px;
 				}
 			}
+
 			li:last-child {
 				align-self: flex-end;
+			}
+
+			select {
+				max-width: 200px;
 			}
 		}
 	}
@@ -469,6 +477,7 @@
 			background-color: white;
 			margin-bottom: 1em;
 		}
+
 		.forgetmenot {
 			margin-bottom: .5em;
 		}
@@ -477,6 +486,7 @@
 			@include etiqueta($color__naranja, white);
 			border: none;
 		}
+
 		#bp-login-widget-form label {
 			font-size: .9em;
 		}

@@ -44,7 +44,8 @@
 
 	a {
 		color: $color__text-main;
-		border: none;
+		border: none!important;
+		padding: 0!important; //lleva important porque el enlace tiene class .post lo que hereda estilos del post de archive
 	}
 }
 

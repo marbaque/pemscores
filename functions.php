@@ -265,7 +265,7 @@ function pemscores_scripts() {
 	wp_localize_script( 'pemscores-navigation', 'pemscoresScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'pemscores'),
 		'collapse' => __( 'Collapse child menu', 'pemscores'),
-	)); 
+	));
 
 	wp_enqueue_script( 'pemscores-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20161201', true );
 
@@ -283,6 +283,17 @@ function pemscores_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'pemscores_scripts' );
+
+
+// Add backend styles for Gutenberg.
+add_action( 'enqueue_block_editor_assets', 'academia_add_gutenberg_assets' );
+/**
+ * Load Gutenberg stylesheet.
+ */
+function academia_add_gutenberg_assets() {
+	// Load the theme styles within Gutenberg.
+	wp_enqueue_style( 'academia-gutenberg', get_theme_file_uri( '/inc/editor-styles.css' ), false );
+}
 
 /**
  * Implement the Custom Header feature.

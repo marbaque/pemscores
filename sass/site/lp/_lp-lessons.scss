@@ -11,10 +11,14 @@
          background: #eee;
      }
 
+     .lp-button {
+       @extend .botones;
+     }
+
      .lp-button-back {
-         display: none;
+         //display: none;
          button {
-             background: inherit;
+
 
 
              &:hover {
@@ -49,7 +53,8 @@
 
          a {
             text-decoration: none;
-            //color: hsla(0, 100%, 100%, 0.5);
+            white-space: nowrap;
+            overflow: hidden;
          }
 
          @media screen and (min-width: $query__medium) {

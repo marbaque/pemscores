@@ -526,6 +526,7 @@ td:last-child {
 --------------------------------------------------------------*/
 button,
 .botones,
+.course-header-lp .lp-button,
 .lp-button,
 input[type="button"],
 input[type="reset"],
@@ -543,8 +544,11 @@ input[type="submit"] {
 
 button:hover, button:active, button:focus,
 .botones:hover,
+.course-header-lp .lp-button:hover,
 .botones:active,
+.course-header-lp .lp-button:active,
 .botones:focus,
+.course-header-lp .lp-button:focus,
 .lp-button:hover,
 .lp-button:active,
 .lp-button:focus,
@@ -777,11 +781,15 @@ a:hover, a:active {
 	color: #006edc;
 }
 
-.botones {
+
+.botones,
+.course-header-lp .lp-button {
 	color: #5abe00 !important;
 }
 
-.botones:hover {
+
+.botones:hover,
+.course-header-lp .lp-button:hover {
 	border: 2px solid #5abe00 !important;
 }
 
@@ -2357,14 +2365,6 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	background: #eee;
 }
 
-.course-header-lp .lp-button-back {
-	display: none;
-}
-
-.course-header-lp .lp-button-back button {
-	background: inherit;
-}
-
 .course-header-lp .lp-button-back button:hover {
 	background: rgba(255, 255, 255, 0.1);
 }
@@ -2389,6 +2389,8 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 
 .course-header-lp .course-title a {
 	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 @media screen and (min-width: 900px) {

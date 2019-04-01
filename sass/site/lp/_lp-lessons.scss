@@ -1,155 +1,171 @@
 //lecciones
-.course-header-lp {
+#course-item-content-header {
+  border-bottom: 1px solid $color__main-bordes!important;
+  background-color: white!important;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  .course-item-search  {
+    background-color: $color__main-oscuro!important;
+    z-index: 99;
+
+    input {
+      font-size: 80%;
+      color: $color__main-superclaro;
+
+       &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+         color: $color__main-superclaro;
+         opacity: 1; /* Firefox */
+       }
+       &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+         color: $color__main-superclaro;
+       }
+
+       &::-ms-input-placeholder { /* Microsoft Edge */
+         color: $color__main-superclaro;
+       }
 
 
-    a, button {
+      &:focus {
+        color: $color__main-superclaro!important;
+      }
+    }
 
-     }
-     button {
-         font-size: 80%;
-         border: none;
-         background: #eee;
-     }
+    button {
+        color: $color__main-superclaro!important;
+    }
+  }
 
-     .lp-button {
+  .course-title {
+     //display: none; //esconder título cuando está la barra lateral y en móviles
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     flex: 0 1 100%;
+
+    a {
+     color: $color__main-bordes;
+     text-decoration: none;
+    }
+
+    @media screen and (min-width: $query__medium) {
+      max-width: 90%;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .lp-button-back {
+
+   button {
+       font-size: 80%;
        @extend .botones;
-     }
+   }
 
-     .lp-button-back {
-         //display: none;
-         button {
+   @media screen and (min-width: $query__medium) {
+     display: block;
+   }
+  }
 
-
-
-             &:hover {
-                 background: hsla(0, 100%, 100%, 0.1)
-             }
-         }
-
-         @media screen and (min-width: $query__medium) {
-             display: block;
-         }
-     }
-
-     .course-item-search  {
-
-         z-index: 99;
-         //color: hsla(0, 100%, 100%, 0.5);
-
-         input {
-             font-size: 80%;
-             &:focus {
-
-             }
-         }
-         button {
-             //color: white;
-         }
-     }
-
-     .course-title {
-         display: none; //esconder título cuando está la barra lateral y en móviles
+  .toggle-content-item {
+   border-left: 1px solid $color__main-bordes!important;
+   order: 4;
+   flex: 1 0 60px;
+  }
 
 
-         a {
-            text-decoration: none;
-            white-space: nowrap;
-            overflow: hidden;
-         }
 
-         @media screen and (min-width: $query__medium) {
-             max-width: 90%;
-             display: block;
-             white-space: nowrap;
-             overflow: hidden;
-             text-overflow: ellipsis;
-         }
-     }
+
 
 }
 
 .full-screen-content-item {
-    .course-title {
-        display: block;
-        max-width: 80%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .course-title {
+    display: block;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
-h3.course-item-title {
+.content-item-wrap { // contenido dentro de la leccion
+  max-width: 780px!important;
+
+  .course-item-title { //titulo de leccion
     border-bottom: 2px solid $color__main-bordes;
     padding-bottom: 1em;
-}
+    font-size: 2em!important;
+    color: $color__main;
+    letter-spacing: normal;
+  }
 
-.content-item-wrap {
-
-    max-width: 780px!important;
-
-    @media screen and (min-width: $query__small) {
-        margin: 3em auto!important;
+  ol,ul {
+    margin: 1em 0;
+    li {
+      margin-bottom: 1em;
     }
+  }
 
-    ol,ul {
-      margin: 1em 0;
-      li {
-        margin-bottom: 1em;
-      }
-    }
+  @media screen and (min-width: $query__small) {
+      margin: 3em auto!important;
+  }
 }
-
 
 .learnpress-page .lp-button {
-    line-height: 1;
-    height: auto!important;
+  line-height: 1;
+  height: auto!important;
 }
 .curriculum-sections {
-    font-family: $font__system;
-    a {
-        text-decoration: none;
-    }
+  font-family: $font__system;
+  a {
+    text-decoration: none;
+  }
 }
 
 form[name="learn-press-form-complete-lesson"] {
-    margin-top: 4em;
-    //background: #eee;
-    width: 100%;
-    //text-align: center;
-    font-size: 80%;
-    position: relative;
-    height: 3em;
+  margin-top: 4em;
+  //background: #eee;
+  width: 100%;
+  //text-align: center;
+  font-size: 80%;
+  position: relative;
+  height: 3em;
 
-    p {
-        color: #777;
+  p {
+    color: #777;
+  }
+  button {
+    margin: 0;
+
+    &:focus,
+    &:hover {
+
     }
-    button {
-        margin: 0;
-
-        &:focus,
-        &:hover {
-
-        }
-    }
+  }
 }
 
 a.toggle-content-item {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 //Mensajes
 .learn-press-message {
-    font-size: 80%;
+  font-size: 80%;
 }
 
 #popup_container {
-    font-family: $font__system;
-    font-size: 90%;
-    font-style: italic;
+  font-family: $font__system;
+  font-size: 90%;
+  font-style: italic;
 
-    input[type="button"] {
-        line-height: 15px
-    }
+  input[type="button"] {
+    line-height: 15px
+  }
 }
 
 .learn-press-content-protected-message {

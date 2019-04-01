@@ -2437,6 +2437,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 
 #course-item-content-header .lp-button-back button {
 	font-size: 80%;
+	background: none;
 }
 
 @media screen and (min-width: 900px) {
@@ -2453,12 +2454,31 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	    flex: 1 0 60px;
 }
 
-.full-screen-content-item .course-title {
-	display: block;
-	max-width: 80%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+.course-curriculum .curriculum-sections li.course-item {
+	font-family: "system";
+	color: #006edc !important;
+}
+
+.course-curriculum .curriculum-sections li.course-item a {
+	text-decoration: none;
+	font-size: 0.9rem !important;
+}
+
+.course-curriculum .curriculum-sections li.course-item.current:before {
+	background: #006edc !important;
+}
+
+.course-curriculum .curriculum-sections li.course-item i.fa {
+	color: #5abe00 !important;
+}
+
+.course-curriculum .curriculum-sections .section-header {
+	background-color: #ebf3fc;
+	border-bottom: 1px solid #6696c7 !important;
+}
+
+.course-curriculum .curriculum-sections .section-header .section-title {
+	font-size: 0.9rem !important;
 }
 
 .content-item-wrap {
@@ -2481,23 +2501,20 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	margin-bottom: 1em;
 }
 
+.content-item-wrap .wp-block-file.descarga-lectura {
+	background-color: #f9f2ea;
+	padding: 1em;
+	font-family: "system";
+}
+
+.content-item-wrap .wp-block-file.descarga-lectura .wp-block-file__button {
+	background: #ff961e;
+}
+
 @media screen and (min-width: 600px) {
 	.content-item-wrap {
 		margin: 3em auto !important;
 	}
-}
-
-.learnpress-page .lp-button {
-	line-height: 1;
-	height: auto !important;
-}
-
-.curriculum-sections {
-	font-family: "system";
-}
-
-.curriculum-sections a {
-	text-decoration: none;
 }
 
 form[name="learn-press-form-complete-lesson"] {

@@ -29,6 +29,11 @@ textarea {
 select {
 	border: 1px solid $color__main-bordes;
 	font-family: $font__system;
+
+	&:focus{
+			outline: 2;
+			box-shadow: 0 0 3px 2px hsla(0, 0, 0, 0.4);
+	}
 }
 
 textarea {

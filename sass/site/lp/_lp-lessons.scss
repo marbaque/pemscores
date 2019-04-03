@@ -132,7 +132,7 @@
   }
 
   .wp-block-file {
-    &.descarga-lectura {
+    &.descarga-lectura { //lectura
       background-color: $color__naranja-claro;
       padding: 1em;
       font-family: $font__system;
@@ -145,6 +145,32 @@
 
   @media screen and (min-width: $query__small) {
       margin: 3em auto!important;
+  }
+
+  // block lab
+  .recuadro {
+    background: $color__main-superclaro;
+    border: 2px solid $color__main-claro;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 1em;
+    margin: 2em 0;
+
+    img {
+      width: 100px;
+      height: auto;
+      margin-right: 1em;
+      @media screen and (min-width: $query__small) {
+        width: 150px;
+      }
+    }
+
+    .text {
+      h3 {
+        margin: 0 0 .5em;
+      }
+    }
   }
 }
 
@@ -195,5 +221,31 @@ a.toggle-content-item {
   font-family: $font__system;
   .icon {
     display: none;
+  }
+}
+
+// block lab
+.recuadro {
+  background: $color__main-superclaro;
+  border: 2px solid $color__main-claro;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 1em;
+  margin: 2em 0;
+
+  img {
+    width: 100px;
+    height: auto;
+    margin-right: 1em;
+    @media screen and (min-width: $query__small) {
+      width: 150px;
+    }
+  }
+
+  .text {
+    h3 {
+      margin: 0 0 .5em;
+    }
   }
 }

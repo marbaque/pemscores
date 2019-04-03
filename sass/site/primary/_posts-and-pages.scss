@@ -259,15 +259,15 @@
 	max-width: $size__max-width;
 	height: auto;
 	padding: 0;
-	margin-top: 1em;
+	margin-top: 0;
 	margin-bottom: 0;
 	position: relative;
 	@extend .sticky;
-	border: 1px solid $color__main-bordes;
 
 	.recurso-media {
 		padding: 0 0 1em;
 		background-color: $color__main-oscuro;
+		min-height: 200px;
 
 		.recurso-image {
 			width: 100%;
@@ -298,7 +298,7 @@
 	}
 
 	.recurso_tags {
-		//font-family: $font__system;
+		font-family: $font__system;
 
 		a {
 			color: $color__naranja;
@@ -342,6 +342,7 @@
 .relacionados {
 	padding: 1em;
 	font-family: $font__system;
+	background: $color__main-superclaro;
 
 	@media screen and (min-width: $query__small) {
 		padding: 2em;

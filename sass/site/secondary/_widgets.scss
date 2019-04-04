@@ -341,7 +341,6 @@
       font-size: 90%;
       font-weight: 400;
 			position: relative;
-
       transition: all .5s;
       &:focus{
           width: 100%;
@@ -423,6 +422,7 @@
 			flex-wrap: wrap;
 			justify-content: space-around;
 			align-items: flex-end;
+			align-self: stretch;
 
 			li:first-child {
 				flex: 1 1 100%;

@@ -17,7 +17,7 @@ html {
 
 .edit-post-visual-editor .editor-block-list__block-edit,
 .edit-post-visual-editor {
-	font-family: "system";
+	font-family: "Lora", Georgia, serif;
 }
 .editor-post-title .editor-post-title__input,
 h1, h2, h3, h4, h5, h6 {
@@ -372,4 +372,33 @@ a:hover, a:active {
 	margin: 0;
 	font-family: "Roboto", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	border: none;
+}
+
+.recuadro {
+	background: #ebf3fc;
+	border: 2px solid #cce2f8;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	-ms-flex-align: center;
+	    align-items: center;
+	padding: 1em;
+	margin: 2em 0;
+}
+
+.recuadro img {
+	width: 100px;
+	height: auto;
+	margin-right: 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.recuadro img {
+		width: 150px;
+	}
+}
+
+.recuadro .text h3 {
+	margin: 0 0 .5em;
 }

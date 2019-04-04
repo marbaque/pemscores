@@ -295,6 +295,7 @@ function academia_add_gutenberg_assets() {
 	wp_enqueue_style( 'academia-gutenberg', get_theme_file_uri( '/inc/editor-styles.css' ), false );
 }
 
+
 /**
  * Implement the Custom Header feature.
  */

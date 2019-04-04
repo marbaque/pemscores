@@ -2,7 +2,6 @@
 #course-item-content-header {
   border-bottom: 1px solid $color__main-bordes!important;
   background-color: white!important;
-
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -63,8 +62,10 @@
 
    button {
        font-size: 80%;
-       @extend .botones;
-       background: none;
+       border: none;
+       height: 100%;
+       //@extend .botones;
+       //background: none;
    }
 
    @media screen and (min-width: $query__medium) {
@@ -133,12 +134,39 @@
 
   .wp-block-file {
     &.descarga-lectura { //lectura
-      background-color: $color__naranja-claro;
-      padding: 1em;
+      border: 1px solid $color__main-claro;
+      box-shadow: 2px 2px 5px hsla(0, 0, 0, .1);
+      padding: 1em 1em 1em 2.5em;
       font-family: $font__system;
+      text-align: left;
+      margin: 2em 0;
+      position: relative;
+
+      &:before {
+        content: "\f0f6";
+        font-family: "FontAwesome";
+        color: $color__main;
+        margin-right: .4em;
+        margin-left: -1em;
+      }
+
+      a {
+        color: $color__main;
+        font-size: 1.2em;
+        text-decoration: none;
+        border-bottom: 2px solid $color__main;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
 
       .wp-block-file__button {
         background: $color__naranja;
+        color: white;
+        border: none;
+        clear: both;
+        font-size: .8em;
       }
     }
   }
@@ -149,26 +177,39 @@
 
   // block lab
   .recuadro {
-    background: $color__main-superclaro;
-    border: 2px solid $color__main-claro;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 1em;
+    background: white;
+    box-shadow: 2px 2px 5px hsla(0, 0, 0, .1);
+    border: 1px solid $color__main-claro;
+    padding: 1em 1.5em;
     margin: 2em 0;
+    position: relative;
+    height: auto;
+    min-height: 100px;
+    display: block;
+    width: auto;
 
-    img {
-      width: 100px;
-      height: auto;
-      margin-right: 1em;
-      @media screen and (min-width: $query__small) {
-        width: 150px;
+    &.icon {
+      padding-left: 100px;
+      margin: 2em 0 2em;
+
+      img {
+        width: 100px;
+        height: auto;
+        position: absolute;
+        top: 1em;
+        left: -20px;
       }
+    }
+
+    @media screen and (min-width: $query__small) {
+      margin: 2em 0;
+      padding: 2em 3em;
     }
 
     .text {
       h3 {
         margin: 0 0 .5em;
+        color: $color__main-oscuro;
       }
     }
   }
@@ -221,31 +262,5 @@ a.toggle-content-item {
   font-family: $font__system;
   .icon {
     display: none;
-  }
-}
-
-// block lab
-.recuadro {
-  background: $color__main-superclaro;
-  border: 2px solid $color__main-claro;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  padding: 1em;
-  margin: 2em 0;
-
-  img {
-    width: 100px;
-    height: auto;
-    margin-right: 1em;
-    @media screen and (min-width: $query__small) {
-      width: 150px;
-    }
-  }
-
-  .text {
-    h3 {
-      margin: 0 0 .5em;
-    }
   }
 }

@@ -11,10 +11,6 @@
  	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
  }
 
-html {
-	padding: 0 2em;
-}
-
 .edit-post-visual-editor .editor-block-list__block-edit,
 .edit-post-visual-editor {
 	font-family: "Lora", Georgia, serif;
@@ -22,7 +18,7 @@ html {
 .editor-post-title .editor-post-title__input,
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: "Roboto", sans-serif;
+	font-family: "system", sans-serif;
 	text-rendering: optimizeLegibility;
 	line-height: 1.2;
 }
@@ -375,30 +371,40 @@ a:hover, a:active {
 }
 
 .recuadro {
-	background: #ebf3fc;
-	border: 2px solid #cce2f8;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: nowrap;
-	    flex-wrap: nowrap;
-	-ms-flex-align: center;
-	    align-items: center;
-	padding: 1em;
-	margin: 2em 0;
+	background: white;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	border: 1px solid #cce2f8;
+	padding: 1em 1em 1em 100px;
+	margin: 2em 0 2em 20px;
+	position: relative;
+  min-height: 136px;
+}
+
+@media screen and (min-width: 600px) {
+	.recuadro {
+		margin: 2em 20px;
+	}
 }
 
 .recuadro img {
 	width: 100px;
 	height: auto;
-	margin-right: 1em;
-}
-
-@media screen and (min-width: 600px) {
-	.recuadro img {
-		width: 150px;
-	}
+	position: absolute;
+	top: 1em;
+	left: -20px;
 }
 
 .recuadro .text h3 {
 	margin: 0 0 .5em;
+	color: #00529a;
+}
+
+.descarga-lectura {
+	background-color: #f9f2ea;
+	padding: 1em;
+	font-family: "system";
+}
+
+.descarga-lectura .wp-block-file__button {
+	background: #ff961e;
 }

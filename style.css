@@ -526,7 +526,6 @@ td:last-child {
 --------------------------------------------------------------*/
 button,
 .botones,
-#course-item-content-header .lp-button-back button,
 .lp-button,
 input[type="button"],
 input[type="reset"],
@@ -544,11 +543,8 @@ input[type="submit"] {
 
 button:hover, button:active, button:focus,
 .botones:hover,
-#course-item-content-header .lp-button-back button:hover,
 .botones:active,
-#course-item-content-header .lp-button-back button:active,
 .botones:focus,
-#course-item-content-header .lp-button-back button:focus,
 .lp-button:hover,
 .lp-button:active,
 .lp-button:focus,
@@ -786,15 +782,11 @@ a:hover, a:active {
 	color: #006edc;
 }
 
-
-.botones,
-#course-item-content-header .lp-button-back button {
+.botones {
 	color: #5abe00 !important;
 }
 
-
-.botones:hover,
-#course-item-content-header .lp-button-back button:hover {
+.botones:hover {
 	border: 2px solid #5abe00 !important;
 }
 
@@ -2447,7 +2439,8 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 
 #course-item-content-header .lp-button-back button {
 	font-size: 80%;
-	background: none;
+	border: none;
+	height: 100%;
 }
 
 @media screen and (min-width: 900px) {
@@ -2512,13 +2505,40 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 }
 
 .content-item-wrap .wp-block-file.descarga-lectura {
-	background-color: #f9f2ea;
-	padding: 1em;
+	border: 1px solid #cce2f8;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	padding: 1em 1em 1em 2.5em;
 	font-family: "system";
+	text-align: left;
+	margin: 2em 0;
+	position: relative;
+}
+
+.content-item-wrap .wp-block-file.descarga-lectura:before {
+	content: "\f0f6";
+	font-family: "FontAwesome";
+	color: #006edc;
+	margin-right: .4em;
+	margin-left: -1em;
+}
+
+.content-item-wrap .wp-block-file.descarga-lectura a {
+	color: #006edc;
+	font-size: 1.2em;
+	text-decoration: none;
+	border-bottom: 2px solid #006edc;
+}
+
+.content-item-wrap .wp-block-file.descarga-lectura a:hover {
+	opacity: .8;
 }
 
 .content-item-wrap .wp-block-file.descarga-lectura .wp-block-file__button {
 	background: #ff961e;
+	color: white;
+	border: none;
+	clear: both;
+	font-size: .8em;
 }
 
 @media screen and (min-width: 600px) {
@@ -2528,32 +2548,41 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 }
 
 .content-item-wrap .recuadro {
-	background: #ebf3fc;
-	border: 2px solid #cce2f8;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: nowrap;
-	    flex-wrap: nowrap;
-	-ms-flex-align: center;
-	    align-items: center;
-	padding: 1em;
+	background: white;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	border: 1px solid #cce2f8;
+	padding: 1em 1.5em;
 	margin: 2em 0;
+	position: relative;
+	height: auto;
+	min-height: 100px;
+	display: block;
+	width: auto;
 }
 
-.content-item-wrap .recuadro img {
+.content-item-wrap .recuadro.icon {
+	padding-left: 100px;
+	margin: 2em 0 2em;
+}
+
+.content-item-wrap .recuadro.icon img {
 	width: 100px;
 	height: auto;
-	margin-right: 1em;
+	position: absolute;
+	top: 1em;
+	left: -20px;
 }
 
 @media screen and (min-width: 600px) {
-	.content-item-wrap .recuadro img {
-		width: 150px;
+	.content-item-wrap .recuadro {
+		margin: 2em 0;
+		padding: 2em 3em;
 	}
 }
 
 .content-item-wrap .recuadro .text h3 {
 	margin: 0 0 .5em;
+	color: #00529a;
 }
 
 form[name="learn-press-form-complete-lesson"] {
@@ -2597,35 +2626,6 @@ a.toggle-content-item {
 
 .learn-press-content-protected-message .icon {
 	display: none;
-}
-
-.recuadro {
-	background: #ebf3fc;
-	border: 2px solid #cce2f8;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: nowrap;
-	    flex-wrap: nowrap;
-	-ms-flex-align: center;
-	    align-items: center;
-	padding: 1em;
-	margin: 2em 0;
-}
-
-.recuadro img {
-	width: 100px;
-	height: auto;
-	margin-right: 1em;
-}
-
-@media screen and (min-width: 600px) {
-	.recuadro img {
-		width: 150px;
-	}
-}
-
-.recuadro .text h3 {
-	margin: 0 0 .5em;
 }
 
 @media screen and (min-width: 900px) {

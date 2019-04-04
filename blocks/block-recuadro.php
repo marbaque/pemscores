@@ -1,4 +1,4 @@
-<div class="recuadro">
+<div class="recuadro icon">
   <img src="<?php block_field( 'icon' ); ?>" aria-hidden="true" />
   <div class="text">
     <h3><?php block_field( 'title' ); ?></h3>

@@ -77,6 +77,9 @@ function pemscores_setup() {
 		'flex-width' => true,
 	));
 
+	// Add theme support for responsive videos in Gutenberg
+	add_theme_support( 'responsive-embeds' );
+
 	/* Editor styles */
 	add_editor_style( array( 'inc/editor-styles.css', pemscores_fonts_url() ) );
 }
@@ -275,12 +278,12 @@ function pemscores_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_register_script('pemscores-fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
-    wp_register_script('pemscores-my-fitvids', get_template_directory_uri() . '/js/my-fitvids.js', array('pemscores-fitvids'),'', true);
-    if(! is_admin() ) {
-        wp_enqueue_script('pemscores-fitvids');
-        wp_enqueue_script('pemscores-my-fitvids');
-    }
+	// wp_register_script('pemscores-fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
+  //   wp_register_script('pemscores-my-fitvids', get_template_directory_uri() . '/js/my-fitvids.js', array('pemscores-fitvids'),'', true);
+  //   if(! is_admin() ) {
+  //       wp_enqueue_script('pemscores-fitvids');
+  //       wp_enqueue_script('pemscores-my-fitvids');
+  //   }
 }
 add_action( 'wp_enqueue_scripts', 'pemscores_scripts' );
 

@@ -43,16 +43,16 @@
 			<div class="recurso-cats">
 				<!-- Ejes temáticos -->
 				    <?php echo get_the_term_list(
-				            $post->ID, 'temas', __('<p>', 'pemscores'), ' ', '</p>' ); ?>
+				            $post->ID, 'temas', __('<span>', 'pemscores'), ' ', '</span>' ); ?>
 				<!-- coberturas -->
 				    <?php echo get_the_term_list(
-				            $post->ID, 'cobertura', __('<p>', 'pemscores'), ' ', '</p>' ); ?>
+				            $post->ID, 'cobertura', __('<span>', 'pemscores'), ' ', '</span>' ); ?>
 				<!-- tipos de recurso -->
 				    <?php echo get_the_term_list(
-				        $post->ID, 'tipo_recurso', __('<p> ', 'pemscores'), ' ', '</p>' ); ?>
+				        $post->ID, 'tipo_recurso', __('<span> ', 'pemscores'), ' ', '</span>' ); ?>
 				<!-- Formato -->
 				    <?php echo get_the_term_list(
-				        $post->ID, 'tipo_medio', __('<p> ', 'pemscores'), ' ', '</p>' ); ?>
+				        $post->ID, 'tipo_medio', __('<span> ', 'pemscores'), ' ', '</span>' ); ?>
 
 			</div><!-- .recurso-cats -->
 		</div><!-- .recurso__content -->

@@ -1251,11 +1251,12 @@ a:hover, a:active {
 .archive-view .recurso .recurso__content .recurso-cats a {
 	font-size: 1rem !important;
 	padding: .2em .4em;
-	background-color: #f9f2ea;
-	color: #ff961e;
+	background-color: #ff961e;
+	color: white;
 	border-radius: .2em;
 	text-decoration: none;
 	font-size: .9em;
+	line-height: 1;
 }
 
 .archive-view .recurso .recurso__content .recurso-cats a:hover {

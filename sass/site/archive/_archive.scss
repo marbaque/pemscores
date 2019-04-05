@@ -185,9 +185,10 @@
 				font-size: .9em;
 
 				a {
-					@include etiqueta($color__naranja, $color__naranja-claro);
+					@include etiqueta(white, $color__naranja);
 					text-decoration: none;
 					font-size: .9em;
+					line-height: 1;
 				}
 			}
 

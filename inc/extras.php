@@ -261,3 +261,16 @@ function academia_allowed_block_types( $allowed_blocks, $post ) {
 	return $allowed_blocks;
 
 }
+
+// Cambiar 'enter title here' en recursos
+function pemscores_change_title_text( $title ){
+     $screen = get_current_screen();
+
+     if  ( 'recurso' == $screen->post_type ) {
+          $title = 'Nombre del recurso';
+     }
+
+     return $title;
+}
+
+add_filter( 'enter_title_here', 'pemscores_change_title_text' );

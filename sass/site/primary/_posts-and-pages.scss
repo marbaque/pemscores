@@ -299,6 +299,7 @@
 
 	.recurso_tags {
 		font-family: $font__system;
+		font-size: .9em;
 
 		a {
 			color: $color__naranja;
@@ -314,6 +315,7 @@
 			box-shadow: 1px 2px rgba(0,0,0,.2);
 
 			a { //separar el link si es muy largo siempre
+				text-decoration: none;
 				overflow-wrap: break-word;
   			word-wrap: break-word;
 			  word-break: break-word;

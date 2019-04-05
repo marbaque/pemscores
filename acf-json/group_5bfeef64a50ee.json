@@ -167,7 +167,7 @@
             ],
             "layout": "vertical",
             "toggle": 0,
-            "return_format": "value",
+            "return_format": "label",
             "save_custom": 0
         }
     ],
@@ -188,5 +188,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Elija las categorías correspondientes a este recurso.",
-    "modified": 1553696861
+    "modified": 1554478890
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_5bfefedcae817",
-    "title": "Recurso",
+    "title": "Fuente de Recurso",
     "fields": [
         {
             "key": "field_5bfeff0939a76",
@@ -93,5 +93,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1553698523
+    "modified": 1554481132
 }

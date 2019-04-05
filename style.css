@@ -1980,6 +1980,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 
 .recurso-wrap .recurso_tags {
 	font-family: "system";
+	font-size: .9em;
 }
 
 .recurso-wrap .recurso_tags a {
@@ -1996,6 +1997,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 }
 
 .recurso-wrap .recurso_tags.recurso-link a {
+	text-decoration: none;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 	word-break: break-word;

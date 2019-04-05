@@ -36,7 +36,7 @@ get_header(); ?>
 				<!-- </h3> -->
 
 				<?php
-				echo do_shortcode( '[searchandfilter fields="search" post_types="recurso,lp-course,page" search_placeholder="Buscar curso, recursos..." class="home-searchandfilter"]' ); ?>
+				echo do_shortcode( '[searchandfilter fields="search" search_placeholder="Buscar curso, recursos..." class="home-searchandfilter"]' ); ?>
 
 			</div>
 		</section>

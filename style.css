@@ -1081,6 +1081,10 @@ a:hover, a:active {
 	}
 }
 
+body.blog .site-content {
+	padding: 1em;
+}
+
 /*--------------------------------------------------------------
 ## Archives
 --------------------------------------------------------------*/
@@ -1133,7 +1137,6 @@ a:hover, a:active {
 	}
 	.archive-view:not(.learnpress):not(.forum-archive):not(.site-content) .content-area {
 		max-width: 66%;
-		margin: 0 auto;
 	}
 }
 

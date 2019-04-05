@@ -21,13 +21,22 @@ get_header(); ?>
 
 		<?php
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
+		if ( is_home() && ! is_front_page() ) :
+			?>
+			<header>
+				<h2 class="page-title screen-reader-text"><?php single_post_title(); ?></h2>
+			</header>
 			<?php
-			endif;
+		endif;
+
+		if ( is_front_page() ): ?>
+
+		<header class="archive-header">
+			<h1 class="page-title"><?= esc_html__( 'Entradas recientes', 'pemscores' ); ?></h1>
+		</header><!-- .page-header -->
+
+	<?php
+		endif;
 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();

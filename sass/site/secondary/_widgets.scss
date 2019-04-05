@@ -238,6 +238,7 @@
 
 		img {
 			margin: 0 auto;
+			min-width: 60px;
 		}
 
 		a {
@@ -264,7 +265,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		align-items: flex-start;
+		align-items: center;
 
 		.widget:not(:last-child):after {
 			padding-right: 1em;

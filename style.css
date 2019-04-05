@@ -3411,6 +3411,8 @@ a.subscription-toggle:hover {
 	}
 	.footer-widgets__wrap .social-menu {
 		width: 30%;
+		border-left: 1px solid #6696c7;
+		padding-left: .5em;
 	}
 }
 
@@ -3489,6 +3491,11 @@ a.subscription-toggle:hover {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+.social-menu ul li {
+	margin: 0;
+	text-align: center;
 }
 
 @media screen and (min-width: 900px) {
@@ -3726,6 +3733,7 @@ a.subscription-toggle:hover {
 
 .footer-widgets .widget_media_image img {
 	margin: 0 auto;
+	min-width: 60px;
 }
 
 .footer-widgets .widget_media_image a {
@@ -3741,8 +3749,8 @@ a.subscription-toggle:hover {
 		    flex-wrap: wrap;
 		-ms-flex-pack: distribute;
 		    justify-content: space-around;
-		-ms-flex-align: start;
-		    align-items: flex-start;
+		-ms-flex-align: center;
+		    align-items: center;
 		/* If only one widget is displayed, make it full width. */
 		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
 		/* If 4 or more widgets are displayed, show three across when available. */

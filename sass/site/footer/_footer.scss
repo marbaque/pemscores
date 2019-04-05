@@ -21,6 +21,8 @@
 
 		.social-menu {
 			width: $size__ratio-small;
+			border-left: 1px solid $color__main-bordes;
+			padding-left: .5em;
 		}
 	}
 }
@@ -97,6 +99,11 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+
+		li {
+			margin: 0;
+			text-align: center;
+		}
 
 		@media screen and (min-width: $query__medium) {
 			justify-content: flex-start;

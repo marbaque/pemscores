@@ -1094,7 +1094,6 @@ a:hover, a:active {
 	position: relative;
 	background: white;
 	border: 1px solid #006edc;
-	border-radius: 4px;
 	padding: 1em 1em 3em;
 	overflow: hidden;
 	font-family: "system";
@@ -1240,12 +1239,8 @@ a:hover, a:active {
 }
 
 .archive-view .recurso .recurso__content p {
-	font-size: .8em;
+	font-size: .86em;
 	color: #888;
-}
-
-.archive-view .recurso .recurso__content .recurso-cats {
-	font-size: .9em;
 }
 
 .archive-view .recurso .recurso__content .recurso-cats a {
@@ -1255,8 +1250,6 @@ a:hover, a:active {
 	color: white;
 	border-radius: .2em;
 	text-decoration: none;
-	font-size: .9em;
-	line-height: 1;
 }
 
 .archive-view .recurso .recurso__content .recurso-cats a:hover {
@@ -1722,12 +1715,12 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	width: 100%;
 	font-family: "system";
 	margin: 1em 0;
-	color: #444;
+	color: #00529a;
 }
 
 .migajas a,
 .learn-press-breadcrumb a {
-	color: #444;
+	color: currentColor;
 	border: none !important;
 	padding: 0 !important;
 }
@@ -1940,33 +1933,39 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	max-width: 1280px;
 	height: auto;
 	padding: 0;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	position: relative;
+	border: 2px solid #cce2f8;
+}
+
+.recurso-wrap .recurso-header {
+	background: #ebf3fc;
+	padding: 30px 70px .5em 1em;
+}
+
+.recurso-wrap .recurso-header h1 {
+	border-bottom: 2px solid #00529a;
+	margin: 0;
+	color: #00529a;
+	font-size: 1.6em;
 }
 
 .recurso-wrap .recurso-media {
 	padding: 0 0 1em;
-	background-color: #00529a;
 	min-height: 200px;
 }
 
-.recurso-wrap .recurso-media .recurso-image {
-	width: 100%;
-	height: auto;
-}
-
-.recurso-wrap .recurso-media .recurso-image img {
+.recurso-wrap .recurso-media img {
 	padding: 0;
-}
-
-.recurso-wrap .recurso-media .recurso-image figcaption {
-	font-size: 90%;
-	padding: 0 .5em;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	width: 100%;
 }
 
 .recurso-wrap .recurso-content {
 	padding: 2em 1em;
+	font-size: .9em;
 }
 
 .recurso-wrap .recurso-content h1.entry-title {
@@ -1978,9 +1977,23 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	margin: 0 .15em;
 }
 
+.recurso-wrap ul.recurso_tags {
+	list-style: none;
+	padding-left: 1em;
+}
+
 .recurso-wrap .recurso_tags {
 	font-family: "system";
 	font-size: .9em;
+	margin-top: 1em;
+}
+
+.recurso-wrap .recurso_tags i.fa {
+	margin-right: 3px;
+}
+
+.recurso-wrap .recurso_tags p {
+	margin: .5em 0;
 }
 
 .recurso-wrap .recurso_tags a {
@@ -1989,11 +2002,19 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	text-decoration: none;
 }
 
+.recurso-wrap .recurso_tags .cc span {
+	font-style: italic;
+}
+
+.recurso-wrap .recurso_tags .cc span:not(:last-child):after {
+	content: ", ";
+}
+
 .recurso-wrap .recurso_tags.recurso-link {
 	background: white;
 	padding: .5em 1em;
 	margin: 1em 0;
-	box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .recurso-wrap .recurso_tags.recurso-link a {
@@ -2007,7 +2028,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 }
 
 @media screen and (min-width: 900px) {
-	.recurso-wrap {
+	.recurso-wrap .recurso-inner {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-line-pack: stretch;

@@ -14,7 +14,7 @@
     echo mb_strimwidth($content, 0, 400, '...');
     ?>
 
-<div class="recurso_tags">
+<ul class="recurso_tags">
   <!-- metadatos: autoria -->
   <?php
       $personas = get_field( 'persona' );
@@ -24,38 +24,38 @@
 
       if( $autoria == 'Persona' ): ?>
 
-          <p><i class="fa fa-address-card-o" aria-hidden="true"></i> <strong><?= __('Creado por:', 'pemscores'); ?></strong>
+          <li><i class="fa fa-address-card-o" aria-hidden="true"></i> <strong><?= __('Creado por:', 'pemscores'); ?></strong>
               <?php echo get_the_term_list( $post->ID, 'autor_tag', ' ', ', ', '' ); ?>
-          </p>
+          </li>
 
       <?php elseif( $autoria == 'Organización' ): ?>
 
-          <p><i class="fa fa-university" aria-hidden="true"></i> <strong><?= __('Creado por:', 'pemscores'); ?></strong>
+          <li><i class="fa fa-university" aria-hidden="true"></i> <strong><?= __('Creado por:', 'pemscores'); ?></strong>
               <?php echo get_the_term_list( $post->ID, 'organizacion_tag', ' ', ', ', '' ); ?>
-          </p>
+          </li>
 
   <?php endif; ?>
 
   <!-- Ejes temáticos -->
     <?= get_the_term_list(
-            $post->ID, 'temas', __('<p><i class="fa fa-tag" aria-hidden="true"></i> <strong>Ejes temáticos:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
+            $post->ID, 'temas', __('<li><i class="fa fa-tag" aria-hidden="true"></i> <strong>Ejes temáticos:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
 
     <!-- coberturas -->
     <?= get_the_term_list(
-            $post->ID, 'cobertura', __('<p><i class="fa fa-bullhorn" aria-hidden="true"></i> <strong>Cobertura:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
+            $post->ID, 'cobertura', __('<li><i class="fa fa-bullhorn" aria-hidden="true"></i> <strong>Cobertura:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
 
     <!-- tipos de recurso -->
     <?= get_the_term_list(
-        $post->ID, 'tipo_recurso', __('<p><i class="fa fa-file-text-o" aria-hidden="true"></i> <strong>Tipo de recurso:</strong> ', 'pemscores'), ', ', ' (' . get_the_term_list(
-     $post->ID, 'tipo_medio', '', ', ', '' ) . ')</p>' ); ?>
+        $post->ID, 'tipo_recurso', __('<li><i class="fa fa-file-text-o" aria-hidden="true"></i> <strong>Tipo de recurso:</strong> ', 'pemscores'), ', ', ' (' . get_the_term_list(
+     $post->ID, 'tipo_medio', '', ', ', '' ) . ')</li>' ); ?>
 
     <!-- Formato -->
 
 
     <!-- Interacciones -->
     <?= get_the_term_list(
-        $post->ID, 'interaccion', __('<p><i class="fa fa-bullseye" aria-hidden="true"></i>
-<strong>Interacción:</strong> ', 'pemscores'), ', ', '</p>' ); ?>
+        $post->ID, 'interaccion', __('<li><i class="fa fa-bullseye" aria-hidden="true"></i>
+<strong>Interacción:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
 
 
 
@@ -66,10 +66,10 @@
 
     if ( $fecha1 ): ?>
 
-        <p><i class="fa fa-calendar" aria-hidden="true"></i> <strong>Fecha de creación:</strong> <?php echo $fecha1; ?></p>
+        <li><i class="fa fa-calendar" aria-hidden="true"></i> <strong>Fecha de creación:</strong> <?php echo $fecha1; ?></li>
 
     <?php else: ?>
-        <p><i class="fa fa-calendar" aria-hidden="true"></i> <strong>Fecha de creación:</strong> N/A</p>
+        <li><i class="fa fa-calendar" aria-hidden="true"></i> <strong>Fecha de creación:</strong> N/A</li>
 
 <?php endif; ?>
 
@@ -81,7 +81,7 @@
 
     if ( $fecha2 ): ?>
 
-    <p><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <strong>Fecha de modificación:</strong> <?php echo $fecha2; ?></p>
+    <li><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <strong>Fecha de modificación:</strong> <?php echo $fecha2; ?></li>
 
 <?php endif; ?>
 
@@ -91,7 +91,7 @@
     $link = get_field( 'basado_en');
 
     if ( $link ): ?>
-        <p><strong>Basado en:</strong> <a class="button" href="<?php echo $link; ?>"><?php echo $link; ?></a></p>
+        <li><i class="fa fa-external-link" aria-hidden="true"></i> <strong>Basado en:</strong> <a class="button" href="<?php echo $link; ?>"><?php echo $link; ?></a></li>
 
 
 <?php endif; ?>
@@ -102,21 +102,21 @@
   $cc = get_field( 'cc_field' );
 
   if ( $licencia == 'copy' ): ?>
-      <p>
+      <li>
         <i class="fa fa-copyright" aria-hidden="true"></i>
         <?= __( 'Derechos reservados', 'pemscores'); ?>
-      </p>
+      </li>
 
     <?php elseif ( $licencia == 'cc' ): ?>
 
-      <p>
+      <li class="cc">
         <i class="fa fa-creative-commons" aria-hidden="true"></i>
         <strong><?= __( 'Licencia Creative Commons: ', 'pemscores'); ?></strong>
       	<?php foreach( $cc as $c ): ?>
       		<span><?php echo $c; ?></span>
       	<?php endforeach; ?>
-      </p>
+      </li>
 
 <?php endif; ?>
 
-</div>
+</ul>

@@ -19,8 +19,8 @@
 
         <?php if( $url ): ?>
         <div class="recurso_tags recurso-link">
-            <p><strong><?php echo __('Enlace:', 'pemscores'); ?></strong>
-                <a href="<?php echo $url; ?>" target="_blank" title="<?php echo __('Enlace a recurso', 'pemscores'); ?>"><?php echo $url; ?> <i class="fa fa-external-link" aria-hidden="true"></i></a> 
+            <p><i class="fa fa-external-link" aria-hidden="true"></i> <strong><?php echo __('Enlace:', 'pemscores'); ?></strong>
+                <a href="<?php echo $url; ?>" target="_blank" title="<?php echo __('Enlace a recurso', 'pemscores'); ?>"><?php echo $url; ?></a>
             </p>
         </div>
         <?php endif; ?>
@@ -29,8 +29,7 @@
 
         <?php if( $file ): ?>
         <div class="recurso_tags recurso-link">
-            <p><i class="fa fa-cloud-download" aria-hidden="true"></i> <strong><?php echo __('Archivo:', 'pemscores'); ?></strong>
-               <a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
+            <p><i class="fa fa-cloud-download" aria-hidden="true"></i> <strong><?php echo __('Archivo:', 'pemscores'); ?></strong> <a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?> </a>
            </p>
         </div>
         <?php endif; ?>

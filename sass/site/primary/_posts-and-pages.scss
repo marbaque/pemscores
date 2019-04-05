@@ -40,10 +40,10 @@
 	width: 100%;
 	font-family: $font__system;
 	margin: 1em 0;
-	color: $color__text-main;
+	color: $color__main-oscuro;
 
 	a {
-		color: $color__text-main;
+		color: currentColor;
 		border: none!important;
 		padding: 0!important; //lleva important porque el enlace tiene class .post lo que hereda estilos del post de archive
 	}
@@ -259,33 +259,39 @@
 	max-width: $size__max-width;
 	height: auto;
 	padding: 0;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	position: relative;
 	@extend .sticky;
+	border: 2px solid $color__main-claro;
+
+	.recurso-header {
+		background: $color__main-superclaro;
+		padding: 30px 70px .5em 1em;
+
+		h1 {
+			border-bottom: 2px solid $color__main-oscuro;
+			margin: 0;
+			color: $color__main-oscuro;
+			font-size: 1.6em;
+		}
+	}
 
 	.recurso-media {
 		padding: 0 0 1em;
-		background-color: $color__main-oscuro;
+
 		min-height: 200px;
 
-		.recurso-image {
+		img {
+			padding: 0;
+			object-fit: cover;
 			width: 100%;
-			height: auto;
-
-			img {
-				padding: 0;
-			}
-			figcaption {
-				font-size: 90%;
-				padding: 0 .5em;
-			}
 		}
 
 	}
 	.recurso-content {
 		padding: 2em 1em;
-		//font-size: 90%;
+		font-size: .9em;
 
 		h1.entry-title {
 			font-size: 1.5em;
@@ -297,9 +303,23 @@
 		}
 	}
 
+	ul.recurso_tags {
+		list-style: none;
+		padding-left: 1em;
+	}
+
 	.recurso_tags {
 		font-family: $font__system;
 		font-size: .9em;
+		margin-top: 1em;
+
+		i.fa {
+			margin-right: 3px;
+		}
+
+		p {
+			margin: .5em 0;
+		}
 
 		a {
 			color: $color__naranja;
@@ -307,12 +327,23 @@
 			text-decoration: none;
 		}
 
+		.cc {
+			span {
+				font-style: italic;
+			}
+			span:not(:last-child) {
+				&:after {
+					content: ", ";
+				}
+			}
+		}
+
 		&.recurso-link {
 			background: white;
 			padding: .5em 1em;
 			margin: 1em 0;
 			//border-radius: 8px;
-			box-shadow: 1px 2px rgba(0,0,0,.2);
+			box-shadow: 1px 2px 6px hsla(0,0,0,.2);
 
 			a { //separar el link si es muy largo siempre
 				text-decoration: none;
@@ -325,11 +356,13 @@
 	}
 
 	@media screen and (min-width: $query__medium) {
-		display: flex;
-		align-content: stretch;
-		justify-content: space-between;
-		flex-wrap: nowrap;
 
+		.recurso-inner {
+			display: flex;
+			align-content: stretch;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+		}
 		.recurso-media {
 			width: 50%;
 			padding: 1em;

@@ -9,7 +9,6 @@
 		position: relative;
 		background: white;
 		border: 1px solid $color__main;
-		border-radius: 4px;
 		padding: 1em 1em 3em;
 		overflow: hidden;
 		font-family: $font__system;
@@ -178,17 +177,13 @@
 			}
 
 			p {
-				font-size: .8em;
+				font-size: .86em;
 				color: $color__gris;
 			}
 			.recurso-cats {
-				font-size: .9em;
-
 				a {
 					@include etiqueta(white, $color__naranja);
 					text-decoration: none;
-					font-size: .9em;
-					line-height: 1;
 				}
 			}
 

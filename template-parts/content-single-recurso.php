@@ -16,45 +16,47 @@ $file = get_field('subir_arch');
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		endif; ?>
-		<?php
-			if( function_exists('bcn_display') && !is_singular('lp_course') ) {
-				echo '<div class="migajas">';
-				bcn_display();
-				echo '</div>';
-			}
-			?>
-
-	</header><!-- .entry-header -->
-
 	<div class="recurso-wrap">
 
-		<div class="recurso-media">
+		<header class="recurso-header">
+			<?php
+			if ( is_single() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			endif; ?>
+			<?php
+				if( function_exists('bcn_display') && !is_singular('lp_course') ) {
+					echo '<div class="migajas">';
+					bcn_display();
+					echo '</div>';
+				}
+				?>
+		</header><!-- .entry-header -->
 
-			<?php if( $fuente == 'ext' ): ?>
-				<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="440"]'); ?>
-			<?php elseif( $fuente == 'int' ): ?>
-				<?php
-				if( $file['type'] == 'image' ) {
-					echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200px" height"auto">';
-				} else {
-					echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]');
-				}?>
-			<?php endif; ?>
+		<div class="recurso-inner">
 
-				<?php get_template_part( 'template-parts/recurso', 'link' ); ?>
+			<div class="recurso-media">
 
-		</div>
+				<?php if( $fuente == 'ext' ): ?>
+					<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="440"]'); ?>
+				<?php elseif( $fuente == 'int' ): ?>
+					<?php
+					if( $file['type'] == 'image' ) {
+						echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200px" height"auto">';
+					} else {
+						echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]');
+					}?>
+				<?php endif; ?>
 
-		<div class="recurso-content">
-			<div class="recurso-descripcion">
-				<?php get_template_part( 'template-parts/recurso', 'meta' ); ?>
-			</div>
-		</div> <!-- recurso-content -->
+					<?php get_template_part( 'template-parts/recurso', 'link' ); ?>
+
+			</div> <!-- recurso-media -->
+
+			<div class="recurso-content">
+				<div class="recurso-descripcion">
+					<?php get_template_part( 'template-parts/recurso', 'meta' ); ?>
+				</div>
+			</div> <!-- recurso-content -->
+		</div> <!-- recurso-inner -->
 
 	</div>
 

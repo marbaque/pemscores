@@ -3967,8 +3967,6 @@ a.subscription-toggle:hover {
 	    justify-content: space-around;
 	-ms-flex-align: end;
 	    align-items: flex-end;
-	-ms-flex-item-align: stretch;
-	    align-self: stretch;
 }
 
 .searchandfilter.recursos-searchandfilter ul li:first-child {
@@ -3992,6 +3990,10 @@ a.subscription-toggle:hover {
 
 .searchandfilter.recursos-searchandfilter ul select {
 	max-width: 200px;
+}
+
+.searchandfilter.recursos-searchandfilter ul input[value="Filtrar"] {
+	height: 40px !important;
 }
 
 .widget.bbp_widget_login form.bbp-login-form fieldset {

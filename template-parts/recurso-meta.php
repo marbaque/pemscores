@@ -54,8 +54,8 @@
 
     <!-- Interacciones -->
     <?= get_the_term_list(
-        $post->ID, 'interaccion', __('<li><i class="fa fa-bullseye" aria-hidden="true"></i>
-<strong>Interacción:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
+        $post->ID, 'interaccion', __('<li><i class="fa fa-exchange" aria-hidden="true"></i>
+<strong>Modalidad:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
 
 
 

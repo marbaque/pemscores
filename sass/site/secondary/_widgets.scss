@@ -423,7 +423,6 @@
 			flex-wrap: wrap;
 			justify-content: space-around;
 			align-items: flex-end;
-			align-self: stretch;
 
 			li:first-child {
 				flex: 1 1 100%;
@@ -439,11 +438,18 @@
 			}
 
 			li:last-child {
+
+			}
+
+			li:last-child {
 				align-self: flex-end;
 			}
 
 			select {
 				max-width: 200px;
+			}
+			input[value="Filtrar"] {
+				height: 40px!important;
 			}
 		}
 	}

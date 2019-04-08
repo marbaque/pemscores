@@ -41,7 +41,7 @@
 }
 
 @mixin etiqueta($color, $fondo) {
-	font-size: 1rem!important;
+	font-size: 1rem;
 	padding: .2em .4em;
 	background-color: $fondo;
 	color: $color;

@@ -715,7 +715,7 @@ fieldset {
 }
 
 #buddypress form.standard-form button.visibility-toggle-link {
-	font-size: 1rem !important;
+	font-size: 1rem;
 	padding: .2em .4em;
 	background-color: #f9f2ea;
 	color: #ff961e;
@@ -1247,12 +1247,13 @@ body.blog .site-content {
 }
 
 .archive-view .recurso .recurso__content .recurso-cats a {
-	font-size: 1rem !important;
+	font-size: 1rem;
 	padding: .2em .4em;
 	background-color: #ff961e;
 	color: white;
 	border-radius: .2em;
 	text-decoration: none;
+	font-size: .8em;
 }
 
 .archive-view .recurso .recurso__content .recurso-cats a:hover {
@@ -2163,7 +2164,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 }
 
 .lp-single-course .course-students {
-	font-size: 1rem !important;
+	font-size: 1rem;
 	padding: .2em .4em;
 	background-color: #00529a;
 	color: #ebf3fc;
@@ -2277,7 +2278,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 }
 
 .course-price span.price {
-	font-size: 1rem !important;
+	font-size: 1rem;
 	padding: .2em .4em;
 	background-color: #ff961e;
 	color: #f9f2ea;
@@ -3168,7 +3169,7 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header {
 }
 
 a.subscription-toggle {
-	font-size: 1rem !important;
+	font-size: 1rem;
 	padding: .2em .4em;
 	background-color: #cce2f8;
 	color: #00529a;
@@ -4021,7 +4022,7 @@ a.subscription-toggle:hover {
 }
 
 .widget.buddypress .bp-login-widget-register-link a {
-	font-size: 1rem !important;
+	font-size: 1rem;
 	padding: .2em .4em;
 	background-color: white;
 	color: #ff961e;

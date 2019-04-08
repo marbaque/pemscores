@@ -15,7 +15,13 @@ $file = get_field('subir_arch');
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	<?php
+		if( function_exists('bcn_display') && !is_singular('lp_course') ) {
+			echo '<div class="migajas">';
+			bcn_display();
+			echo '</div>';
+		}
+		?>
 	<div class="recurso-wrap">
 
 		<header class="recurso-header">
@@ -23,13 +29,7 @@ $file = get_field('subir_arch');
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			endif; ?>
-			<?php
-				if( function_exists('bcn_display') && !is_singular('lp_course') ) {
-					echo '<div class="migajas">';
-					bcn_display();
-					echo '</div>';
-				}
-				?>
+
 		</header><!-- .entry-header -->
 
 		<div class="recurso-inner">

@@ -86,7 +86,6 @@ function pemscores_setup() {
 endif;
 add_action( 'after_setup_theme', 'pemscores_setup' );
 
-
 /**
  * Register custom fonts.
  */
@@ -321,8 +320,10 @@ require get_template_directory() . '/inc/extras.php';
 
 /**
  * Custom post types y taxonomies
+ * Para utilizar los custom post types desde el tema (sin el plugin), decomente la siguiente línea.
+ * ASEGÚRESE DE QUE EL PLUGIN NO ESTÁ INSTALADO NI ACTIVADO, YA QUE EST PUEDE ROMPER EL SITIO.
  */
-require get_template_directory() . '/inc/cpt.php';
+//require get_template_directory() . '/inc/cpt.php';
 
 /**
  * Load Jetpack compatibility file.

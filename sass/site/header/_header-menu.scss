@@ -83,7 +83,7 @@ button.dropdown-toggle {
 	right: 0;
 	border: none;
 	background: inherit;
-	color: $color__main;
+	color: currentcolor;
 	line-height: 1em;
 	padding: .4em .75em;
 	font-weight: 700;
@@ -114,6 +114,7 @@ button.dropdown-toggle {
 
 //Boton de login de BP
 .bp-login-nav a {
+	color: $color__verde;
 
 	&:after {
 		font-family: 'FontAwesome';
@@ -121,12 +122,30 @@ button.dropdown-toggle {
 		margin-left: .5em;
 	}
 }
-.bp-profile-nav a {
+.mi-perfil>a {
 
-	&:after {
+	&:before {
 		font-family: 'FontAwesome';
 		content: "\f2be";
-		margin-left: .5em;
+		margin-right: .5em;
+
+	}
+}
+.ajustes>a {
+
+	&:before {
+		font-family: 'FontAwesome';
+		content: "\f013";
+		margin-right: .5em;
+	}
+}
+
+.mis-cursos>a {
+
+	&:before {
+		font-family: 'FontAwesome';
+		content: "\f19d";
+		margin-right: .5em;
 	}
 }
 

@@ -450,8 +450,19 @@
 			}
 			input[value="Filtrar"] {
 				height: 40px!important;
+				&:before {
+					content: "A";
+				}
 			}
 		}
+	}
+}
+
+.widget {
+	&.popular-posts {
+			.wpp-list li {
+				margin: .75em 0;
+			}
 	}
 }
 

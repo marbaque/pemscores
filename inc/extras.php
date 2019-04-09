@@ -274,3 +274,16 @@ function pemscores_change_title_text( $title ){
 }
 
 add_filter( 'enter_title_here', 'pemscores_change_title_text' );
+
+
+// Quitar admin bar de buddypress
+add_action( 'init', 'remove_admin_bar_user', 10001 );
+function remove_admin_bar_user() {
+
+	if ( current_user_can( 'administrator' ) || is_admin() ) {
+
+		show_admin_bar( true );
+	} else {
+		show_admin_bar( false );
+	}
+}

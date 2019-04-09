@@ -1,4 +1,12 @@
 <?php
+/*
+**	Este es el código para el plugin de contenido personalizado (Recursos y taxonomías).
+**	Creado con el plugin Custom Posts UI.
+**	Para editar el plugin, edite el archivo wp-content/mu-plugins/instituto-custom-content.php.
+**	Se puso aparte en un plugin para que no fuera parte del tema, porque no es muy recomendado.
+**	Si decide usar este archivo en vez del plugin, asegúrese que EL PLUGIN NO ESTÁ PRESENTE,
+		descomente el códio a continuación y incluya este archivo en functions.php.
+*/
 
 function cptui_register_my_cpts() {
 

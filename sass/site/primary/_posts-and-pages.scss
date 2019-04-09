@@ -267,10 +267,11 @@
 
 	.recurso-header {
 		background: $color__main-superclaro;
-		padding: 30px 70px .5em 1em;
+		padding: 40px 70px 40px 1em;
+		border-bottom: 2px solid $color__main-claro;
 
 		h1 {
-			border-bottom: 2px solid $color__main-oscuro;
+			//border-bottom: 2px solid $color__main-oscuro;
 			margin: 0;
 			color: $color__main-oscuro;
 			font-size: 1.6em;

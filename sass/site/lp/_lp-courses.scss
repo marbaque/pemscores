@@ -231,3 +231,10 @@ ul.curriculum-sections
       );
   }
 }
+
+// Keep all lesson sections in Curriculum closed
+
+.lp-landing #learn-press-course-curriculum .curriculum-sections .section .section-content,
+.course-curriculum ul.curriculum-sections .section-content {
+display: none;
+}

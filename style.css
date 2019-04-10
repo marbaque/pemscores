@@ -709,9 +709,11 @@ fieldset {
 }
 
 #buddypress form.standard-form p.field-visibility-settings-toggle,
-#buddypress form.standard-form p.field-visibility-settings-notoggle {
+#buddypress form.standard-form p.field-visibility-settings-notoggle,
+#buddypress form.standard-form p.description {
 	font-size: 80%;
 	color: #888;
+	background: transparent;
 }
 
 #buddypress form.standard-form button.visibility-toggle-link {
@@ -2686,20 +2688,30 @@ a.toggle-content-item {
 	}
 }
 
-.profile .learnpress .lp-profile-avatar img {
+.buddypress-wrap .learnpress .lp-profile-avatar img {
 	border-radius: 50% !important;
 }
 
-.profile .learnpress .lp-profile-header {
+.buddypress-wrap .learnpress .lp-profile-header {
 	background-color: white !important;
 }
 
-.profile #learn-press-profile-nav:before {
+.buddypress-wrap .item-avatar a,
+.buddypress-wrap .member-name a {
+	border: 0;
+}
+
+.buddypress-wrap #learn-press-profile-nav:before {
 	background: none;
 }
 
-.profile #learn-press-profile-nav {
+.buddypress-wrap #learn-press-profile-nav {
 	background: none;
+}
+
+.buddypress-wrap .users-nav li.selected a {
+	background: #006edc !important;
+	color: white !important;
 }
 
 @media screen and (min-width: 900px) {

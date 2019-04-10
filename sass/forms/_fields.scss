@@ -129,9 +129,11 @@ fieldset {
 		}
 
 		p.field-visibility-settings-toggle,
-		p.field-visibility-settings-notoggle {
+		p.field-visibility-settings-notoggle,
+		p.description {
 			font-size: 80%;
 			color: $color__gris;
+			background: transparent;
 		}
 		button.visibility-toggle-link {
 			@include etiqueta($color__naranja, $color__naranja-claro);

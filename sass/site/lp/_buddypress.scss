@@ -12,7 +12,7 @@
 }
 
 
-.profile {
+.buddypress-wrap {
   .learnpress {
 
     .lp-profile-avatar img {
@@ -24,8 +24,9 @@
     }
   }
 
-  a {
-      //border: 0;
+  .item-avatar a,
+  .member-name a {
+      border: 0;
   }
 
   #learn-press-profile-nav:before {
@@ -34,6 +35,13 @@
 
   #learn-press-profile-nav {
       background: none;
+  }
+
+  .users-nav {
+    li.selected a {
+      background: $color__main!important;
+      color: white!important;
+    }
   }
 }
 

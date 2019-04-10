@@ -3436,7 +3436,7 @@ a.subscription-toggle:hover {
 .footer-container {
 	margin: 2em auto 0;
 	padding: 1em 0;
-	background-color: #ebf3fc;
+	background: #f4f4f4;
 	width: 100% !important;
 	font-size: 1rem;
 	z-index: 2;

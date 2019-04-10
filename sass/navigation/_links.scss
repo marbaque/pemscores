@@ -1,5 +1,5 @@
 a {
-	color: $color__main-oscuro;
+	color: $color__main;
 
 	&:visited {
 		color: $color__main;
@@ -25,12 +25,13 @@ a {
 .comment-content {
 
 	a {
-		text-decoration: underline;
-		//border-bottom: 2px solid $color__main-oscuro;
+		text-decoration: none;
+		border-bottom: 2px solid $color__main;
 
 		&:focus,
 		&:hover {
-			color: $color__main;
+			color: $color__main-oscuro;
+			border-color: $color__main-oscuro;
 		}
 	}
 }

@@ -173,11 +173,7 @@ function pemscores_content_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0];
 
 	if ( 900 <= $width ) {
-		$sizes = '(min-width: 900px) 700px, 900px';
-	}
-
-	if ( is_active_sidebar( 'sidebar-1' ) || is_active_sidebar( 'sidebar-2' ) ) {
-		$sizes = '(min-width: 900px) 600px, 900px';
+		$sizes = '(min-width: 900px) 800px, 900px';
 	}
 
 	return $sizes;

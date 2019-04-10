@@ -313,28 +313,28 @@
 
   }
 
-	&:before {
+	&:after {
 		font-family: 'FontAwesome';
 		content: "\f002";
 		font-size: 24px;
-		display: inline-block;
+		display: block;
 		position: absolute;
-		top: 14px;
+		top: 12px;
 		right: 1em;
-		z-index: 1;
+		z-index: 99;
 		line-height: 1;
-		font-size: 120%;
 		color: $color__main;
 	}
 
   .search-field,
 	input[name="ofsearch"] { //agregar input de searchsandfilter plugin
       width: 100%;
+			margin: 0 auto;
       height: 40px;
       border: 2px solid $color__main;
       flex-grow: 1;
       outline: 0;
-      padding: 24px 2.5em 24px 10px;
+      padding: 24px 2.5em 24px 1em;
       -webkit-appearance: none;
       @include borde-redondeado(6px);
       background: white;
@@ -343,6 +343,9 @@
       font-weight: 400;
 			position: relative;
       transition: all .5s;
+
+
+
       &:focus{
           width: 100%;
           outline: 2;

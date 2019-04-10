@@ -233,8 +233,11 @@ ul.curriculum-sections
 }
 
 // Keep all lesson sections in Curriculum closed
-
 .lp-landing #learn-press-course-curriculum .curriculum-sections .section .section-content,
 .course-curriculum ul.curriculum-sections .section-content {
 display: none;
+}
+
+.course-overview_section:nth-child(3) { // esconder el instructor
+  display: none;
 }

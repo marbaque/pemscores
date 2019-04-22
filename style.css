@@ -2304,8 +2304,8 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	opacity: .8;
 }
 
-.lp-landing #learn-press-course-curriculum .curriculum-sections .section .section-content,
-.course-curriculum ul.curriculum-sections .section-content {
+.single-lp_course:not(.course-item-lp_lesson) .lp-landing #learn-press-course-curriculum .curriculum-sections .section .section-content,
+.single-lp_course:not(.course-item-lp_lesson) .course-curriculum ul.curriculum-sections .section-content {
 	display: none;
 }
 

@@ -264,3 +264,17 @@ a.toggle-content-item {
     display: none;
   }
 }
+
+
+//tablas
+table.is-style-regular {
+  border: 1px solid #333;
+  font-size: .8em;
+  th, td {
+    border: 1px solid #333;
+  }
+  td {
+    padding: .5em;
+  }
+  
+}

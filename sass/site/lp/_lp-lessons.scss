@@ -267,7 +267,7 @@ a.toggle-content-item {
 
 
 //tablas
-table.is-style-regular {
+body.learnpress table.is-style-regular {
   border: 1px solid #333;
   font-size: .8em;
   th, td {
@@ -277,4 +277,16 @@ table.is-style-regular {
     padding: .5em;
   }
   
+}
+
+.button-complete-lesson {
+  &:after  {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    margin-left: .25em;
+  }
+}
+.learn-press-form.completed p {
+  background: $color__main-superclaro;
+  padding: .5em;
 }

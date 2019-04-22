@@ -2680,16 +2680,27 @@ a.toggle-content-item {
 	display: none;
 }
 
-table.is-style-regular {
+body.learnpress table.is-style-regular {
 	border: 1px solid #333;
 	font-size: .8em;
 }
 
-table.is-style-regular th, table.is-style-regular td {
+body.learnpress table.is-style-regular th, body.learnpress table.is-style-regular td {
 	border: 1px solid #333;
 }
 
-table.is-style-regular td {
+body.learnpress table.is-style-regular td {
+	padding: .5em;
+}
+
+.button-complete-lesson:after {
+	content: "\f00c";
+	font-family: 'FontAwesome';
+	margin-left: .25em;
+}
+
+.learn-press-form.completed p {
+	background: #ebf3fc;
 	padding: .5em;
 }
 

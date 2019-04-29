@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, basado en el tema hecho por Morten Rand-Hendriksen para el curso Building Themes From Scratch Using Underscores en LinkedIn Learning y Lynda.com.
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -526,6 +526,7 @@ td:last-child {
 --------------------------------------------------------------*/
 button,
 .botones,
+#course-item-content-header .lp-button-back button,
 .lp-button,
 input[type="button"],
 input[type="reset"],
@@ -543,8 +544,11 @@ input[type="submit"] {
 
 button:hover, button:active, button:focus,
 .botones:hover,
+#course-item-content-header .lp-button-back button:hover,
 .botones:active,
+#course-item-content-header .lp-button-back button:active,
 .botones:focus,
+#course-item-content-header .lp-button-back button:focus,
 .lp-button:hover,
 .lp-button:active,
 .lp-button:focus,
@@ -786,11 +790,15 @@ a:hover, a:active {
 	border-color: #00529a;
 }
 
-.botones {
+
+.botones,
+#course-item-content-header .lp-button-back button {
 	color: #5abe00 !important;
 }
 
-.botones:hover {
+
+.botones:hover,
+#course-item-content-header .lp-button-back button:hover {
 	border: 2px solid #5abe00 !important;
 }
 
@@ -2146,7 +2154,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 
 .course .post-content .course-overview_section .curriculum-sections li.section .section-header {
 	border: none;
-	background-color: #ebf3fc;
+	background-color: #cce2f8;
 	color: #00529a;
 	padding: .5em 1em;
 }
@@ -2439,45 +2447,8 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 }
 
 #course-item-content-header .course-item-search {
-	background-color: #00529a !important;
 	z-index: 99;
-}
-
-#course-item-content-header .course-item-search input {
-	font-size: 80%;
-	color: #ebf3fc;
-}
-
-#course-item-content-header .course-item-search input:-ms-input-placeholder {
-	/* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: #ebf3fc;
-	opacity: 1;
-	/* Firefox */
-}
-
-#course-item-content-header .course-item-search input::placeholder {
-	/* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: #ebf3fc;
-	opacity: 1;
-	/* Firefox */
-}
-
-#course-item-content-header .course-item-search input:-ms-input-placeholder {
-	/* Internet Explorer 10-11 */
-	color: #ebf3fc;
-}
-
-#course-item-content-header .course-item-search input::-ms-input-placeholder {
-	/* Microsoft Edge */
-	color: #ebf3fc;
-}
-
-#course-item-content-header .course-item-search input:focus {
-	color: #ebf3fc !important;
-}
-
-#course-item-content-header .course-item-search button {
-	color: #ebf3fc !important;
+	border-right: 1px solid #6696c7;
 }
 
 #course-item-content-header .course-title {
@@ -2489,7 +2460,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 }
 
 #course-item-content-header .course-title a {
-	color: #6696c7;
+	color: #006edc;
 	text-decoration: none;
 }
 
@@ -2505,14 +2476,7 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 
 #course-item-content-header .lp-button-back button {
 	font-size: 80%;
-	border: none;
 	height: 100%;
-}
-
-@media screen and (min-width: 900px) {
-	#course-item-content-header .lp-button-back {
-		display: block;
-	}
 }
 
 #course-item-content-header .toggle-content-item {
@@ -2523,31 +2487,36 @@ a.read-more .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses
 	    flex: 1 0 60px;
 }
 
-.course-curriculum .curriculum-sections li.course-item {
+.course-curriculum ul.curriculum-sections li.course-item {
 	font-family: "system";
 	color: #006edc !important;
 }
 
-.course-curriculum .curriculum-sections li.course-item a {
+.course-curriculum ul.curriculum-sections li.course-item a {
 	text-decoration: none;
 	font-size: 0.9rem !important;
 }
 
-.course-curriculum .curriculum-sections li.course-item.current:before {
+.course-curriculum ul.curriculum-sections li.course-item.current:before {
 	background: #006edc !important;
 }
 
-.course-curriculum .curriculum-sections li.course-item i.fa {
+.course-curriculum ul.curriculum-sections li.course-item i.fa {
 	color: #5abe00 !important;
 }
 
-.course-curriculum .curriculum-sections .section-header {
-	background-color: #ebf3fc;
-	border-bottom: 1px solid #6696c7 !important;
+.course-curriculum ul.curriculum-sections .section-header {
+	background-color: #cce2f8;
+	color: #006edc;
+	font-weight: 700;
 }
 
-.course-curriculum .curriculum-sections .section-header .section-title {
+.course-curriculum ul.curriculum-sections .section-header .section-title {
 	font-size: 0.9rem !important;
+}
+
+.course-curriculum ul.curriculum-sections .section-header .progress-bg {
+	background: white;
 }
 
 .content-item-wrap {

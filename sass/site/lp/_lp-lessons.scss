@@ -7,33 +7,12 @@
   justify-content: flex-start;
 
   .course-item-search  {
-    background-color: $color__main-oscuro!important;
+    //background-color: $color__main-oscuro!important;
     z-index: 99;
-
-    input {
-      font-size: 80%;
-      color: $color__main-superclaro;
-
-       &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-         color: $color__main-superclaro;
-         opacity: 1; /* Firefox */
-       }
-       &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-         color: $color__main-superclaro;
-       }
-
-       &::-ms-input-placeholder { /* Microsoft Edge */
-         color: $color__main-superclaro;
-       }
-
-
-      &:focus {
-        color: $color__main-superclaro!important;
-      }
-    }
+    border-right: 1px solid $color__main-bordes;
 
     button {
-        color: $color__main-superclaro!important;
+        
     }
   }
 
@@ -45,7 +24,7 @@
      flex: 0 1 100%;
 
     a {
-     color: $color__main-bordes;
+     color: $color__main;
      text-decoration: none;
     }
 
@@ -62,14 +41,11 @@
 
    button {
        font-size: 80%;
-       border: none;
+       //border: none;
        height: 100%;
-       //@extend .botones;
+       @extend .botones;
        //background: none;
-   }
 
-   @media screen and (min-width: $query__medium) {
-     display: block;
    }
   }
 
@@ -82,7 +58,7 @@
 
 .course-curriculum {
 
-  .curriculum-sections {
+  ul.curriculum-sections {
 
     li.course-item {
       font-family: $font__system;
@@ -104,10 +80,14 @@
     }
 
     .section-header {
-      background-color: $color__main-superclaro;
-      border-bottom: 1px solid $color__main-bordes!important;
+      background-color: $color__main-claro;
+      color: $color__main;
+      font-weight: 700;
       .section-title {
         font-size: .9rem!important;
+      }
+      .progress-bg {
+        background: white;
       }
     }
 

@@ -12,15 +12,16 @@
 	background-image: url("images/fondo-ilustrado.svg");
   background-repeat: repeat-x;
   background-color: $color__main-superclaro;
-  background-position: left 100px;
+  background-position: left bottom;
   background-size: auto 370px;
 	//border-bottom: 1px solid $color__main-bordes;
 
   @media screen and (min-width: $query__small) {
 		animation-name: paneo; /* IE 10+, Fx 29+ */
-		animation-duration: 100s;
-		animation-iteration-count: 2;
-  	animation-timing-function: linear;
+		animation-duration: 60s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+		animation-timing-function: ease-out;
   }
 
 	.hero-title {

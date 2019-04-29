@@ -1,88 +1,98 @@
 //pagina de descripción
 .course {
-    .post-content {
 
-        .course-overview_section {
-            margin-bottom: 1em;
-            background: white;
-            padding: 1em 1em 2em;
-            border: 1px solid $color__main-claro;
-            box-shadow: -1px 2px 2px hsla(0, 0%, 10%, .1);
-            border-radius: 4px;
+  .course-forum {
+    font-family: $font__system;
 
-            .curriculum-sections {
+    a.learn-press-course-forum-link {
+      font-size: inherit;
+    }
+  }
 
-              li.section {
-                border-radius: 4px;
-                border: 1px solid $color__main;
-                overflow: hidden;
-                margin-bottom: 1em;
-                font-size: .8em;
 
-                .section-header {
-                  border: none;
-                  background-color: $color__main-claro;
-                  color: $color__main-oscuro;
-                  padding: .5em 1em;
+  .post-content {
 
-                  h5{
-                    font-weight: 400;
-                  }
+      .course-overview_section {
+          margin-bottom: 1em;
+          background: white;
+          padding: 1em 1em 2em;
+          border: 1px solid $color__main-claro;
+          box-shadow: -1px 2px 2px hsla(0, 0%, 10%, .1);
+          border-radius: 4px;
+
+          .curriculum-sections {
+
+            li.section {
+              border-radius: 4px;
+              border: 1px solid $color__main;
+              overflow: hidden;
+              margin-bottom: 1em;
+              font-size: .8em;
+
+              .section-header {
+                border: none;
+                background-color: $color__main-claro;
+                color: $color__main-oscuro;
+                padding: .5em 1em;
+
+                h5{
+                  font-weight: 400;
                 }
-                .section-content {
-                  margin: 0;
+              }
+              .section-content {
+                margin: 0;
 
-                  .course-item a {
-                    font-size: 1.1em;
-                  }
+                .course-item a {
+                  font-size: 1.1em;
+                }
 
-                  a {
-                    padding: 0 1em;
-                  }
+                a {
+                  padding: 0 1em;
                 }
               }
             }
+          }
 
 
-            .course-author>h3 {
-                display: none;
-            }
+          .course-author>h3 {
+              display: none;
+          }
 
-            &:first-of-type {
-                margin-top: 1em;
-            }
+          &:first-of-type {
+              margin-top: 1em;
+          }
 
-            @media screen and (min-width: $query__small) {
-                padding: 1em 2em 2em;
-            }
-        }
+          @media screen and (min-width: $query__small) {
+              padding: 1em 2em 2em;
+          }
+      }
 
-        // .course-tabs{
-        //     ul.course-nav-tabs {
-        //         margin-bottom: 0;
-        //         font-size: 80%;
-        //         border-color: #f4f4f4;
-        //
-        //         li.course-nav {
-        //             background: white;
-        //             border-radius: 4px 4px 0 0;
-        //             margin: 0 .3em;
-        //             border-color: white;
-        //             opacity: .5;
-        //
-        //             &.active {
-        //                 @include altura1;
-        //                 opacity: 1;
-        //             }
-        //         }
-        //     }
-        // }
-        // .course-tab-panel {
-        //     background: white;
-        //     padding: 2em 2em 3em;
-        //     font-size: 90%;
-        // }
-    }
+      // .course-tabs{
+      //     ul.course-nav-tabs {
+      //         margin-bottom: 0;
+      //         font-size: 80%;
+      //         border-color: #f4f4f4;
+      //
+      //         li.course-nav {
+      //             background: white;
+      //             border-radius: 4px 4px 0 0;
+      //             margin: 0 .3em;
+      //             border-color: white;
+      //             opacity: .5;
+      //
+      //             &.active {
+      //                 @include altura1;
+      //                 opacity: 1;
+      //             }
+      //         }
+      //     }
+      // }
+      // .course-tab-panel {
+      //     background: white;
+      //     padding: 2em 2em 3em;
+      //     font-size: 90%;
+      // }
+  }
 }
 
 .lp-single-course {

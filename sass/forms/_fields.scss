@@ -78,6 +78,13 @@ fieldset {
 		color: $color__main-bordes;
 		font-style: italic;
 	}
+
+	.hf-message {
+
+		&.hf-message-success {
+			@extend .alert-success,
+		}
+	}
 }
 
 

@@ -34,4 +34,12 @@ figure {
 	margin: 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
+.alert-success {
+	padding: 1em;
+	border: 1px solid $color__verde;
+	color: $color__verde;
+	border-radius: .25em;
+	background: $color__verde-claro;
+}
+
 @import "tables";

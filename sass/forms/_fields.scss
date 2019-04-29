@@ -45,6 +45,41 @@ fieldset {
 	font-family: $font__system;
 }
 
+// HTML Form
+.hf-form {
+	max-width: 100%;
+
+	input[type="text"],
+	input[type="email"] {
+		display: block;
+	}
+
+	label {
+		font-size: .9em;
+	}
+
+	textarea {
+		max-width: $query__small;
+		display: block;
+	}
+
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: $color__main-bordes;
+		font-style: italic;
+		opacity: 1; /* Firefox */
+	  }
+	  
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: $color__main-bordes;
+		font-style: italic;
+	}
+	  
+	::-ms-input-placeholder { /* Microsoft Edge */
+		color: $color__main-bordes;
+		font-style: italic;
+	}
+}
+
 
 #buddypress {
 

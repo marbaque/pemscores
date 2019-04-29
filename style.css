@@ -630,6 +630,52 @@ fieldset {
 	font-family: "system";
 }
 
+.hf-form {
+	max-width: 100%;
+}
+
+.hf-form input[type="text"],
+.hf-form input[type="email"] {
+	display: block;
+}
+
+.hf-form label {
+	font-size: .9em;
+}
+
+.hf-form textarea {
+	max-width: 600px;
+	display: block;
+}
+
+.hf-form :-ms-input-placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #6696c7;
+	font-style: italic;
+	opacity: 1;
+	/* Firefox */
+}
+
+.hf-form ::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #6696c7;
+	font-style: italic;
+	opacity: 1;
+	/* Firefox */
+}
+
+.hf-form :-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: #6696c7;
+	font-style: italic;
+}
+
+.hf-form ::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: #6696c7;
+	font-style: italic;
+}
+
 #buddypress form.standard-form .layout-wrap .register-section {
 	background-color: #cce2f8;
 	border-radius: 1em;

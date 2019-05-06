@@ -280,10 +280,12 @@ add_filter( 'enter_title_here', 'pemscores_change_title_text' );
 add_action( 'init', 'remove_admin_bar_user', 10001 );
 function remove_admin_bar_user() {
 
-	if ( current_user_can( 'administrator' ) || is_admin() ) {
-
+	if ( current_user_can( 'administrator' ) || current_user_can( 'editor' ) || current_user_can( 'author' ) ) {
+		
 		show_admin_bar( true );
+	
 	} else {
+		
 		show_admin_bar( false );
 	}
 }

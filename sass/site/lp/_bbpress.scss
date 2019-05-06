@@ -92,6 +92,13 @@ li.bbp-forum-freshness {
 	position:relative;
 }
 
+#bbpress-forums {
+	
+	a {
+		border: none;
+	}
+}
+
 li.bbp-forum-info, li.bbp-topic-title {
     width: 50%;
 }
@@ -135,6 +142,7 @@ div.bbp-topic-tags,
 #bbpress-forums li.bbp-body ul.forum,
 #bbpress-forums li.bbp-body ul.topic {
 	font-size: 1rem;
+	font-family: $font__system;
 }
 
 div.bbp-template-notice p,
@@ -165,7 +173,7 @@ div.bbp-template-notice p,
 
 .bbp-reply-author br,
 .bbp-topic-author br {
-	display: none;
+	//display: none;
 }
 
 .bbp-reply-author,

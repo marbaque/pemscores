@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, basado en el tema hecho por Morten Rand-Hendriksen para el curso Building Themes From Scratch Using Underscores en LinkedIn Learning y Lynda.com.
-Version: 1.4
+Version: 1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -542,11 +542,11 @@ input[type="submit"] {
 	width: auto;
 	background: #eaf7df;
 	border: 2px solid #5abe00;
-	color: #5abe00;
+	color: #408503;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1;
-	padding: .5em 1em;
+	padding: .75em 1.5em;
 	border-radius: 4px;
 }
 
@@ -2978,6 +2978,10 @@ li.bbp-forum-freshness {
 	position: relative;
 }
 
+#bbpress-forums a {
+	border: none;
+}
+
 li.bbp-forum-info, li.bbp-topic-title {
 	width: 50%;
 }
@@ -3021,6 +3025,7 @@ div.bbp-topic-tags,
 #bbpress-forums li.bbp-body ul.forum,
 #bbpress-forums li.bbp-body ul.topic {
 	font-size: 1rem;
+	font-family: "system";
 }
 
 div.bbp-template-notice p,
@@ -3045,11 +3050,6 @@ div.bbp-template-notice p,
 
 #bbpress-forums div.bbp-forum-author a.bbp-author-name, #bbpress-forums div.bbp-topic-author a.bbp-author-name, #bbpress-forums div.bbp-reply-author a.bbp-author-name {
 	margin: 0;
-}
-
-.bbp-reply-author br,
-.bbp-topic-author br {
-	display: none;
 }
 
 .bbp-reply-author,

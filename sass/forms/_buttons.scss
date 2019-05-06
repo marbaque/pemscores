@@ -6,12 +6,12 @@ input[type="reset"],
 input[type="submit"] {
 
 	width: auto;
-  background: $color__verde-claro;
-  border: 2px solid $color__verde;
-	color: $color__verde;
+  	background: $color__verde-claro;
+  	border: 2px solid $color__verde;
+	color: $color__verde-oscuro;
 	@include font-size(1);
 	line-height: 1;
-	padding: .5em 1em;
+	padding: .75em 1.5em;
 	border-radius: 4px;
 
 	&:hover,

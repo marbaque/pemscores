@@ -79,12 +79,13 @@
 .social-menu {
 	margin: 1.5em 1em 0;
 
-	p.title {
-		font-family: $font__system;
+	.title {
+		font-family: $font__sans;
 		color: $color__main-oscuro;
 		margin: 0;
 		text-align: center;
 		font-weight: 700;
+		font-size: 1em;
 		padding: 0 .5em;
 
 		@media screen and(min-width: $query__small) {
@@ -97,7 +98,7 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		list-style-type: none;
-		margin: 0;
+		margin: .5em 0 0;
 		padding: 0;
 
 		li {
@@ -105,7 +106,7 @@
 			text-align: center;
 		}
 
-		@media screen and (min-width: $query__medium) {
+		@media screen and (min-width: $query__small) {
 			justify-content: flex-start;
 		}
 
@@ -117,6 +118,7 @@
 			text-decoration: none;
 			color: $color__main-oscuro;
 			font-size: 1.6em;
+			line-height: 1;
 
 			&:hover,
 			&:focus {

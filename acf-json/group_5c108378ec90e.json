@@ -25,6 +25,25 @@
             "ui": 1
         },
         {
+            "key": "field_5cd4677f34f35",
+            "label": "Descripción 1",
+            "name": "descripcion_1",
+            "type": "textarea",
+            "instructions": "Agregue una descripción muy corta de esta página. Sino lo hace, se incluirá automáticamente el inicio del texto presente en la página seleccionada.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 200,
+            "rows": 3,
+            "new_lines": "wpautop"
+        },
+        {
             "key": "field_5c108614b94ce",
             "label": "Página destacada 2",
             "name": "pagina_2",
@@ -47,6 +66,25 @@
             "ui": 1
         },
         {
+            "key": "field_5cd4680f144af",
+            "label": "Descripción 2",
+            "name": "descripcion_2",
+            "type": "textarea",
+            "instructions": "Agregue una descripción muy corta de esta página. Sino lo hace, se incluirá automáticamente el inicio del texto presente en la página seleccionada.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 200,
+            "rows": 3,
+            "new_lines": "wpautop"
+        },
+        {
             "key": "field_5c108617b94cf",
             "label": "Página destacada 3",
             "name": "pagina_3",
@@ -67,6 +105,25 @@
             "multiple": 0,
             "return_format": "object",
             "ui": 1
+        },
+        {
+            "key": "field_5cd4681daa420",
+            "label": "Descripción 3",
+            "name": "descripcion_3",
+            "type": "textarea",
+            "instructions": "Agregue una descripción muy corta de esta página. Sino lo hace, se incluirá automáticamente el inicio del texto presente en la página seleccionada.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 200,
+            "rows": 3,
+            "new_lines": "wpautop"
         }
     ],
     "location": [
@@ -86,5 +143,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Seleccione las 3 páginas que quiere destacar en la portada del sitio.",
-    "modified": 1552428583
+    "modified": 1557424352
 }

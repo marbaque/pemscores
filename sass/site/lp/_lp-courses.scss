@@ -233,12 +233,11 @@ ul.curriculum-sections
 
 .course-price {
   margin: 1em 0;
+  
 
   span.price {
-    @include etiqueta(
-      $color__naranja-claro,
-      $color__naranja
-      );
+    @include etiqueta($color__naranja-claro, $color__naranja);
+    font-size: .9em!important;
   }
 }
 

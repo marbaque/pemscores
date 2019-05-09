@@ -47,6 +47,7 @@ get_header(); ?>
 			<?php
 
 			$pagina1 = get_field('pagina_1');
+			$desc1 = get_field('descripcion_1');
 
 			if( $pagina1 ):
 
@@ -57,7 +58,13 @@ get_header(); ?>
 				?>
 				<div class="pagina">
 					<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-				<div class="excerpt"><?php the_excerpt(); ?></div>
+				
+				<?php if ($desc1): ?>
+					<p><?= $desc1; ?></p>
+				<?php else: ?>
+					<div class="excerpt"><?php the_excerpt(); ?></div>
+				<?php endif; ?>
+				
 				<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más', 'pemscores') . pemscores_get_svg( array( 'icon' => 'arrow-right' , 'fallback' => true ) ); ?></a>
 				</div>
 
@@ -68,6 +75,7 @@ get_header(); ?>
 			<?php
 
 			$pagina2 = get_field('pagina_2');
+			$desc2 = get_field('descripcion_2');
 
 			if( $pagina2 ):
 
@@ -78,7 +86,13 @@ get_header(); ?>
 				?>
 				<div class="pagina">
 					<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-				<div class="excerpt"><?php the_excerpt(); ?></div>
+					
+					<?php if ($desc2): ?>
+						<p><?= $desc2; ?></p>
+					<?php else: ?>
+						<div class="excerpt"><?php the_excerpt(); ?></div>
+					<?php endif; ?>
+				
 				<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más', 'pemscores') . pemscores_get_svg( array( 'icon' => 'arrow-right' , 'fallback' => true ) ); ?></a>
 				</div>
 
@@ -89,6 +103,7 @@ get_header(); ?>
 			<?php
 
 			$pagina3 = get_field('pagina_3');
+			$desc3 = get_field('descripcion_3');
 
 			if( $pagina3 ):
 
@@ -99,7 +114,13 @@ get_header(); ?>
 				?>
 			    <div class="pagina">
 			    	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-					<div class="excerpt"><?php the_excerpt(); ?></div>
+					
+					<?php if ($desc3): ?>
+						<p><?= $desc3; ?></p>
+					<?php else: ?>
+						<div class="excerpt"><?php the_excerpt(); ?></div>
+					<?php endif; ?>
+
 					<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo __('Leer más', 'pemscores') . pemscores_get_svg( array( 'icon' => 'arrow-right' , 'fallback' => true ) ); ?></a>
 			    </div>
 

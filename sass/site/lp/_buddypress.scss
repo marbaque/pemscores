@@ -13,6 +13,12 @@
 
 
 .buddypress-wrap {
+  font-family: $font__system;
+
+  .bp-navs {
+    font-size: .8em;
+  }
+
   .learnpress {
 
     .lp-profile-avatar img {
@@ -37,7 +43,7 @@
       background: none;
   }
 
-  .users-nav {
+  .bp-navs {
     li.selected a {
       background: $color__main!important;
       color: white!important;
@@ -45,6 +51,13 @@
   }
 }
 
+.bp-feedback {
+  
+  p {
+    padding: .5em 1em;
+    line-height: 1.4;
+  }
+}
 
 @media screen and (min-width: $query__medium) {
   body.buddypress .entry-content {
@@ -90,7 +103,7 @@ body.buddypress {
 
 .bp_members .post-content {
   font-family: $font__system;
-  font-size: .8em;
+  //font-size: .8em;
 }
 
 .leanpress-buddpress-list-filters,
@@ -120,7 +133,21 @@ body.buddypress {
         border:  1px solid $color__main-bordes;
         padding: 1em 1em 3em;
         position: relative;
+        
+      }
 
+      .widget-body {
+        font-size: .8em;
+      }
+
+      .course-student-number {
+        margin: 1em 0;
+      
+        &:before {
+          font-family: 'FontAwesome';
+          content: "\f0c0";
+          margin-right: .2em;
+        }
       }
 
       .widget-footer a {
@@ -129,9 +156,6 @@ body.buddypress {
     }
 
   }
-
-
-
 
   @media screen and (min-width: $query__medium) {
     display: flex;

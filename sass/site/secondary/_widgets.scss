@@ -46,12 +46,7 @@
 
 	a {
 		text-decoration: none;
-
-
-		&:hover,
-		&:focus {
-			border-bottom: 3px solid $color__interactive;
-		}
+		border: none;
 	}
 
 	/* Make sure select elements fit in widgets. */
@@ -429,7 +424,19 @@
 
 			li:first-child {
 				flex: 1 1 100%;
-				margin: 0 0 20;
+				padding-bottom: 20px;
+				margin: 0 0 20px;
+				position: relative;
+
+				&:after {
+					content: "";
+					height: 2px;
+					width: 30%;
+					background: $color__main-bordes;
+					position: absolute;
+					bottom: 0;
+					left: 35%;
+				}
 			}
 
 			li:not(:first-child) {
@@ -453,9 +460,8 @@
 			}
 			input[value="Filtrar"] {
 				height: 40px!important;
-				&:before {
-					content: "A";
-				}
+				@include etiqueta($color__main-superclaro, $color__main);
+				border-color: $color__main-oscuro;
 			}
 		}
 	}

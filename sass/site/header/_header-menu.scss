@@ -85,8 +85,10 @@ button.dropdown-toggle {
 	background: inherit;
 	color: currentcolor;
 	line-height: 1em;
-	padding: .4em .75em;
+	padding: .25em .75em;
 	font-weight: 700;
+	font-size: 18px;
+	height: auto;
 }
 
 .menu-toggle {
@@ -95,7 +97,7 @@ button.dropdown-toggle {
 	right: 0;
 	display: block;
 	margin: 1.2em 1em 0 0;
-	padding: .6em .8em;
+	padding: .5em;
 	font-size: 1.2em;
 	color: $color__main-bordes;
 	border: 2px solid $color__main-bordes;
@@ -154,7 +156,7 @@ button.dropdown-toggle {
 		display: none;
 	}
 	button.dropdown-toggle {
-		line-height: 2;
+		line-height: 1.8;
 	}
 
 	.main-navigation {

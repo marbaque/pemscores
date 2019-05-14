@@ -9,6 +9,20 @@
 
 ?>
 
+<?php if ( has_post_thumbnail() ) : ?>
+	<div class="full-bleed featured-image">
+		<?php
+			the_post_thumbnail('pemscores-full-bleed');
+			?>
+		<?php if ( is_singular('lp_course') ): ?>
+			<?php the_title( '<h1 class="course-title">', '</h1>' ); ?>
+		<?php endif; ?>
+	</div><!-- .full-bleed -->
+
+	<?php elseif ( !has_post_thumbnail() && is_singular('lp_course') ) : ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<?php endif; ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 

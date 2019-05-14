@@ -35,17 +35,25 @@ $file = get_field('subir_arch');
 		<div class="recurso-inner">
 
 			<div class="recurso-media">
+			
+			<?php if ( has_post_thumbnail() ) : ?>
+				
+				<?php the_post_thumbnail('recurso-portada'); ?>
+				
+				<?php else : ?>
+					<?php if( $fuente == 'ext' ): ?>
+						<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="440"]'); ?>
+					<?php elseif( $fuente == 'int' ): ?>
+						<?php
+						if( $file['type'] == 'image' ) {
+							echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200px" height"auto">';
+						} else {
+							echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]');
+						}?>
+					<?php endif; ?>		
+			<?php endif; ?>
 
-				<?php if( $fuente == 'ext' ): ?>
-					<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="440"]'); ?>
-				<?php elseif( $fuente == 'int' ): ?>
-					<?php
-					if( $file['type'] == 'image' ) {
-						echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200px" height"auto">';
-					} else {
-						echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]');
-					}?>
-				<?php endif; ?>
+				
 
 					<?php get_template_part( 'template-parts/recurso', 'link' ); ?>
 

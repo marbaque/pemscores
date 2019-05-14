@@ -43,7 +43,7 @@ function pemscores_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'pemscores-full-bleed', 2000, 1000, true );
 	add_image_size( 'pemscores-index-img', 1000, 550, true );
-	add_image_size( 'recurso-portada', 800, 800, true );
+	add_image_size( 'recurso-portada', 800, 600, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

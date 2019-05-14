@@ -9,6 +9,10 @@
 
 ?>
 
+<div class="full-bleed featured-image">
+	<?php the_post_thumbnail('pemscores-full-bleed'); ?>
+</div><!-- .full-bleed -->
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header">

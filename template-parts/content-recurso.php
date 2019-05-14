@@ -19,19 +19,24 @@
 
 	<div class="recurso__content">
 
-		<?php if( $fuente == 'ext' ): ?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			
+			
 			<figure class="recurso-index-img">
+			<a href="<?= esc_url( get_permalink() ); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+			</figure>
+			
+			<?php else : ?>
+				<?php if( $fuente == 'ext' ): ?>
 				<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="200" height="200"]'); ?>
-			</figure>
-		<?php elseif( $fuente == 'int' ): ?>
-			<figure>
+				<?php elseif( $fuente == 'int' ): ?>
 				<?php
-				if( $file['type'] == 'image' ) {
-					echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '">';
-				} else {
-					echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200" height="200"]');
-				}?>
-			</figure>
+					if( $file['type'] == 'image' ) {
+						echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '">';
+					} else {
+						echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200" height="200"]');
+					}?>
+				<?php endif; ?>		
 		<?php endif; ?>
 
 		<div class="recurso__text">

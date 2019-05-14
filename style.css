@@ -1167,6 +1167,7 @@ body.blog .site-content {
 	padding: 1em 1em 3em;
 	overflow: hidden;
 	font-family: "Roboto", sans-serif;
+	margin: 0 0 2.5em;
 }
 
 .archive-view:not(.learnpress):not(.forum-archive) .post .entry-title a,
@@ -1208,10 +1209,6 @@ body.blog .site-content {
 
 .page-title {
 	margin: 0 0 .5em;
-}
-
-.archive-description {
-	font-family: "system";
 }
 
 /* For content-none.php */
@@ -2043,6 +2040,7 @@ button.dropdown-toggle {
 	margin-bottom: 2em;
 	position: relative;
 	border: 2px solid #cce2f8;
+	border-radius: .2em;
 }
 
 .recurso-wrap .recurso-header {
@@ -2108,12 +2106,20 @@ button.dropdown-toggle {
 	text-decoration: none;
 }
 
-.recurso-wrap .recurso_tags .cc span {
-	font-style: italic;
+.recurso-wrap .recurso_tags .cc-license {
+	padding: 1em 0 0;
+	font-size: .8em;
+	border-top: 2px solid #cce2f8;
 }
 
-.recurso-wrap .recurso_tags .cc span:not(:last-child):after {
-	content: ", ";
+.recurso-wrap .recurso_tags .cc-license a:first-child {
+	float: left;
+	margin: 0 .5em .5em 0;
+	border: none;
+}
+
+.recurso-wrap .recurso_tags .cc-license br {
+	display: none;
 }
 
 .recurso-wrap .recurso_tags.recurso-link {

@@ -117,8 +117,8 @@
             "label": "Licencia",
             "name": "licencia_select",
             "type": "button_group",
-            "instructions": "\"El intercambio y la colaboración pueden liberar todo el potencial de la Web y, lo que es más importante, de todas las personas que lo utilizan\". \r\nIndique si desea agregar una licencia para compartir este recurso.",
-            "required": 0,
+            "instructions": "Indique si desea publicar este recurso con licencia abierta o con restricción de derecho de autor.\r\n\r\nLa licencia abierta utilizada es de tipo Atribución-NoComercial-CompartirIgual (CC BY-NC-SA).",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -130,45 +130,9 @@
                 "copy": "Derechos reservados"
             },
             "allow_null": 0,
-            "default_value": "",
+            "default_value": "cc",
             "layout": "horizontal",
             "return_format": "value"
-        },
-        {
-            "key": "field_5bfef788bf183",
-            "label": "Creative Commons",
-            "name": "cc_field",
-            "type": "checkbox",
-            "instructions": "Seleccione las características de la licencia Creative Commons.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5bfef636bf182",
-                        "operator": "!=",
-                        "value": "copy"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "atr": "Atribución",
-                "sa": "Compartir igual",
-                "nc": "No comercial",
-                "sd": "Sin derivados"
-            },
-            "allow_custom": 0,
-            "default_value": [
-                "atr"
-            ],
-            "layout": "vertical",
-            "toggle": 0,
-            "return_format": "label",
-            "save_custom": 0
         }
     ],
     "location": [
@@ -188,5 +152,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Elija las categorías correspondientes a este recurso.",
-    "modified": 1554478890
+    "modified": 1557855272
 }

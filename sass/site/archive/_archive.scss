@@ -12,6 +12,7 @@
 		padding: 1em 1em 3em;
 		overflow: hidden;
 		font-family: $font__sans;
+		margin: 0 0 2.5em;
 
 		.entry-title {
 
@@ -62,7 +63,7 @@
 
 .archive-description {
 	//margin: -1em 0 2em;
-	font-family: $font__system;
+	//font-family: $font__system;
 }
 
 /* For content-none.php */
@@ -149,12 +150,12 @@
 
 		&:before {
 			content: "";
-	    display: block;
-	    width: 2em;
-	    height: 2em;
-	    position: absolute;
-	    top: 0;
-	    right: .5em;
+			display: block;
+			width: 2em;
+			height: 2em;
+			position: absolute;
+			top: 0;
+			right: .5em;
 			background: url("images/bookmark-search.svg") no-repeat;
 			background-size: contain;
 		}

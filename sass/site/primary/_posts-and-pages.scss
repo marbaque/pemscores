@@ -264,6 +264,7 @@
 	position: relative;
 	@extend .sticky;
 	border: 2px solid $color__main-claro;
+	border-radius: .2em;
 
 	.recurso-header {
 		background: $color__main-superclaro;
@@ -328,14 +329,18 @@
 			text-decoration: none;
 		}
 
-		.cc {
-			span {
-				font-style: italic;
+		.cc-license { //estilos para el texto de CC
+			padding: 1em 0 0;
+			font-size: .8em;
+			border-top: 2px solid $color__main-claro;
+
+			a:first-child {
+				float: left;
+				margin: 0 .5em .5em 0;
+				border: none;
 			}
-			span:not(:last-child) {
-				&:after {
-					content: ", ";
-				}
+			br {
+				display: none;
 			}
 		}
 

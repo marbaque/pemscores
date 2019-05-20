@@ -1,4 +1,4 @@
-.archive-view:not(.learnpress):not(.forum-archive) {
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) {
 	.post,
 	.page,
 	.curso,
@@ -53,6 +53,29 @@
 				//margin: 0 auto;
 			}
 		}
+	}
+}
+
+// El archive de foros tiene una estructura diferente
+.forum-archive,
+.topic-tag {
+	
+	@media screen and (min-width: $query__medium) {
+			
+			.forum,
+			.hentry {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+			.entry-content {
+				width: $size__ratio-large;
+			}
+
+			.widget-area {
+				width: $size__ratio-small;
+			}
+
 	}
 }
 

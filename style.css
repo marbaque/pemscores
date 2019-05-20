@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, basado en el tema hecho por Morten Rand-Hendriksen para el curso Building Themes From Scratch Using Underscores en LinkedIn Learning y Lynda.com.
-Version: 1.7
+Version: 1.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -1154,13 +1154,13 @@ body.blog .site-content {
 /*--------------------------------------------------------------
 ## Archives
 --------------------------------------------------------------*/
-.archive-view:not(.learnpress):not(.forum-archive) .post,
-.archive-view:not(.learnpress):not(.forum-archive) .page,
-.archive-view:not(.learnpress):not(.forum-archive) .curso,
-.archive-view:not(.learnpress):not(.forum-archive) .recurso,
-.archive-view:not(.learnpress):not(.forum-archive) .lp_quiz,
-.archive-view:not(.learnpress):not(.forum-archive) .lp_course,
-.archive-view:not(.learnpress):not(.forum-archive) .hentry {
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .post,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .page,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .curso,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .recurso,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .lp_quiz,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .lp_course,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .hentry {
 	position: relative;
 	background: white;
 	border: 1px solid #006edc;
@@ -1170,18 +1170,18 @@ body.blog .site-content {
 	margin: 0 0 2.5em;
 }
 
-.archive-view:not(.learnpress):not(.forum-archive) .post .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive) .page .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive) .curso .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive) .recurso .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive) .lp_quiz .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive) .lp_course .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive) .hentry .entry-title a {
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .post .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .page .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .curso .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .recurso .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .lp_quiz .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .lp_course .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .hentry .entry-title a {
 	text-decoration: none;
 }
 
 @media screen and (min-width: 900px) {
-	.archive-view:not(.learnpress):not(.forum-archive).has-sidebar .site-content {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag).has-sidebar .site-content {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-pack: justify;
@@ -1189,21 +1189,43 @@ body.blog .site-content {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
-	.archive-view:not(.learnpress):not(.forum-archive).has-sidebar .page-header {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag).has-sidebar .page-header {
 		width: 100%;
 		-ms-flex: 1 0 100%;
 		    flex: 1 0 100%;
 	}
-	.archive-view:not(.learnpress):not(.forum-archive).has-sidebar .content-area {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag).has-sidebar .content-area {
 		width: 66%;
 		margin-top: 2em;
 	}
-	.archive-view:not(.learnpress):not(.forum-archive).has-sidebar .widget-area {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag).has-sidebar .widget-area {
 		width: 30%;
 		margin-top: 2em;
 	}
-	.archive-view:not(.learnpress):not(.forum-archive):not(.site-content) .content-area {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.site-content) .content-area {
 		max-width: 66%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.forum-archive .forum,
+	.forum-archive .hentry,
+	.topic-tag .forum,
+	.topic-tag .hentry {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+	.forum-archive .entry-content,
+	.topic-tag .entry-content {
+		width: 66%;
+	}
+	.forum-archive .widget-area,
+	.topic-tag .widget-area {
+		width: 30%;
 	}
 }
 

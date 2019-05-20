@@ -66,6 +66,8 @@
 	margin-top: 0;
 	margin-bottom: .5em;
 	font-size: 1.4em;
+	font-weight: 400;
+	color: $color__main-oscuro;
 }
 
 /* Archive and Categories widgets */
@@ -479,8 +481,10 @@
 
 //widgets de bbpress y learn-press
 .widget{
-	&.bbp_widget_login{
+	&.bbp_widget_login {
+		
 		form.bbp-login-form {
+			
 			fieldset {
 				border: none;
 				//padding: 0;
@@ -488,6 +492,7 @@
 				label[for="user_login"] {
 					width: 100%;
 				}
+				
 				input[type="text"],
 				input[type="password"] {
 					width: 100%;
@@ -516,6 +521,22 @@
 
 		#bp-login-widget-form label {
 			font-size: .9em;
+		}
+	}
+
+	&.widget_display_replies {
+		li {
+			padding: .5em 0;
+
+			.avatar {
+				border-radius: 50%;
+			}
+
+			div {
+				font-style: italic;
+				color: #7D7D7D;
+				font-size: .8em;
+			}
 		}
 	}
 }

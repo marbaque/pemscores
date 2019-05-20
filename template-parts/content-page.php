@@ -36,7 +36,7 @@
 
 
 	<?php
-		if( function_exists('bcn_display') && !is_singular('lp_course') ) {
+		if( function_exists('bcn_display') && !is_singular('lp_course') && !is_bbpress() ) {
 			echo '<div class="migajas">';
 			bcn_display();
 			echo '</div>';

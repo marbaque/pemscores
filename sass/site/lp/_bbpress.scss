@@ -79,6 +79,8 @@ li.bbp-forum-freshness {
 .bbp-topics ul.sticky,
 .bbp-forum-content ul.sticky {
 	font-size: 1em;
+	background-color: $color__verde-claro!important;
+	border-color: $color__verde;
 }
 .bbp-topics-front ul.super-sticky .bbp-topic-permalink,
 .bbp-topics ul.super-sticky .bbp-topic-permalink,
@@ -219,7 +221,7 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 #bbpress-forums .bbp-replies .type-topic,
 #bbpress-forums .bbp-replies .type-reply{
 	margin-bottom: 20px !important;
-	border: 1px solid #DDD;
+	border: 1px solid $color__main-bordes;
 }
 
 #bbp-search-results .bbp-topic-title,
@@ -267,12 +269,16 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 	width: 75%;
 }
 #bbp_search_submit {
-	width: 24%;
-	min-width: 150px;
+	width: auto;
+	//min-width: 150px;
 }
 #bbpress-forums div.bbp-breadcrumb p,
 #bbpress-forums div.bbp-topic-tags p {
     //margin-top: .5em;
+}
+
+div.bbp-breadcrumb {
+	float: none;
 }
 
 .bbp-pagination {
@@ -294,7 +300,7 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 }
 
 #bbpress-forums .bbp-search-form {
-	display: none;
+	//display: none;
 }
 
 #bbpress-forums,
@@ -310,6 +316,17 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 	margin-bottom: 5px;
 }
 
+#bbpress-forums p.bbp-topic-meta img.avatar, 
+#bbpress-forums ul.bbp-reply-revision-log img.avatar, 
+#bbpress-forums ul.bbp-topic-revision-log img.avatar, 
+#bbpress-forums div.bbp-template-notice img.avatar, 
+#bbpress-forums .widget_display_topics img.avatar, 
+#bbpress-forums .widget_display_replies img.avatar {
+	margin-bottom: -.5em;
+	width: 2em;
+	height: 2em;
+}
+
 .bbp-author-role,
 .bbps-post-count,
 #bbps-post-count {
@@ -321,7 +338,7 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 .bbp-reply-author,
 .bbp-topic-author {
 	clear: none !important;
-    	margin-top: 0px !important;
+	margin-top: 0px !important;
 	font-weight: bold !important;
 	font-size: 16px !important;
 	color: #222 !important;
@@ -396,7 +413,16 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header {
   margin: .5em 0 1em;
   display: block;
 }
+
 a.subscription-toggle {
   @include etiqueta($color__main-oscuro, $color__main-claro);
   margin: 0 .5em;
+}
+
+.bbp-pagination {
+	font-style: italic;
+	border-color: $color__main-bordes;
+	padding: 0;
+	float: none!important;
+	display: block;
 }

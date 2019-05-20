@@ -1154,13 +1154,13 @@ body.blog .site-content {
 /*--------------------------------------------------------------
 ## Archives
 --------------------------------------------------------------*/
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .post,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .page,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .curso,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .recurso,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .lp_quiz,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .lp_course,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .hentry {
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .post,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .page,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .curso,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .recurso,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_quiz,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_course,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .hentry {
 	position: relative;
 	background: white;
 	border: 1px solid #006edc;
@@ -1170,18 +1170,18 @@ body.blog .site-content {
 	margin: 0 0 2.5em;
 }
 
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .post .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .page .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .curso .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .recurso .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .lp_quiz .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .lp_course .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag) .hentry .entry-title a {
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .post .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .page .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .curso .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .recurso .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_quiz .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_course .entry-title a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .hentry .entry-title a {
 	text-decoration: none;
 }
 
 @media screen and (min-width: 900px) {
-	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag).has-sidebar .site-content {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search).has-sidebar .site-content {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-pack: justify;
@@ -1189,20 +1189,20 @@ body.blog .site-content {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
-	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag).has-sidebar .page-header {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search).has-sidebar .page-header {
 		width: 100%;
 		-ms-flex: 1 0 100%;
 		    flex: 1 0 100%;
 	}
-	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag).has-sidebar .content-area {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search).has-sidebar .content-area {
 		width: 66%;
 		margin-top: 2em;
 	}
-	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag).has-sidebar .widget-area {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search).has-sidebar .widget-area {
 		width: 30%;
 		margin-top: 2em;
 	}
-	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.site-content) .content-area {
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search):not(.site-content) .content-area {
 		max-width: 66%;
 	}
 }
@@ -1211,7 +1211,9 @@ body.blog .site-content {
 	.forum-archive .forum,
 	.forum-archive .hentry,
 	.topic-tag .forum,
-	.topic-tag .hentry {
+	.topic-tag .hentry,
+	.forum-search .forum,
+	.forum-search .hentry {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-pack: justify;
@@ -1219,12 +1221,24 @@ body.blog .site-content {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
+	.forum-archive .page-header,
+	.forum-archive .entry-header,
+	.topic-tag .page-header,
+	.topic-tag .entry-header,
+	.forum-search .page-header,
+	.forum-search .entry-header {
+		width: 100%;
+		-ms-flex: 1 0 100%;
+		    flex: 1 0 100%;
+	}
 	.forum-archive .entry-content,
-	.topic-tag .entry-content {
+	.topic-tag .entry-content,
+	.forum-search .entry-content {
 		width: 66%;
 	}
 	.forum-archive .widget-area,
-	.topic-tag .widget-area {
+	.topic-tag .widget-area,
+	.forum-search .widget-area {
 		width: 30%;
 	}
 }
@@ -3027,6 +3041,8 @@ li.bbp-forum-freshness {
 .bbp-forum-content ul.sticky,
 .bbp-forum-content ul.recurso-wrap {
 	font-size: 1em;
+	background-color: #eaf7df !important;
+	border-color: #5abe00;
 }
 
 .bbp-topics-front ul.super-sticky .bbp-topic-permalink,
@@ -3163,7 +3179,7 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 #bbpress-forums .bbp-replies .type-topic,
 #bbpress-forums .bbp-replies .type-reply {
 	margin-bottom: 20px !important;
-	border: 1px solid #DDD;
+	border: 1px solid #6696c7;
 }
 
 #bbp-search-results .bbp-topic-title,
@@ -3211,8 +3227,11 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 }
 
 #bbp_search_submit {
-	width: 24%;
-	min-width: 150px;
+	width: auto;
+}
+
+div.bbp-breadcrumb {
+	float: none;
 }
 
 .bbp-pagination {
@@ -3233,10 +3252,6 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 	display: none;
 }
 
-#bbpress-forums .bbp-search-form {
-	display: none;
-}
-
 #bbpress-forums,
 #forums-list-0 {
 	margin-bottom: 0;
@@ -3248,6 +3263,17 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 	float: none;
 	display: block;
 	margin-bottom: 5px;
+}
+
+#bbpress-forums p.bbp-topic-meta img.avatar,
+#bbpress-forums ul.bbp-reply-revision-log img.avatar,
+#bbpress-forums ul.bbp-topic-revision-log img.avatar,
+#bbpress-forums div.bbp-template-notice img.avatar,
+#bbpress-forums .widget_display_topics img.avatar,
+#bbpress-forums .widget_display_replies img.avatar {
+	margin-bottom: -.5em;
+	width: 2em;
+	height: 2em;
 }
 
 .bbp-author-role,
@@ -3348,6 +3374,14 @@ a.subscription-toggle {
 
 a.subscription-toggle:hover {
 	opacity: .8;
+}
+
+.bbp-pagination {
+	font-style: italic;
+	border-color: #6696c7;
+	padding: 0;
+	float: none !important;
+	display: block;
 }
 
 /*--------------------------------------------------------------
@@ -3785,6 +3819,8 @@ a.subscription-toggle:hover {
 	margin-top: 0;
 	margin-bottom: .5em;
 	font-size: 1.4em;
+	font-weight: 400;
+	color: #00529a;
 }
 
 /* Archive and Categories widgets */
@@ -4230,6 +4266,20 @@ a.subscription-toggle:hover {
 
 .widget.buddypress #bp-login-widget-form label {
 	font-size: .9em;
+}
+
+.widget.widget_display_replies li {
+	padding: .5em 0;
+}
+
+.widget.widget_display_replies li .avatar {
+	border-radius: 50%;
+}
+
+.widget.widget_display_replies li div {
+	font-style: italic;
+	color: #7D7D7D;
+	font-size: .8em;
 }
 
 /*--------------------------------------------------------------

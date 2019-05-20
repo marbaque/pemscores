@@ -2872,11 +2872,18 @@ body.buddypress .site-content .entry-header {
 }
 
 #buddypress #header-cover-image {
-	background-color: #eaf7df;
-	background-image: url("images/fondo-perfil.png");
+	background-color: #006edc;
 	background-size: auto 80%;
-	background-position: left bottom;
-	background-repeat: repeat-x;
+	background-position: center center;
+	background-repeat: none;
+	background-size: cover;
+}
+
+#buddypress .activity {
+	background: #006edc;
+	color: white;
+	padding: 1px 4px;
+	border-radius: 2px;
 }
 
 .buddypress-wrap .bp-navs.tabbed-links {

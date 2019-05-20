@@ -17,7 +17,7 @@
 .widget {
 	margin: 0 0 2em;
 	font-family: $font__sans;
-	//border: 1px solid $color__main-bordes;
+	border: 1px solid $color__main-claro;
 	background: $color__main-superclaro;
 	border-radius: 8px;
 
@@ -60,7 +60,7 @@
 
 }
 .widget-inner {
-	padding: 1em 1em 1.2em;
+	padding: 2.5em 1em 2em;
 }
 .widget-title {
 	margin-top: 0;
@@ -68,6 +68,8 @@
 	font-size: 1.4em;
 	font-weight: 400;
 	color: $color__main-oscuro;
+	border-bottom: 2px solid $color__main-bordes;
+	padding-bottom: .25em;
 }
 
 /* Archive and Categories widgets */
@@ -527,9 +529,16 @@
 	&.widget_display_replies {
 		li {
 			padding: .5em 0;
+			line-height: 1.4;
 
 			.avatar {
 				border-radius: 50%;
+				width: 1em;
+				margin-bottom: -.2em;				
+			}
+
+			a {
+				color: inherit;
 			}
 
 			div {

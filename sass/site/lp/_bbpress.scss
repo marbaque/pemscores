@@ -101,6 +101,15 @@ li.bbp-forum-freshness {
 	}
 }
 
+#bbpress-forums div.bbp-topic-content a, #bbpress-forums div.bbp-reply-content a {
+	color: $color__verde;
+	font-weight: 700;
+
+	&:hover {
+		color: $color__naranja;
+	}
+}
+
 li.bbp-forum-info, li.bbp-topic-title {
     width: 50%;
 }

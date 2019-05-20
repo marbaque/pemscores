@@ -2041,7 +2041,7 @@ button.dropdown-toggle {
 .entry-header .page-title {
 	color: #00529a;
 	font-weight: 700;
-	border-bottom: 2px solid #00529a;
+	border-bottom: 3px solid #00529a;
 	margin-bottom: .5em;
 	margin-top: 0;
 }
@@ -3063,6 +3063,15 @@ li.bbp-forum-freshness {
 	border: none;
 }
 
+#bbpress-forums div.bbp-topic-content a, #bbpress-forums div.bbp-reply-content a {
+	color: #5abe00;
+	font-weight: 700;
+}
+
+#bbpress-forums div.bbp-topic-content a:hover, #bbpress-forums div.bbp-reply-content a:hover {
+	color: #ff961e;
+}
+
 li.bbp-forum-info, li.bbp-topic-title {
 	width: 50%;
 }
@@ -3770,6 +3779,7 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 .widget {
 	margin: 0 0 2em;
 	font-family: "Roboto", sans-serif;
+	border: 1px solid #cce2f8;
 	background: #ebf3fc;
 	border-radius: 8px;
 	/* Make sure select elements fit in widgets. */
@@ -3818,7 +3828,7 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 }
 
 .widget-inner {
-	padding: 1em 1em 1.2em;
+	padding: 2.5em 1em 2em;
 }
 
 .widget-title {
@@ -3827,6 +3837,8 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	font-size: 1.4em;
 	font-weight: 400;
 	color: #00529a;
+	border-bottom: 2px solid #6696c7;
+	padding-bottom: .25em;
 }
 
 /* Archive and Categories widgets */
@@ -4276,10 +4288,17 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 
 .widget.widget_display_replies li {
 	padding: .5em 0;
+	line-height: 1.4;
 }
 
 .widget.widget_display_replies li .avatar {
 	border-radius: 50%;
+	width: 1em;
+	margin-bottom: -.2em;
+}
+
+.widget.widget_display_replies li a {
+	color: inherit;
 }
 
 .widget.widget_display_replies li div {

@@ -118,16 +118,18 @@ body.buddypress {
   }
 }
 
-#member-front-widgets {
+.bp-widget-area {
 
   .widget {
     padding: 1em;
-    background: white;
 
     &.widget_lp-widget-recent-courses,
     &.widget_lp-widget-featured-courses,
     &.widget_lp-widget-popular-courses {
 
+      .entrada {
+        background: white;
+      }
 
       .archive-course-widget-outer {
         border:  1px solid $color__main-bordes;
@@ -138,6 +140,7 @@ body.buddypress {
 
       .widget-body {
         font-size: .8em;
+        background: white;
       }
 
       .course-student-number {
@@ -176,4 +179,10 @@ body.buddypress {
       width: 100%;
     }
   }
+}
+
+// BuddyPress user list page
+.bp-navs ul li .count {
+  border: none;
+  padding: 2px 6px;
 }

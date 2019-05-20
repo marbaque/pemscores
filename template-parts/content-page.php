@@ -28,7 +28,7 @@
 
 
 
-	<?php if ( !is_singular('lp_course') ): ?>
+	<?php if ( !is_singular('lp_course') && !is_buddypress() ): ?>
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
@@ -44,6 +44,10 @@
 		?>
 
 	<div class="entry-content post-content">
+
+		<?php if ( is_buddypress() ): ?>
+			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+		<?php endif; ?>
 		<?php
 			the_content();
 

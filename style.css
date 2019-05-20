@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, basado en el tema hecho por Morten Rand-Hendriksen para el curso Building Themes From Scratch Using Underscores en LinkedIn Learning y Lynda.com.
-Version: 1.9
+Version: 2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -1781,7 +1781,7 @@ button.dropdown-toggle {
 	line-height: 1.4;
 }
 
-.read-more, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button, #member-front-widgets .widget.widget_lp-widget-recent-courses .widget-footer a, #member-front-widgets .widget.widget_lp-widget-featured-courses .widget-footer a, #member-front-widgets .widget.widget_lp-widget-popular-courses .widget-footer a {
+.read-more, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a {
 	background: #cce2f8;
 	position: absolute;
 	bottom: 0;
@@ -1798,12 +1798,12 @@ button.dropdown-toggle {
 	border-top: 1px solid #006edc;
 }
 
-.read-more:hover, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:hover, #member-front-widgets .widget.widget_lp-widget-recent-courses .widget-footer a:hover, #member-front-widgets .widget.widget_lp-widget-featured-courses .widget-footer a:hover, #member-front-widgets .widget.widget_lp-widget-popular-courses .widget-footer a:hover {
+.read-more:hover, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:hover, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:hover {
 	background: #006edc;
 	color: #ebf3fc;
 }
 
-.read-more .icon, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button .icon, #member-front-widgets .widget.widget_lp-widget-recent-courses .widget-footer a .icon, #member-front-widgets .widget.widget_lp-widget-featured-courses .widget-footer a .icon, #member-front-widgets .widget.widget_lp-widget-popular-courses .widget-footer a .icon {
+.read-more .icon, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button .icon, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a .icon, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a .icon, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a .icon {
 	right: 1em;
 	top: .75em;
 	position: absolute;
@@ -2902,51 +2902,60 @@ body.buddypress .site-content .entry-header {
 	padding-bottom: 0 !important;
 }
 
-#member-front-widgets .widget {
+.bp-widget-area .widget {
 	padding: 1em;
+}
+
+.bp-widget-area .widget.widget_lp-widget-recent-courses .entrada, .bp-widget-area .widget.widget_lp-widget-featured-courses .entrada, .bp-widget-area .widget.widget_lp-widget-popular-courses .entrada {
 	background: white;
 }
 
-#member-front-widgets .widget.widget_lp-widget-recent-courses .archive-course-widget-outer, #member-front-widgets .widget.widget_lp-widget-featured-courses .archive-course-widget-outer, #member-front-widgets .widget.widget_lp-widget-popular-courses .archive-course-widget-outer {
+.bp-widget-area .widget.widget_lp-widget-recent-courses .archive-course-widget-outer, .bp-widget-area .widget.widget_lp-widget-featured-courses .archive-course-widget-outer, .bp-widget-area .widget.widget_lp-widget-popular-courses .archive-course-widget-outer {
 	border: 1px solid #6696c7;
 	padding: 1em 1em 3em;
 	position: relative;
 }
 
-#member-front-widgets .widget.widget_lp-widget-recent-courses .widget-body, #member-front-widgets .widget.widget_lp-widget-featured-courses .widget-body, #member-front-widgets .widget.widget_lp-widget-popular-courses .widget-body {
+.bp-widget-area .widget.widget_lp-widget-recent-courses .widget-body, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-body, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-body {
 	font-size: .8em;
+	background: white;
 }
 
-#member-front-widgets .widget.widget_lp-widget-recent-courses .course-student-number, #member-front-widgets .widget.widget_lp-widget-featured-courses .course-student-number, #member-front-widgets .widget.widget_lp-widget-popular-courses .course-student-number {
+.bp-widget-area .widget.widget_lp-widget-recent-courses .course-student-number, .bp-widget-area .widget.widget_lp-widget-featured-courses .course-student-number, .bp-widget-area .widget.widget_lp-widget-popular-courses .course-student-number {
 	margin: 1em 0;
 }
 
-#member-front-widgets .widget.widget_lp-widget-recent-courses .course-student-number:before, #member-front-widgets .widget.widget_lp-widget-featured-courses .course-student-number:before, #member-front-widgets .widget.widget_lp-widget-popular-courses .course-student-number:before {
+.bp-widget-area .widget.widget_lp-widget-recent-courses .course-student-number:before, .bp-widget-area .widget.widget_lp-widget-featured-courses .course-student-number:before, .bp-widget-area .widget.widget_lp-widget-popular-courses .course-student-number:before {
 	font-family: 'FontAwesome';
 	content: "\f0c0";
 	margin-right: .2em;
 }
 
 @media screen and (min-width: 900px) {
-	#member-front-widgets {
+	.bp-widget-area {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 		width: 100%;
 	}
-	#member-front-widgets .widget {
+	.bp-widget-area .widget {
 		-ms-flex: 0 1 50%;
 		    flex: 0 1 50%;
 	}
 }
 
-#member-front-widgets .course-cover a {
+.bp-widget-area .course-cover a {
 	border: none;
 }
 
-#member-front-widgets .course-cover img {
+.bp-widget-area .course-cover img {
 	width: 100%;
+}
+
+.bp-navs ul li .count {
+	border: none;
+	padding: 2px 6px;
 }
 
 /* start new bbpress */

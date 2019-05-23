@@ -289,3 +289,17 @@ function remove_admin_bar_user() {
 		show_admin_bar( false );
 	}
 }
+
+// Permitir subir otros tipos de archivos a recursos u otros tipos de contenidos
+//.doc, .docx (Microsoft Word Document)
+add_filter('upload_mimes','add_custom_mime_types');
+    function add_custom_mime_types($mimes){
+        return array_merge($mimes,array (
+            'doc' => 'application/msword',
+			'docx' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+			'ppt'	=>	'application/vnd.ms-powerpoint',
+			'pptx'	=>	'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+			'pps'	=>	'application/vnd.openxmlformats-officedocument.presentationml.slideshow',
+			'dotx'	=>	'application/vnd.openxmlformats-officedocument.wordprocessingml.template',
+        ));
+    }

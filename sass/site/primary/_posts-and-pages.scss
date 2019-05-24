@@ -265,6 +265,7 @@
 	@extend .sticky;
 	border: 2px solid $color__main-claro;
 	border-radius: .2em;
+	font-family: $font__system;
 
 	.recurso-header {
 		background: $color__main-superclaro;
@@ -307,11 +308,10 @@
 
 	ul.recurso_tags {
 		list-style: none;
-		padding-left: 1em;
+		padding-left: 0;
 	}
 
 	.recurso_tags {
-		font-family: $font__system;
 		font-size: .9em;
 		margin-top: 1em;
 
@@ -329,21 +329,6 @@
 			text-decoration: none;
 		}
 
-		.cc-license { //estilos para el texto de CC
-			padding: 1em 0 0;
-			font-size: .8em;
-			border-top: 2px solid $color__main-claro;
-
-			a:first-child {
-				float: left;
-				margin: 0 .5em .5em 0;
-				border: none;
-			}
-			br {
-				display: none;
-			}
-		}
-
 		&.recurso-link {
 			background: white;
 			padding: .5em 1em;
@@ -358,6 +343,21 @@
 			  word-break: break-word;
 				hyphens: auto;
 			}
+		}
+	}
+
+	.cc-license { //estilos para el texto de CC
+		padding: 1em 0 0;
+		font-size: .8em;
+		border-top: 2px solid $color__main-claro;
+
+		a:first-child {
+			float: left;
+			margin: 0 .5em .5em 0;
+			border: none;
+		}
+		br {
+			display: none;
 		}
 	}
 

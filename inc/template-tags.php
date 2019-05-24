@@ -162,4 +162,4 @@ add_filter( 'excerpt_length', 'pemscores_excerpt_length');
 
 
 //Enable yoast breadcrumbs
-add_theme_support( 'yoast-seo-breadcrumbs' );
+//add_theme_support( 'yoast-seo-breadcrumbs' );

@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, basado en el tema hecho por Morten Rand-Hendriksen para el curso Building Themes From Scratch Using Underscores en LinkedIn Learning y Lynda.com.
-Version: 2.1
+Version: 2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -1274,7 +1274,7 @@ body.blog .site-content {
 	width: 2em;
 	height: 2em;
 	position: absolute;
-	top: 0;
+	top: -2px;
 	right: .5em;
 	background: url("images/bookmark-search.svg") no-repeat;
 	background-size: contain;
@@ -2076,6 +2076,7 @@ button.dropdown-toggle {
 	position: relative;
 	border: 2px solid #cce2f8;
 	border-radius: .2em;
+	font-family: "system";
 }
 
 .recurso-wrap .recurso-header {
@@ -2118,11 +2119,10 @@ button.dropdown-toggle {
 
 .recurso-wrap ul.recurso_tags {
 	list-style: none;
-	padding-left: 1em;
+	padding-left: 0;
 }
 
 .recurso-wrap .recurso_tags {
-	font-family: "system";
 	font-size: .9em;
 	margin-top: 1em;
 }
@@ -2141,22 +2141,6 @@ button.dropdown-toggle {
 	text-decoration: none;
 }
 
-.recurso-wrap .recurso_tags .cc-license {
-	padding: 1em 0 0;
-	font-size: .8em;
-	border-top: 2px solid #cce2f8;
-}
-
-.recurso-wrap .recurso_tags .cc-license a:first-child {
-	float: left;
-	margin: 0 .5em .5em 0;
-	border: none;
-}
-
-.recurso-wrap .recurso_tags .cc-license br {
-	display: none;
-}
-
 .recurso-wrap .recurso_tags.recurso-link {
 	background: white;
 	padding: .5em 1em;
@@ -2172,6 +2156,22 @@ button.dropdown-toggle {
 	-webkit-hyphens: auto;
 	    -ms-hyphens: auto;
 	        hyphens: auto;
+}
+
+.recurso-wrap .cc-license {
+	padding: 1em 0 0;
+	font-size: .8em;
+	border-top: 2px solid #cce2f8;
+}
+
+.recurso-wrap .cc-license a:first-child {
+	float: left;
+	margin: 0 .5em .5em 0;
+	border: none;
+}
+
+.recurso-wrap .cc-license br {
+	display: none;
 }
 
 @media screen and (min-width: 900px) {

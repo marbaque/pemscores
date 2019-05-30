@@ -71,7 +71,7 @@ $file = get_field('subir_arch');
 </article><!-- #post-## -->
 
 <div class="recurso-secundario">
-	<section class="comentarios">
+	<section class="content">
 		<?php
 		// If comments are open or we have at least one comment, load up the comment template.
 		if ( comments_open() || get_comments_number() ) :

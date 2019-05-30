@@ -72,18 +72,6 @@ add_filter('template_include', function( $template ) {
 	return $template;
 });
 
-// Quita las metaboxes de autores y organizaciones en recursos
-// No sirve con gutenberg
-function remove_tags_fields() {
-	remove_meta_box( 'tagsdiv-autor_tag' , 'recurso' , 'side' );
-	remove_meta_box( 'tagsdiv-organizacion_tag' , 'recurso' , 'side' );
-	remove_meta_box( 'coberturadiv' , 'recurso' , 'side' );
-	remove_meta_box( 'tagsdiv-tipo_recurso' , 'recurso' , 'side' );
-	remove_meta_box( 'tagsdiv-tipo_medio' , 'recurso' , 'side' );
-	remove_meta_box( 'tagsdiv-interaccion' , 'recurso' , 'side' );
-}
-add_action( 'admin_menu' , 'remove_tags_fields' );
-
 //tamaño del excerpt
 function wpse_excerpt_length( $length ) {
     return 20;
@@ -128,7 +116,7 @@ add_shortcode( 'snapshot', function ( $atts ) {
 } );
 
 
-//Usar gutenberg en recursos
+//Usar gutenberg en lecciones
 add_filter('register_post_type_args', 'learnpress_cpt_add_gutenberg_support', 10, 2);
 
 function learnpress_cpt_add_gutenberg_support ($args, $post_type)
@@ -304,3 +292,12 @@ function add_custom_mime_types($mimes){
 		'dotx'	=>	'application/vnd.openxmlformats-officedocument.wordprocessingml.template',
 	));
 }
+
+
+/**
+ * Disable the custom color picker.
+ */
+function pemscores_gutenberg_disable_custom_colors() {
+	add_theme_support( 'disable-custom-colors' );
+}
+add_action( 'after_setup_theme', 'pemscores_gutenberg_disable_custom_colors' );

@@ -2204,7 +2204,7 @@ button.dropdown-toggle {
 		-ms-flex-align: start;
 		    align-items: flex-start;
 	}
-	.recurso-secundario .comentarios {
+	.recurso-secundario .content {
 		width: 66%;
 	}
 	.recurso-secundario .relacionados {
@@ -2228,6 +2228,10 @@ button.dropdown-toggle {
 	.recurso-secundario .relacionados {
 		padding: 2em;
 	}
+}
+
+.recurso-secundario .relacionados h4 {
+	margin: 0 0 .5em;
 }
 
 .recurso-secundario .relacionados ul {
@@ -3447,6 +3451,7 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	padding: 1.5em 0;
 	border-top: 1px solid #cccccc;
 	font-family: "system";
+	font-size: .9em;
 }
 
 .comments-title {

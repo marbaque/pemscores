@@ -24,14 +24,15 @@
 
       if( $autoria == 'Persona' ): ?>
 
-          <li><i class="fa fa-address-card-o" aria-hidden="true"></i> <strong><?= __('Creado por:', 'pemscores'); ?></strong>
-              <?php echo get_the_term_list( $post->ID, 'autor_tag', ' ', ', ', '' ); ?>
+          <li>
+              <?php echo get_the_term_list( $post->ID, 'autor_tag', 
+              __('<i class="fa fa-address-card-o" aria-hidden="true"></i> <strong>Creado por</strong> ' , 'pemscores'), ', ', '' ); ?>
           </li>
 
       <?php elseif( $autoria == 'Organización' ): ?>
 
-          <li><i class="fa fa-university" aria-hidden="true"></i> <strong><?= __('Creado por:', 'pemscores'); ?></strong>
-              <?php echo get_the_term_list( $post->ID, 'organizacion_tag', ' ', ', ', '' ); ?>
+          <li>
+              <?php echo get_the_term_list( $post->ID, 'organizacion_tag', __('<i class="fa fa-university" aria-hidden="true"></i> <strong>Creado por </strong> ', 'pemscores'), ', ', '' ); ?>
           </li>
 
   <?php endif; ?>

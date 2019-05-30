@@ -388,7 +388,7 @@
 		justify-content: space-around;
 		align-items: flex-start;
 		
-		.comentarios {
+		.content {
 			width: $size__ratio-large;
 		}
 
@@ -410,6 +410,10 @@
 	
 		@media screen and (min-width: $query__medium) {
 			padding: 2em;
+		}
+
+		h4 {
+			margin: 0 0 .5em;
 		}
 	
 		ul {

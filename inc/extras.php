@@ -295,9 +295,10 @@ function add_custom_mime_types($mimes){
 
 
 /**
- * Disable the custom color picker.
+ * Disable all colors within Gutenberg.
  */
-function pemscores_gutenberg_disable_custom_colors() {
+function pemscores_gutenberg_disable_all_colors() {
+	add_theme_support( 'editor-color-palette' );
 	add_theme_support( 'disable-custom-colors' );
 }
-add_action( 'after_setup_theme', 'pemscores_gutenberg_disable_custom_colors' );
+add_action( 'after_setup_theme', 'pemscores_gutenberg_disable_all_colors' );

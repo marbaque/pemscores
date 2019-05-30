@@ -70,24 +70,35 @@ $file = get_field('subir_arch');
 
 </article><!-- #post-## -->
 
-<section class="relacionados">
-	<h4><?= __( 'Recursos relacionados', 'pemscores' ); ?></h4>
-	<ul>
-	<?php
-	$related = get_posts( array(
-		'category__in' => wp_get_post_categories($post->ID),
-		'numberposts' => 	5, 'post__not_in' => array($post->ID),
-		'post_type'		=>	'recurso'
-	) );
+<div class="recurso-secundario">
+	<section class="comentarios">
+		<?php
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+		?>
+	</section>
 
-	if( $related ) foreach( $related as $post ) {
-	setup_postdata($post); ?>
+	<section class="relacionados">
+		<h4><?= __( 'Recursos relacionados', 'pemscores' ); ?></h4>
+		<ul>
+		<?php
+		$related = get_posts( array(
+			'category__in' => wp_get_post_categories($post->ID),
+			'numberposts' => 	5, 'post__not_in' => array($post->ID),
+			'post_type'		=>	'recurso'
+		) );
 
-    <li>
-    <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-    </li>
+		if( $related ) foreach( $related as $post ) {
+		setup_postdata($post); ?>
 
-	<?php } ?>
-	</ul>
-	<?php wp_reset_postdata(); ?>
-</section>
+			<li>
+			<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+			</li>
+
+		<?php } ?>
+		</ul>
+		<?php wp_reset_postdata(); ?>
+	</section>
+</div>

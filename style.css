@@ -2195,24 +2195,47 @@ button.dropdown-toggle {
 	}
 }
 
-.relacionados {
+@media screen and (min-width: 600px) {
+	.recurso-secundario {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+		-ms-flex-align: start;
+		    align-items: flex-start;
+	}
+	.recurso-secundario .comentarios {
+		width: 66%;
+	}
+	.recurso-secundario .relacionados {
+		width: 30%;
+	}
+}
+
+.recurso-secundario .comments-area {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #cccccc;
+}
+
+.recurso-secundario .relacionados {
 	padding: 1em;
 	font-family: "system";
 	background: #ebf3fc;
 }
 
-@media screen and (min-width: 600px) {
-	.relacionados {
+@media screen and (min-width: 900px) {
+	.recurso-secundario .relacionados {
 		padding: 2em;
 	}
 }
 
-.relacionados ul {
+.recurso-secundario .relacionados ul {
 	list-style: none;
 	padding-left: 0;
 }
 
-.relacionados ul li {
+.recurso-secundario .relacionados ul li {
 	margin-bottom: .2em;
 }
 
@@ -3423,12 +3446,13 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	margin: 3em 0;
 	padding: 1.5em 0;
 	border-top: 1px solid #cccccc;
+	font-family: "system";
 }
 
 .comments-title {
 	margin-bottom: 2em;
-	font-size: 2.5em;
-	font-weight: 600;
+	font-size: 1.5em;
+	font-weight: 300;
 }
 
 .comment-list {

@@ -3,12 +3,13 @@
 	margin: 3em 0;
 	padding: 1.5em 0;
 	border-top: 1px solid hsl(0, 0%, 80%);
+	font-family: $font__system;
 }
 
 .comments-title {
 	margin-bottom: 2em;
-	font-size: 2.5em;
-	font-weight: 600;
+	font-size: 1.5em;
+	font-weight: 300;
 }
 
 .comment-list {

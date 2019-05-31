@@ -38,15 +38,13 @@
   }
 
   .lp-button-back {
+    flex-shrink: 0;
+    button {
+      font-size: 80%;
+      height: 100%;
+      line-height: 1;
 
-   button {
-       font-size: 80%;
-       //border: none;
-       height: 100%;
-       @extend .botones;
-       //background: none;
-
-   }
+    }
   }
 
   .toggle-content-item {

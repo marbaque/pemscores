@@ -324,7 +324,7 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+//require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Load SVG icon functions.

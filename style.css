@@ -534,7 +534,6 @@ td:last-child {
 --------------------------------------------------------------*/
 button,
 .botones,
-#course-item-content-header .lp-button-back button,
 .lp-button,
 input[type="button"],
 input[type="reset"],
@@ -552,11 +551,8 @@ input[type="submit"] {
 
 button:hover, button:active, button:focus,
 .botones:hover,
-#course-item-content-header .lp-button-back button:hover,
 .botones:active,
-#course-item-content-header .lp-button-back button:active,
 .botones:focus,
-#course-item-content-header .lp-button-back button:focus,
 .lp-button:hover,
 .lp-button:active,
 .lp-button:focus,
@@ -844,15 +840,11 @@ a:hover, a:active {
 	border-color: #00529a;
 }
 
-
-.botones,
-#course-item-content-header .lp-button-back button {
+.botones {
 	color: #5abe00 !important;
 }
 
-
-.botones:hover,
-#course-item-content-header .lp-button-back button:hover {
+.botones:hover {
 	border: 2px solid #5abe00 !important;
 }
 
@@ -2617,9 +2609,15 @@ button.dropdown-toggle {
 	}
 }
 
+#course-item-content-header .lp-button-back {
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+}
+
 #course-item-content-header .lp-button-back button {
 	font-size: 80%;
 	height: 100%;
+	line-height: 1;
 }
 
 #course-item-content-header .toggle-content-item {

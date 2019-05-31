@@ -73,6 +73,18 @@
 		<?php endif; // End header image check. ?>
 
 			<h1 class="hero-title">Academia Municipal</h1>
+			
+			<section class="search-section">
+				<div class="home-search">
+					<!-- <h3> -->
+						<?php //echo __( 'Buscar recursos', 'pemscores'); ?>
+					<!-- </h3> -->
+
+					<?php
+					echo do_shortcode( '[searchandfilter fields="search" search_placeholder="Buscar curso, recursos..." class="home-searchandfilter"]' ); ?>
+
+				</div>
+			</section>
 
 		</section><!-- .hero-banner -->
 

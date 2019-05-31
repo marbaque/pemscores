@@ -4,8 +4,8 @@ Theme Name: pemscores
 Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
-Description: Tema para recursos y contenido educativo, basado en el tema hecho por Morten Rand-Hendriksen para el curso Building Themes From Scratch Using Underscores en LinkedIn Learning y Lynda.com.
-Version: 2.3
+Description: Tema para recursos y contenido educativo, hecho a partir de _s.
+Version: 2.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -1391,7 +1391,7 @@ body.blog .site-content {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-	padding: 1em;
+	padding: .5em 1em;
 	color: #6696c7;
 	background-color: #cce2f8;
 	font-family: "Roboto", sans-serif;
@@ -1401,7 +1401,7 @@ body.blog .site-content {
 
 @media screen and (min-width: 600px) {
 	.site-header {
-		padding: 1em 2em;
+		padding: .5em 2em;
 	}
 }
 
@@ -1468,6 +1468,12 @@ Header Menu
 	margin-top: 1em;
 }
 
+@media screen and (min-width: 600px) {
+	.main-navigation ul.menu {
+		margin-top: .5em;
+	}
+}
+
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -1502,6 +1508,7 @@ Header Menu
 .main-navigation li {
 	position: relative;
 	color: #00529a;
+	margin-bottom: 0;
 }
 
 .main-navigation a {
@@ -1528,7 +1535,7 @@ button.dropdown-toggle {
 	border: none;
 	background: inherit;
 	color: currentcolor;
-	line-height: 1em;
+	line-height: 1.5;
 	padding: .25em .75em;
 	font-weight: 700;
 	font-size: 18px;
@@ -1540,7 +1547,7 @@ button.dropdown-toggle {
 	top: 0;
 	right: 0;
 	display: block;
-	margin: 1.2em 1em 0 0;
+	margin: .75em 1em 0 0;
 	padding: .5em;
 	font-size: 1.2em;
 	color: #6696c7;
@@ -1557,21 +1564,38 @@ button.dropdown-toggle {
 	display: block;
 }
 
-.bp-login-nav a:after {
-	font-family: 'FontAwesome';
-	content: "\f090";
-	margin-left: .5em;
+.mi-perfil .dropdown-symbol,
+.bp-login-nav .dropdown-symbol {
+	color: white !important;
 }
 
-.mi-perfil > a:before {
+.mi-perfil > a,
+.bp-login-nav > a {
+	background: #006edc;
+	color: #cce2f8;
+}
+
+.mi-perfil > a:before,
+.bp-login-nav > a:before {
 	font-family: 'FontAwesome';
 	content: "\f2be";
 	margin-right: .5em;
 }
 
+.mi-perfil > a:hover,
+.bp-login-nav > a:hover {
+	color: white;
+}
+
 .ajustes > a:before {
 	font-family: 'FontAwesome';
 	content: "\f013";
+	margin-right: .5em;
+}
+
+.bp-logout-nav > a:before {
+	font-family: 'FontAwesome';
+	content: "\f08b";
 	margin-right: .5em;
 }
 
@@ -1594,12 +1618,6 @@ button.dropdown-toggle {
 	}
 	.main-navigation ul.menu {
 		text-align: center;
-	}
-	.main-navigation ul.menu > li:not(:last-child):after {
-		content: "|";
-		position: absolute;
-		right: 0;
-		top: .75em;
 	}
 	.main-navigation ul.menu a {
 		width: 180px;

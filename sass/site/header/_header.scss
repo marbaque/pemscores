@@ -1,14 +1,13 @@
 .site-header {
-	padding: 1em;
+	padding: .5em 1em;
 	color: $color__main-bordes;
 	background-color: $color__main-claro;
 	font-family: $font__sans;
 	border-bottom: 1px solid $color__main;
 	position: relative;
 
-
 	@media screen and (min-width: $query__small) {
-		padding: 1em 2em;
+		padding: .5em 2em;
 	}
 }
 
@@ -58,13 +57,9 @@
 		justify-content: space-between;
 	}
 
-	.site-branding {
+	//.site-branding {}
 
-	}
-
-	.site-navigation {
-
-	}
+	//.site-navigation {}
 }
 
 /*

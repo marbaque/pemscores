@@ -195,11 +195,11 @@ function my_login_logo() { ?>
 			}
         #login h1 a, .login h1 a {
             background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo-full.png);
-						height:100px;
-						width:320px;
-						background-size: contain;
-						background-repeat: no-repeat;
-	        	padding-bottom: 30px;
+			height:100px;
+			width:320px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			padding-bottom: 30px;
         }
     </style>
 <?php }
@@ -216,22 +216,17 @@ function my_login_logo_url_title() {
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
-// Redireccionar despues de login
+ 
+/* 
+Redireccionar despues de login
+La página de perfil de Learnpress debe tener el permalink 'perfil-academia'
+Si cambia este nombre, entonces debe cambiar también el permalink de la página en cuestión 
+*/
+
 function admin_default_page() {
   return '/perfil-academia';
 }
-
 add_filter('login_redirect', 'admin_default_page');
-
-// No permitir que usuarios vayan a escritorio
-function disable_dashboard() {
-    if (current_user_can('subscriber') && is_admin()) {
-        wp_redirect(home_url());
-        exit;
-    }
-}
-add_action('admin_init', 'disable_dashboard');
-
 
 // Permitir sólo ciertos bloques para recursos
 add_filter( 'allowed_block_types', 'academia_allowed_block_types', 10, 2 );

@@ -19,7 +19,9 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				if ( is_post_type_archive('lp_course') or is_tax('course_category') ) {
+				if ( is_post_type_archive('lp_course') || 
+				is_tax( 'course_category' ) || 
+				is_tax( 'course_tag' ) ) {
 					get_template_part( 'template-parts/content', 'courses-page' );
 				} else {
 					get_template_part( 'template-parts/content', 'page' );

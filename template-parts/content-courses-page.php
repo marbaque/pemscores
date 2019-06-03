@@ -16,14 +16,6 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php
-		if( function_exists('bcn_display') && !is_singular('lp_course') ) {
-			echo '<div class="migajas">';
-			bcn_display();
-			echo '</div>';
-		}
-		?>
-
 	<div class="entry-content post-content">
 		<?php
 			the_content();

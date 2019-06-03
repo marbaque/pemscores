@@ -154,6 +154,8 @@
 .course-remaining-time {
     font-size: 80%;
     margin: 1em 0;
+    font-family: $font__system;
+
     .lp-label.label-enrolled, .lp-label.label-started {
         background: hsla(180, 100%, 35%, 1);
         border-radius: 0;
@@ -197,6 +199,7 @@ ul.curriculum-sections
     display: block;
     padding: 0;
     margin-right: 0!important;
+    font-family: $font__system;
 
     .items-progress, .course-progress {
         padding: 1em;
@@ -253,3 +256,7 @@ ul.curriculum-sections
 .course-overview_section:nth-child(3) { // esconder el instructor
   display: none;
 }
+
+.course-overview_section:nth-child(4) { // reseñas
+  font-family: $font__system;
+} 

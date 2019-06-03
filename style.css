@@ -2406,6 +2406,7 @@ body:not(.logged-in) li.bp-comunidad {
 .course-remaining-time {
 	font-size: 80%;
 	margin: 1em 0;
+	font-family: "system";
 }
 
 .course-remaining-time .lp-label.label-enrolled, .course-remaining-time .lp-label.label-started {
@@ -2433,6 +2434,7 @@ body:not(.logged-in) li.bp-comunidad {
 	display: block;
 	padding: 0;
 	margin-right: 0 !important;
+	font-family: "system";
 }
 
 .learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
@@ -2498,6 +2500,10 @@ body:not(.logged-in) li.bp-comunidad {
 	display: none;
 }
 
+.course-overview_section:nth-child(4) {
+	font-family: "system";
+}
+
 .archive-view.learnpress .site .site-content .page-header {
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
@@ -2555,6 +2561,24 @@ body:not(.logged-in) li.bp-comunidad {
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info .course-instructor {
 	display: block;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags {
+	display: block;
+	clear: both;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .cat-links a {
+	background: #6696c7;
+	color: #cce2f8;
+	padding: .4em .2em;
+	border: 0;
+	display: inline-block;
+	margin: 4px 0;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .course-tags {
+	margin-top: 1em;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons {

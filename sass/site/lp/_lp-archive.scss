@@ -56,6 +56,23 @@
                   }
               }
 
+              .lp-course-tags {
+                display: block;
+                clear: both;
+
+                .cat-links a {
+                  background: $color__main-bordes;
+                  color: $color__main-claro;
+                  padding: .4em .2em;
+                  border: 0;
+                  display: inline-block;
+                  margin: 4px 0;
+                }
+                .course-tags {
+                  margin-top: 1em;
+                }
+              }
+
               .lp-course-buttons {
                   display: block;
                   position: absolute;

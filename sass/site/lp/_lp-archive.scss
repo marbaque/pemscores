@@ -59,13 +59,15 @@
               .lp-course-tags {
                 display: block;
                 clear: both;
+                text-transform: uppercase;
+                line-height: 1.6em;
 
                 .cat-links a {
                   background: $color__main-bordes;
                   color: $color__main-claro;
-                  padding: .4em .2em;
+                  padding: .2em;
                   border: 0;
-                  display: inline-block;
+                  display: inline;
                   margin: 4px 0;
                 }
                 .course-tags {

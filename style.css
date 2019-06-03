@@ -2566,14 +2566,16 @@ body:not(.logged-in) li.bp-comunidad {
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags {
 	display: block;
 	clear: both;
+	text-transform: uppercase;
+	line-height: 1.6em;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .cat-links a {
 	background: #6696c7;
 	color: #cce2f8;
-	padding: .4em .2em;
+	padding: .2em;
 	border: 0;
-	display: inline-block;
+	display: inline;
 	margin: 4px 0;
 }
 

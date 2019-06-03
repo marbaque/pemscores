@@ -169,6 +169,20 @@ button.dropdown-toggle {
 	}
 }
 
+body:not(.logged-in) {
+	li.bp-comunidad {
+		display: none;
+	}
+}
+
+.bp-comunidad>a {
+	&:before {
+		font-family: 'FontAwesome';
+		content: "\f0c0";
+		margin-right: .5em;
+	}
+}
+
 //menu en pantallas grandes
 @media screen and (min-width: $query__medium) {
 	.menu-toggle {

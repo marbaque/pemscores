@@ -57,4 +57,4 @@ endif;
 /**
  * @since 3.0.0
  */
-//do_action( 'learn-press/after-main-content' );
+do_action( 'learn-press/after-main-content' );

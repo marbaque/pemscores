@@ -2579,6 +2579,7 @@ body:not(.logged-in) li.bp-comunidad {
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .course-tags {
 	margin-top: 1em;
+	font-size: .9em;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons {

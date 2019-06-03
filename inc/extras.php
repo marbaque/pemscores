@@ -62,15 +62,15 @@ add_filter('admin_footer_text', 'change_admin_footer');
 /* * ********************************************************************* */
 // Dar a categorias del curso el mismo template de archivo de cursos page-capacitacion.php
 /* * ********************************************************************* */
-add_filter('template_include', function( $template ) {
-	if ( is_tax('course_category') ) {
-		$locate = locate_template('page-capacitacion.php', false, false);
-		if (!empty($locate)) {
-			$template = $locate;
-		}
-	}
-	return $template;
-});
+// add_filter('template_include', function( $template ) {
+// 	if ( is_tax('course_category') || is_tag('course_tag') ) {
+// 		$locate = locate_template('page-capacitacion.php', false, false);
+// 		if (!empty($locate)) {
+// 			$template = $locate;
+// 		}
+// 	}
+// 	return $template;
+// });
 
 //tamaño del excerpt
 function wpse_excerpt_length( $length ) {
@@ -165,7 +165,7 @@ add_action( 'after_setup_theme', 'pemscores_setup_theme_supported_features' );
 *	Esconder perfil de buddypress si no esta registrado como usuario
 *	las página correspondienes se deben tener el siguiente slug:
 *	perfil-academia
-* regsitro-academia
+* 	registro-academia
 */
 add_action( 'template_redirect', function() {
 

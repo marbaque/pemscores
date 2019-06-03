@@ -30,12 +30,12 @@ $course = LP_Global::course();
 		printf( '<div class="cat-links">%s</div>', $term_list );
 	}
 
-	$tags   = $course->get_tags();
-
-	if ( ! $tags ) {
-		return;
-	}
+	$tags = get_the_term_list( get_the_ID(), 'course_tag', 'Etiquetas: ', ', ', '' );
+	if( $tags ) {
+		printf(
+			'<div class="course-tags">%s</span>',	
+			$tags
+		);
+	}	
 	?>
-
-	<div class="course-tags"><?php echo $tags; ?></div>
 </div>

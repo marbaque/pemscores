@@ -1,8 +1,3 @@
-/* Show only default top level items */
-// #wp-toolbar > ul > li {
-// 	display: inline-block!important;
-// 	margin: 0 .5em!important;
-// }
 .site-content {
 	padding: 0 1em 1em;
 
@@ -15,14 +10,6 @@
 .site-content {
 	max-width: $size__max-width;
 	margin: 0 auto;
-}
-
-.archive-view:not(.learnpress) .site-content {
-	//padding-top: 1em;
-
-	@media screen and (min-width: $query__medium) {
-		//padding-top: 2em;
-	}
 }
 
 /* Single posts */
@@ -74,15 +61,6 @@
 		}
 	}
 
-}
-
-
-@media screen and (min-width: $query__medium) {
-	.single {
-		&.no-sidebar {
-
-		}
-	}
 }
 
 // Solo para blog

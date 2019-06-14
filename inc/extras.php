@@ -26,7 +26,7 @@ function pemscores_body_classes( $classes ) {
 	}
 
 	// Add a class telling us if the sidebar is in use.
-	if ( is_active_sidebar( 'sidebar-1' ) ) {
+	if ( is_active_sidebar( 'sidebar-1' ) || is_active_sidebar( 'sidebar-2' ) || is_active_sidebar( 'sidebar-recursos' ) ) {
 		$classes[] = 'has-sidebar';
 	} else {
 		$classes[] = 'no-sidebar';
@@ -35,6 +35,11 @@ function pemscores_body_classes( $classes ) {
 	// Add a class telling us if the page sidebar is in use.
 	if ( is_active_sidebar( 'sidebar-2' ) ) {
 		$classes[] = 'has-page-sidebar';
+	}
+
+	// Add a class telling us if the recursos sidebar is in use.
+	if ( is_active_sidebar( 'sidebar-3' ) ) {
+		$classes[] = 'has-recursos-sidebar';
 	}
 
 	return $classes;
@@ -297,3 +302,19 @@ function pemscores_gutenberg_disable_all_colors() {
 	add_theme_support( 'disable-custom-colors' );
 }
 add_action( 'after_setup_theme', 'pemscores_gutenberg_disable_all_colors' );
+
+
+// Google analytics
+function pemscores_google_analytics() { ?>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64250561-45"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-64250561-45');
+	</script>
+  <?php
+  }
+  
+add_action( 'wp_head', 'pemscores_google_analytics', 10 );

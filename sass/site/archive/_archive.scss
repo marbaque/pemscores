@@ -23,10 +23,11 @@
 	}
 
 	@media screen and (min-width: $query__medium) {
+		
 		&.has-sidebar {
 			.site-content {
 				display: flex;
-				justify-content: space-between;
+				justify-content: space-around;
 				flex-wrap: wrap;
 			}
 
@@ -44,6 +45,10 @@
 				margin-top: 2em;
 			}
 
+			.widgets-recursos {
+				order: 1;
+			}
+
 		}
 
 		&:not(.site-content) {
@@ -53,6 +58,7 @@
 				//margin: 0 auto;
 			}
 		}
+
 	}
 }
 
@@ -94,7 +100,7 @@
 
 .archive-description {
 	//margin: -1em 0 2em;
-	//font-family: $font__system;
+	font-family: $font__system;
 }
 
 /* For content-none.php */
@@ -177,6 +183,19 @@
 //Archivo de recursos
 .archive-view {
 
+	// Archivo de recursos
+	&:not(.has-recursos-sidebar) {
+		.content-area {
+			margin: 0 auto;
+		}
+	}
+	
+	&.has-recursos-sidebar {
+		.site-content {
+			flex-direction: row-reverse;
+		}
+	}
+
 	.recurso {
 
 		&:before {
@@ -212,8 +231,9 @@
 				color: $color__gris;
 			}
 			.recurso-cats {
+				
 				a {
-					@include etiqueta(white, $color__naranja);
+					color: $color__main;
 					text-decoration: none;
 					font-size: .8em;
 				}

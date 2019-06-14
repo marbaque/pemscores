@@ -1071,7 +1071,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global layouts
 --------------------------------------------------------------*/
-/* Show only default top level items */
 .site-content {
 	padding: 0 1em 1em;
 }
@@ -1176,8 +1175,8 @@ body.blog .site-content {
 	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search).has-sidebar .site-content {
 		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-pack: justify;
-		    justify-content: space-between;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
@@ -1193,6 +1192,10 @@ body.blog .site-content {
 	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search).has-sidebar .widget-area {
 		width: 30%;
 		margin-top: 2em;
+	}
+	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search).has-sidebar .widgets-recursos {
+		-ms-flex-order: 1;
+		    order: 1;
 	}
 	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search):not(.site-content) .content-area {
 		max-width: 66%;
@@ -1237,6 +1240,10 @@ body.blog .site-content {
 
 .page-title {
 	margin: 0 0 .5em;
+}
+
+.archive-description {
+	font-family: "system";
 }
 
 /* For content-none.php */
@@ -1304,6 +1311,15 @@ body.blog .site-content {
 	position: absolute;
 }
 
+.archive-view:not(.has-recursos-sidebar) .content-area {
+	margin: 0 auto;
+}
+
+.archive-view.has-recursos-sidebar .site-content {
+	-ms-flex-direction: row-reverse;
+	    flex-direction: row-reverse;
+}
+
 .archive-view .recurso:before {
 	content: "";
 	display: block;
@@ -1337,17 +1353,9 @@ body.blog .site-content {
 }
 
 .archive-view .recurso .recurso__content .recurso-cats a {
-	font-size: 1rem;
-	padding: .2em .4em;
-	background-color: #ff961e;
-	color: white;
-	border-radius: .2em;
+	color: #006edc;
 	text-decoration: none;
 	font-size: .8em;
-}
-
-.archive-view .recurso .recurso__content .recurso-cats a:hover {
-	opacity: .8;
 }
 
 @media screen and (min-width: 600px) {

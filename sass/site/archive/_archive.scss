@@ -44,11 +44,6 @@
 				width: $size__ratio-small;
 				margin-top: 2em;
 			}
-
-			.widgets-recursos {
-				order: 1;
-			}
-
 		}
 
 		&:not(.site-content) {
@@ -187,12 +182,6 @@
 	&:not(.has-recursos-sidebar) {
 		.content-area {
 			margin: 0 auto;
-		}
-	}
-	
-	&.has-recursos-sidebar {
-		.site-content {
-			flex-direction: row-reverse;
 		}
 	}
 

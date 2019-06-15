@@ -2,6 +2,14 @@
 	$('figure.wp-caption.aligncenter').removeAttr('style');
 	$('img.aligncenter').wrap('<figure class="centered-image" />');
 
+	// Agregar el icono de lupa a los input fields de busqueda
+	$('.search-field').before('<i class="fa fa-search" aria-hidden="true"></i>');
+	$('input[name="ofsearch"]').before('<i class="fa fa-search" aria-hidden="true"></i>');
+	$('#bbp_search').before('<i class="fa fa-search" aria-hidden="true"></i>');
+
+	// Quitar tab de pedidos (orders) del perfil de buddypress
+	$('#orders-personal-li').remove();
+	
 	/*
 	 * Test if inline SVGs are supported.
 	 * @link https://github.com/Modernizr/Modernizr/

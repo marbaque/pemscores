@@ -66,6 +66,7 @@ add_filter('admin_footer_text', 'change_admin_footer');
 
 /* * ********************************************************************* */
 // Dar a categorias del curso el mismo template de archivo de cursos page-capacitacion.php
+// Dar a taxonomias de recursos el mismo template de archivo de recursos archive-recurso.php
 /* * ********************************************************************* */
 add_filter('template_include', function( $template ) {
 	if ( is_tax('course_category') || is_tag('course_tag') ) {
@@ -74,6 +75,20 @@ add_filter('template_include', function( $template ) {
 			$template = $locate;
 		}
 	}
+	if ( 	is_tax('temas') || 
+				is_tax('cobertura') || 
+				is_tax('tipo_recurso') || 
+				is_tax('tipo_medio') || 
+				is_tax('organizacion_tag') || 
+				is_tax('autor_tag') || 
+				is_tax('interaccion') ) {
+
+		$locate = locate_template('archive-recurso.php', false, false);
+		if (!empty($locate)) {
+			$template = $locate;
+		}
+	}
+
 	return $template;
 });
 
@@ -302,7 +317,6 @@ function pemscores_gutenberg_disable_all_colors() {
 	add_theme_support( 'disable-custom-colors' );
 }
 add_action( 'after_setup_theme', 'pemscores_gutenberg_disable_all_colors' );
-
 
 // Google analytics
 function pemscores_google_analytics() { ?>

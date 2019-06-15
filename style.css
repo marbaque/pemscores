@@ -1193,10 +1193,6 @@ body.blog .site-content {
 		width: 30%;
 		margin-top: 2em;
 	}
-	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search).has-sidebar .widgets-recursos {
-		-ms-flex-order: 1;
-		    order: 1;
-	}
 	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search):not(.site-content) .content-area {
 		max-width: 66%;
 	}
@@ -1313,11 +1309,6 @@ body.blog .site-content {
 
 .archive-view:not(.has-recursos-sidebar) .content-area {
 	margin: 0 auto;
-}
-
-.archive-view.has-recursos-sidebar .site-content {
-	-ms-flex-direction: row-reverse;
-	    flex-direction: row-reverse;
 }
 
 .archive-view .recurso:before {
@@ -4080,6 +4071,12 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	font-size: 90%;
 }
 
+/* Html widget */
+.widget_custom_html,
+.widget_display_search {
+	padding: 1.5em 1em 2em;
+}
+
 /* Footer widget stylings */
 .footer-widgets .widget {
 	-ms-flex: 1;
@@ -4137,36 +4134,28 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 ------------------------------------------*/
 .search-form,
 .learn-press-search-course-form,
-.searchandfilter {
+.searchandfilter,
+#bbp-search-form {
 	position: relative;
 }
 
 .search-form .search-course-button,
 .learn-press-search-course-form .search-course-button,
-.searchandfilter .search-course-button {
+.searchandfilter .search-course-button,
+#bbp-search-form .search-course-button {
 	visibility: hidden;
 	display: none;
 }
 
-.search-form label,
-.learn-press-search-course-form label,
-.searchandfilter label {
-	height: 40px;
-	width: 80%;
-	-ms-flex-positive: 1;
-	    flex-grow: 1;
-}
-
-.search-form:after,
-.learn-press-search-course-form:after,
-.searchandfilter:after {
-	font-family: 'FontAwesome';
-	content: "\f002";
+.search-form .fa-search,
+.learn-press-search-course-form .fa-search,
+.searchandfilter .fa-search,
+#bbp-search-form .fa-search {
 	font-size: 24px;
 	display: block;
 	position: absolute;
 	top: 12px;
-	right: 1em;
+	left: 14px;
 	z-index: 99;
 	line-height: 1;
 	color: #006edc;
@@ -4174,18 +4163,24 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 
 .search-form .search-field,
 .search-form input[name="ofsearch"],
+.search-form input[name="bbp_search"],
 .learn-press-search-course-form .search-field,
 .learn-press-search-course-form input[name="ofsearch"],
+.learn-press-search-course-form input[name="bbp_search"],
 .searchandfilter .search-field,
-.searchandfilter input[name="ofsearch"] {
-	width: 100%;
+.searchandfilter input[name="ofsearch"],
+.searchandfilter input[name="bbp_search"],
+#bbp-search-form .search-field,
+#bbp-search-form input[name="ofsearch"],
+#bbp-search-form input[name="bbp_search"] {
+	width: 100% !important;
 	margin: 0 auto;
 	height: 40px;
 	border: 2px solid #006edc;
 	-ms-flex-positive: 1;
 	    flex-grow: 1;
 	outline: 0;
-	padding: 24px 2.5em 24px 1em;
+	padding: 24px 1em 24px 2.5em;
 	-webkit-appearance: none;
 	border-radius: 6px;
 	background: white;
@@ -4198,10 +4193,16 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 
 .search-form .search-field:focus,
 .search-form input[name="ofsearch"]:focus,
+.search-form input[name="bbp_search"]:focus,
 .learn-press-search-course-form .search-field:focus,
 .learn-press-search-course-form input[name="ofsearch"]:focus,
+.learn-press-search-course-form input[name="bbp_search"]:focus,
 .searchandfilter .search-field:focus,
-.searchandfilter input[name="ofsearch"]:focus {
+.searchandfilter input[name="ofsearch"]:focus,
+.searchandfilter input[name="bbp_search"]:focus,
+#bbp-search-form .search-field:focus,
+#bbp-search-form input[name="ofsearch"]:focus,
+#bbp-search-form input[name="bbp_search"]:focus {
 	width: 100%;
 	outline: 2;
 	box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4);
@@ -4209,10 +4210,16 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 
 .search-form .search-field::-webkit-input-placeholder,
 .search-form input[name="ofsearch"]::-webkit-input-placeholder,
+.search-form input[name="bbp_search"]::-webkit-input-placeholder,
 .learn-press-search-course-form .search-field::-webkit-input-placeholder,
 .learn-press-search-course-form input[name="ofsearch"]::-webkit-input-placeholder,
+.learn-press-search-course-form input[name="bbp_search"]::-webkit-input-placeholder,
 .searchandfilter .search-field::-webkit-input-placeholder,
-.searchandfilter input[name="ofsearch"]::-webkit-input-placeholder {
+.searchandfilter input[name="ofsearch"]::-webkit-input-placeholder,
+.searchandfilter input[name="bbp_search"]::-webkit-input-placeholder,
+#bbp-search-form .search-field::-webkit-input-placeholder,
+#bbp-search-form input[name="ofsearch"]::-webkit-input-placeholder,
+#bbp-search-form input[name="bbp_search"]::-webkit-input-placeholder {
 	outline: 0;
 	border: 0 none;
 	font-weight: normal;
@@ -4221,10 +4228,16 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 
 .search-form .search-field:-moz-placeholder,
 .search-form input[name="ofsearch"]:-moz-placeholder,
+.search-form input[name="bbp_search"]:-moz-placeholder,
 .learn-press-search-course-form .search-field:-moz-placeholder,
 .learn-press-search-course-form input[name="ofsearch"]:-moz-placeholder,
+.learn-press-search-course-form input[name="bbp_search"]:-moz-placeholder,
 .searchandfilter .search-field:-moz-placeholder,
-.searchandfilter input[name="ofsearch"]:-moz-placeholder {
+.searchandfilter input[name="ofsearch"]:-moz-placeholder,
+.searchandfilter input[name="bbp_search"]:-moz-placeholder,
+#bbp-search-form .search-field:-moz-placeholder,
+#bbp-search-form input[name="ofsearch"]:-moz-placeholder,
+#bbp-search-form input[name="bbp_search"]:-moz-placeholder {
 	outline: 0;
 	border: 0 none;
 	font-weight: normal;
@@ -4233,10 +4246,16 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 
 .search-form .search-field:-ms-input-placeholder,
 .search-form input[name="ofsearch"]:-ms-input-placeholder,
+.search-form input[name="bbp_search"]:-ms-input-placeholder,
 .learn-press-search-course-form .search-field:-ms-input-placeholder,
 .learn-press-search-course-form input[name="ofsearch"]:-ms-input-placeholder,
+.learn-press-search-course-form input[name="bbp_search"]:-ms-input-placeholder,
 .searchandfilter .search-field:-ms-input-placeholder,
-.searchandfilter input[name="ofsearch"]:-ms-input-placeholder {
+.searchandfilter input[name="ofsearch"]:-ms-input-placeholder,
+.searchandfilter input[name="bbp_search"]:-ms-input-placeholder,
+#bbp-search-form .search-field:-ms-input-placeholder,
+#bbp-search-form input[name="ofsearch"]:-ms-input-placeholder,
+#bbp-search-form input[name="bbp_search"]:-ms-input-placeholder {
 	outline: 0;
 	border: 0 none;
 	font-weight: normal;
@@ -4244,32 +4263,17 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 }
 
 .search-form .search-submit,
+.search-form .button,
 .learn-press-search-course-form .search-submit,
-.searchandfilter .search-submit {
+.learn-press-search-course-form .button,
+.searchandfilter .search-submit,
+.searchandfilter .button,
+#bbp-search-form .search-submit,
+#bbp-search-form .button {
 	display: none;
 }
 
-.searchandfilter select,
-.searchandfilter input.postform {
-	border: 2px solid #6696c7;
-	font-family: "system";
-	background-color: #ebf3fc;
-	padding: 8px;
-	font-size: 1rem;
-	height: 40px;
-}
-
-.searchandfilter li {
-	padding-right: 0;
-}
-
-.searchandfilter li h4 {
-	margin: 2px 0;
-	font-weight: 400;
-	letter-spacing: 1px;
-	font-size: .8rem;
-}
-
+/* busqueda de recursos del home */
 .searchandfilter.home-searchandfilter ul {
 	display: block;
 	padding: 0;
@@ -4279,77 +4283,55 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 .searchandfilter.home-searchandfilter ul li {
 	width: 100%;
 	padding: 0;
+	margin: 0;
 }
 
 .searchandfilter.home-searchandfilter ul input[value="Submit"] {
 	display: none;
 }
 
-.searchandfilter.recursos-searchandfilter {
-	width: 100%;
-	max-width: 900px;
-	margin: 40px auto;
+/* Widgets de recursos */
+.widgets-recursos .searchandfilter h4 {
+	margin: 2em 0 .5em;
 }
 
-.searchandfilter.recursos-searchandfilter ul {
-	padding: 0;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-ms-flex-pack: distribute;
-	    justify-content: space-around;
-	-ms-flex-align: end;
-	    align-items: flex-end;
+.widgets-recursos .searchandfilter label {
+	width: auto;
 }
 
-.searchandfilter.recursos-searchandfilter ul li:first-child {
-	-ms-flex: 1 1 100%;
-	    flex: 1 1 100%;
-	padding-bottom: 20px;
-	margin: 0 0 20px;
-	position: relative;
+.widgets-recursos .searchandfilter input[type="radio"] {
+	margin-right: 8px;
 }
 
-.searchandfilter.recursos-searchandfilter ul li:first-child:after {
-	content: "";
-	height: 2px;
-	width: 30%;
-	background: #6696c7;
-	position: absolute;
-	bottom: 0;
-	left: 35%;
+.widgets-recursos .searchandfilter ul {
+	display: block;
 }
 
-.searchandfilter.recursos-searchandfilter ul li:not(:first-child) {
+.widgets-recursos .searchandfilter ul > li:not(:first-child) {
+	font-size: 95%;
+}
+
+.widgets-recursos .searchandfilter ul > li:not(:first-child) label {
+	margin-left: 28px;
+	text-indent: -26px;
+}
+
+.widgets-recursos .searchandfilter li {
 	margin-bottom: .5em;
 }
 
-.searchandfilter.recursos-searchandfilter ul li:not(:first-child) select {
-	min-width: 200px;
+.widgets-recursos .searchandfilter input[name="ofsearch"] {
+	margin-bottom: 2em;
 }
 
-.searchandfilter.recursos-searchandfilter ul li:last-child {
-	-ms-flex-item-align: end;
-	    align-self: flex-end;
+.widgets-recursos .searchandfilter .fa-search {
+	top: 22px;
+	left: 10px;
+	font-size: 20px;
 }
 
-.searchandfilter.recursos-searchandfilter ul select {
-	max-width: 200px;
-}
-
-.searchandfilter.recursos-searchandfilter ul input[value="Filtrar"] {
-	height: 40px !important;
-	font-size: 1rem;
-	padding: .2em .4em;
-	background-color: #006edc;
-	color: #ebf3fc;
-	border-radius: .2em;
-	border-color: #00529a;
-}
-
-.searchandfilter.recursos-searchandfilter ul input[value="Filtrar"]:hover {
-	opacity: .8;
+.widgets-recursos .searchandfilter input[type="Submit"] {
+	margin-top: 1em;
 }
 
 .widget.popular-posts .wpp-list li {

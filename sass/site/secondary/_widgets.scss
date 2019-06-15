@@ -218,6 +218,12 @@
 	//font-family: $font__serif;
 }
 
+/* Html widget */
+.widget_custom_html,
+.widget_display_search {
+	padding: 1.5em 1em 2em;
+}
+
 
 /* Footer widget stylings */
 .footer-widgets {
@@ -297,7 +303,8 @@
 ------------------------------------------*/
 .search-form,
 .learn-press-search-course-form,
-.searchandfilter {
+.searchandfilter,
+#bbp-search-form {
   position: relative;
 
 	.search-course-button {
@@ -305,35 +312,27 @@
 		display: none;
 	}
 
-  label {
-      height: 40px;
-      width: 80%;
-      flex-grow: 1;
-
-  }
-
-	&:after {
-		font-family: 'FontAwesome';
-		content: "\f002";
+	.fa-search {
 		font-size: 24px;
 		display: block;
 		position: absolute;
 		top: 12px;
-		right: 1em;
+		left: 14px;
 		z-index: 99;
 		line-height: 1;
 		color: $color__main;
 	}
 
   .search-field,
-	input[name="ofsearch"] { //agregar input de searchsandfilter plugin
-      width: 100%;
+	input[name="ofsearch"],
+	input[name="bbp_search"] { //agregar input de searchsandfilter plugin
+      width: 100%!important;
 			margin: 0 auto;
       height: 40px;
       border: 2px solid $color__main;
       flex-grow: 1;
       outline: 0;
-      padding: 24px 2.5em 24px 1em;
+      padding: 24px 1em 24px 2.5em;
       -webkit-appearance: none;
       @include borde-redondeado(6px);
       background: white;
@@ -341,7 +340,9 @@
       font-size: 90%;
       font-weight: 400;
 			position: relative;
-      transition: all .5s;
+			transition: all .5s;
+			
+			
 
 
 
@@ -373,31 +374,14 @@
     }
 
 
-    .search-submit{
+		.search-submit,
+		.button {
         display: none;
     }
 }
 
+/* busqueda de recursos del home */
 .searchandfilter {
-
-	select,
-	input.postform {
-		border: 2px solid $color__main-bordes;
-		font-family: $font__system;
-		background-color: $color__main-superclaro;
-		padding: 8px;
-		font-size: 1rem;
-		height: 40px;
-	}
-	li {
-		padding-right: 0;
-	}
-	li h4 {
-		margin: 2px 0;
-		font-weight: 400;
-		letter-spacing: 1px;
-		font-size: .8rem;
-	}
 
 	&.home-searchandfilter ul {
 	  display: block;
@@ -407,66 +391,64 @@
 		li {
 			width: 100%;
 			padding: 0;
+			margin: 0;
 		}
 
 		input[value="Submit"] {
 			display: none;
+			
 		}
 	}
+}
 
-	&.recursos-searchandfilter {
-		width: 100%;
-		max-width: $query__medium;
-		margin: 40px auto;
+/* Widgets de recursos */
+.widgets-recursos {
+	
+	.searchandfilter {
+
+		h4 {
+			margin: 2em 0 .5em;
+		}
+		
+		label {
+			width: auto;
+		}
+
+		input[type="radio"] {
+			margin-right: 8px;			
+		}
 
 		ul {
-			padding: 0;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around;
-			align-items: flex-end;
+			display: block;
+		}
 
-			li:first-child {
-				flex: 1 1 100%;
-				padding-bottom: 20px;
-				margin: 0 0 20px;
-				position: relative;
+		ul>li:not(:first-child) {
+			font-size: 95%;
 
-				&:after {
-					content: "";
-					height: 2px;
-					width: 30%;
-					background: $color__main-bordes;
-					position: absolute;
-					bottom: 0;
-					left: 35%;
-				}
+			label {
+				margin-left: 28px;
+				text-indent: -26px;
 			}
+		}
 
-			li:not(:first-child) {
-				margin-bottom: .5em;
+		li {
+			margin-bottom: .5em;
 
-				select {
-					min-width: 200px;
-				}
-			}
+		}
 
-			li:last-child {
+		input[name="ofsearch"] {
+			margin-bottom: 2em;
+		}
 
-			}
+		.fa-search {
+			top: 22px;
+			left: 10px;
+			font-size: 20px;
+		}
 
-			li:last-child {
-				align-self: flex-end;
-			}
-
-			select {
-				max-width: 200px;
-			}
-			input[value="Filtrar"] {
-				height: 40px!important;
-				@include etiqueta($color__main-superclaro, $color__main);
-				border-color: $color__main-oscuro;
-			}
+		input[type="Submit"] {
+			margin-top: 1em;
+			
 		}
 	}
 }
@@ -478,7 +460,6 @@
 			}
 	}
 }
-
 
 
 //widgets de bbpress y learn-press

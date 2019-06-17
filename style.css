@@ -1158,7 +1158,6 @@ body.blog .site-content {
 	padding: 1em 1em 3em;
 	overflow: hidden;
 	font-family: "Roboto", sans-serif;
-	margin: 0 0 2.5em;
 }
 
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .post .entry-title a,
@@ -1175,8 +1174,8 @@ body.blog .site-content {
 	.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search).has-sidebar .site-content {
 		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-pack: distribute;
-		    justify-content: space-around;
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
@@ -1209,8 +1208,6 @@ body.blog .site-content {
 		display: flex;
 		-ms-flex-pack: justify;
 		    justify-content: space-between;
-		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap;
 	}
 	.forum-archive .page-header,
 	.forum-archive .entry-header,
@@ -1356,34 +1353,16 @@ body.blog .site-content {
 		-ms-flex-align: start;
 		    align-items: flex-start;
 	}
-	.archive-view .recurso .recurso__content figure.recurso-index-img {
-		width: 30%;
+	.archive-view .recurso .recurso__content img {
+		width: 150px;
 		height: auto;
 	}
 	.archive-view .recurso .recurso__content .recurso__text {
 		padding: 0 2em;
-		width: 66%;
+		width: auto;
 		-ms-flex-positive: 2;
 		    flex-grow: 2;
 	}
-}
-
-.beautiful-taxonomy-filters,
-.beautiful-taxonomy-filters-active-filter {
-	margin: 0 0 2em !important;
-	font-size: .9rem;
-}
-
-.beautiful-taxonomy-filters .filter-count-many {
-	margin-bottom: .5em;
-}
-
-.beautiful-taxonomy-filters button {
-	background-color: #6BA6C5;
-}
-
-.beautiful-taxonomy-filters button:hover {
-	color: white;
 }
 
 /*--------------------------------------------------------------

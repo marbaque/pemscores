@@ -326,58 +326,54 @@
   .search-field,
 	input[name="ofsearch"],
 	input[name="bbp_search"] { //agregar input de searchsandfilter plugin
-      width: 100%!important;
-			margin: 0 auto;
-      height: 40px;
-      border: 2px solid $color__main;
-      flex-grow: 1;
-      outline: 0;
-      padding: 24px 1em 24px 2.5em;
-      -webkit-appearance: none;
-      @include borde-redondeado(6px);
-      background: white;
-      font-family: $font__system;
-      font-size: 90%;
-      font-weight: 400;
-			position: relative;
-			transition: all .5s;
-			
-			
+		width: 100%!important;
+		margin: 0 auto;
+		height: 40px;
+		border: 2px solid $color__main;
+		flex-grow: 1;
+		outline: 0;
+		padding: 24px 1em 24px 2.5em;
+		-webkit-appearance: none;
+		@include borde-redondeado(6px);
+		background: white;
+		font-family: $font__system;
+		font-size: 90%;
+		font-weight: 400;
+		position: relative;
+		transition: all .5s;
+
+		&:focus{
+				width: 100%;
+				outline: 2;
+				box-shadow: 0 0 3px 2px hsla(0, 0, 0, 0.4);
+		}
+		&::-webkit-input-placeholder {
+				outline: 0;
+				border: 0 none;
+				font-weight: normal;
+				font-style: italic;
+		}
+		&:-moz-placeholder {
+				outline: 0;
+				border: 0 none;
+				font-weight: normal;
+				font-style: italic;
+		}
+		&:-ms-input-placeholder {
+				outline: 0;
+				border: 0 none;
+				font-weight: normal;
+				font-style: italic;
+		}
 
 
-
-      &:focus{
-          width: 100%;
-          outline: 2;
-          box-shadow: 0 0 3px 2px hsla(0, 0, 0, 0.4);
-      }
-      &::-webkit-input-placeholder {
-          outline: 0;
-          border: 0 none;
-          font-weight: normal;
-          font-style: italic;
-      }
-      &:-moz-placeholder {
-          outline: 0;
-          border: 0 none;
-          font-weight: normal;
-          font-style: italic;
-      }
-      &:-ms-input-placeholder {
-          outline: 0;
-          border: 0 none;
-          font-weight: normal;
-          font-style: italic;
-      }
+	}
 
 
-    }
-
-
-		.search-submit,
-		.button {
-        display: none;
-    }
+	.search-submit,
+	.button {
+			display: none;
+	}
 }
 
 /* busqueda de recursos del home */
@@ -407,7 +403,9 @@
 	.searchandfilter {
 
 		h4 {
-			margin: 2em 0 .5em;
+			margin: 1.5em 0 0;
+			font-size: .9em;
+			color: $color__main-oscuro;
 		}
 		
 		label {
@@ -437,7 +435,7 @@
 		}
 
 		input[name="ofsearch"] {
-			margin-bottom: 2em;
+			margin-bottom: 1em;
 		}
 
 		.fa-search {

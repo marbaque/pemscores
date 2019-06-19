@@ -42,7 +42,7 @@
 
 			<?php else : ?>
 
-				<p><?php esc_html_e( 'Parece que no encontramos que anda buscando. Inténtelo con una búsqueda.', 'pemscores' ); ?></p>
+				<p><?php esc_html_e( 'Parece que no encontramos lo que anda buscando. Inténtelo con una búsqueda.', 'pemscores' ); ?></p>
 				<?php get_search_form(); ?>
 			<?php endif; ?>
 		</div><!-- .page-content -->

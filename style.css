@@ -1138,10 +1138,6 @@ a:hover, a:active {
 	}
 }
 
-body.blog .site-content {
-	padding: 1em;
-}
-
 /*--------------------------------------------------------------
 ## Archives
 --------------------------------------------------------------*/
@@ -1208,6 +1204,8 @@ body.blog .site-content {
 		display: flex;
 		-ms-flex-pack: justify;
 		    justify-content: space-between;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 	.forum-archive .page-header,
 	.forum-archive .entry-header,
@@ -4271,7 +4269,9 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 
 /* Widgets de recursos */
 .widgets-recursos .searchandfilter h4 {
-	margin: 2em 0 .5em;
+	margin: 1.5em 0 0;
+	font-size: .9em;
+	color: #00529a;
 }
 
 .widgets-recursos .searchandfilter label {
@@ -4300,7 +4300,7 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 }
 
 .widgets-recursos .searchandfilter input[name="ofsearch"] {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 .widgets-recursos .searchandfilter .fa-search {

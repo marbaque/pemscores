@@ -403,7 +403,7 @@
 	.searchandfilter {
 
 		h4 {
-			margin: 1.5em 0 0;
+			margin: 0;
 			font-size: .9em;
 			color: $color__main-oscuro;
 		}
@@ -420,9 +420,13 @@
 			display: block;
 		}
 
-		ul>li:not(:first-child) {
-			font-size: 95%;
+		>div>ul>li:not(:first-child) {
+			margin-top: 2em;
+		}
 
+		>div>ul>li {
+			font-size: 95%;
+			
 			label {
 				margin-left: 28px;
 				text-indent: -26px;

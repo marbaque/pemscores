@@ -1,4 +1,5 @@
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) {
+	
 	.post,
 	.page,
 	.curso,
@@ -52,7 +53,6 @@
 				//margin: 0 auto;
 			}
 		}
-
 	}
 }
 
@@ -112,8 +112,7 @@
 		//padding: .5em;
 	}
 	input[type="submit"] {
-		border-color: white;
-		color: white;
+		
 
 		&:focus,
 		&:hover {
@@ -177,11 +176,12 @@
 //Archivo de recursos
 .archive-view {
 
-	// Archivo de recursos
-	&:not(.has-recursos-sidebar) {
-		.content-area {
-			margin: 0 auto;
-		}
+	.widgets-recursos {
+		order: -1;
+	}
+
+	.recursos-title {
+		margin-top: 0;
 	}
 
 	.recurso {
@@ -219,10 +219,15 @@
 				color: $color__gris;
 			}
 			.recurso-cats {
+
+				span:not(:last-child) {
+					&:after {
+						content: " | ";
+						color: $color__main;
+					}
+				}
 				
 				a {
-					color: $color__main;
-					text-decoration: none;
 					font-size: .8em;
 				}
 			}

@@ -64,13 +64,14 @@
 
 	a:hover,
 	a:focus {
-		color: $color__main-bordes;
+		background: $color__main-superclaro;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		background: $color__main-superclaro;
 	}
 
 	.menu-item-has-children,

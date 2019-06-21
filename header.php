@@ -76,12 +76,17 @@
 			
 			<section class="search-section">
 				<div class="home-search">
-					<!-- <h3> -->
-						<?php //echo __( 'Buscar recursos', 'pemscores'); ?>
-					<!-- </h3> -->
 
 					<?php
-					echo do_shortcode( '[searchandfilter fields="search" search_placeholder="Buscar curso, recursos..." class="home-searchandfilter"]' ); ?>
+					// The standard search form
+					$form = get_search_form( false );
+					
+					// Let's add a hidden input field
+					$form = str_replace( '<input type="submit"', '<input type="hidden" name="post_type" value="recurso"><input type="submit"', $form );
+					
+					// Display our modified form
+					echo $form;
+					?>
 
 				</div>
 			</section>

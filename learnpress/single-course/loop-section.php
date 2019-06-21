@@ -19,7 +19,7 @@ if ( ! isset( $section ) ) {
 }
 ?>
 
-<li<?php $section->main_class();?> id="section-<?php echo $section->get_slug(); ?>" data-id="<?php echo $section->get_slug(); ?>" data-section-id="<?php echo $section->get_id();?>">
+<li <?php $section->main_class();?> id="section-<?php echo $section->get_slug(); ?>" data-id="<?php echo $section->get_slug(); ?>" data-section-id="<?php echo $section->get_id();?>">
 
 	<?php
 	/**

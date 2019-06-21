@@ -42,4 +42,10 @@ figure {
 	background: $color__verde-claro;
 }
 
+p.small {
+	font-family: $font__system;
+	font-size: .8em;
+	margin: 0 0 .5em;
+}
+
 @import "tables";

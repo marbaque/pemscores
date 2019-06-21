@@ -28,13 +28,13 @@
 			
 			<?php else : ?>
 				<?php if( $fuente == 'ext' ): ?>
-				<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="200" height="200"]'); ?>
+				<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="150" height="150"]'); ?>
 				<?php elseif( $fuente == 'int' ): ?>
 				<?php
 					if( $file['type'] == 'image' ) {
 						echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '">';
 					} else {
-						echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200" height="200"]');
+						echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="150" height="150"]');
 					}?>
 				<?php endif; ?>		
 		<?php endif; ?>
@@ -48,16 +48,16 @@
 			<div class="recurso-cats">
 				<!-- Ejes temáticos -->
 				    <?php echo get_the_term_list(
-				            $post->ID, 'temas', __('<span>', 'pemscores'), ' ', '</span>' ); ?>
+				            $post->ID, 'temas', __('<span>', 'pemscores'), ', ', '</span>' ); ?>
 				<!-- coberturas -->
 				    <?php echo get_the_term_list(
-				            $post->ID, 'cobertura', __('<span>', 'pemscores'), ' ', '</span>' ); ?>
+				            $post->ID, 'cobertura', __('<span>', 'pemscores'), ', ', '</span>' ); ?>
 				<!-- tipos de recurso -->
 				    <?php echo get_the_term_list(
-				        $post->ID, 'tipo_recurso', __('<span> ', 'pemscores'), ' ', '</span>' ); ?>
+				        $post->ID, 'tipo_recurso', __('<span> ', 'pemscores'), ', ', '</span>' ); ?>
 				<!-- Formato -->
 				    <?php echo get_the_term_list(
-				        $post->ID, 'tipo_medio', __('<span> ', 'pemscores'), ' ', '</span>' ); ?>
+				        $post->ID, 'tipo_medio', __('<span> ', 'pemscores'), ', ', '</span>' ); ?>
 
 			</div><!-- .recurso-cats -->
 		</div><!-- .recurso__content -->

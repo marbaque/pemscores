@@ -31,3 +31,37 @@
 <?php 
 
 endif;
+?>
+
+
+</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<aside id="secondary" class="widget-area widgets-recursos" role="complimentary">
+
+		<div class="widget">
+			<?php
+				// The standard search form
+				$form = get_search_form( false );
+				
+				// Let's add a hidden input field
+				$form = str_replace( '<input type="submit"', '<input type="hidden" name="post_type" value="recurso"><input type="submit"', $form );
+				
+				// Display our modified form
+				echo $form;
+				?>
+		</div>
+
+		<div class="widget">
+			<div class="widget-inner">
+				<h2 class="widget-title">Filtrar</h2>
+				<?php echo do_shortcode('[searchandfilter fields="temas,cobertura,tipo_recurso,tipo_medio" types="radio,radio,radio,radio" headings="Ejes temáticos:,Cobertura:,Tipo de recurso:,Tipo de medio:" show_count="1,1,1,1" operators=”OR”   empty_search_url="/recursos/" search_placeholder="Palabras clave" submit_label="Filtrar"]'); 
+				?>
+			</div>
+		</div>	
+	</aside> <!-- secondary -->
+
+
+<?php
+
+get_footer();

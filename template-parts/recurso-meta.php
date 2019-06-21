@@ -43,7 +43,7 @@
 
     <!-- coberturas -->
     <?= get_the_term_list(
-            $post->ID, 'cobertura', __('<li><i class="fa fa-bullhorn" aria-hidden="true"></i> <strong>Cobertura:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
+            $post->ID, 'cobertura', __('<li><i class="fa fa-map-o" aria-hidden="true"></i> <strong>Cobertura:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
 
     <!-- tipos de recurso -->
     <?= get_the_term_list(

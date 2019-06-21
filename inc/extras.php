@@ -37,11 +37,6 @@ function pemscores_body_classes( $classes ) {
 		$classes[] = 'has-page-sidebar';
 	}
 
-	// Add a class telling us if the recursos sidebar is in use.
-	if ( is_active_sidebar( 'sidebar-3' ) ) {
-		$classes[] = 'has-recursos-sidebar';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'pemscores_body_classes' );

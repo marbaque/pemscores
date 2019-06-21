@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, hecho a partir de _s.
-Version: 2.4
+Version: 2.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -490,6 +490,12 @@ figure {
 	background: #eaf7df;
 }
 
+p.small {
+	font-family: "system";
+	font-size: .8em;
+	margin: 0 0 .5em;
+}
+
 table {
 	border-collapse: collapse;
 	margin: 0 0 1.5em;
@@ -803,6 +809,7 @@ fieldset {
 --------------------------------------------------------------*/
 a {
 	color: #006edc;
+	text-decoration: none;
 }
 
 a:visited {
@@ -810,7 +817,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: #6696c7;
+	color: #ff961e;
 }
 
 a:focus {
@@ -819,25 +826,6 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
-}
-
-.page-content a,
-.entry-content a,
-.entry-summary a,
-.comment-content a {
-	text-decoration: none;
-	border-bottom: 2px solid #006edc;
-}
-
-.page-content a:focus, .page-content a:hover,
-.entry-content a:focus,
-.entry-content a:hover,
-.entry-summary a:focus,
-.entry-summary a:hover,
-.comment-content a:focus,
-.comment-content a:hover {
-	color: #00529a;
-	border-color: #00529a;
 }
 
 .botones {
@@ -970,8 +958,8 @@ a:hover, a:active {
 }
 
 .pagination .current {
-	font-weight: 600;
-	color: #6696c7;
+	background: #006edc;
+	color: white;
 }
 
 .pagination .prev .icon {
@@ -1138,6 +1126,10 @@ a:hover, a:active {
 	}
 }
 
+body.blog .site-content {
+	padding: 1em;
+}
+
 /*--------------------------------------------------------------
 ## Archives
 --------------------------------------------------------------*/
@@ -1246,12 +1238,6 @@ a:hover, a:active {
 	background: #6BA6C5;
 }
 
-.search input[type="submit"],
-.error-404 input[type="submit"] {
-	border-color: white;
-	color: white;
-}
-
 .search input[type="submit"]:focus, .search input[type="submit"]:hover,
 .error-404 input[type="submit"]:focus,
 .error-404 input[type="submit"]:hover {
@@ -1302,8 +1288,13 @@ a:hover, a:active {
 	position: absolute;
 }
 
-.archive-view:not(.has-recursos-sidebar) .content-area {
-	margin: 0 auto;
+.archive-view .widgets-recursos {
+	-ms-flex-order: -1;
+	    order: -1;
+}
+
+.archive-view .recursos-title {
+	margin-top: 0;
 }
 
 .archive-view .recurso:before {
@@ -1338,9 +1329,12 @@ a:hover, a:active {
 	color: #888;
 }
 
-.archive-view .recurso .recurso__content .recurso-cats a {
+.archive-view .recurso .recurso__content .recurso-cats span:not(:last-child):after {
+	content: " | ";
 	color: #006edc;
-	text-decoration: none;
+}
+
+.archive-view .recurso .recurso__content .recurso-cats a {
 	font-size: .8em;
 }
 
@@ -1497,7 +1491,14 @@ Header Menu
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	color: #6696c7;
+	background: #ebf3fc;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	background: #ebf3fc;
 }
 
 .main-navigation .menu-item-has-children > a,
@@ -4269,7 +4270,7 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 
 /* Widgets de recursos */
 .widgets-recursos .searchandfilter h4 {
-	margin: 1.5em 0 0;
+	margin: 0;
 	font-size: .9em;
 	color: #00529a;
 }
@@ -4286,11 +4287,15 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	display: block;
 }
 
-.widgets-recursos .searchandfilter ul > li:not(:first-child) {
+.widgets-recursos .searchandfilter > div > ul > li:not(:first-child) {
+	margin-top: 2em;
+}
+
+.widgets-recursos .searchandfilter > div > ul > li {
 	font-size: 95%;
 }
 
-.widgets-recursos .searchandfilter ul > li:not(:first-child) label {
+.widgets-recursos .searchandfilter > div > ul > li label {
 	margin-left: 28px;
 	text-indent: -26px;
 }

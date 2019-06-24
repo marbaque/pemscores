@@ -11,6 +11,7 @@
 	// $('#orders-personal-li').remove(); 
 	// con la traducción el id cambia
 	$('#pedidos-personal-li').remove();
+	$('#quizzes-personal-li').remove();
 	
 	/*
 	 * Test if inline SVGs are supported.

@@ -64,14 +64,14 @@
 
 	a:hover,
 	a:focus {
-		background: $color__main-superclaro;
+		background: hsla(0, 0, 100, .4);
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		background: $color__main-superclaro;
+		background: hsla(0, 0, 100, .4);
 	}
 
 	.menu-item-has-children,
@@ -129,7 +129,7 @@ button.dropdown-toggle {
 	}
 
 	>a {
-		background: $color__main;
+		background: $color__main!important;
 		color: $color__main-claro;
 	
 		&:before {
@@ -140,6 +140,7 @@ button.dropdown-toggle {
 
 		&:hover {
 			color: white;
+			background: $color__main-oscuro;
 		}
 	}
 }

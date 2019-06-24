@@ -1491,14 +1491,14 @@ Header Menu
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	background: #ebf3fc;
+	background: rgba(255, 255, 255, 0.4);
 }
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-	background: #ebf3fc;
+	background: rgba(255, 255, 255, 0.4);
 }
 
 .main-navigation .menu-item-has-children > a,
@@ -1548,7 +1548,7 @@ button.dropdown-toggle {
 
 .mi-perfil > a,
 .bp-login-nav > a {
-	background: #006edc;
+	background: #006edc !important;
 	color: #cce2f8;
 }
 
@@ -1562,6 +1562,7 @@ button.dropdown-toggle {
 .mi-perfil > a:hover,
 .bp-login-nav > a:hover {
 	color: white;
+	background: #00529a;
 }
 
 .ajustes > a:before {
@@ -1704,7 +1705,7 @@ body:not(.logged-in) li.bp-comunidad {
 
 .fp-content {
 	max-width: 1280px;
-	margin: 2em auto;
+	margin: 1em auto;
 	font-size: 1.2em;
 	font-family: "Roboto", sans-serif;
 	color: #6696c7;

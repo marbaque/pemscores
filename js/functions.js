@@ -8,7 +8,9 @@
 	$('#bbp_search').before('<i class="fa fa-search" aria-hidden="true"></i>');
 
 	// Quitar tab de pedidos (orders) del perfil de buddypress
-	$('#orders-personal-li').remove();
+	// $('#orders-personal-li').remove(); 
+	// con la traducción el id cambia
+	$('#pedidos-personal-li').remove();
 	
 	/*
 	 * Test if inline SVGs are supported.

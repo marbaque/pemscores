@@ -483,6 +483,8 @@
 					width: 100%;
 				}
 			}
+
+			
 		}
 	}
 
@@ -506,6 +508,16 @@
 
 		#bp-login-widget-form label {
 			font-size: .9em;
+		}
+
+		a.logout {
+			font-size: .9em;
+			
+			&:before {
+				font-family: 'FontAwesome';
+				content: "\f08b";
+				margin-right: .5em;
+			}
 		}
 	}
 

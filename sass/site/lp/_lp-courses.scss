@@ -260,3 +260,34 @@ ul.curriculum-sections
 .course-overview_section:nth-child(4) { // reseñas
   font-family: $font__system;
 } 
+
+//Sección de star reviews y opiniones
+#course-reviews {
+
+  .course-reviews-list {
+    padding-left: 0;
+
+    .review-author {
+
+      float: left!important;
+      
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .review-author-info {
+      display: inline-block;
+    }
+
+    .review-title {
+
+    }
+
+    .review-text {
+      width: 100%;
+      display: block;
+      font-size: .9em;
+    }
+  }
+}

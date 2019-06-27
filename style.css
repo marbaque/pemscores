@@ -2482,6 +2482,28 @@ body:not(.logged-in) li.bp-comunidad {
 	font-family: "system";
 }
 
+#course-reviews .course-reviews-list {
+	padding-left: 0;
+}
+
+#course-reviews .course-reviews-list .review-author {
+	float: left !important;
+}
+
+#course-reviews .course-reviews-list .review-author img {
+	border-radius: 50%;
+}
+
+#course-reviews .course-reviews-list .review-author-info {
+	display: inline-block;
+}
+
+#course-reviews .course-reviews-list .review-text {
+	width: 100%;
+	display: block;
+	font-size: .9em;
+}
+
 .archive-view.learnpress .site .site-content .page-header {
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
@@ -4362,6 +4384,16 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 
 .widget.buddypress #bp-login-widget-form label {
 	font-size: .9em;
+}
+
+.widget.buddypress a.logout {
+	font-size: .9em;
+}
+
+.widget.buddypress a.logout:before {
+	font-family: 'FontAwesome';
+	content: "\f08b";
+	margin-right: .5em;
 }
 
 .widget.widget_display_replies li {

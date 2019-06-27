@@ -267,9 +267,14 @@ ul.curriculum-sections
   .course-reviews-list {
     padding-left: 0;
 
-    .review-author {
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      border-color: $color__main-claro;
+    }
 
-      float: left!important;
+    .review-author {
+      flex: 0 0 80px;
       
       img {
         border-radius: 50%;
@@ -277,17 +282,23 @@ ul.curriculum-sections
     }
 
     .review-author-info {
-      display: inline-block;
-    }
+      flex: 1;
 
-    .review-title {
+      .user-name {
+        font-size: 1.2em;
+      }
 
+      .review-title {
+        margin: 0 0 .5em;
+        font-style: normal;
+        font-size: 1em;
+        width: auto;
+      }
     }
 
     .review-text {
-      width: 100%;
-      display: block;
       font-size: .9em;
+      flex: 1 0 100%;
     }
   }
 }

@@ -1060,12 +1060,13 @@ a:hover, a:active {
 ## Global layouts
 --------------------------------------------------------------*/
 .site-content {
-	padding: 0 1em 1em;
+	padding: 1em;
+	background: white;
 }
 
 @media screen and (min-width: 600px) {
 	.site-content {
-		padding: 0 2em 2em;
+		padding: 2em;
 	}
 }
 
@@ -1124,10 +1125,6 @@ a:hover, a:active {
 	.learnpress-page:not(.has-page-sidebar) .post-content {
 		max-width: 66%;
 	}
-}
-
-body.blog .site-content {
-	padding: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -1928,18 +1925,18 @@ body:not(.logged-in) li.bp-comunidad {
 .full-bleed {
 	width: 100vw;
 	min-height: 400px;
-	max-height: 780px;
+	max-height: 640px;
 	margin-left: -1em;
 	border-bottom: 1px solid #cce2f8;
 	overflow: hidden;
 	position: relative;
-	background-color: white;
-	background-attachment: fixed;
+	top: -1em;
 }
 
 @media screen and (min-width: 600px) {
 	.full-bleed {
 		margin-left: -2em;
+		top: -2em;
 	}
 }
 
@@ -1959,44 +1956,44 @@ body:not(.logged-in) li.bp-comunidad {
 .full-bleed img {
 	display: block;
 	margin: 0 auto;
-	height: inherit;
+	max-height: 800px;
 	min-height: 400px;
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
 
-.full-bleed h1.course-title {
+.full-bleed .course-title_wrap {
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	margin: 0 1em 1em;
+	right: 0;
 	display: block;
-	z-index: 99;
+	width: 100%;
+	background: #f4f4f4;
+}
+
+.full-bleed h1.course-title {
 	font-size: 2rem;
-	width: auto;
-	background: rgba(0, 0, 0, 0.5);
-	padding: 0.1em .2em;
-	color: white;
-	border-radius: 8px;
-	border: 1px solid #cce2f8;
+	margin: 0 auto;
+	max-width: 1280px;
+	padding: .5em;
 }
 
 @media screen and (min-width: 600px) {
 	.full-bleed h1.course-title {
 		font-size: 2.5rem;
-		padding: .2em .4em;
 	}
 }
 
 @media screen and (min-width: 900px) {
 	.full-bleed h1.course-title {
-		font-size: 3rem;
-		width: 740px;
+		font-size: 3.5rem;
 	}
 }
 
 .page-header,
 .entry-header {
+	margin-top: -1em;
 	padding: 2em 1em;
 	margin-left: -1em;
 	margin-right: -1em;
@@ -2007,9 +2004,15 @@ body:not(.logged-in) li.bp-comunidad {
 @media screen and (min-width: 600px) {
 	.page-header,
 	.entry-header {
+		margin-top: -2em;
 		padding: 4em 1em 2em;
 		position: relative;
+		margin-left: -2em;
+		margin-right: -2em;
 	}
+}
+
+@media screen and (min-width: 1280px) {
 	.page-header:before,
 	.entry-header:before {
 		content: "";
@@ -2021,16 +2024,8 @@ body:not(.logged-in) li.bp-comunidad {
 		left: 0;
 		top: 0;
 		z-index: -1;
-		margin-left: -1em;
-		margin-right: -1em;
-	}
-}
-
-@media screen and (min-width: 1280px) {
-	.page-header:before,
-	.entry-header:before {
-		margin-right: calc( ((-100vw + 1280px)/2) - 1em);
-		margin-left: calc( ((-100vw + 1280px)/2) - 1em);
+		margin-right: calc( ((-100vw + 1280px)/2) - 2em);
+		margin-left: calc( ((-100vw + 1280px)/2));
 	}
 }
 
@@ -2550,7 +2545,7 @@ body:not(.logged-in) li.bp-comunidad {
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
 	position: relative;
-	background: #f8f9fa;
+	background: #f4f4f4;
 	border: 1px solid #006edc;
 	padding: 1em 1em 4em;
 	margin-bottom: 1em;
@@ -2978,18 +2973,7 @@ body.buddypress .site-content .entry-header {
 }
 
 #buddypress #header-cover-image {
-	background-color: #006edc;
-	background-size: auto 80%;
-	background-position: center center;
-	background-repeat: none;
-	background-size: cover;
-}
-
-#buddypress .activity {
-	background: #006edc;
-	color: white;
-	padding: 1px 4px;
-	border-radius: 2px;
+	background-color: #f4f4f4;
 }
 
 .buddypress-wrap .bp-navs.tabbed-links {
@@ -4177,7 +4161,7 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	display: block;
 	position: absolute;
 	top: 12px;
-	left: 14px;
+	right: 14px;
 	z-index: 99;
 	line-height: 1;
 	color: #006edc;
@@ -4202,7 +4186,7 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	-ms-flex-positive: 1;
 	    flex-grow: 1;
 	outline: 0;
-	padding: 24px 1em 24px 2.5em;
+	padding: 24px 2.5em 24px 1em;
 	-webkit-appearance: none;
 	border-radius: 6px;
 	background: white;

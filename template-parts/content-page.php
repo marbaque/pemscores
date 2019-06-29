@@ -15,7 +15,7 @@
 			the_post_thumbnail('pemscores-full-bleed');
 			?>
 		<?php if ( is_singular('lp_course') ): ?>
-			<?php the_title( '<h1 class="course-title">', '</h1>' ); ?>
+			<div class="course-title_wrap"><?php the_title( '<h1 class="course-title">', '</h1>' ); ?></div>
 		<?php endif; ?>
 	</div><!-- .full-bleed -->
 

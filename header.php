@@ -66,13 +66,9 @@
 
 	<?php if ( is_front_page() ): ?>
 
-		<?php if ( get_header_image() ) : ?>
-		<section class="hero-banner custom-image" style="background-image: url(<?php header_image(); ?>);" aria-role="banner">
-		<?php else : ?>
-			<section class="hero-banner" aria-role="banner">
-		<?php endif; // End header image check. ?>
-
-			<h1 class="hero-title">Academia Municipal</h1>
+		<section class="hero-banner" aria-role="banner">
+			
+		<h1 class="hero-title">Academia Municipal</h1>
 			
 			<section class="search-section">
 				<div class="home-search">

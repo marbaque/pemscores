@@ -90,18 +90,12 @@ body.buddypress {
 
 // Perfil de buddypress
 #buddypress #header-cover-image {
-  background-color: $color__main;
-  background-size: auto 80%;
-  background-position: center center;
-  background-repeat: none;
-  background-size: cover;
+  background-color: $color__gris-claro;
+  
 }
 
 #buddypress .activity {
-  background: $color__main;
-  color: white;
-  padding: 1px 4px;
-  border-radius: 2px;
+  
 }
 
 .buddypress-wrap .bp-navs.tabbed-links {

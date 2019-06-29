@@ -1,8 +1,9 @@
 .site-content {
-	padding: 0 1em 1em;
+	padding: 1em;
+	background: white;
 
 	@media screen and (min-width: $query__small) {
-		padding: 0 2em 2em;
+		padding: 2em;
 	}
 }
 
@@ -63,11 +64,4 @@
 
 
 
-}
-
-// Solo para blog
-body.blog  {
-	.site-content {
-		padding: 1em;
-	}
 }

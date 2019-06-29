@@ -317,7 +317,7 @@
 		display: block;
 		position: absolute;
 		top: 12px;
-		left: 14px;
+		right: 14px;
 		z-index: 99;
 		line-height: 1;
 		color: $color__main;
@@ -332,7 +332,7 @@
 		border: 2px solid $color__main;
 		flex-grow: 1;
 		outline: 0;
-		padding: 24px 1em 24px 2.5em;
+		padding: 24px 2.5em 24px 1em;
 		-webkit-appearance: none;
 		@include borde-redondeado(6px);
 		background: white;

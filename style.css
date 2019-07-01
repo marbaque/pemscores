@@ -4337,8 +4337,8 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 }
 
 .widgets-recursos .searchandfilter .fa-search {
-	top: 22px;
-	left: 10px;
+	top: 24px;
+	right: 24px;
 	font-size: 20px;
 }
 

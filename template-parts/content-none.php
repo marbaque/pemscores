@@ -8,24 +8,22 @@
  */
 
 ?>
-<header class="page-header">
-	<h1 class="page-title">
-		<?php
-		if ( is_404() ) { esc_html_e( 'Página no disponible', 'pemscores' );
-		} else if ( is_search() ) {
-			/* translators: %s = search query */
-			printf( esc_html__( 'Nada encontrado para &ldquo;%s&rdquo;', 'pemscores'), get_search_query() );
-		} else {
-			esc_html_e( 'Nada encontrado', 'pemscores' );
-		}
-		?>
-	</h1>
-</header><!-- .page-header -->
-
 <section id="primary" class="content-area <?php if ( is_404() ) { echo 'error-404'; } else { echo 'no-results'; } ?> not-found">
 	<main id="main" class="site-main" role="main">
 
 		<div class="page-content">
+			<h1 class="page-title">
+				<?php
+				if ( is_404() ) { esc_html_e( 'Página no disponible', 'pemscores' );
+				} else if ( is_search() ) {
+					/* translators: %s = search query */
+					printf( esc_html__( 'Nada encontrado para &ldquo;%s&rdquo;', 'pemscores'), get_search_query() );
+				} else {
+					esc_html_e( 'Nada encontrado', 'pemscores' );
+				}
+				?>
+			</h1>
+			
 			<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
 				<p><?php printf( wp_kses( __( '¿Quiere hacer su primera publicación? <a href="%1$s">Empieze aquí</a>.', 'pemscores' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
@@ -80,5 +78,5 @@
 </section><!-- #primary -->
 
 <?php
-get_sidebar();
+get_sidebar( 'recursos' );
 get_footer();

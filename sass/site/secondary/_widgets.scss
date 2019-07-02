@@ -420,8 +420,14 @@
 			display: block;
 		}
 
-		>div>ul>li:not(:first-child) {
-			margin-top: 2em;
+		>div>ul>li:first-child {
+			margin: 0!important;
+			padding: 0;
+		}
+
+		>div>ul>li:not(:first-child),
+		>div>ul>li:not(:last-child) {
+			margin-top: 1em;
 		}
 
 		>div>ul>li {
@@ -435,7 +441,6 @@
 
 		li {
 			margin-bottom: .5em;
-
 		}
 
 		input[name="ofsearch"] {
@@ -443,15 +448,21 @@
 		}
 
 		.fa-search {
-			top: 24px;
+			top: 20px;
 			right: 24px;
 			font-size: 20px;
 		}
 
 		input[type="Submit"] {
 			margin-top: 1em;
-			
+			text-align: right;
 		}
+	}
+
+	a.clean-search {
+		display: block;
+		font-size: .8em;
+		margin-top: 1em;
 	}
 }
 

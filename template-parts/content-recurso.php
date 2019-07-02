@@ -18,26 +18,26 @@
 
 
 	<div class="recurso__content">
+		
+		<?php
+			$medioClass = "empty";
+			
+			if ( has_term('documento', 'tipo_medio') ) {
+				$medioClass = "documento";
+			}
+			if ( has_term('audio', 'tipo_medio') ) {
+				$medioClass = "audio";
+			}
+			if ( has_term('sitio-web', 'tipo_medio') ) {
+				$medioClass = "sitio-web";
+			}
+			if ( has_term('video', 'tipo_medio') ) {
+				$medioClass = "video";
+			}
 
-		<?php if ( has_post_thumbnail() ) : ?>
-			
-			
-			<figure class="recurso-index-img">
-			<a href="<?= esc_url( get_permalink() ); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-			</figure>
-			
-			<?php else : ?>
-				<?php if( $fuente == 'ext' ): ?>
-				<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="150" height="150"]'); ?>
-				<?php elseif( $fuente == 'int' ): ?>
-				<?php
-					if( $file['type'] == 'image' ) {
-						echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '">';
-					} else {
-						echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="150" height="150"]');
-					}?>
-				<?php endif; ?>		
-		<?php endif; ?>
+		?>
+		
+		<div class="recurso-icon <?php echo $medioClass; ?>"></div>
 
 		<div class="recurso__text">
 				<?php

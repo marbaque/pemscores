@@ -11,8 +11,11 @@
 <section id="primary" class="content-area <?php if ( is_404() ) { echo 'error-404'; } else { echo 'no-results'; } ?> not-found">
 	<main id="main" class="site-main" role="main">
 
-		<div class="page-content">
+		<div class="page-content search-box">
 			<h1 class="page-title">
+				<div class="icon-none">
+					<img src="<?= get_template_directory_uri(); ?>/images/icons/search_result_icon.svg" alt="Search icon" aria-hidden="true">
+				</div>
 				<?php
 				if ( is_404() ) { esc_html_e( 'Página no disponible', 'pemscores' );
 				} else if ( is_search() ) {

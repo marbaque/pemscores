@@ -1227,18 +1227,32 @@ a:hover, a:active {
 }
 
 /* For content-none.php */
-.search .page-content,
-.error-404 .page-content {
-	margin-bottom: 2em;
-	padding: 1em 2em;
+.search .search-box,
+.error-404 .search-box,
+.archive .search-box {
+	margin: 0 0 2em;
+	padding: 1em 2em 2em;
 	color: white;
-	background: #6BA6C5;
+	background: #00529a;
+	font-family: "Roboto", sans-serif;
 }
 
 .search input[type="submit"]:focus, .search input[type="submit"]:hover,
 .error-404 input[type="submit"]:focus,
-.error-404 input[type="submit"]:hover {
+.error-404 input[type="submit"]:hover,
+.archive input[type="submit"]:focus,
+.archive input[type="submit"]:hover {
 	color: black;
+}
+
+.icon-none {
+	text-align: center;
+}
+
+.icon-none img {
+	width: 206px;
+	height: 206px;
+	margin: 0 auto;
 }
 
 .sticky:before, .recurso-wrap:before {
@@ -1301,57 +1315,95 @@ a:hover, a:active {
 	height: 2em;
 	position: absolute;
 	top: 0;
-	right: .5em;
+	right: .25em;
 	background: url("images/bookmark-search.svg") no-repeat;
 	background-size: contain;
 }
 
-.archive-view .recurso figure.recurso-index-img {
-	width: 100%;
-	height: 200px;
-	overflow: hidden;
+.archive-view .recurso .recurso__content {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: start;
+	    align-items: flex-start;
 }
 
-.archive-view .recurso figure.recurso-index-img img {
-	width: 100%;
+.archive-view .recurso .recurso__content .recurso-icon {
+	width: 80px;
+	height: 80px;
+	background-color: #f4f4f4;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	margin-right: 1em;
+	background-size: 60%;
 }
 
-.archive-view .recurso .recurso__content .entry-title {
-	font-size: 1.2em;
+@media screen and (min-width: 600px) {
+	.archive-view .recurso .recurso__content .recurso-icon {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+.archive-view .recurso .recurso__content .recurso-icon.documento {
+	background: url(images/icons/document_format_icon.svg) no-repeat center center #f4f4f4;
+	background-size: 50%;
+}
+
+.archive-view .recurso .recurso__content .recurso-icon.video {
+	background: url(images/icons/video_format_icon.svg) no-repeat center center #f4f4f4;
+	background-size: 50%;
+}
+
+.archive-view .recurso .recurso__content .recurso-icon.audio {
+	background: url(images/icons/audio_format_icon.svg) no-repeat center center #f4f4f4;
+	background-size: 50%;
+}
+
+.archive-view .recurso .recurso__content .recurso-icon.sitio-web {
+	background: url(images/icons/web_site_format_icon.svg) no-repeat center center #f4f4f4;
+	background-size: 50%;
+}
+
+.archive-view .recurso .recurso__content .recurso-icon.imagen {
+	background: url(images/icons/image_format_icon.svg) no-repeat center center #f4f4f4;
+	background-size: 50%;
+}
+
+.archive-view .recurso .recurso__content .recurso__text .entry-title {
+	font-size: 1em;
 	margin-bottom: 0.5em;
+	margin-top: 0;
+	padding-right: 1.5em;
 }
 
-.archive-view .recurso .recurso__content p {
-	font-size: .86em;
+.archive-view .recurso .recurso__content .recurso__text .entry-title a {
+	color: #444;
+}
+
+.archive-view .recurso .recurso__content .recurso__text .entry-title a:hover {
+	color: #ff961e;
+}
+
+.archive-view .recurso .recurso__content .recurso__text p {
+	font-size: .8em;
 	color: #888;
+	line-height: 1.4;
+	margin: 0 0 .5em;
 }
 
-.archive-view .recurso .recurso__content .recurso-cats span:not(:last-child):after {
+.archive-view .recurso .recurso__content .recurso__text .recurso-cats {
+	font-size: .8em;
+	line-height: 1.1;
+	text-transform: uppercase;
+}
+
+.archive-view .recurso .recurso__content .recurso__text .recurso-cats span:not(:last-child):after {
 	content: " | ";
 	color: #006edc;
 }
 
-.archive-view .recurso .recurso__content .recurso-cats a {
+.archive-view .recurso .recurso__content .recurso__text .recurso-cats a {
 	font-size: .8em;
-}
-
-@media screen and (min-width: 600px) {
-	.archive-view .recurso .recurso__content {
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-align: start;
-		    align-items: flex-start;
-	}
-	.archive-view .recurso .recurso__content img {
-		width: 150px;
-		height: auto;
-	}
-	.archive-view .recurso .recurso__content .recurso__text {
-		padding: 0 2em;
-		width: auto;
-		-ms-flex-positive: 2;
-		    flex-grow: 2;
-	}
 }
 
 /*--------------------------------------------------------------
@@ -4315,8 +4367,14 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	display: block;
 }
 
-.widgets-recursos .searchandfilter > div > ul > li:not(:first-child) {
-	margin-top: 2em;
+.widgets-recursos .searchandfilter > div > ul > li:first-child {
+	margin: 0 !important;
+	padding: 0;
+}
+
+.widgets-recursos .searchandfilter > div > ul > li:not(:first-child),
+.widgets-recursos .searchandfilter > div > ul > li:not(:last-child) {
+	margin-top: 1em;
 }
 
 .widgets-recursos .searchandfilter > div > ul > li {
@@ -4337,12 +4395,19 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 }
 
 .widgets-recursos .searchandfilter .fa-search {
-	top: 24px;
+	top: 20px;
 	right: 24px;
 	font-size: 20px;
 }
 
 .widgets-recursos .searchandfilter input[type="Submit"] {
+	margin-top: 1em;
+	text-align: right;
+}
+
+.widgets-recursos a.clean-search {
+	display: block;
+	font-size: .8em;
 	margin-top: 1em;
 }
 

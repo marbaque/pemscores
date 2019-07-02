@@ -19,15 +19,16 @@ get_header(); ?>
 	}
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			
-			<?php
-				the_archive_title( '<h2 class="recursos-title">', '</h2>' );
-			?>
+	
 
 			<?php if ( have_posts() ) : ?>
-
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main" role="main">
+					
+					<?php
+						the_archive_title( '<h2 class="recursos-title">', '</h2>' );
+					?>
+				
 				<?php 
 					$countPosts = $wp_the_query->post_count; 
 					$count = $GLOBALS['wp_query']->found_posts;
@@ -52,7 +53,7 @@ get_header(); ?>
 
 			else :
 
-				get_template_part( 'template-parts/content', 'none-recurso' );
+				get_template_part( 'template-parts/content', 'none' );
 				return;
 			
 			endif;

@@ -7,18 +7,32 @@
  * @package pemscores
  */
 
-if ( ! is_active_sidebar( 'sidebar-3' )  )
-{
-	return;
-}
+
 ?>
 <aside id="secondary" class="widget-area widgets-recursos" role="complimentary">
-
+	<!-- agregamos un widget manualmente con el shorcode para el plugin search and filter -->
+	<!-- http://docs.designsandcode.com/search-filter/ -->
 	<div class="widget">
+		
 		<div class="widget-inner">
-			<h2 class="widget-title"><?= echo __( 'Filtrar', 'pemscores' ); ?></h2>
-			<?php echo do_shortcode('[searchandfilter fields="temas,cobertura,tipo_recurso,tipo_medio" headings="Ejes temáticos:,Cobertura:,Tipo de recurso:,Tipo de medio:" show_count="1,1,1,1" operators=”OR” empty_search_url="/recursos/" search_placeholder="Palabras clave" submit_label="Filtrar"]'); ?>
+			
+			<h2 class="widget-title"><?= __( 'Filtrar recursos', 'pemscores' ); ?></h2>
+			
+			<?php echo do_shortcode('[searchandfilter fields="search,temas,cobertura,tipo_recurso,tipo_medio" headings=",Ejes temáticos:,Cobertura:,Tipo de recurso:,Tipo de medio:" show_count=",1,1,1,1" operators=”OR” empty_search_url="/recursos/" search_placeholder="Palabras clave" submit_label="Filtrar"]'); ?>
+			
+			<a class="clean-search" href="/recursos/">
+				<i class="fa fa-refresh" aria-hidden="true"></i>
+				<?= __( 'Limpiar', 'pemscores'); ?>
+			</a>
+
 		</div>
-	</div>	
-	<?php dynamic_sidebar( 'sidebar-3' ); ?>
+	</div>
+	
+	<?php
+		if ( is_active_sidebar( 'sidebar-3' )  )
+			{
+				dynamic_sidebar( 'sidebar-3' );
+			}	
+	?>
+
 </aside> <!-- secondary -->

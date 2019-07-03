@@ -34,24 +34,44 @@ $file = get_field('subir_arch');
 
 		<div class="recurso-inner">
 
-			<div class="recurso-media">
-			
-			<?php if ( has_post_thumbnail() ) : ?>
+			<?php
+				$medioClass = "empty";
 				
-				<?php the_post_thumbnail('recurso-portada'); ?>
-				
-				<?php else : ?>
-					<?php if( $fuente == 'ext' ): ?>
-						<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="440"]'); ?>
-					<?php elseif( $fuente == 'int' ): ?>
-						<?php
-						if( $file['type'] == 'image' ) {
-							echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200px" height"auto">';
-						} else {
-							echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]');
-						}?>
-					<?php endif; ?>		
-			<?php endif; ?>
+				if ( has_term('documento', 'tipo_medio') ) {
+					$medioClass = "documento";
+				}
+				if ( has_term('audio', 'tipo_medio') ) {
+					$medioClass = "audio";
+				}
+				if ( has_term('sitio-web', 'tipo_medio') ) {
+					$medioClass = "sitio-web";
+				}
+				if ( has_term('video', 'tipo_medio') ) {
+					$medioClass = "video";
+				}
+			?>
+
+			<div class="recurso-media <?= $medioClass; ?>">
+
+				<!-- si se subió una imagen al recurso -->
+				<?php if ( has_post_thumbnail() ) : ?>
+					
+					<?php the_post_thumbnail('recurso-portada'); ?>
+					
+					<?php else : ?>
+						<!-- si es una fuente externa, obtener la captura de pantalla -->
+						<?php if( $fuente == 'ext' ): ?>
+							<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="440"]'); ?>
+						
+						<?php elseif( $fuente == 'int' ): ?>
+							<?php
+							if( $file['type'] == 'image' ) {
+								echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200px" height"auto">';
+							} else {
+								echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]');
+							}?>
+						<?php endif; ?>		
+				<?php endif; ?>
 
 				
 

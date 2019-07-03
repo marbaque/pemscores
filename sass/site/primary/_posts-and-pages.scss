@@ -284,33 +284,40 @@
 
 	.recurso-media {
 		padding: 0 0 1em;
-		//background: $color__gris-claro;
 		min-height: 200px;
 		max-height: 500px;
+		//background: $color__gris-claro;
 		position: relative;
 		overflow: hidden;
 
-		&:after { //iconos de formato
-			content: "";
-			width: 128px;
-			height: 128px;
-			background: url('images/icons/document_format_icon.svg') no-repeat;
+		.recurso-icon {
 			position: absolute;
-			top: calc(50% - 75px);
-			right: calc(50% - 75px);
+			top: calc(50% - 100px);
+			left: calc(50% - 100px);
+			width: 200px;
+			height: 200px;
+			background-size: 80%;
+			background: url(images/icons/document_format_icon.svg) no-repeat center center;
+
+			
+			&.video {
+				background: url(images/icons/video_format_icon.svg) no-repeat center center;
+				background-size: 80%;
+			}
+			&.audio {
+				background: url(images/icons/audio_format_icon.svg) no-repeat center center;
+				background-size: 100%;
+			}
+			&.sitio-web {
+				background: url(images/icons/web_site_format_icon.svg) no-repeat center center;
+				background-size: 80%;
+			}
+			&.imagen {
+				background: url(images/icons/image_format_icon.svg) no-repeat center center;
+				background-size: 80%;
+			}
 		}
-		&.video:after {
-			background: url('images/icons/video_format_icon.svg') no-repeat;
-		}
-		&.audio:after {
-			background: url('images/icons/audio_format_icon.svg') no-repeat;
-		}
-		&.sitio-web:after {
-			background: url('images/icons/web_site_format_icon.svg') no-repeat;
-		}
-		&.imagen:after {
-			background: url('images/icons/imagen_format_icon.svg') no-repeat;
-		}
+		
 
 		img {
 			padding: 0;

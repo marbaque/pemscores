@@ -215,12 +215,10 @@
 			.recurso-icon {
 				width: 80px;
 				height: 80px;
-				background-color: $color__gris-claro;
 				flex-shrink: 0;
 				margin-right: 1em;
-				background-size: 60%;
 				background: url(images/icons/document_format_icon.svg) no-repeat center center $color__gris-claro;
-					background-size: 50%;
+				background-size: 50%;
 				
 				@media screen and (min-width: $query__small) {
 					width: 150px;

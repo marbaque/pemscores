@@ -2137,6 +2137,7 @@ body:not(.logged-in) li.bp-comunidad {
 .recurso-wrap .recurso-media {
 	padding: 0 0 1em;
 	min-height: 200px;
+	max-height: 500px;
 	position: relative;
 	overflow: hidden;
 }
@@ -2216,7 +2217,7 @@ body:not(.logged-in) li.bp-comunidad {
 	background: #fff;
 	padding: .5em 1em;
 	margin: 1em 0;
-	border: 1px solid #888;
+	border: 1px solid #cce2f8;
 }
 
 .recurso-wrap .recurso_tags.recurso-link a {

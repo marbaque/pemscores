@@ -286,6 +286,7 @@
 		padding: 0 0 1em;
 		//background: $color__gris-claro;
 		min-height: 200px;
+		max-height: 500px;
 		position: relative;
 		overflow: hidden;
 
@@ -359,7 +360,7 @@
 			background: #fff;
 			padding: .5em 1em;
 			margin: 1em 0;
-			border: 1px solid $color__gris;
+			border: 1px solid $color__main-claro;
 
 			a { //separar el link si es muy largo siempre
 				border-bottom: 1px solid white;

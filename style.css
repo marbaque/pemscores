@@ -2082,9 +2082,10 @@ body:not(.logged-in) li.bp-comunidad {
 .entry-header .page-title {
 	color: #00529a;
 	font-weight: 700;
-	border-bottom: 3px solid #00529a;
+	border-bottom: 2px solid #00529a;
 	margin-bottom: .5em;
 	margin-top: 0;
+	padding: 0 .2em;
 }
 
 .page-content,
@@ -2385,6 +2386,10 @@ body:not(.logged-in) li.bp-comunidad {
 
 .course .post-content .course-overview_section .curriculum-sections li.section .section-content .course-item a {
 	font-size: 1.1em;
+}
+
+.course .post-content .course-overview_section .curriculum-sections li.section .section-content .course-item.item-locked .course-item-status:before {
+	color: #fa3c46;
 }
 
 .course .post-content .course-overview_section .curriculum-sections li.section .section-content a {
@@ -2786,7 +2791,7 @@ body:not(.logged-in) li.bp-comunidad {
 }
 
 .course-curriculum ul.curriculum-sections li.course-item {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 	color: #006edc !important;
 }
 
@@ -2795,8 +2800,12 @@ body:not(.logged-in) li.bp-comunidad {
 	font-size: 0.9rem !important;
 }
 
+.course-curriculum ul.curriculum-sections li.course-item.current {
+	color: #006edc;
+}
+
 .course-curriculum ul.curriculum-sections li.course-item.current:before {
-	background: #006edc !important;
+	background: #ff961e;
 }
 
 .course-curriculum ul.curriculum-sections li.course-item i.fa {

@@ -224,9 +224,10 @@
 	.page-title {
 		color: $color__main-oscuro;
 		font-weight: 700;
-		border-bottom: 3px solid $color__main-oscuro;
+		border-bottom: 2px solid $color__main-oscuro;
 		margin-bottom: .5em;
 		margin-top: 0;
+		padding: 0 .2em;
 	}
 }
 

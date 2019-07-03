@@ -24,16 +24,16 @@
 
       if( $autoria == 'Persona' ): ?>
 
-          <li>
-              <?php echo get_the_term_list( $post->ID, 'autor_tag', 
-              __('<i class="fa fa-address-card-o" aria-hidden="true"></i> <strong>Creado por</strong> ' , 'pemscores'), ', ', '' ); ?>
-          </li>
+          
+        <?php echo get_the_term_list( $post->ID, 'autor_tag', 
+        __('<li><i class="fa fa-address-card-o" aria-hidden="true"></i> <strong>Creado por</strong> ' , 'pemscores'), ', ', '</li>' ); ?>
+          
 
       <?php elseif( $autoria == 'Organización' ): ?>
 
-          <li>
-              <?php echo get_the_term_list( $post->ID, 'organizacion_tag', __('<i class="fa fa-university" aria-hidden="true"></i> <strong>Creado por </strong> ', 'pemscores'), ', ', '' ); ?>
-          </li>
+          
+				<?php echo get_the_term_list( $post->ID, 'organizacion_tag', __('<li><i class="fa fa-university" aria-hidden="true"></i> <strong>Creado por </strong> ', 'pemscores'), ', ', '</li>' ); ?>
+          
 
   <?php endif; ?>
 

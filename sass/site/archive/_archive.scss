@@ -219,16 +219,15 @@
 				flex-shrink: 0;
 				margin-right: 1em;
 				background-size: 60%;
+				background: url(images/icons/document_format_icon.svg) no-repeat center center $color__gris-claro;
+					background-size: 50%;
 				
 				@media screen and (min-width: $query__small) {
 					width: 150px;
 					height: 150px;
 				}
 
-				&.documento {
-					background: url(images/icons/document_format_icon.svg) no-repeat center center $color__gris-claro;
-					background-size: 50%;
-				}
+				
 				&.video {
 					background: url(images/icons/video_format_icon.svg) no-repeat center center $color__gris-claro;
 					background-size: 50%;

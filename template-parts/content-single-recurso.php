@@ -71,16 +71,13 @@ $file = get_field('subir_arch');
 								echo do_shortcode('[snapshot url="' . $file['url'] . '" alt="' . $file['filename'] . '" width="700" height="440"]');
 							}?>
 						<?php endif; ?>		
-				<?php endif; ?>
-
+				<?php endif; ?>					
 				
-
-					<?php get_template_part( 'template-parts/recurso', 'link' ); ?>
-
 			</div> <!-- recurso-media -->
 
 			<div class="recurso-content">
 				<div class="recurso-descripcion">
+				<?php get_template_part( 'template-parts/recurso', 'link' ); ?>
 					<?php get_template_part( 'template-parts/recurso', 'meta' ); ?>
 				</div>
 			</div> <!-- recurso-content -->

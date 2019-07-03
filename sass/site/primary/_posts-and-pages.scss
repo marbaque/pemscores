@@ -277,15 +277,39 @@
 		h1 {
 			//border-bottom: 2px solid $color__main-oscuro;
 			margin: 0;
-			color: $color__main-oscuro;
+			color: $color__text-main;
 			font-size: 1.6em;
 		}
 	}
 
 	.recurso-media {
 		padding: 0 0 1em;
-
+		//background: $color__gris-claro;
 		min-height: 200px;
+		position: relative;
+		overflow: hidden;
+
+		&:after { //iconos de formato
+			content: "";
+			width: 128px;
+			height: 128px;
+			background: url('images/icons/document_format_icon.svg') no-repeat;
+			position: absolute;
+			top: calc(50% - 75px);
+			right: calc(50% - 75px);
+		}
+		&.video:after {
+			background: url('images/icons/video_format_icon.svg') no-repeat;
+		}
+		&.audio:after {
+			background: url('images/icons/audio_format_icon.svg') no-repeat;
+		}
+		&.sitio-web:after {
+			background: url('images/icons/web_site_format_icon.svg') no-repeat;
+		}
+		&.imagen:after {
+			background: url('images/icons/imagen_format_icon.svg') no-repeat;
+		}
 
 		img {
 			padding: 0;
@@ -332,13 +356,13 @@
 		}
 
 		&.recurso-link {
-			background: white;
+			background: #fff;
 			padding: .5em 1em;
 			margin: 1em 0;
-			//border-radius: 8px;
-			box-shadow: 1px 2px 6px hsla(0,0,0,.2);
+			border: 1px solid $color__gris;
 
 			a { //separar el link si es muy largo siempre
+				border-bottom: 1px solid white;
 				text-decoration: none;
 				overflow-wrap: break-word;
   			word-wrap: break-word;
@@ -364,16 +388,15 @@
 	}
 
 	@media screen and (min-width: $query__medium) {
-
+		
 		.recurso-inner {
 			display: flex;
-			align-content: stretch;
-			justify-content: space-between;
-			flex-wrap: nowrap;
+			align-items: flex-start;
 		}
 		.recurso-media {
 			width: 50%;
-			padding: 1em;
+			padding: 2em;
+			min-height: 480px;
 		}
 		.recurso-content {
 			width: 50%;
@@ -385,7 +408,7 @@
 
 .recurso-secundario {
 
-	@media screen and (min-width: $query__small) {
+	@media screen and (min-width: $query__medium) {
 		display: flex;
 		justify-content: space-around;
 		align-items: flex-start;
@@ -407,12 +430,8 @@
 
 	.relacionados {
 		padding: 1em;
-		font-family: $font__system;
+		font-family: $font__sans;
 		background: $color__main-superclaro;
-	
-		@media screen and (min-width: $query__medium) {
-			padding: 2em;
-		}
 
 		h4 {
 			margin: 0 0 .5em;
@@ -422,7 +441,15 @@
 			list-style: none;
 			padding-left: 0;
 			li {
-				margin-bottom: .2em;
+				margin-bottom: 1em;
+				line-height: 1.4;
+
+				a {
+					color: $color__text-main;
+					&:hover {
+						color: $color__naranja;
+					}
+				}
 			}
 		}
 	}

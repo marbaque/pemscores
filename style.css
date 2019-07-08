@@ -1850,6 +1850,17 @@ button.dropdown-toggle {
 	opacity: 1;
 }
 
+.creditos {
+	font-size: .6em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.creditos a {
+	font-weight: 700;
+}
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/

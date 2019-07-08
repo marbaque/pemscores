@@ -58,24 +58,50 @@ function change_admin_footer(){
 	}
 add_filter('admin_footer_text', 'change_admin_footer');
 
+/* Custom fields */
+if( function_exists('acf_add_local_field_group') ):
 
-/* * ********************************************************************* */
-// Dar a categorias del curso el mismo template de archivo de cursos page-capacitacion.php
-/* * ********************************************************************* */
-add_filter('template_include', function( $template ) {
-	if (is_tax('course_category')) {
-		$locate = locate_template('page-capacitacion.php', false, false);
-		if (!empty($locate)) {
-			$template = $locate;
-		}
-	}
-	return $template;
-});
-
-
-//Quita las metaboxes de autores y organizaciones en recursos
-function remove_tags_fields() {
-	remove_meta_box( 'tagsdiv-autor_tag' , 'recursos' , 'side' );
-	remove_meta_box( 'tagsdiv-organizacion_tag' , 'recursos' , 'side' );
-}
-add_action( 'admin_menu' , 'remove_tags_fields' );
+	acf_add_local_field_group(array(
+		'key' => 'group_5d239cd817621',
+		'title' => 'Opciones de página',
+		'fields' => array(
+			array(
+				'key' => 'field_5d239cefba116',
+				'label' => 'Ocultar título',
+				'name' => 'ocultar_titulo',
+				'type' => 'true_false',
+				'instructions' => 'Seleccione si quiere esconder el título de esta página.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+	
+	endif;

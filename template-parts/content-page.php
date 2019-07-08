@@ -19,10 +19,13 @@
 	</figure><!-- .featured-image full-bleed -->
 	<?php } ?>
 	
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
+	<?php if( !get_field('ocultar_titulo') ): ?>
+	
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header><!-- .entry-header -->
+		
+	<?php endif; ?>
 
 	<div class="entry-content post-content">
 		<?php

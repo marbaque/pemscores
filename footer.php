@@ -48,7 +48,7 @@
 
 		<div class="creditos">
 			<p>
-				<a href="https://uned.ac.cr" title="Sitio web de la UNED">©<?= date("Y"); ?> Universidad Estatal a Distancia</a> | 
+				<a href="https://uned.ac.cr" title="Sitio web de la UNED">Universidad Estatal a Distancia ©<?= date("Y"); ?></a> | 
 				<a href="https://multimedia.uned.ac.cr/index.php" title="Sitio web de Multimedia UNED">Producción Electrónica Multimedial</a></p>
 		</div>
 	</footer><!-- #colophon -->

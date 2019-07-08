@@ -860,6 +860,10 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global layouts
 --------------------------------------------------------------*/
+body {
+	background: #f4f4f4;
+}
+
 .site {
 	max-width: 1440px;
 	margin: 0 auto;
@@ -1133,6 +1137,7 @@ a:hover, a:active {
 
 .site-title a:hover, .site-title a:focus {
 	text-decoration: underline;
+	color: currentColor;
 }
 
 .site-description {
@@ -1851,14 +1856,20 @@ button.dropdown-toggle {
 }
 
 .creditos {
-	font-size: .6em;
+	font-size: .66em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	text-align: center;
+	color: rgba(255, 255, 255, 0.4);
 }
 
 .creditos a {
 	font-weight: 700;
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.creditos a:hover {
+	color: rgba(255, 255, 255, 0.6);
 }
 
 /*--------------------------------------------------------------

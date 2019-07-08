@@ -35,8 +35,8 @@
 			<?php the_custom_logo(); ?>
 			<div class="site-branding__text">
 			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			if ( is_front_page() ) : ?>
+				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php

@@ -1,15 +1,17 @@
+.site {
+	max-width: $size__max-width;
+	margin: 0 auto;
+	background: white;
+}
+
 .site-content {
 	padding: 1em;
+	max-width: $size__max-width;
+	margin: 0 auto;
 
 	@media screen and (min-width: $query__small) {
 		padding: 2em;
 	}
-}
-
-
-.site-content {
-	max-width: $size__max-width;
-	margin: 0 auto;
 }
 
 /* Single posts */
@@ -42,12 +44,21 @@
 			.hentry {
 				flex-direction: row-reverse;
 			}
+			.post-content {
+				width: $size__ratio-large!important;
+			}
 		}
 		&:not(.has-page-sidebar) {
 			.hentry {
 				justify-content: flex-end;
+				max-width: $size__ratio-large;
+				margin: 0 auto;
+			}
+			.post-content {
+				width: 100%;
 			}
 		}
+		
 	}
 
 

@@ -57,6 +57,7 @@
 	a:hover,
 	a:focus {
 		text-decoration: underline;
+		background: hsla(0, 0%, 100%, 0.15);
 	}
 
 	.current_page_item > a,
@@ -121,6 +122,7 @@ button.dropdown-toggle {
 			display: block;
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: space-around;
 
 			ul {
 				flex-direction: column;
@@ -153,7 +155,7 @@ button.dropdown-toggle {
 	.main-navigation {
 
 		ul {
-			justify-content: flex-end;
+			justify-content: flex-start;
 			padding-top: 0;
 
 			/* If you want dropdowns to open on hover, uncomment this: */

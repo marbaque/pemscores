@@ -282,7 +282,7 @@ textarea {
 }
 
 body {
-	font-family: "expo-serif-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 button,
@@ -860,19 +860,22 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global layouts
 --------------------------------------------------------------*/
+.site {
+	max-width: 1440px;
+	margin: 0 auto;
+	background: white;
+}
+
 .site-content {
 	padding: 1em;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 @media screen and (min-width: 600px) {
 	.site-content {
 		padding: 2em;
 	}
-}
-
-.site-content {
-	max-width: 1440px;
-	margin: 0 auto;
 }
 
 /* Single posts */
@@ -904,9 +907,17 @@ a:hover, a:active {
 		-ms-flex-direction: row-reverse;
 		    flex-direction: row-reverse;
 	}
+	.page.has-page-sidebar .post-content {
+		width: 60% !important;
+	}
 	.page:not(.has-page-sidebar) .hentry {
 		-ms-flex-pack: end;
 		    justify-content: flex-end;
+		max-width: 60%;
+		margin: 0 auto;
+	}
+	.page:not(.has-page-sidebar) .post-content {
+		width: 100%;
 	}
 }
 
@@ -1029,14 +1040,14 @@ a:hover, a:active {
 	opacity: .8;
 }
 
-.continue-reading, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button {
+.continue-reading {
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
-.continue-reading a, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button a {
+.continue-reading a {
 	display: block;
 	padding: .5em 1em;
 	font-size: 90%;
@@ -1044,7 +1055,7 @@ a:hover, a:active {
 	background: #d9d9d9;
 }
 
-.continue-reading a:focus, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button a:focus, .continue-reading a:hover, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button a:hover {
+.continue-reading a:focus, .continue-reading a:hover {
 	color: white;
 	background: #b51c35;
 }
@@ -1073,6 +1084,8 @@ a:hover, a:active {
 @media screen and (min-width: 600px) {
 	.site-header {
 		padding: 1em 2em;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 }
 
@@ -1080,10 +1093,13 @@ a:hover, a:active {
 	display: -ms-flexbox;
 	display: flex;
 	min-height: 65px;
+	width: 85%;
 }
 
 .custom-logo-link {
 	margin-right: 1em;
+	-ms-flex: 0 0 auto;
+	    flex: 0 0 auto;
 }
 
 .custom-logo-link img {
@@ -1105,7 +1121,7 @@ a:hover, a:active {
 .site-title {
 	margin: 0;
 	padding: 0;
-	font-size: 1.6em;
+	font-size: 1.2em;
 	font-weight: 600;
 	line-height: 1em;
 }
@@ -1137,6 +1153,9 @@ a:hover, a:active {
 		width: 35%;
 		-ms-flex: 1 0 auto;
 		    flex: 1 0 auto;
+	}
+	.site-title {
+		font-size: 1.6em;
 	}
 	.site-navigation {
 		width: 55%;
@@ -1205,6 +1224,7 @@ Header Menu
 .main-navigation a:hover,
 .main-navigation a:focus {
 	text-decoration: underline;
+	background: rgba(255, 255, 255, 0.15);
 }
 
 .main-navigation .menu-item-has-children,
@@ -1261,6 +1281,8 @@ button.dropdown-toggle {
 		display: flex;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
 	}
 	.main-navigation ul ul {
 		-ms-flex-direction: column;
@@ -1282,8 +1304,8 @@ button.dropdown-toggle {
 
 @media screen and (min-width: 900px) {
 	.main-navigation ul {
-		-ms-flex-pack: end;
-		    justify-content: flex-end;
+		-ms-flex-pack: start;
+		    justify-content: flex-start;
 		padding-top: 0;
 		/* If you want dropdowns to open on hover, uncomment this: */
 		/*
@@ -1487,393 +1509,6 @@ button.dropdown-toggle {
 .entry-footer {
 	margin: 1.5em 0;
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-/*--------------------------------------------------------------
-# LearnPress
---------------------------------------------------------------*/
-.course .post-content .course-tabs ul.course-nav-tabs {
-	margin-bottom: 0;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: 80%;
-	border-color: #f4f4f4;
-}
-
-.course .post-content .course-tabs ul.course-nav-tabs li.course-nav {
-	background: white;
-	border-radius: 4px 4px 0 0;
-	margin: 0 .3em;
-	border-color: white;
-	opacity: .5;
-}
-
-.course .post-content .course-tabs ul.course-nav-tabs li.course-nav.active {
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-	opacity: 1;
-}
-
-.course .post-content .course-tab-panel {
-	background: white;
-	padding: 2em 2em 3em;
-	font-size: 90%;
-}
-
-.lp-single-course .learn-press-breadcrumb,
-.lp-single-course .learn-press-course-forum-link {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: .8em;
-	border: none;
-}
-
-.lp-single-course .learn-press-breadcrumb q a,
-.lp-single-course .learn-press-course-forum-link q a {
-	border: none;
-}
-
-.lp_course.has-post-thumbnail .full-bleed {
-	margin-top: -2em;
-}
-
-.widget .learn-press-course-results-progress {
-	background: inherit;
-	border: none;
-	padding: 0;
-	width: 100%;
-}
-
-.widget .learn-press-course-results-progress .items-progress, .widget .learn-press-course-results-progress .course-progress {
-	padding: 0;
-	margin: 0 0 1em;
-}
-
-.widget .avatar-cont {
-	display: block;
-	width: 100%;
-	text-align: center;
-	margin-bottom: 1em;
-}
-
-.widget .avatar-cont .avatar {
-	width: 80px;
-	height: auto;
-	border-radius: 50%;
-}
-
-.course-remaining-time {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: 80%;
-	margin: 1em 0;
-}
-
-.course-remaining-time .lp-label.label-enrolled, .course-remaining-time .lp-label.label-started {
-	background: #00b3b3;
-	border-radius: 0;
-	padding: .4em;
-	margin-right: .25em;
-}
-
-.course-meta,
-.price {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-.learnpress-page .lp-button {
-	line-height: 1;
-	height: auto !important;
-}
-
-.course-curriculum ul.curriculum-sections .section-header .section-title {
-	font-weight: 750 !important;
-}
-
-.course-curriculum ul.curriculum-sections .section-content .course-item {
-	font-size: 0.9em !important;
-}
-
-.learn-press-course-results-progress {
-	display: block;
-	padding: 0;
-	margin-right: 0 !important;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-.learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
-	padding: 1em;
-	background: white;
-	padding: 1em;
-	margin: 0 !important;
-}
-
-.learn-press-course-results-progress h4 {
-	font-size: 1em;
-	line-height: 1.2;
-}
-
-@media screen and (min-width: 600px) {
-	.learn-press-course-results-progress {
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-pack: justify;
-		    justify-content: space-between;
-	}
-	.learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
-		float: none !important;
-	}
-}
-
-.course-remaining-time {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: 80%;
-	margin: 1em 0;
-}
-
-.course-remaining-time .lp-label.label-enrolled, .course-remaining-time .lp-label.label-started {
-	background: #00b3b3;
-	border-radius: 0;
-	padding: .4em;
-	margin-right: .25em;
-}
-
-.archive-view.learnpress .site .site-content .page-header {
-	-ms-flex-negative: 0;
-	    flex-shrink: 0;
-	width: 100%;
-}
-
-.archive-view.learnpress .site .site-content article.page {
-	background: none;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-breadcrumb {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: 80%;
-	color: #eee !important;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
-	position: relative;
-	background: white;
-	padding: 1em 1em 2em;
-	margin-bottom: 1em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-permalink {
-	border: none;
-	height: auto;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-thumbnail {
-	text-align: center;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-thumbnail img {
-	margin: 0 auto;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info {
-	display: block;
-	width: 100%;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info .course-price {
-	display: block;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info .course-instructor {
-	display: block;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons {
-	display: block;
-	margin-top: 1em;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button {
-	width: auto;
-	background: #d9d9d9;
-	border: 0;
-	font-size: 90%;
-	padding: .5em 1em;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:focus, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:hover {
-	color: white;
-	background: #b51c35;
-}
-
-@media screen and (min-width: 600px) {
-	.archive-view.learnpress .site .site-content article.page .learn-press-courses {
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-pack: start;
-		    justify-content: flex-start;
-		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap;
-	}
-	.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
-		width: 48%;
-	}
-}
-
-.course-header-lp button {
-	font-size: 80%;
-	border: none;
-	background: #eee;
-}
-
-.course-header-lp .lp-button-back {
-	display: none;
-}
-
-.course-header-lp .lp-button-back button {
-	background: inherit;
-}
-
-.course-header-lp .lp-button-back button:hover {
-	background: rgba(255, 255, 255, 0.1);
-}
-
-@media screen and (min-width: 900px) {
-	.course-header-lp .lp-button-back {
-		display: block;
-	}
-}
-
-.course-header-lp .course-item-search {
-	z-index: 99;
-}
-
-.course-header-lp .course-item-search input {
-	font-size: 80%;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-.course-header-lp .course-title {
-	display: none;
-}
-
-.course-header-lp .course-title a {
-	text-decoration: none;
-}
-
-@media screen and (min-width: 900px) {
-	.course-header-lp .course-title {
-		max-width: 90%;
-		display: block;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-}
-
-.full-screen-content-item .course-title {
-	display: block;
-	max-width: 80%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-h3.course-item-title {
-	border-bottom: 3px solid #eee;
-	padding-bottom: 1em;
-}
-
-.content-item-wrap {
-	max-width: 780px !important;
-}
-
-@media screen and (min-width: 600px) {
-	.content-item-wrap {
-		margin: 3em auto !important;
-	}
-}
-
-.content-item-wrap ol {
-	counter-reset: list;
-	list-style-type: none;
-	padding-left: 0px;
-}
-
-.content-item-wrap ol li {
-	text-indent: -40px;
-	margin-left: 40px;
-	counter-increment: list;
-}
-
-.content-item-wrap ol li:before {
-	background-color: #002254;
-	width: 24px;
-	text-indent: 2px;
-	padding-left: 0px;
-	height: 24px;
-	line-height: 24px;
-	vertical-align: top;
-	border-radius: 12px;
-	background-clip: padding-box;
-	color: #fff;
-	display: inline-block;
-	font-weight: 700;
-	content: counter(list);
-	margin-right: 15px;
-	margin-top: 4px;
-	font-size: 14px;
-	text-align: center;
-}
-
-.course-meta,
-.price {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-.learnpress-page .lp-button {
-	line-height: 1;
-	height: auto !important;
-}
-
-.curriculum-sections {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-.curriculum-sections a {
-	text-decoration: none;
-}
-
-form[name="learn-press-form-complete-lesson"] {
-	margin-top: 4em;
-	width: 100%;
-	font-size: 80%;
-	position: relative;
-	height: 3em;
-}
-
-form[name="learn-press-form-complete-lesson"] p {
-	color: #777;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-form[name="learn-press-form-complete-lesson"] button {
-	margin: 0;
-}
-
-a.toggle-content-item {
-	text-decoration: none;
-}
-
-.learn-press-message {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: 80%;
-}
-
-#popup_container {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: 90%;
-	font-style: italic;
-}
-
-#popup_container input[type="button"] {
-	line-height: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -2231,7 +1866,6 @@ a.toggle-content-item {
 
 .widget {
 	margin: 0 0 2em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	/* Make sure select elements fit in widgets. */
 }
 
@@ -2368,7 +2002,7 @@ a.toggle-content-item {
 
 .rssSummary {
 	padding: .5em 0;
-	font-family: "expo-serif-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: .8em;
 	line-height: 1.4em;
 }
@@ -2420,7 +2054,7 @@ a.toggle-content-item {
 /* Text widget */
 .textwidget {
 	font-size: 90%;
-	font-family: "expo-serif-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 /* Footer widget stylings */

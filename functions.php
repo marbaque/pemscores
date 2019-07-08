@@ -95,7 +95,7 @@ function pemscores_fonts_url() {
 	 * into your own language.
 	 */
 	$futura = _x( 'on', 'Futura font: on or off', 'pemscores' );
-	$expoSerif = _x( 'on', 'Expo Serif Pro: on or off', 'pemscores' );
+	$proximaNova = _x( 'on', 'Proxima Nova: on or off', 'pemscores' );
 
 	$font_families = array();
 
@@ -103,12 +103,12 @@ function pemscores_fonts_url() {
 		$font_families[] = 'futura-pt:400,400i,600,600i';
 	}
 
-	if ( 'off' !== $expoSerif ) {
-		$font_families[] = 'expo-serif-pro:400,400i,700,700i';
+	if ( 'off' !== $proximaNova ) {
+		$font_families[] = 'proxima-nova:400,400i,700,700i';
 	}
 
 
-	if ( in_array( 'on', array($futura, $expoSerif) ) ) {
+	if ( in_array( 'on', array($futura, $proximaNova) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -133,7 +133,7 @@ function pemscores_fonts_url() {
 function pemscores_resource_hints( $urls, $relation_type ) {
 	if ( wp_style_is( 'pemscores-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = array(
-			'href' => 'https://fonts.gstatic.com',
+			'href' => 'https://use.typekit.net',
 			'crossorigin',
 		);
 	}
@@ -272,7 +272,7 @@ add_action( 'widgets_init', 'pemscores_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pemscores_scripts() {
-	// Enqueue Typekit Fonts: Futura and Expo Serif Pro
+	// Enqueue Typekit Fonts: Futura and Proxima Nova
 	wp_enqueue_style( 'pemscores-fonts', pemscores_fonts_url() );
 
 	wp_enqueue_style( 'pemscores-style', get_stylesheet_uri() );

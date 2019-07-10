@@ -46,6 +46,10 @@
                   font-size: 1.1em;
                 }
 
+                .course-item.item-locked .course-item-status:before {
+                  color: #fa3c46;
+                }
+
                 a {
                   padding: 0 1em;
                 }

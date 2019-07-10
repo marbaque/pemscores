@@ -18,7 +18,7 @@
 			
 			<h2 class="widget-title"><?= __( 'Filtrar recursos', 'pemscores' ); ?></h2>
 			
-			<?php echo do_shortcode('[searchandfilter fields="search,temas,cobertura,tipo_recurso,tipo_medio" headings=",Ejes temáticos:,Cobertura:,Tipo de recurso:,Tipo de medio:" show_count=",1,1,1,1" operators=”OR” empty_search_url="/recursos/" search_placeholder="Palabras clave" submit_label="Filtrar"]'); ?>
+			<?php echo do_shortcode('[searchandfilter fields="search,temas,cobertura,tipo_recurso,tipo_medio" headings=",Ejes temáticos:,Cobertura:,Tipo de recurso:,Tipo de medio:" show_count=",1,1,1,1" operators=”OR” empty_search_url="/recursos/" search_placeholder="Palabras clave&hellip;" submit_label="Filtrar"]'); ?>
 			
 			<a class="clean-search" href="/recursos/">
 				<i class="fa fa-refresh" aria-hidden="true"></i>

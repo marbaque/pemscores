@@ -10,8 +10,8 @@
 ?>
 <!-- descipción -->
 <?php
-    $content = get_the_content();
-    echo mb_strimwidth($content, 0, 400, '...');
+    //$content = get_the_content();
+    //echo mb_strimwidth($content, 0, 400, '...');
     ?>
 
 <ul class="recurso_tags">

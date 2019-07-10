@@ -284,9 +284,9 @@
 	}
 
 	.recurso-media {
-		padding: 0 0 1em;
+		padding: 0;
 		min-height: 200px;
-		max-height: 500px;
+		max-height: 400px;
 		//background: $color__gris-claro;
 		position: relative;
 		overflow: hidden;
@@ -347,7 +347,7 @@
 	}
 
 	.recurso_tags {
-		font-size: .9em;
+		//font-size: 1em;
 		margin-top: 1em;
 
 		i.fa {
@@ -421,12 +421,13 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: flex-start;
+		flex-direction: row-reverse;
 		
-		.content {
+		.content-area {
 			width: $size__ratio-large;
 		}
 
-		.relacionados {
+		.widget-area {
 			width: $size__ratio-small;
 		}
 	}
@@ -493,4 +494,26 @@
 .avatar-circular {
 	border-radius: 50%;
 	border: 2px solid $color__main;
+}
+
+//rate my post
+.rmp-results {
+	font-family: $font__system;
+}
+.rmp-main {
+	margin: 3em 0 1em;
+	padding: 1em 0;
+	font-family: $font__system;
+	border-top: 1px solid $color__main-bordes;
+}
+// Widget de rate my post
+.rmp-tr-posts__star-rating, 
+.rmp-tr-posts__link {
+	text-align: left;
+	max-width: inherit;
+}
+
+.rmp-tr-posts__link {
+	margin-bottom: 2em;
+	font-size: 1em;
 }

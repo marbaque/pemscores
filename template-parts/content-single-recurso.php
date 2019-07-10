@@ -62,7 +62,7 @@ $file = get_field('subir_arch');
 				
 					<!-- si es una fuente externa, obtener la captura de pantalla -->
 					<?php if( $fuente == 'ext' ): ?>
-						<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="440"]'); ?>
+						<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="400"]'); ?>
 					
 					<?php elseif( $fuente == 'int' ): ?>
 						<?php
@@ -91,24 +91,8 @@ $file = get_field('subir_arch');
 </article><!-- #post-## -->
 
 <div class="recurso-secundario hentry">
-	
-	<section class="content-area">
-		<?php
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
-		?>
-	</section>
 
-	
-		
 	<aside id="secondary" class="widget-area" role="complimentary">
-		<div class="widget">
-			<div class="widget-inner">
-				<?php echo do_shortcode('[ratemypost]'); ?>
-			</div>
-		</div>
 		
 		<?php
 			if ( is_active_sidebar( 'sidebar-3' )  )
@@ -118,5 +102,16 @@ $file = get_field('subir_arch');
 		?>
 
 	</aside> <!-- secondary -->
+	
+	<section class="content-area">
+		<h3><?= __('Descripción', 'pemscores'); ?></h3>
+		<?php
+		the_content();
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+		?>
+	</section>
 
 </div>

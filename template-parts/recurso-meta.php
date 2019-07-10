@@ -118,5 +118,5 @@
 
 <p class="cc-license">
         
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="<?= __('Licencia Creative Commons', 'pemscores'); ?>" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><?= __('Esta obra está bajo una <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.', 'pemscores'); ?>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="<?= __('Licencia Creative Commons', 'pemscores'); ?>" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><?= __('Esta obra está bajo una <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0//deed.es">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.', 'pemscores'); ?>
 </p>

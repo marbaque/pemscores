@@ -17,6 +17,7 @@
 			display: none;
 			top: 1.5em;
 			z-index: 99999;
+			padding-top: 0;
 
 			ul {
 				top: 0;
@@ -56,8 +57,8 @@
 
 	a:hover,
 	a:focus {
-		text-decoration: underline;
-		background: hsla(0, 0%, 100%, 0.15);
+		background: hsla(0, 0%, 100%, 0.3);
+		color: #fff;
 	}
 
 	.current_page_item > a,
@@ -82,7 +83,7 @@ button.dropdown-toggle {
 	border: none;
 	background: inherit;
 	color: white;
-	line-height: 1.5em;
+	line-height: 1.2em;
 	padding: .4em 1em .4em .5em;
 }
 
@@ -93,10 +94,25 @@ button.dropdown-toggle {
 	display: block;
 	margin: 1.2em 1.2em 0 0;
 	padding: .6em .8em;
-	font-size: 80%;
-	text-transform: uppercase;
-	color: white;
+	width: 40px;
+	height: 40px;	
+	border-radius: 0 8px 0 8px;
 	border: 1px solid hsla(0, 0%, 100%, .3);
+	@include hideText;
+	background: url('images/plus-solid.svg') no-repeat center center hsla(0, 0%, 100%, 0.2);
+	background-size: 30%;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: url('images/plus-solid.svg') no-repeat center center hsla(0, 0%, 100%, 0.3);
+		background-size: 30%;
+	}
+}
+
+.toggled-on .menu-toggle {
+	background: url('images/minus-solid.svg') no-repeat center center hsla(0, 0%, 100%, 0.3);
+	background-size: 30%;
 }
 
 /* Toggle small menu and children on */
@@ -115,7 +131,6 @@ button.dropdown-toggle {
 		.menu-item-has-children > a,
 		.page_item_has_children > a {
 			padding-right: 2em;
-			background: hsla(0, 0%, 100%, .1);
 		}
 
 		ul {

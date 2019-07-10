@@ -28,8 +28,8 @@
 	box-shadow: 0px 0px 4px rgba(0,0,0,.2);
 }
 
-@mixin borde-redondeado($radio) {
-	-webkit-border-radius: $radio;
-	-moz-border-radius: $radio;
-	border-radius: $radio;
+@mixin hideText {
+	overflow: hidden;
+	text-indent: 2000px;
+	white-space: nowrap;
 }

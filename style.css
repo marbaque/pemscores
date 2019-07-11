@@ -1528,6 +1528,10 @@ button.dropdown-toggle {
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
+.subheader {
+	font-style: italic;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

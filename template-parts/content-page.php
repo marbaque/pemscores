@@ -19,12 +19,25 @@
 	</figure><!-- .featured-image full-bleed -->
 	<?php } ?>
 	
-	<?php if( !get_field('ocultar_titulo') ): ?>
-	
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-		
+	<!-- custom-fields.php -->
+	<?php $meta = get_post_meta( $post->ID, 'page_options', true ); ?>
+
+	<?php if (is_array($meta) && isset($meta['checkbox'])) : ?>
+			<!-- Checkbox is checked. -->
+			<?php the_title( '<h1 class="screen-reader-text">', '</h1>' ); ?>
+	<?php else: ?>
+			<!-- Checkbox is not checked. -->
+			<header class="entry-header">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+				<?php if (is_array($meta) && isset($meta['subtitle'])) : ?>
+					<?php if ( strlen( $meta['subtitle'] ) > 0 ) {
+						echo '<h2 class="subheader">' . $meta['subtitle'] . '</h2>';
+					}
+					?>
+				<?php endif; ?>
+				
+			</header><!-- .entry-header -->
 	<?php endif; ?>
 
 	<div class="entry-content post-content">

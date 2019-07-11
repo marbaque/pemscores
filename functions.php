@@ -327,3 +327,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load SVG icon functions.
  */
 require get_template_directory() . '/inc/icon-functions.php';
+
+/**
+ * Load custom fields.
+ */
+require get_template_directory() . '/inc/custom-fields.php';

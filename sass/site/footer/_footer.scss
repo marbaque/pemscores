@@ -83,6 +83,10 @@
 		margin: 0;
 		padding: 0;
 
+		@media screen and (min-width: $query__medium) {
+			justify-content: flex-start;
+		}
+
 		a {
 			display: block;
 			padding: .5em 1em;

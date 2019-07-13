@@ -55,7 +55,8 @@
 			<?php
 			$read_more_link = sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continuar leyendo %s', 'pemscores' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Ver más %s', 'pemscores' ), array( 'span' => array( 'class' => array() ) ) ) .
+				pemscores_get_svg( array( 'icon' => 'arrow-right' ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			);
 			?>

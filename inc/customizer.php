@@ -21,7 +21,7 @@ function pemscores_customize_register( $wp_customize ) {
 
 	// Setting for header and footer background color
 	$wp_customize->add_setting( 'theme_bg_color', array(
-		'default'			=> '#002254',
+		'default'			=> '#00519e',
 		'transport'			=> 'postMessage',
 		'type'				=> 'theme_mod',
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -43,7 +43,7 @@ function pemscores_customize_register( $wp_customize ) {
 	// Create interactive color setting
 	$wp_customize->add_setting( 'interactive_color' ,
 		array(
-			'default'			=> '#b51c35',
+			'default'			=> '#ee8925',
 			'transport'			=> 'postMessage',
 			'type'				=> 'theme_mod',
 			'sanitize_callback'	=> 'sanitize_hex_color',
@@ -186,10 +186,12 @@ function pemscores_header_style() {
 	/*
 	 * Do we have a custom header background color?
 	 */
-	if ( '#002254' != $header_bg_color ) { ?>
+	if ( '#00519e' != $header_bg_color ) { ?>
 		<style type="text/css">
 			.site-header,
 			.site-footer,
+			.nav-menu .sub-menu,
+			.main-navigation.toggled .nav-menu,
 			.search-form .search-field:focus {
 				background-color: <?php echo esc_attr( $header_bg_color ); ?>!important;
 			}
@@ -200,7 +202,7 @@ function pemscores_header_style() {
 	/*
 	 * Do we have a custom interactive color?
 	 */
-	if ( '#b51c35' != $interactive_color ) { ?>
+	if ( '#ee8925' != $interactive_color ) { ?>
 		<style type="text/css">
 			a:hover,
 			a:focus,

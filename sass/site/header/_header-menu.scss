@@ -1,186 +1,239 @@
 .main-navigation {
-	display: block;
-
-	font-family: $font__sans;
-	font-weight: 400;
-	clear: left;
-	line-height: 1.2;
+	text-transform: uppercase;
+	background: transparent;
+	z-index: 99;
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
-		padding-top: 1em;
 		padding-left: 0;
-
-		ul {
-			display: none;
-			top: 1.5em;
-			z-index: 99999;
-			padding-top: 0;
-
-			ul {
-				top: 0;
-			}
-
-			li {
-				padding-left: 1em;
-
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		@media screen and(min-width:$query__medium) {
+			justify-content: flex-end;
 		}
 	}
 
 	li {
+		float: left;
 		position: relative;
 	}
 
 	a {
-		display: inline-block;
-		width: 100%;
-		padding: .5em 1em .5em 0;
+		display: block;
+		padding: 1em .75em;
+		font-size: 1rem;
 		text-decoration: none;
-		color: #fff;
+		line-height: 1.2;
+		color: currentColor;
+		cursor: pointer;
+
+		&:hover {
+			background: hsla(0, 0%, 100%, .3);
+		}
 	}
 
-	a:hover,
-	a:focus {
+	ul ul {
+		position: absolute;
+		left: 0;
+		z-index: 99999;
+		display: none;
+		float: left;
+		padding: 0;
+		background: $color__skin;
+
+		li {
+			background: hsla(0, 0%, 0%, .1);
+		}
+
+		a {
+			width: 200px;
+		}
+	}
+
+	ul ul ul {
+		left: 0;
+		top: 100%;
+	}
+
+	li:hover > a {
+		color: currentColor;
+		background: hsla(0, 0%, 100%, 0.2);
+	}
+
+	ul ul :hover > a {
+	}
+
+	ul ul a:hover {
 		background: hsla(0, 0%, 100%, 0.3);
-		color: #fff;
+	}
+
+	ul li:hover > ul {
+		display: block;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+	.current_page_item > a:hover,
+	.current-menu-item > a:hover {
+		background: hsla(0, 0%, 100%, 0.3);
+		color: currentColor;
 	}
 
-	.menu-item-has-children,
-	.page_item_has_children {
-		min-width: 218px;
+	.current_page_ancestor {
+		background: hsla(0, 0%, 100%, 0.2);
 	}
-	.menu-item-has-children > a,
-	.page_item_has_children > a {
-		padding-right: 2em;
-	}
-}
 
-button.dropdown-toggle {
-	position: absolute;
-	right: 0;
-	border: none;
-	background: inherit;
-	color: white;
-	line-height: 1.2em;
-	padding: .4em 1em .4em .5em;
+	ul ul .current_page_parent,
+	.current_page_parent .current_page_item > a {
+		color: currentColor;
+		background: hsla(0, 0%, 100%, 0.2);
+	}
 }
 
 .menu-toggle {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: block;
-	margin: 1.2em 1.2em 0 0;
-	padding: .6em .8em;
-	width: 40px;
-	height: 40px;	
-	border-radius: 0 8px 0 8px;
-	border: 1px solid hsla(0, 0%, 100%, .3);
-	@include hideText;
-	background: url('images/plus-solid.svg') no-repeat center center hsla(0, 0%, 100%, 0.2);
-	background-size: 30%;
-
-	&:hover,
-	&:focus,
-	&:active {
-		background: url('images/plus-solid.svg') no-repeat center center hsla(0, 0%, 100%, 0.3);
-		background-size: 30%;
-	}
+	display: none;
 }
 
-.toggled-on .menu-toggle {
-	background: url('images/minus-solid.svg') no-repeat center center hsla(0, 0%, 100%, 0.3);
-	background-size: 30%;
-}
 
-/* Toggle small menu and children on */
-.toggled-on ul,
-.sub-menu.toggled-on {
-	display: block;
-}
-
-@media screen and (min-width: $query__small) {
+// Responsive
+@media screen and (max-width: $query__small) {
 	.menu-toggle {
+		display: block;
+		height: auto;
+		padding: 1em;
+		font-weight: normal;
+		font-size: 1rem;
+		text-decoration: none;
+		line-height: 1;
+		color: white;
+		position: absolute;
+		right: 1em;
+		bottom: 1.5em;
+	}
+	.menu-toggle,
+	.menu-toggle:active,
+	.menu-toggle:focus,
+	.menu-toggle:hover {
+		background: hsla(0, 0%, 100%, .1);
+		border: 1px solid hsla(0, 0%, 100%, .25);
+		color: currentColor;
+	}
+        
+	.main-navigation.toggled .nav-menu {
+		display: block;
+		border-top: 1px solid;
+		border-top-color: #fff;
+		border-top-color: hsla(0, 0%, 100%, .5);
+		position: absolute;
+		background: $color__skin;
+		z-index: 99;
+		width: 100vw;
+		left: 0;
+	}
+
+	.main-navigation ul {
 		display: none;
+		padding-left: 0;
+	}
+        
+	.main-navigation li { 
+		float: none; 
 	}
 
-	.main-navigation {
-
-		.menu-item-has-children > a,
-		.page_item_has_children > a {
-			padding-right: 2em;
-		}
-
-		ul {
-			display: block;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around;
-
-			ul {
-				flex-direction: column;
-				background: hsla(0, 0%, 100%, .1);
-				margin-left: 0;
-
-				li {
-					padding-left: 0;
-
-					a {
-						width: 218px;
-						background: none;
-					}
-				}
-			}
-
-			li {
-
-				a {
-					padding: .4em 1em;
-				}
-			}
-		}
-
+	.main-navigation li a { 
+		padding: 1.3em 2em; 
 	}
 
+	.main-navigation li li a { 
+		padding-left: 4em; 
+	}
+
+	.main-navigation li li li a { 
+		padding-left: 6em; 
+	}
+
+	.main-navigation li:hover > a {
+		background: hsla(0, 0%, 100%, .1);
+	}
+	
+	.main-navigation ul ul,
+	.main-navigation ul ul ul {
+		position: relative;
+		top: inherit;
+		left: 0;
+		display: block;
+		float: none;
+		background: hsla(0, 0%, 100%, .1);
+	}
+	
+	.main-navigation ul ul a { width: 100%; }
+
+	.main-navigation ul a:hover,
+	.main-navigation ul ul a:hover {
+		background: hsla(0, 0%, 100%, .2);
+	}
+
+	.main-navigation .current_page_ancestor { background: inherit; }
+
+	.main-navigation ul ul .current_page_parent {
+		color: inherit;
+		background: inherit;
+	}
+
+	.main-navigation .current_page_item > a,
+	.main-navigation .current_page_item > a:hover,
+	.main-navigation .current_page_item li:hover,
+	.main-navigation .current_page_parent .current_page_item > a  {
+		color: #fff;
+		color: hsl(0, 0%, 100%);
+		background: hsla(0, 0%, 100%, .2);  
+	}
+
+	.menu-item-has-children > a {
+		position: relative;
+	}
+	
+        
+} // End responsive menu
+
+
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
 }
-
-@media screen and (min-width: $query__medium) {
-	.main-navigation {
-
-		ul {
-			justify-content: flex-start;
-			padding-top: 0;
-
-			/* If you want dropdowns to open on hover, uncomment this: */
-			/*
-			li:hover > ul,
-				li:focus > ul {
-				display: block;
-			}
-			*/
-		}
-
-	}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba(255,255,255,.5);
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: white; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(255,255,255,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
 }

@@ -277,11 +277,12 @@ function pemscores_scripts() {
 
 	wp_enqueue_style( 'pemscores-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'pemscores-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
-	wp_localize_script( 'pemscores-navigation', 'pemscoresScreenReaderText', array(
-		'expand' => __( 'Expand child menu', 'pemscores'),
-		'collapse' => __( 'Collapse child menu', 'pemscores'),
-	));
+	wp_enqueue_script( 'pemscores-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20191215', true );
+	
+	// wp_localize_script( 'pemscores-navigation', 'pemscoresScreenReaderText', array(
+	// 	'expand' => __( 'Expand child menu', 'pemscores'),
+	// 	'collapse' => __( 'Collapse child menu', 'pemscores'),
+	// ));
 
 	wp_enqueue_script( 'pemscores-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20161201', true );
 
@@ -290,10 +291,24 @@ function pemscores_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
-	wp_register_script('pemscores-fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
 }
 add_action( 'wp_enqueue_scripts', 'pemscores_scripts' );
+
+// Load superfish scripts
+function myprefix_load_superfish_scripts() {
+
+	// load jquery if it isn't
+	//wp_enqueue_script( 'jquery' );
+
+	//Hoverintent
+	wp_enqueue_script( 'hoverinent', get_template_directory_uri() . '/js/hoverintent.js' );
+
+
+	// SuperFish Scripts
+	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.js' );
+	wp_enqueue_script( 'superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js' );
+}
+add_action( 'wp_enqueue_scripts', 'myprefix_load_superfish_scripts' );
 
 /* Permitir responsive embeds */
 add_theme_support( 'responsive-embeds' );

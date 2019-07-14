@@ -955,11 +955,14 @@ body {
 .archive-view .recurso {
 	position: relative;
 	background: white;
-	border: 1px solid #333;
+	border-radius: 1em;
+	box-shadow: 4px 4px 18px rgba(26, 26, 26, 0.2);
+	background-clip: padding-box;
+	overflow: hidden;
 }
 
 .archive-view .post__content {
-	padding: 2em 2em 3em;
+	padding: 2em 2em 5em;
 }
 
 @media screen and (min-width: 900px) {
@@ -1049,17 +1052,21 @@ body {
 
 .continue-reading {
 	position: absolute;
-	right: 0;
+	left: 0;
 	bottom: 0;
+	width: 100%;
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	background: whitesmoke;
+	padding: 1em;
+	text-align: right;
 }
 
 .continue-reading a {
-	display: block;
 	padding: .5em 1em;
 	font-size: 90%;
 	text-decoration: none;
 	background: #d9d9d9;
+	border-radius: 4px;
 }
 
 .continue-reading a:focus, .continue-reading a:hover {

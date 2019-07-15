@@ -8,7 +8,8 @@
 		position: relative;
 		background: white;
 		border-radius: 8px;
-		box-shadow: 4px 4px 18px hsla(0, 0%, 10%, .1);
+		box-shadow: 4px 4px 12px hsla(0, 0%, 10%, .1);
+		border: 1px solid hsl(0, 0%, 90%);
 		background-clip: padding-box;
 		overflow: hidden;
 	}
@@ -42,7 +43,7 @@
 }
 
 .page-header {
-	font-family: $font__sans;
+	font-family: $font__headings;
 }
 
 .page-title {
@@ -60,7 +61,7 @@
 	.page-content {
 		margin-bottom: 2em;
 		padding: 1em 2em;
-		font-family: $font__sans;
+		font-family: $font__headings;
 		color: white;
 		background: $color__interactive;
 	}
@@ -112,7 +113,7 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	font-family: $font__sans;
+	font-family: $font__headings;
 	background: hsl(0, 0%, 96%);
 	padding: 1em;
 	text-align: right;

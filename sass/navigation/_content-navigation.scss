@@ -3,7 +3,7 @@
 .post-navigation,
 .paging-navigation,
 .course-item-nav {
-	font-family: $font__sans;
+	font-family: $font__headings;
 	text-align: left;
 	overflow: hidden;
 	font-size: 80%;
@@ -100,7 +100,7 @@
 
 .pagination {
 
-	font-family: $font__sans;
+	font-family: $font__headings;
 
 	.nav-links {
 		display: flex;

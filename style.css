@@ -290,7 +290,7 @@ button,
 input,
 select,
 textarea {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -956,7 +956,8 @@ body {
 	position: relative;
 	background: white;
 	border-radius: 8px;
-	box-shadow: 4px 4px 18px rgba(26, 26, 26, 0.1);
+	box-shadow: 4px 4px 12px rgba(26, 26, 26, 0.1);
+	border: 1px solid #e6e6e6;
 	background-clip: padding-box;
 	overflow: hidden;
 }

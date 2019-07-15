@@ -955,8 +955,8 @@ body {
 .archive-view .recurso {
 	position: relative;
 	background: white;
-	border-radius: 1em;
-	box-shadow: 4px 4px 18px rgba(26, 26, 26, 0.2);
+	border-radius: 8px;
+	box-shadow: 4px 4px 18px rgba(26, 26, 26, 0.1);
 	background-clip: padding-box;
 	overflow: hidden;
 }
@@ -1615,6 +1615,7 @@ Header Menu
 	margin: 3em 0;
 	padding: 1.5em 0;
 	border-top: 1px solid #cccccc;
+	font-size: .9em;
 }
 
 .comments-title {
@@ -1641,7 +1642,7 @@ Header Menu
 .comment-meta {
 	position: relative;
 	margin-left: 70px;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 80%;
 }
 
@@ -1746,7 +1747,7 @@ Header Menu
 .reply a {
 	display: inline-block;
 	padding: .5em 1.4em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 85%;
 	color: #000;
 	line-height: 1.3em;
@@ -1785,7 +1786,7 @@ Header Menu
 }
 
 .comment-form {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	line-height: 1.3em;
 }
 
@@ -1824,7 +1825,7 @@ Header Menu
 }
 
 .pingback {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .pingback .comment-body {
@@ -1834,6 +1835,21 @@ Header Menu
 .pingback a {
 	font-style: italic;
 	text-decoration: none;
+}
+
+.comment-form-cookies-consent {
+	font-size: .8em;
+	line-height: 1.2;
+	padding-left: 1.5em;
+}
+
+.comment-form-cookies-consent input[type="checkbox"] {
+	float: left;
+	margin-left: -1em;
+}
+
+.comment-form-cookies-consent label {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------

@@ -890,7 +890,7 @@ body {
 	}
 }
 
-/* Single posts */
+/* Single posts and pages */
 @media screen and (min-width: 900px) {
 	.single.has-sidebar .hentry,
 	.page .hentry {
@@ -915,13 +915,6 @@ body {
 	.page .hentry .widget-area {
 		width: 30%;
 	}
-	.page.has-page-sidebar .hentry {
-		-ms-flex-direction: row-reverse;
-		    flex-direction: row-reverse;
-	}
-	.page.has-page-sidebar .post-content {
-		width: 60% !important;
-	}
 	.page:not(.has-page-sidebar) .hentry {
 		-ms-flex-pack: end;
 		    justify-content: flex-end;
@@ -930,6 +923,13 @@ body {
 	}
 	.page:not(.has-page-sidebar) .post-content {
 		width: 100%;
+	}
+	.page.has-page-sidebar .hentry {
+		-ms-flex-direction: row-reverse;
+		    flex-direction: row-reverse;
+	}
+	.page.has-page-sidebar .post-content {
+		width: 60%;
 	}
 }
 
@@ -945,6 +945,26 @@ body {
 	}
 	.single.no-sidebar .post-content__wrap .post-content__body {
 		width: 70%;
+	}
+}
+
+/* Full page layout */
+.page .full-width .widget-area {
+	display: none;
+}
+
+@media screen and (min-width: 900px) {
+	.page .full-width .post-content {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.page .full-width .hentry {
+		max-width: 100%;
+		margin: 0 auto;
 	}
 }
 

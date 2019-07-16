@@ -20,7 +20,7 @@ body {
 	}
 }
 
-/* Single posts */
+/* Single posts and pages */
 @media screen and (min-width: $query__medium) {
 	.single.has-sidebar,
 	.page {
@@ -46,14 +46,6 @@ body {
 	}
 
 	.page {
-		&.has-page-sidebar {
-			.hentry {
-				flex-direction: row-reverse;
-			}
-			.post-content {
-				width: $size__ratio-large!important;
-			}
-		}
 		&:not(.has-page-sidebar) {
 			.hentry {
 				justify-content: flex-end;
@@ -64,7 +56,15 @@ body {
 				width: 100%;
 			}
 		}
-		
+
+		&.has-page-sidebar {
+			.hentry {
+				flex-direction: row-reverse;
+			}
+			.post-content {
+				width: $size__ratio-large;
+			}
+		}
 	}
 
 
@@ -89,5 +89,34 @@ body {
 			}
 
 		}
+	}
+}
+
+
+/* Full page layout */
+
+.page {
+	
+	.full-width {
+		
+		.widget-area {
+			display: none;
+		}
+
+		@media screen and(min-width: $query__medium) {
+			.post-content {
+				width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		@media screen and (min-width: $query__medium) {
+			.hentry {
+				max-width: 100%;
+				margin: 0 auto;
+			}
+		}
+		
 	}
 }

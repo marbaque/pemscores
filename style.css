@@ -884,6 +884,12 @@ body {
 	}
 }
 
+@media screen and (min-width: 1440px) {
+	.site-content {
+		padding: 3em 4em;
+	}
+}
+
 /* Single posts */
 @media screen and (min-width: 900px) {
 	.single.has-sidebar .hentry,
@@ -1062,7 +1068,7 @@ body {
 }
 
 .continue-reading a {
-	padding: .5em 1em;
+	padding: .75em 1em;
 	font-size: 90%;
 	text-decoration: none;
 	background: #d9d9d9;

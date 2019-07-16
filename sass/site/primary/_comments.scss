@@ -3,6 +3,7 @@
 	margin: 3em 0;
 	padding: 1.5em 0;
 	border-top: 1px solid hsl(0, 0%, 80%);
+	font-size: .9em;
 }
 
 .comments-title {
@@ -29,7 +30,7 @@
 .comment-meta {
 	position: relative;
 	margin-left: 70px;
-	font-family: $font__sans;
+	font-family: $font__body;
 	font-size: 80%;
 }
 
@@ -153,7 +154,7 @@
 	a {
 		display: inline-block;
 		padding: .5em 1.4em;
-		font-family: $font__sans;
+		font-family: $font__body;
 		font-size: 85%;
 		color: #000;
 		line-height: 1.3em;
@@ -201,7 +202,7 @@
 }
 
 .comment-form {
-	font-family: $font__sans;
+	font-family: $font__body;
 	line-height: 1.3em;
 
 	a {
@@ -242,7 +243,7 @@
 }
 
 .pingback {
-	font-family: $font__sans;
+	font-family: $font__body;
 
 	.comment-body {
 		padding: 1em 0;
@@ -251,5 +252,20 @@
 	a {
 		font-style: italic;
 		text-decoration: none;
+	}
+}
+
+.comment-form-cookies-consent {
+	font-size: .8em;
+	line-height: 1.2;
+	padding-left: 1.5em;
+
+	input[type="checkbox"] {
+		float: left;
+		margin-left: -1em;
+	}
+
+	label {
+		width: 100%;
 	}
 }

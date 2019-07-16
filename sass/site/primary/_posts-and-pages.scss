@@ -7,7 +7,7 @@
 }
 
 .entry-header {
-	font-family: $font__sans;
+	font-family: $font__headings;
 }
 
 .cat-links {
@@ -49,7 +49,7 @@
 
 .entry-meta,
 .entry-footer {
-	font-family: $font__sans;
+	font-family: $font__headings;
 	font-size: 90%;
 
 	a {
@@ -194,7 +194,7 @@
 
 .entry-footer {
 	margin: 1.5em 0;
-	font-family: $font__sans;
+	font-family: $font__headings;
 }
 
 .subheader {

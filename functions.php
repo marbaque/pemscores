@@ -46,7 +46,7 @@ function pemscores_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Header', 'pemscores' ),
+		'primary' => esc_html__( 'Cabecera', 'pemscores' ),
 		'social' => esc_html__( 'Social Media Menu', 'pemscores' ),
 		'info' => esc_html__( 'Info del sitio', 'pemscores' ),
 	) );
@@ -76,8 +76,7 @@ function pemscores_setup() {
 		'flex-width' => true,
 	));
 
-	/* Editor styles */
-	add_editor_style( array( 'inc/editor-styles.css', pemscores_fonts_url() ) );
+	
 }
 endif;
 add_action( 'after_setup_theme', 'pemscores_setup' );

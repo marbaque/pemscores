@@ -90,16 +90,16 @@ function pemscores_fonts_url() {
 
 	/**
 	 * Translators: If there are characters in your language that are not
-	 * supported by Futura Pro and Meta Serif Pro, translate this to 'off'. Do not translate
+	 * supported by FF Ernestine Pro and Meta Serif Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$futura = _x( 'on', 'Futura font: on or off', 'pemscores' );
+	$ffernestinepro = _x( 'on', 'FF Ernestine Pro font: on or off', 'pemscores' );
 	$proximaNova = _x( 'on', 'Proxima Nova: on or off', 'pemscores' );
 
 	$font_families = array();
 
-	if ( 'off' !== $futura ) {
-		$font_families[] = 'futura-pt:400,400i,600,600i';
+	if ( 'off' !== $ffernestinepro ) {
+		$font_families[] = 'ff-ernestine-pro:400,400i,600,600i';
 	}
 
 	if ( 'off' !== $proximaNova ) {
@@ -107,7 +107,7 @@ function pemscores_fonts_url() {
 	}
 
 
-	if ( in_array( 'on', array($futura, $proximaNova) ) ) {
+	if ( in_array( 'on', array($ffernestinepro, $proximaNova) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -271,7 +271,7 @@ add_action( 'widgets_init', 'pemscores_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pemscores_scripts() {
-	// Enqueue Typekit Fonts: Futura and Proxima Nova
+	// Enqueue Typekit Fonts: Europa and Proxima Nova
 	wp_enqueue_style( 'pemscores-fonts', pemscores_fonts_url() );
 
 	wp_enqueue_style( 'pemscores-style', get_stylesheet_uri() );
@@ -311,6 +311,9 @@ add_action( 'wp_enqueue_scripts', 'myprefix_load_superfish_scripts' );
 
 /* Permitir responsive embeds */
 add_theme_support( 'responsive-embeds' );
+
+/* Permitir estilos de blocks en frontend */
+add_theme_support( 'wp-block-styles' );
 
 /**
  * Implement the Custom Header feature.

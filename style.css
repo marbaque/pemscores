@@ -296,7 +296,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	margin-top: .75em;
 	margin-bottom: .25em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	clear: both;
 	text-rendering: optimizeLegibility;
 	line-height: 1.2;
@@ -339,7 +339,7 @@ blockquote {
 	position: relative;
 	margin: 0 0 1em;
 	background: #eee;
-	padding: 1em 2em .5em 5em;
+	padding: 2em 2em .5em 5em;
 	font-style: italic;
 }
 
@@ -348,7 +348,7 @@ blockquote:before {
 	top: -.2em;
 	left: -.13em;
 	content: "“";
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 12em;
 	line-height: 100%;
 	color: white;
@@ -388,6 +388,35 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+/* Gutenberg Blocks */
+.wp-block-button:not(.is-style-outline) a {
+	border: none;
+}
+
+.wp-block-button:not(.is-style-outline) a:hover {
+	border: none;
+	color: currentColor;
+}
+
+.wp-block-image figure {
+	padding: 8px;
+	border: 1px solid #cccccc;
+}
+
+.wp-block-image figure a {
+	border: none !important;
+}
+
+p.has-drop-cap:first-letter {
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-weight: 700 !important;
+	font-size: 8em !important;
+}
+
+.wp-block-file a {
+	border: none !important;
 }
 
 /*--------------------------------------------------------------
@@ -509,7 +538,7 @@ input[type="submit"] {
 	border: 0;
 	border-color: black;
 	color: black;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 18px;
 	font-size: 1.2rem;
 	line-height: 1;
@@ -621,7 +650,7 @@ a:hover, a:active {
 .comment-content a:focus,
 .comment-content a:hover {
 	color: #ee8925;
-	border-style: dashed;
+	border-bottom-style: dashed;
 }
 
 /*--------------------------------------------------------------
@@ -632,7 +661,7 @@ a:hover, a:active {
 .post-navigation,
 .paging-navigation,
 .course-item-nav {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	text-align: left;
 	overflow: hidden;
 	font-size: 80%;
@@ -733,7 +762,7 @@ a:hover, a:active {
 }
 
 .pagination {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .pagination .nav-links {
@@ -1015,7 +1044,7 @@ body {
 }
 
 .page-header {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .page-title {
@@ -1031,7 +1060,7 @@ body {
 .error-404 .page-content {
 	margin-bottom: 2em;
 	padding: 1em 2em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: white;
 	background: #ee8925;
 }
@@ -1082,7 +1111,7 @@ body {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	background: whitesmoke;
 	padding: 1em;
 	text-align: right;
@@ -1116,7 +1145,7 @@ body {
 
 .site-header {
 	position: relative;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: #fff;
 	background-color: #00519e;
 }
@@ -1204,9 +1233,9 @@ body {
 Header Menu
 */
 .main-navigation {
-	text-transform: uppercase;
 	background: transparent;
 	z-index: 99;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .main-navigation ul {
@@ -1236,7 +1265,6 @@ Header Menu
 .main-navigation a {
 	display: block;
 	padding: 1em .75em;
-	font-size: 1rem;
 	text-decoration: none;
 	line-height: 1.2;
 	color: currentColor;
@@ -1298,20 +1326,22 @@ Header Menu
 .main-navigation ul ul .current_page_parent,
 .main-navigation .current_page_parent .current_page_item > a {
 	color: currentColor;
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.1);
 }
 
 .menu-toggle {
 	display: none;
 }
 
+/* 
+/* Responsive Menu
+*/
 @media screen and (max-width: 600px) {
 	.menu-toggle {
 		display: block;
 		height: auto;
 		padding: 1em;
 		font-weight: normal;
-		font-size: 1rem;
 		text-decoration: none;
 		line-height: 1;
 		color: white;
@@ -1324,7 +1354,7 @@ Header Menu
 	.menu-toggle:focus,
 	.menu-toggle:hover {
 		background: rgba(255, 255, 255, 0.1);
-		border: 1px solid rgba(255, 255, 255, 0.25);
+		border: 1px solid rgba(255, 255, 255, 0.1);
 		color: currentColor;
 	}
 	.main-navigation.toggled .nav-menu {
@@ -1386,7 +1416,7 @@ Header Menu
 	.main-navigation .current_page_parent .current_page_item > a {
 		color: #fff;
 		color: white;
-		background: rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.1);
 	}
 	.menu-item-has-children > a {
 		position: relative;
@@ -1448,10 +1478,12 @@ Header Menu
 
 .hentry {
 	margin: 0 0 1.5em;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .entry-header {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .cat-links {
@@ -1493,7 +1525,7 @@ Header Menu
 
 .entry-meta,
 .entry-footer {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 90%;
 }
 
@@ -1630,7 +1662,7 @@ Header Menu
 
 .entry-footer {
 	margin: 1.5em 0;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .subheader {
@@ -1888,7 +1920,7 @@ Header Menu
 .site-footer {
 	position: relative;
 	padding: 1em;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: #fff;
 	background-color: #00519e;
 	text-align: center;
@@ -2005,6 +2037,7 @@ Header Menu
 	letter-spacing: 1px;
 	text-align: center;
 	color: rgba(255, 255, 255, 0.4);
+	margin-top: 4em;
 }
 
 .creditos a {
@@ -2077,7 +2110,7 @@ Header Menu
 	width: 100%;
 	height: 2.5em;
 	padding: 10px;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	border: 1px solid #ccc;
 }
 
@@ -2330,7 +2363,7 @@ Header Menu
 	-webkit-appearance: none;
 	border-radius: 0;
 	background: rgba(0, 0, 0, 0.2);
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 95%;
 	font-weight: 400;
 	color: #fff;
@@ -2431,7 +2464,7 @@ object {
 .wp-caption {
 	margin-bottom: 2em;
 	max-width: 100%;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 90%;
 	color: #666666;
 	text-align: center;
@@ -2553,8 +2586,10 @@ object {
 .gallery-caption {
 	display: block;
 	margin: 0;
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	border: none;
+	font-size: .9em;
+	line-height: 1.3;
 }
 
 /*--------------------------------------------------------------

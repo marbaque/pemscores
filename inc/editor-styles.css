@@ -27,8 +27,13 @@ textarea {
 
 /* post title */
 .editor-post-title__block .editor-post-title__input,
-.wp-block-heading h1, .wp-block-heading h2, .wp-block-heading h3 {
-	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+.wp-block-heading h1, 
+.wp-block-heading h2, 
+.wp-block-heading h3,
+.wp-block-heading h4,
+.wp-block-heading h5,
+.wp-block-heading h6 {
+	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 

@@ -30,7 +30,7 @@ a {
 		&:focus,
 		&:hover {
 			color: $color__interactive;
-			border-style: dashed;
+			border-bottom-style: dashed;
 		}
 	}
 }

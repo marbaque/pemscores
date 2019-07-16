@@ -11,7 +11,7 @@ blockquote {
 	position: relative;
 	margin: 0 0 1em;
 	background: $color__background-pre;
-	padding: 1em 2em .5em 5em;
+	padding: 2em 2em .5em 5em;
 	font-style: italic;
 	
 	&:before {
@@ -58,4 +58,45 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+/* Gutenberg Blocks */
+.wp-block-button {
+	
+	&:not(.is-style-outline) {
+		a {
+			border: none;
+
+			&:hover {
+				border: none;
+				color: currentColor;
+			}
+		}
+	}
+
+	
+}
+
+.wp-block-image {
+
+	figure {
+		padding: 8px;
+		border: 1px solid hsl(0, 0%, 80%);
+
+		a {
+			border: none!important;
+		}
+	}
+}
+
+p.has-drop-cap:first-letter {
+	font-family: $font__headings;
+	font-weight: 700!important;
+	font-size: 8em!important;	
+}
+
+.wp-block-file {
+	a {
+		border: none!important;
+	}
 }

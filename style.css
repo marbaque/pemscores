@@ -303,27 +303,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 3em;
-}
-
-h2 {
-	font-size: 2.6em;
-}
-
-h3 {
 	font-size: 2.2em;
 }
 
-h4 {
+h2 {
 	font-size: 2em;
 }
 
-h5 {
+h3 {
 	font-size: 1.8em;
 }
 
-h6 {
+h4 {
 	font-size: 1.6em;
+}
+
+h5 {
+	font-size: 1.4em;
+}
+
+h6 {
+	font-size: 1.2em;
 }
 
 p {
@@ -1154,7 +1154,7 @@ body {
 	display: -ms-flexbox;
 	display: flex;
 	min-height: 80px;
-	width: 80%;
+	width: 85%;
 	padding: 1em;
 }
 
@@ -1183,7 +1183,7 @@ body {
 .site-title {
 	margin: 0;
 	padding: 0;
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: 600;
 	line-height: 1em;
 }
@@ -1200,9 +1200,10 @@ body {
 
 .site-description {
 	margin: 0;
-	font-size: .9em;
+	font-size: .8em;
 	font-style: italic;
 	font-weight: 400;
+	line-height: 1.2;
 }
 
 @media screen and (min-width: 900px) {
@@ -1215,16 +1216,19 @@ body {
 		    align-items: center;
 	}
 	.site-branding {
-		width: 35%;
+		width: 40%;
 		-ms-flex: 1 0 auto;
 		    flex: 1 0 auto;
 		margin: 1em 0 1em 1em;
 	}
 	.site-title {
-		font-size: 1.6em;
+		font-size: 1.4em;
+	}
+	.site-description {
+		font-size: 1em;
 	}
 	.main-navigation {
-		width: 60%;
+		width: 55%;
 		margin-right: 2em;
 	}
 }
@@ -1342,12 +1346,13 @@ Header Menu
 		height: auto;
 		padding: 1em;
 		font-weight: normal;
+		font-size: .8rem;
 		text-decoration: none;
 		line-height: 1;
 		color: white;
 		position: absolute;
 		right: 1em;
-		bottom: 1.5em;
+		bottom: 2em;
 	}
 	.menu-toggle,
 	.menu-toggle:active,
@@ -1376,13 +1381,13 @@ Header Menu
 		float: none;
 	}
 	.main-navigation li a {
-		padding: 1.3em 2em;
+		padding: 1em;
 	}
 	.main-navigation li li a {
-		padding-left: 4em;
+		padding-left: 2em;
 	}
 	.main-navigation li li li a {
-		padding-left: 6em;
+		padding-left: 3em;
 	}
 	.main-navigation li:hover > a {
 		background: rgba(255, 255, 255, 0.1);
@@ -1487,7 +1492,7 @@ Header Menu
 }
 
 .cat-links {
-	font-size: 90%;
+	font-size: 80%;
 	font-weight: 700;
 }
 
@@ -1504,13 +1509,13 @@ Header Menu
 
 .entry-title {
 	margin: .125em 0 .25em;
-	font-size: 2.5em;
+	font-size: 1.6em;
 	line-height: 1.2;
 }
 
 @media screen and (min-width: 900px) {
 	.entry-title {
-		font-size: 3em;
+		font-size: 2.2em;
 	}
 }
 
@@ -1525,8 +1530,8 @@ Header Menu
 
 .entry-meta,
 .entry-footer {
-	font-family: "ff-ernestine-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: 90%;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 80%;
 }
 
 .entry-meta a,
@@ -1579,7 +1584,6 @@ Header Menu
 		font-size: 80%;
 	}
 	.no-sidebar .post-content__wrap .entry-meta a {
-		font-size: 110%;
 		display: block;
 		border-bottom: 3px solid white;
 	}

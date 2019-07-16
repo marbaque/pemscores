@@ -13,7 +13,7 @@
 }
 
 .cat-links {
-	font-size: 90%;
+	font-size: 80%;
 	font-weight: 700;
 
 	a {
@@ -31,11 +31,11 @@
 
 .entry-title {
 	margin: .125em 0 .25em;
-	font-size: 2.5em;
+	font-size: 1.6em;
 	line-height: 1.2;
 
 	@media screen and (min-width: $query__medium) {
-		font-size: 3em;
+		font-size: 2.2em;
 	}
 
 	a {
@@ -51,8 +51,8 @@
 
 .entry-meta,
 .entry-footer {
-	font-family: $font__headings;
-	font-size: 90%;
+	font-family: $font__body;
+	font-size: 80%;
 
 	a {
 		font-weight: 700;
@@ -112,7 +112,6 @@
 				font-size: 80%;
 
 				a {
-					font-size: 110%;
 					display: block;
 					border-bottom: 3px solid white;
 

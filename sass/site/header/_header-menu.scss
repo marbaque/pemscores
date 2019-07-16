@@ -106,13 +106,13 @@
 		height: auto;
 		padding: 1em;
 		font-weight: normal;
-		//font-size: 1rem;
+		font-size: .8rem;
 		text-decoration: none;
 		line-height: 1;
 		color: white;
 		position: absolute;
 		right: 1em;
-		bottom: 1.5em;
+		bottom: 2em;
 	}
 	.menu-toggle,
 	.menu-toggle:active,
@@ -145,15 +145,15 @@
 	}
 
 	.main-navigation li a { 
-		padding: 1.3em 2em; 
+		padding: 1em; 
 	}
 
 	.main-navigation li li a { 
-		padding-left: 4em; 
+		padding-left: 2em; 
 	}
 
 	.main-navigation li li li a { 
-		padding-left: 6em; 
+		padding-left: 3em; 
 	}
 
 	.main-navigation li:hover > a {

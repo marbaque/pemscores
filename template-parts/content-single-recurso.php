@@ -92,16 +92,6 @@ $file = get_field('subir_arch');
 
 <div class="recurso-secundario hentry">
 
-	<aside id="secondary" class="widget-area" role="complimentary">
-		
-		<?php
-			if ( is_active_sidebar( 'sidebar-3' )  )
-				{
-					dynamic_sidebar( 'sidebar-3' );
-				}	
-		?>
-
-	</aside> <!-- secondary -->
 	
 	<section class="content-area">
 		<h3><?= __('Descripción', 'pemscores'); ?></h3>
@@ -113,5 +103,16 @@ $file = get_field('subir_arch');
 		endif;
 		?>
 	</section>
+
+	<aside id="secondary" class="widget-area" role="complimentary">
+		
+		<?php
+			if ( is_active_sidebar( 'sidebar-3' )  )
+				{
+					dynamic_sidebar( 'sidebar-3' );
+				}	
+		?>
+
+	</aside> <!-- secondary -->
 
 </div>

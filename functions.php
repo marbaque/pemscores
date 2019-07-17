@@ -90,16 +90,16 @@ function pemscores_fonts_url() {
 
 	/**
 	 * Translators: If there are characters in your language that are not
-	 * supported by FF Ernestine Pro and Meta Serif Pro, translate this to 'off'. Do not translate
+	 * supported by Futura PT and Meta Serif Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$ffernestinepro = _x( 'on', 'FF Ernestine Pro font: on or off', 'pemscores' );
+	$futura = _x( 'on', 'Futura PT font: on or off', 'pemscores' );
 	$proximaNova = _x( 'on', 'Proxima Nova: on or off', 'pemscores' );
 
 	$font_families = array();
 
-	if ( 'off' !== $ffernestinepro ) {
-		$font_families[] = 'ff-ernestine-pro:400,400i,600,600i';
+	if ( 'off' !== $futura ) {
+		$font_families[] = 'futura-pt:400,400i,600,600i';
 	}
 
 	if ( 'off' !== $proximaNova ) {
@@ -107,7 +107,7 @@ function pemscores_fonts_url() {
 	}
 
 
-	if ( in_array( 'on', array($ffernestinepro, $proximaNova) ) ) {
+	if ( in_array( 'on', array($futura, $proximaNova) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),

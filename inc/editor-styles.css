@@ -36,4 +36,11 @@ textarea {
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
+/* Ancho del editor de gutenberg */
+@media screen and ( min-width: 768px ) {
+	.edit-post-visual-editor .editor-post-title__block,
+	.edit-post-visual-editor .editor-block-list__block {
+		max-width:	900px;
+	}
+}
 

@@ -6,6 +6,13 @@
 	margin: 0 0 1.5em;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+
+	/* Enlaces sin borde */
+	figure {
+		a, a:hover, a:active, a:focus {
+			border: none;
+		}
+	}
 }
 
 .entry-header {

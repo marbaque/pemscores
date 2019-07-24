@@ -415,7 +415,7 @@ p.has-drop-cap:first-letter {
 	font-size: 8em !important;
 }
 
-.wp-block-file a {
+.wp-block-file a.wp-block-file__button {
 	border: none !important;
 }
 
@@ -1485,6 +1485,11 @@ Header Menu
 	margin: 0 0 1.5em;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	/* Enlaces sin borde */
+}
+
+.hentry figure a, .hentry figure a:hover, .hentry figure a:active, .hentry figure a:focus {
+	border: none;
 }
 
 .entry-header {

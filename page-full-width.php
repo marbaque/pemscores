@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Full Width
+* Template Name: Página: ancho completo
 *
 * @package WordPress
 * @subpackage Twenty_Fourteen

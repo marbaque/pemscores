@@ -19,6 +19,12 @@
 	</figure><!-- .featured-image full-bleed -->
 	<?php } ?>
 
+	<?php 
+		if ( function_exists( 'pemscores_breadcrumbs' ) ) {
+			pemscores_breadcrumbs();
+		}
+	?>
+
 	<header class="entry-header">
 		<?php pemscores_the_category_list(); ?>
 		<?php

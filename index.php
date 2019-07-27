@@ -19,6 +19,12 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<?php 
+			if ( function_exists( 'pemscores_breadcrumbs' ) ) {
+				pemscores_breadcrumbs();
+			}
+		?>
+
 		<?php
 
 			if ( is_home() && ! is_front_page() ) : ?>

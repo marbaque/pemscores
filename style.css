@@ -1695,9 +1695,9 @@ Header Menu
 }
 
 #breadcrumbs .separator {
-	font-size: 18px;
 	font-weight: 100;
 	color: #ccc;
+	margin-right: .25em;
 }
 
 /*--------------------------------------------------------------

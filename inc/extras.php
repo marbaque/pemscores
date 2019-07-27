@@ -72,10 +72,10 @@ add_action( 'enqueue_block_editor_assets', 'legit_block_editor_styles' );
 */
 function pemscores_breadcrumbs() {
   
-  $delimiter = '>';
+  $delimiter = '<span class="separator">></span>';
   $name = 'Inicio'; //text for the 'Home' link
-  $currentBefore = '<span class="current">';
-  $currentAfter = '</span>';
+  $currentBefore = '<li><span class="current-item">';
+  $currentAfter = '</span></li>';
   
   if ( !is_home() && !is_front_page() || is_paged() ) {
   
@@ -83,7 +83,7 @@ function pemscores_breadcrumbs() {
   
     global $post;
     $home = get_bloginfo('url');
-    echo '<li><li><a href="' . $home . '">' . $name . '</a></li></li> ' . $delimiter . ' ';
+    echo '<li><a href="' . $home . '">' . $name . '</a></li>' . $delimiter;
   
     if ( is_category() ) {
       global $wp_query;
@@ -91,26 +91,27 @@ function pemscores_breadcrumbs() {
       $thisCat = $cat_obj->term_id;
       $thisCat = get_category($thisCat);
       $parentCat = get_category($thisCat->parent);
-      if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-      echo $currentBefore . 'Archive by category &#39;';
+      if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter));
+      echo $currentBefore . 'Archivado en categoría &#39;';
       single_cat_title();
       echo '&#39;' . $currentAfter;
   
     } elseif ( is_day() ) {
-      echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
-      echo '<li><a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a></li> ' . $delimiter . ' ';
+      echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li>' . $delimiter;
+      echo '<li><a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a></li>' . $delimiter . ' ';
       echo $currentBefore . get_the_time('d') . $currentAfter;
   
     } elseif ( is_month() ) {
-      echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
+      echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li>' . $delimiter;
       echo $currentBefore . get_the_time('F') . $currentAfter;
   
     } elseif ( is_year() ) {
       echo $currentBefore . get_the_time('Y') . $currentAfter;
   
     } elseif ( is_single() && !is_attachment() ) {
-      $cat = get_the_category(); $cat = $cat[0];
-      echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+			$cat = get_the_category(); $cat = $cat[0];
+			echo '<li>';
+      echo get_category_parents($cat, TRUE, ' ' . '</li>' . $delimiter);
       echo $currentBefore;
       the_title();
       echo $currentAfter;
@@ -119,7 +120,7 @@ function pemscores_breadcrumbs() {
       $parent = get_post($post->post_parent);
       $cat = get_the_category($parent->ID); $cat = $cat[0];
       echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-      echo '<li><a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a></li> ' . $delimiter . ' ';
+      echo '<li><a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a></li>' . $delimiter;
       echo $currentBefore;
       the_title();
       echo $currentAfter;
@@ -138,23 +139,23 @@ function pemscores_breadcrumbs() {
         $parent_id  = $page->post_parent;
       }
       $breadcrumbs = array_reverse($breadcrumbs);
-      foreach ($breadcrumbs as $crumb) echo $crumb . ' ' . $delimiter . ' ';
+      foreach ($breadcrumbs as $crumb) echo $crumb . ' ' . $delimiter;
       echo $currentBefore;
       the_title();
       echo $currentAfter;
   
     } elseif ( is_search() ) {
-      echo $currentBefore . 'Search results for &#39;' . get_search_query() . '&#39;' . $currentAfter;
+      echo $currentBefore . 'Resultados para &#39;' . get_search_query() . '&#39;' . $currentAfter;
   
     } elseif ( is_tag() ) {
-      echo $currentBefore . 'Posts tagged &#39;';
+      echo $currentBefore . 'Entradas etiquetadas como &#39;';
       single_tag_title();
       echo '&#39;' . $currentAfter;
   
     } elseif ( is_author() ) {
        global $author;
       $userdata = get_userdata($author);
-      echo $currentBefore . 'Articles posted by ' . $userdata->display_name . $currentAfter;
+      echo $currentBefore . 'Entradas publicadas por ' . $userdata->display_name . $currentAfter;
   
     } elseif ( is_404() ) {
       echo $currentBefore . 'Error 404' . $currentAfter;
@@ -162,7 +163,7 @@ function pemscores_breadcrumbs() {
   
     if ( get_query_var('paged') ) {
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-      echo __('Page') . ' ' . get_query_var('paged');
+      echo __('Página') . ' ' . get_query_var('paged');
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
   

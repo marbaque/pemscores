@@ -1026,9 +1026,7 @@ body {
 }
 
 .archive-view .post,
-.archive-view .page,
-.archive-view .curso,
-.archive-view .recurso {
+.archive-view .page {
 	position: relative;
 	background: white;
 	border-radius: 8px;

@@ -288,17 +288,18 @@
     position: relative;
 
     &:before{
-        font-family: FontAwesome;
-        content: "\f002";
-        height: 40px;
-        display: inline-block;
-        color: #fff;
-        position: absolute;
-        top: 0;
-        left: 1em;
-        z-index: 1;
-        line-height: 2;
-        font-size: 100%;
+			content: "";
+			height: 20px;
+			width: 20px;
+			background-image: url('images/search.svg');
+			display: inline-block;
+			color: #fff;
+			position: absolute;
+			top: .5em;
+			left: 1em;
+			z-index: 1;
+			line-height: 2;
+			font-size: 100%;
     }
 
     label{

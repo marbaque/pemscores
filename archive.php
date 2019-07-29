@@ -9,7 +9,11 @@
 
 get_header(); ?>
 
-
+	<?php 
+		if ( function_exists( 'pemscores_breadcrumbs' ) ) {
+			pemscores_breadcrumbs();
+		}
+	?>
 
 	<header class="page-header">
 		<?php

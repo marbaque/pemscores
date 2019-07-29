@@ -9,6 +9,12 @@
 
 get_header(); ?>
 
+	<?php 
+		if ( function_exists( 'pemscores_breadcrumbs' ) ) {
+			pemscores_breadcrumbs();
+		}
+	?>
+
 <?php
 if ( have_posts() ) : ?>
 

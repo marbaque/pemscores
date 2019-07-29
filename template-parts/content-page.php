@@ -18,6 +18,12 @@
 		?>
 	</figure><!-- .featured-image full-bleed -->
 	<?php } ?>
+
+	<?php 
+		if ( function_exists( 'pemscores_breadcrumbs' ) ) {
+			pemscores_breadcrumbs();
+		}
+	?>
 	
 	<!-- custom-fields.php -->
 	<?php $meta = get_post_meta( $post->ID, 'page_options', true ); ?>

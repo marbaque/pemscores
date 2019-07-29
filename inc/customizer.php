@@ -193,7 +193,7 @@ function pemscores_header_style() {
 			.nav-menu .sub-menu,
 			.main-navigation.toggled .nav-menu,
 			.search-form .search-field:focus {
-				background-color: <?php echo esc_attr( $header_bg_color ); ?>!important;
+				background-color: <?php echo esc_attr( $header_bg_color ); ?>;
 			}
 		</style>
 	<?php

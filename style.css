@@ -487,10 +487,31 @@ figure {
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
-table {
+table,
+table.wp-block-table {
 	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
+	font-size: .8em;
+}
+
+.wp-block-table td, .wp-block-table th {
+	word-break: keep-all;
+	-webkit-hyphens: initial;
+	    -ms-hyphens: initial;
+	        hyphens: initial;
+}
+
+.wp-block-table td {
+	min-width: 140px !important;
+}
+
+@media only screen and (max-width: 768px) {
+	.wp-block-table {
+		overflow: hidden;
+		overflow-x: scroll;
+		display: block;
+	}
 }
 
 thread th {
@@ -516,13 +537,13 @@ td {
 	padding: .4em;
 }
 
-th:first-child,
-td:first-child {
+table:not.is-style-regular th:first-child,
+table:not.is-style-regular td:first-child {
 	padding-left: 0;
 }
 
-th:last-child,
-td:last-child {
+table:not.is-style-regular th:last-child,
+table:not.is-style-regular td:last-child {
 	padding-right: 0;
 }
 
@@ -1063,11 +1084,6 @@ body {
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: white;
 	background: #ee8925;
-}
-
-.search input[type="search"],
-.error-404 input[type="search"] {
-	padding: .5em;
 }
 
 .search input[type="submit"],

@@ -34,6 +34,7 @@
               .course-permalink {
                 border: none;
                 height: auto;
+                color: $color__main-oscuro;
               }
 
               .course-thumbnail {
@@ -42,6 +43,11 @@
                       margin: 0 auto;
                   }
               }
+
+              .course-title {
+                line-height: 1.2;
+              }
+
               .course-info {
                   display: block;
                   width: 100%;

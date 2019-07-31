@@ -41,7 +41,7 @@ function pemscores_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'pemscores-full-bleed', 2000, 1000, true );
+	add_image_size( 'pemscores-full-bleed', 2000, 800, true );
 	add_image_size( 'pemscores-index-img', 1000, 550, true );
 	add_image_size( 'recurso-portada', 800, 600, true );
 

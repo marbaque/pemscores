@@ -3,6 +3,30 @@
     "title": "Página de inicio",
     "fields": [
         {
+            "key": "field_5d42058e1f7b0",
+            "label": "Icono de página 1",
+            "name": "icon1",
+            "type": "image",
+            "instructions": "Suba un ícono para ilustrar esta página",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "uploadedTo",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 800,
+            "max_height": 800,
+            "max_size": 2,
+            "mime_types": ""
+        },
+        {
             "key": "field_5c1083f177fe3",
             "label": "Página destacada 1",
             "name": "pagina_1",
@@ -44,6 +68,30 @@
             "new_lines": "wpautop"
         },
         {
+            "key": "field_5d4205dc5053b",
+            "label": "Icono de página 2",
+            "name": "icono_2",
+            "type": "image",
+            "instructions": "Suba un ícono para ilustrar esta página",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 800,
+            "max_height": 800,
+            "max_size": 2,
+            "mime_types": "png,svg"
+        },
+        {
             "key": "field_5c108614b94ce",
             "label": "Página destacada 2",
             "name": "pagina_2",
@@ -83,6 +131,30 @@
             "maxlength": 200,
             "rows": 3,
             "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5d4205e25053c",
+            "label": "Icono de página 3",
+            "name": "icono_3",
+            "type": "image",
+            "instructions": "Suba un ícono para ilustrar esta página",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 800,
+            "max_height": 800,
+            "max_size": 2,
+            "mime_types": "png,svg"
         },
         {
             "key": "field_5c108617b94cf",
@@ -143,5 +215,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Seleccione las 3 páginas que quiere destacar en la portada del sitio.",
-    "modified": 1557424352
+    "modified": 1564608806
 }

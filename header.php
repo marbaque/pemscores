@@ -64,6 +64,28 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<?php if ( !is_front_page() && is_page() || is_singular('lp_course') ) : ?>
+		
+		<?php if ( has_post_thumbnail() ): ?>			
+			<div class="full-bleed featured-image">
+				<?php
+					the_post_thumbnail('pemscores-full-bleed');
+					?>
+			</div><!-- .full-bleed -->
+		<?php endif; ?>
+
+		<?php if ( is_singular('lp_course') ): ?>
+			<div class="course-title_wrap"><?php the_title( '<h1 class="course-title">', '</h1>' ); ?></div>
+		<?php endif; ?>
+
+		<?php if ( !is_singular('lp_course') && !is_buddypress() ): ?>
+			<header class="page-header">
+				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+			</header><!-- .entry-header -->
+		<?php endif; ?>
+
+	<?php endif; ?>
+
 	<?php if ( is_front_page() ): ?>
 
 		<section class="hero-banner" aria-role="banner">

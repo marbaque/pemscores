@@ -45,7 +45,12 @@ get_header(); ?>
 
 				?>
 				<div class="pagina">
-					<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+
+					<h3>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<?php the_title(); ?>
+						</a>
+					</h3>
 				
 				<?php if ($desc1): ?>
 					<p><?= $desc1; ?></p>

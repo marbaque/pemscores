@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="full-bleed featured-image">
+<div class="featured-image">
 	<?php the_post_thumbnail('pemscores-full-bleed'); ?>
 </div><!-- .full-bleed -->
 

@@ -36,6 +36,7 @@ get_header(); ?>
 
 			$pagina1 = get_field('pagina_1');
 			$desc1 = get_field('descripcion_1');
+			$css1 = get_field('class_1');
 
 			if( $pagina1 ):
 
@@ -44,7 +45,7 @@ get_header(); ?>
 				setup_postdata( $post );
 
 				?>
-				<div class="pagina">
+				<div class="pagina <?= $css1; ?>">
 
 					<h3>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
@@ -69,6 +70,7 @@ get_header(); ?>
 
 			$pagina2 = get_field('pagina_2');
 			$desc2 = get_field('descripcion_2');
+			$css2 = get_field('class_2');
 
 			if( $pagina2 ):
 
@@ -77,7 +79,7 @@ get_header(); ?>
 				setup_postdata( $post );
 
 				?>
-				<div class="pagina">
+				<div class="pagina <?= $css2; ?>">
 					<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 					
 					<?php if ($desc2): ?>
@@ -97,6 +99,7 @@ get_header(); ?>
 
 			$pagina3 = get_field('pagina_3');
 			$desc3 = get_field('descripcion_3');
+			$css3 = get_field('class_3');
 
 			if( $pagina3 ):
 
@@ -105,7 +108,7 @@ get_header(); ?>
 				setup_postdata( $post );
 
 				?>
-			    <div class="pagina">
+			    <div class="pagina <?= $css3; ?>">
 			    	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 					
 					<?php if ($desc3): ?>

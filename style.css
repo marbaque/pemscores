@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, hecho a partir de _s.
-Version: 2.5
+Version: 2.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -1822,6 +1822,30 @@ body:not(.logged-in) li.bp-comunidad {
 	font-family: "Roboto", sans-serif;
 	font-size: .8em;
 	line-height: 1.4;
+}
+
+.bloqueA:before,
+.bloqueB:before,
+.bloqueC:before {
+	content: "";
+	width: 100%;
+	height: 120px;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.bloqueA:before {
+	background-image: url("images/icons/about_icon.svg");
+}
+
+.bloqueB:before {
+	background-image: url("images/icons/self_training_icon.svg");
+}
+
+.bloqueC:before {
+	background-image: url("images/icons/help_icon.svg");
 }
 
 .read-more, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a {

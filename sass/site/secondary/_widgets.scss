@@ -116,6 +116,13 @@
 
 }
 
+/* Image widget */
+.widget .figure{
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
 
 /* Meta widget */
 .widget_meta li {
@@ -233,8 +240,8 @@
 		border: none;
 		background: none;
 
-		.original-title {
-
+		@media screen and (min-width: $query__small) {
+			margin: 0!important;
 		}
 	}
 
@@ -272,27 +279,8 @@
 		justify-content: space-around;
 		align-items: center;
 
-		.widget:not(:last-child):after {
-			padding-right: 1em;
-			border-right: 1px solid $color__main-bordes;
-		}
-
-		/* If only one widget is displayed, make it full width. */
-		.widget:only-of-type {
-			width: 100%;
-			max-width: 300px;
-		}
-
-		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
-		.widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
-
-		}
-
-		/* If 4 or more widgets are displayed, show three across when available. */
-		.widget:nth-last-child(n+2),
-		.widget:nth-last-child(n+2) ~ .widget {
-			width: 40%;
-			flex: 1 1 40%;
+		.widget {
+			flex: 1 1 45%;
 		}
 	}
 

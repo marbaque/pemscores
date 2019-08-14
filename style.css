@@ -496,10 +496,12 @@ p.small {
 	margin: 0 0 .5em;
 }
 
-table {
+table,
+.wp-block-table {
 	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
+	font-size: .9em;
 }
 
 thread th {
@@ -522,7 +524,8 @@ tr {
 }
 
 td {
-	padding: .4em;
+	padding: .5em;
+	border: 1px solid #888;
 }
 
 th:first-child,
@@ -2605,6 +2608,10 @@ h1.course-title {
 	    flex: 1 0 100%;
 }
 
+.course-review-head {
+	display: none;
+}
+
 .archive-view.learnpress .site .site-content .page-header {
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
@@ -4082,6 +4089,13 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	padding: 0;
 }
 
+/* Image widget */
+.widget .figure {
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
 /* Meta widget */
 .widget_meta li {
 	padding: 0;
@@ -4184,6 +4198,12 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	background: none;
 }
 
+@media screen and (min-width: 600px) {
+	.footer-widgets .widget {
+		margin: 0 !important;
+	}
+}
+
 .footer-widgets .widget_media_image {
 	text-align: center;
 }
@@ -4208,23 +4228,10 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 		    justify-content: space-around;
 		-ms-flex-align: center;
 		    align-items: center;
-		/* If only one widget is displayed, make it full width. */
-		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
-		/* If 4 or more widgets are displayed, show three across when available. */
 	}
-	.footer-widgets .widget:not(:last-child):after {
-		padding-right: 1em;
-		border-right: 1px solid #6696c7;
-	}
-	.footer-widgets .widget:only-of-type {
-		width: 100%;
-		max-width: 300px;
-	}
-	.footer-widgets .widget:nth-last-child(n+2),
-	.footer-widgets .widget:nth-last-child(n+2) ~ .widget {
-		width: 40%;
-		-ms-flex: 1 1 40%;
-		    flex: 1 1 40%;
+	.footer-widgets .widget {
+		-ms-flex: 1 1 45%;
+		    flex: 1 1 45%;
 	}
 }
 

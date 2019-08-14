@@ -29,7 +29,7 @@
 						'depth'          => 1,
 						'link_before'    => '<span class="screen-reader-text">',
 						'link_after'     => '</span>' . pemscores_get_svg( array( 'icon' => 'chain' ) ),
-						'items_wrap' => '<h5 class="title">' . __( 'Academia Municipal', 'pemscores') . '</h5><ul class="%2$s">%3$s</ul>'
+						'items_wrap' => '<ul class="%2$s">%3$s</ul>'
 					) );
 				?>
 			</nav><!-- .social-menu -->

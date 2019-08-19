@@ -46,9 +46,7 @@
                   font-size: 1.1em;
                 }
 
-                .course-item.item-locked .course-item-status:before {
-                  color: #fa3c46;
-                }
+                
 
                 a {
                   padding: 0 1em;
@@ -99,6 +97,10 @@
   }
 }
 
+.course-item.item-locked .course-item-status:before {
+  color: #fa3c46!important;
+}
+
 .lp-single-course {
 
 
@@ -106,7 +108,7 @@
     .learn-press-course-forum-link {
         //font-family: $font__system;
         font-size: .8em;
-        border: none;q
+        border: none;
         a {
             border: none;
         }

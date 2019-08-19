@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit();
 
 <div class="learn-press-content-protected-message">
 
-    <span class="icon"></span>
+    <div class="lock-icon"><i class="fa fa-lock" aria-hidden="true"></i></div>
 
 	<?php
     if( $can_view_item && $can_view_item == 'not-enrolled' ){

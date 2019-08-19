@@ -11,9 +11,7 @@
 	font-family: $font__system;
 
 	a {
-		display: block;
-		max-width: 100%;
-		width: 100%;
+		display: block!important;
 		text-decoration: none;
 		padding: 1em;
 		border: 1px solid $color__main-bordes;
@@ -30,37 +28,77 @@
 
 
 .nav-links {
-	margin: 0 auto;
-	padding: 0 .4em;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 0;
+}
+
+.comment-navigation,
+.post-navigation {
+
+	display: flex;
+	width: 100%;
+
+	.meta-nav {
+		font-weight: 700;
+		display: block;
+	}
+
+	.nav-previous,
+	.nav-next {
+		flex: 1 1 48%;
+		display: flex;
+		align-items: stretch;
+
+		a {
+			width: 100%;
+		}
+	}
+
+	.nav-next {
+		text-align: right;
+		margin-left: auto;
+	}
 }
 
 .nav-previous {
-	padding-bottom: 1em;
+	padding-bottom: 0;
 }
 
-@media screen and (min-width: $query__medium) {
 
-	.nav-links {
-		display: flex;
-		justify-content: space-between;
-		align-items: stretch;
-		padding: 0;
-	}
 
-	.comment-navigation,
-	.posts-navigation,
+
+
+// Navegación en las lecciones
+.course-item-lp_lesson {
+
 	.post-navigation {
+		background-color: white;
+		overflow: hidden;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		margin: 0!important;
+		border-top: 1px solid $color__main-bordes;
+		box-sizing: border-box;
 
 		.nav-previous,
 		.nav-next {
-			float: left;
+			flex: 1 1 48%;
 			display: flex;
 			align-items: stretch;
-			width: 48%;
+
+			
+
+			a {
+				border: 0;
+				width: 100%;
+			}
 		}
 
 		.nav-next {
-			float: right;
 			text-align: right;
 			margin-left: auto;
 		}
@@ -70,32 +108,25 @@
 		padding-bottom: 0;
 	}
 
+	&:not(.full-screen-content-item) {
+		
+		.post-navigation {
+			padding-left: 200px;
+
+			@media screen and (min-width: 768px) {
+				padding-left: 300px;
+			}
+			@media screen and (min-width: 1300px) {
+				padding-left: 400px;
+			}
+		}
+	}
+
+
 
 }
 
-.post-navigation {
 
-	.meta-nav {
-		display: block;
-	}
-
-	@media screen and (min-width: 30em) {
-		padding-bottom: 1em;
-	}
-
-	.post-title {
-		font-size: 1em;
-		font-weight: 600;
-		line-height: 1!important;
-		//border-bottom: 3px solid $color__main-bordes;
-	}
-
-	a:hover .post-title,
-	a:focus .post-title{
-		//border-bottom-color: white;
-	}
-
-}
 
 .pagination {
 

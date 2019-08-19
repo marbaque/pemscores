@@ -95,7 +95,6 @@
 }
 
 .content-item-wrap { // contenido dentro de la leccion
-  max-width: 780px!important;
 
   .course-item-title { //titulo de leccion
     border-bottom: 2px solid $color__main-bordes;
@@ -237,11 +236,24 @@ a.toggle-content-item {
 }
 
 .learn-press-content-protected-message {
-  background-color: $color__naranja-claro!important;
-  font-family: $font__system;
-  .icon {
-    display: none;
+  text-align: center;
+  font-family: $font__sans;
+  max-width: $query__small;
+  margin: 0 auto;
+  
+  .lock-icon {
+    width: 40px;
+    height: 40px;
+    margin: .5em auto;
+    font-size: 32px;
+    background-color: #fa3c46;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
   }
+
+
 }
 
 

@@ -38,15 +38,15 @@
   <?php endif; ?>
 
   <!-- Ejes temáticos -->
-    <?= get_the_term_list(
+    <?php echo get_the_term_list(
             $post->ID, 'temas', __('<li><i class="fa fa-tag" aria-hidden="true"></i> <strong>Ejes temáticos:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
 
     <!-- coberturas -->
-    <?= get_the_term_list(
+    <?php echo get_the_term_list(
             $post->ID, 'cobertura', __('<li><i class="fa fa-map-o" aria-hidden="true"></i> <strong>Cobertura:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
 
     <!-- tipos de recurso -->
-    <?= get_the_term_list(
+    <?php echo get_the_term_list(
         $post->ID, 'tipo_recurso', __('<li><i class="fa fa-file-text-o" aria-hidden="true"></i> <strong>Tipo de recurso:</strong> ', 'pemscores'), ', ', ' (' . get_the_term_list(
      $post->ID, 'tipo_medio', '', ', ', '' ) . ')</li>' ); ?>
 
@@ -54,7 +54,7 @@
 
 
     <!-- Interacciones -->
-    <?= get_the_term_list(
+    <?php echo get_the_term_list(
         $post->ID, 'interaccion', __('<li><i class="fa fa-exchange" aria-hidden="true"></i>
 <strong>Modalidad:</strong> ', 'pemscores'), ', ', '</li>' ); ?>
 
@@ -105,7 +105,7 @@
   if ( $licencia == 'copy' ): ?>
       <li>
         <i class="fa fa-copyright" aria-hidden="true"></i>
-        <?= __( 'Derechos reservados', 'pemscores'); ?>
+        <?php echo __( 'Derechos reservados', 'pemscores'); ?>
       </li>
 
     <?php elseif ( $licencia == 'cc' ): ?>
@@ -118,5 +118,5 @@
 
 <p class="cc-license">
         
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="<?= __('Licencia Creative Commons', 'pemscores'); ?>" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><?= __('Esta obra está bajo una <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0//deed.es">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.', 'pemscores'); ?>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="<?php echo __('Licencia Creative Commons', 'pemscores'); ?>" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><?php echo __('Esta obra está bajo una <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0//deed.es">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.', 'pemscores'); ?>
 </p>

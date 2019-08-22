@@ -7,26 +7,15 @@
   justify-content: flex-start;
 
   .course-item-search  {
-    //background-color: $color__main-oscuro!important;
     z-index: 99;
     border-right: 1px solid $color__main-bordes;
-
-    button {
-        
-    }
   }
 
   .course-title {
-     //display: none; //esconder título cuando está la barra lateral y en móviles
      white-space: nowrap;
      overflow: hidden;
      text-overflow: ellipsis;
      flex: 0 1 100%;
-
-    a {
-     color: $color__main-oscuro;
-     text-decoration: none;
-    }
 
     @media screen and (min-width: $query__medium) {
       max-width: 90%;
@@ -96,10 +85,11 @@
 
 .content-item-wrap { // contenido dentro de la leccion
 
-  .course-item-title { //titulo de leccion
+  padding-bottom: 100px; // importante por la barra fija en la parte inferior
+
+  .course-item-title { // título de leccion
     border-bottom: 2px solid $color__main-bordes;
     padding-bottom: 1em;
-    font-size: 2em!important;
     letter-spacing: normal;
   }
 
@@ -111,41 +101,36 @@
   }
 
   .wp-block-file {
-    &.descarga-lectura { //lectura
-      border: 1px solid $color__main-claro;
-      box-shadow: 2px 2px 5px hsla(0, 0, 0, .1);
-      padding: 1em 1em 1em 2.5em;
-      font-family: $font__system;
-      text-align: left;
-      margin: 2em 0;
-      position: relative;
+    border: 1px solid $color__main-claro;
+    box-shadow: 2px 2px 5px hsla(0, 0, 0, .1);
+    padding: 1em 1em 1em 2.5em;
+    font-family: $font__sans;
+    text-align: left;
+    margin: 2em 0;
+    position: relative;
 
-      &:before {
-        content: "\f0f6";
-        font-family: "FontAwesome";
-        color: $color__main;
-        margin-right: .4em;
-        margin-left: -1em;
+    &:before {
+      content: "\f0f6";
+      font-family: "FontAwesome";
+      color: $color__main;
+      margin-right: .4em;
+      margin-left: -1em;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        opacity: .8;
       }
+    }
 
-      a {
-        color: $color__main;
-        font-size: 1.2em;
-        text-decoration: none;
-        border-bottom: 2px solid $color__main;
-
-        &:hover {
-          opacity: .8;
-        }
-      }
-
-      .wp-block-file__button {
-        background: $color__naranja;
-        color: white;
-        border: none;
-        clear: both;
-        font-size: .8em;
-      }
+    .wp-block-file__button {
+      background: $color__naranja;
+      color: white;
+      border: none;
+      clear: both;
+      font-size: .8em;
     }
   }
 
@@ -226,7 +211,7 @@ a.toggle-content-item {
 }
 
 #popup_container {
-  font-family: $font__system;
+  font-family: $font__sans;
   font-size: 90%;
   font-style: italic;
 

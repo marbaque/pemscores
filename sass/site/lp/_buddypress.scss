@@ -13,7 +13,7 @@
 
 
 .buddypress-wrap {
-  font-family: $font__system;
+  font-family: $font__sans;
 
   .bp-navs {
     font-size: .8em;
@@ -83,7 +83,7 @@ body.buddypress {
 
   .bp-feedback,
   .bp-messages {
-    //font-family: $font__system;
+    //font-family: $font__sans;
   }
 }
 
@@ -103,7 +103,7 @@ body.buddypress {
 }
 
 .bp_members .post-content {
-  font-family: $font__system;
+  font-family: $font__sans;
   //font-size: .8em;
 }
 

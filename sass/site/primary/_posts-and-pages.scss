@@ -25,7 +25,7 @@
 
 .entry-meta,
 .entry-footer {
-	//font-family: $font__system;
+	//font-family: $font__sans;
 	font-size: 90%;
 
 	a {
@@ -38,7 +38,7 @@
 	font-size: 80%;
 	display: block;
 	width: 100%;
-	font-family: $font__system;
+	font-family: $font__sans;
 	margin: 1em 0;
 	color: $color__main-oscuro;
 
@@ -212,7 +212,7 @@ h1.course-title {
 
 .entry-footer {
 	margin: 1.5em 0;
-	font-family: $font__system;
+	font-family: $font__sans;
 }
 
 //content-recurso
@@ -227,7 +227,7 @@ h1.course-title {
 	@extend .sticky;
 	border: 2px solid $color__main-claro;
 	border-radius: .2em;
-	font-family: $font__system;
+	font-family: $font__sans;
 
 	.recurso-header {
 		background: $color__main-superclaro;
@@ -456,12 +456,12 @@ h1.course-title {
 
 //rate my post
 .rmp-results {
-	font-family: $font__system;
+	font-family: $font__sans;
 }
 .rmp-main {
 	margin: 3em 0 1em;
 	padding: 1em 0;
-	font-family: $font__system;
+	font-family: $font__sans;
 	border-top: 1px solid $color__main-bordes;
 }
 // Widget de rate my post

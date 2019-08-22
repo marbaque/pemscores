@@ -94,7 +94,7 @@ $file = get_field('subir_arch');
 
 	
 	<section class="content-area">
-		<h3><?= __('Descripción', 'pemscores'); ?></h3>
+		<h3><?php echo __('Descripción', 'pemscores'); ?></h3>
 		<?php
 		the_content();
 		// If comments are open or we have at least one comment, load up the comment template.

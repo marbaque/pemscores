@@ -4,9 +4,10 @@ input,
 select,
 textarea {
 	color: $color__text-main;
-	@include font-size(1);
+	@include font-size(.9);
 	line-height: $font__line-height-body;
 	font-family: $font__serif;
+	
 	@media screen and (min-width: $query__small) {
 		@include font-size(1.125);
 	}

@@ -2,7 +2,7 @@
 .course {
 
   .course-forum {
-    font-family: $font__system;
+    font-family: $font__sans;
 
     a.learn-press-course-forum-link {
       font-size: inherit;
@@ -106,7 +106,7 @@
 
     .learn-press-breadcrumb,
     .learn-press-course-forum-link {
-        //font-family: $font__system;
+        //font-family: $font__sans;
         font-size: .8em;
         border: none;
         a {
@@ -160,7 +160,7 @@
 .course-remaining-time {
     font-size: 80%;
     margin: 1em 0;
-    font-family: $font__system;
+    font-family: $font__sans;
 
     .lp-label.label-enrolled, .lp-label.label-started {
         background: hsla(180, 100%, 35%, 1);
@@ -173,7 +173,7 @@
 
 .course-meta,
 .price {
-    font-family: $font__system;
+    font-family: $font__sans;
 }
 
 .learnpress-page .lp-button {
@@ -205,7 +205,7 @@ ul.curriculum-sections
     display: block;
     padding: 0;
     margin-right: 0!important;
-    font-family: $font__system;
+    font-family: $font__sans;
 
     .items-progress, .course-progress {
         padding: 1em;
@@ -228,7 +228,7 @@ ul.curriculum-sections
     }
 }
 .course-remaining-time {
-    font-family: $font__system;
+    font-family: $font__sans;
     font-size: 80%;
     margin: 1em 0;
     .lp-label.label-enrolled, .lp-label.label-started {
@@ -264,7 +264,7 @@ ul.curriculum-sections
 }
 
 .course-overview_section:nth-child(4) { // reseñas
-  font-family: $font__system;
+  font-family: $font__sans;
 } 
 
 //Sección de star reviews y opiniones

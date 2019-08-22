@@ -45,7 +45,7 @@ get_header(); ?>
 				setup_postdata( $post );
 
 				?>
-				<div class="pagina <?= $css1; ?>">
+				<div class="pagina <?php echo $css1; ?>">
 
 					<h3>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
@@ -54,7 +54,7 @@ get_header(); ?>
 					</h3>
 				
 				<?php if ($desc1): ?>
-					<p><?= $desc1; ?></p>
+					<p><?php echo $desc1; ?></p>
 				<?php else: ?>
 					<div class="excerpt"><?php the_excerpt(); ?></div>
 				<?php endif; ?>
@@ -79,11 +79,11 @@ get_header(); ?>
 				setup_postdata( $post );
 
 				?>
-				<div class="pagina <?= $css2; ?>">
+				<div class="pagina <?php echo $css2; ?>">
 					<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 					
 					<?php if ($desc2): ?>
-						<p><?= $desc2; ?></p>
+						<p><?php echo $desc2; ?></p>
 					<?php else: ?>
 						<div class="excerpt"><?php the_excerpt(); ?></div>
 					<?php endif; ?>
@@ -108,11 +108,11 @@ get_header(); ?>
 				setup_postdata( $post );
 
 				?>
-			    <div class="pagina <?= $css3; ?>">
+			    <div class="pagina <?php echo $css3; ?>">
 			    	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 					
 					<?php if ($desc3): ?>
-						<p><?= $desc3; ?></p>
+						<p><?php echo $desc3; ?></p>
 					<?php else: ?>
 						<div class="excerpt"><?php the_excerpt(); ?></div>
 					<?php endif; ?>

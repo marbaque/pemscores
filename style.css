@@ -275,8 +275,8 @@ input,
 select,
 textarea {
 	color: #444;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 14.4px;
+	font-size: 0.9rem;
 	line-height: 1.66;
 	font-family: "Lora", Georgia, Times, serif;
 }
@@ -852,7 +852,8 @@ a:hover, a:active {
 	font-size: 80%;
 	width: 100%;
 	margin: 2em auto;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
+	line-height: 1.2;
 }
 
 .comment-navigation a,
@@ -862,9 +863,19 @@ a:hover, a:active {
 .course-item-nav a {
 	display: block !important;
 	text-decoration: none;
-	padding: 1em;
+	padding: .5em;
 	border: 1px solid #6696c7;
 	color: #6696c7;
+}
+
+@media screen and (min-width: 600px) {
+	.comment-navigation a,
+	.posts-navigation a,
+	.post-navigation a,
+	.paging-navigation a,
+	.course-item-nav a {
+		padding: 1em;
+	}
 }
 
 .nav-links {
@@ -888,6 +899,7 @@ a:hover, a:active {
 .post-navigation .meta-nav {
 	font-weight: 700;
 	display: block;
+	margin-bottom: .5em;
 }
 
 .comment-navigation .nav-previous,
@@ -927,8 +939,8 @@ a:hover, a:active {
 	left: 0;
 	width: 100%;
 	margin: 0 !important;
-	border-top: 1px solid #6696c7;
 	box-sizing: border-box;
+	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .course-item-lp_lesson .post-navigation .nav-previous,
@@ -947,13 +959,13 @@ a:hover, a:active {
 	width: 100%;
 }
 
+.course-item-lp_lesson .post-navigation .nav-previous {
+	background-color: #ebf3fc;
+}
+
 .course-item-lp_lesson .post-navigation .nav-next {
 	text-align: right;
 	margin-left: auto;
-}
-
-.course-item-lp_lesson .nav-previous {
-	padding-bottom: 0;
 }
 
 .course-item-lp_lesson:not(.full-screen-content-item) .post-navigation {
@@ -1269,7 +1281,7 @@ a:hover, a:active {
 }
 
 .archive-description {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 /* For content-none.php */
@@ -1329,7 +1341,7 @@ a:hover, a:active {
 	bottom: 0;
 	font-size: .9rem;
 	width: 100%;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .continue-reading a {
@@ -1902,7 +1914,7 @@ body:not(.logged-in) li.bp-comunidad {
 	display: block;
 	width: 100%;
 	padding: .75em;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 	font-size: .8em;
 	text-align: left;
 	color: #6696c7;
@@ -1965,7 +1977,7 @@ body:not(.logged-in) li.bp-comunidad {
 	font-size: 80%;
 	display: block;
 	width: 100%;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 	margin: 1em 0;
 	color: #00529a;
 }
@@ -2130,7 +2142,7 @@ h1.course-title {
 
 .entry-footer {
 	margin: 1.5em 0;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .recurso-wrap {
@@ -2142,7 +2154,7 @@ h1.course-title {
 	position: relative;
 	border: 2px solid #cce2f8;
 	border-radius: .2em;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .recurso-wrap .recurso-header {
@@ -2365,13 +2377,13 @@ h1.course-title {
 }
 
 .rmp-results {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .rmp-main {
 	margin: 3em 0 1em;
 	padding: 1em 0;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 	border-top: 1px solid #6696c7;
 }
 
@@ -2390,7 +2402,7 @@ h1.course-title {
 # LearnPress
 --------------------------------------------------------------*/
 .course .course-forum {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .course .course-forum a.learn-press-course-forum-link {
@@ -2510,7 +2522,7 @@ h1.course-title {
 .course-remaining-time {
 	font-size: 80%;
 	margin: 1em 0;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .course-remaining-time .lp-label.label-enrolled, .course-remaining-time .lp-label.label-started {
@@ -2522,7 +2534,7 @@ h1.course-title {
 
 .course-meta,
 .price {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .learnpress-page .lp-button {
@@ -2538,7 +2550,7 @@ h1.course-title {
 	display: block;
 	padding: 0;
 	margin-right: 0 !important;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
@@ -2566,7 +2578,7 @@ h1.course-title {
 }
 
 .course-remaining-time {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 	font-size: 80%;
 	margin: 1em 0;
 }
@@ -2605,7 +2617,7 @@ h1.course-title {
 }
 
 .course-overview_section:nth-child(4) {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 #course-reviews .course-reviews-list {
@@ -2684,7 +2696,7 @@ h1.course-title {
 	border: 1px solid #006edc;
 	padding: 1em 1em 4em;
 	margin-bottom: 1em;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-permalink {
@@ -2810,11 +2822,6 @@ h1.course-title {
 	    flex: 0 1 100%;
 }
 
-#course-item-content-header .course-title a {
-	color: #00529a;
-	text-decoration: none;
-}
-
 @media screen and (min-width: 900px) {
 	#course-item-content-header .course-title {
 		max-width: 90%;
@@ -2880,10 +2887,13 @@ h1.course-title {
 	background: white;
 }
 
+.content-item-wrap {
+	padding-bottom: 100px;
+}
+
 .content-item-wrap .course-item-title {
 	border-bottom: 2px solid #6696c7;
 	padding-bottom: 1em;
-	font-size: 2em !important;
 	letter-spacing: normal;
 }
 
@@ -2895,17 +2905,17 @@ h1.course-title {
 	margin-bottom: 1em;
 }
 
-.content-item-wrap .wp-block-file.descarga-lectura {
+.content-item-wrap .wp-block-file {
 	border: 1px solid #cce2f8;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 	padding: 1em 1em 1em 2.5em;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 	text-align: left;
 	margin: 2em 0;
 	position: relative;
 }
 
-.content-item-wrap .wp-block-file.descarga-lectura:before {
+.content-item-wrap .wp-block-file:before {
 	content: "\f0f6";
 	font-family: "FontAwesome";
 	color: #006edc;
@@ -2913,18 +2923,15 @@ h1.course-title {
 	margin-left: -1em;
 }
 
-.content-item-wrap .wp-block-file.descarga-lectura a {
-	color: #006edc;
-	font-size: 1.2em;
+.content-item-wrap .wp-block-file a {
 	text-decoration: none;
-	border-bottom: 2px solid #006edc;
 }
 
-.content-item-wrap .wp-block-file.descarga-lectura a:hover {
+.content-item-wrap .wp-block-file a:hover {
 	opacity: .8;
 }
 
-.content-item-wrap .wp-block-file.descarga-lectura .wp-block-file__button {
+.content-item-wrap .wp-block-file .wp-block-file__button {
 	background: #ff961e;
 	color: white;
 	border: none;
@@ -3001,7 +3008,7 @@ a.toggle-content-item {
 }
 
 #popup_container {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 	font-size: 90%;
 	font-style: italic;
 }
@@ -3062,7 +3069,7 @@ body.learnpress table.is-style-regular td {
 }
 
 .buddypress-wrap {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .buddypress-wrap .bp-navs {
@@ -3130,7 +3137,7 @@ body.buddypress .site-content .entry-header {
 }
 
 .bp_members .post-content {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .leanpress-buddpress-list-filters,
@@ -3370,7 +3377,7 @@ div.bbp-topic-tags,
 #bbpress-forums li.bbp-body ul.forum,
 #bbpress-forums li.bbp-body ul.topic {
 	font-size: 1rem;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 div.bbp-template-notice p,
@@ -3926,7 +3933,7 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	background-color: #cce2f8;
 	color: #6696c7;
 	text-align: center;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 	font-size: .8em;
 }
 

@@ -30,7 +30,7 @@ defined( 'ABSPATH' ) || exit();
 	<?php foreach ( $tabs as $key => $tab ) { ?>
 
         <div class="course-overview_section">
-			<h3><?= $tab['title']; ?></h3>
+			<h3><?php echo $tab['title']; ?></h3>
 			<?php
 			if ( apply_filters( 'learn_press_allow_display_tab_section', true, $key, $tab ) ) {
 				if ( is_callable( $tab['callback'] ) ) {

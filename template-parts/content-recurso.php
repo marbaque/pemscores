@@ -37,7 +37,7 @@
 
 		?>
 		
-		<div class="recurso-icon <?= $medioClass; ?>"></div>
+		<div class="recurso-icon <?php echo $medioClass; ?>"></div>
 
 		<div class="recurso__text">
 				<?php

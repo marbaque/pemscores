@@ -45,7 +45,7 @@ $user = LP_Global::user();
 							) ); ?>
                         </a>
 					<?php } else { ?>
-                        <div class="section-item-link">
+							<div class="section-item-link">
 							<?php learn_press_get_template( 'single-course/section/content-item.php', array(
 								'item'    => $item,
 								'section' => $section

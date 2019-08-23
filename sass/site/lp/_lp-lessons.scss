@@ -266,3 +266,13 @@ body.learnpress table.is-style-regular {
   background: $color__main-superclaro;
   padding: .5em;
 }
+
+.learn-press-message,
+.learn-press-form.completed p {
+  font-family: $font__sans;
+}
+
+form[name="learn-press-form-complete-lesson"] {
+  text-align: right;
+  margin-bottom: 2em;
+}

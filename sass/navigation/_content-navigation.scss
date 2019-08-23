@@ -1,8 +1,7 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation,
-.paging-navigation,
-.course-item-nav {
+.paging-navigation {
 	text-align: left;
 	overflow: hidden;
 	font-size: 80%;
@@ -75,7 +74,7 @@
 // Navegación en las lecciones
 .course-item-lp_lesson {
 
-	.post-navigation {
+	.course-item-nav {
 		background-color: white;
 		overflow: hidden;
 		position: fixed;
@@ -85,24 +84,29 @@
 		margin: 0!important;
 		box-sizing: border-box;
 		box-shadow: 0 -1px 2px rgba(0,0,0,0.1);
+		font-family: $font__sans;
+		font-size: .8em;
 
-		.nav-previous,
-		.nav-next {
-			flex: 1 1 48%;
-			display: flex;
-			align-items: stretch;
+		.prev,
+		.next {
+			padding: .5em;
+			max-width: 50%;
+
+			@media screen and (min-width: 768px) {
+				padding: 1em;
+			}
 
 			a {
-				border: 0;
 				width: 100%;
 			}
 		}
 
-		.nav-previous {
+		.prev {
 			background-color: $color__main-superclaro;
+			margin-right: auto;
 		}
 
-		.nav-next {
+		.next {
 			text-align: right;
 			margin-left: auto;
 		}
@@ -110,8 +114,8 @@
 
 	&:not(.full-screen-content-item) {
 		
-		.post-navigation {
-			padding-left: 200px;
+		.course-item-nav {
+			//padding-left: 200px;
 
 			@media screen and (min-width: 768px) {
 				padding-left: 300px;

@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, hecho a partir de _s.
-Version: 2.6
+Version: 2.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -845,8 +845,7 @@ a:hover, a:active {
 .comment-navigation,
 .posts-navigation,
 .post-navigation,
-.paging-navigation,
-.course-item-nav {
+.paging-navigation {
 	text-align: left;
 	overflow: hidden;
 	font-size: 80%;
@@ -859,8 +858,7 @@ a:hover, a:active {
 .comment-navigation a,
 .posts-navigation a,
 .post-navigation a,
-.paging-navigation a,
-.course-item-nav a {
+.paging-navigation a {
 	display: block !important;
 	text-decoration: none;
 	padding: .5em;
@@ -872,8 +870,7 @@ a:hover, a:active {
 	.comment-navigation a,
 	.posts-navigation a,
 	.post-navigation a,
-	.paging-navigation a,
-	.course-item-nav a {
+	.paging-navigation a {
 		padding: 1em;
 	}
 }
@@ -931,7 +928,7 @@ a:hover, a:active {
 	padding-bottom: 0;
 }
 
-.course-item-lp_lesson .post-navigation {
+.course-item-lp_lesson .course-item-nav {
 	background-color: white;
 	overflow: hidden;
 	position: fixed;
@@ -941,45 +938,46 @@ a:hover, a:active {
 	margin: 0 !important;
 	box-sizing: border-box;
 	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+	font-family: "Roboto", sans-serif;
+	font-size: .8em;
 }
 
-.course-item-lp_lesson .post-navigation .nav-previous,
-.course-item-lp_lesson .post-navigation .nav-next {
-	-ms-flex: 1 1 48%;
-	    flex: 1 1 48%;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-align: stretch;
-	    align-items: stretch;
+.course-item-lp_lesson .course-item-nav .prev,
+.course-item-lp_lesson .course-item-nav .next {
+	padding: .5em;
+	max-width: 50%;
 }
 
-.course-item-lp_lesson .post-navigation .nav-previous a,
-.course-item-lp_lesson .post-navigation .nav-next a {
-	border: 0;
+@media screen and (min-width: 768px) {
+	.course-item-lp_lesson .course-item-nav .prev,
+	.course-item-lp_lesson .course-item-nav .next {
+		padding: 1em;
+	}
+}
+
+.course-item-lp_lesson .course-item-nav .prev a,
+.course-item-lp_lesson .course-item-nav .next a {
 	width: 100%;
 }
 
-.course-item-lp_lesson .post-navigation .nav-previous {
+.course-item-lp_lesson .course-item-nav .prev {
 	background-color: #ebf3fc;
+	margin-right: auto;
 }
 
-.course-item-lp_lesson .post-navigation .nav-next {
+.course-item-lp_lesson .course-item-nav .next {
 	text-align: right;
 	margin-left: auto;
 }
 
-.course-item-lp_lesson:not(.full-screen-content-item) .post-navigation {
-	padding-left: 200px;
-}
-
 @media screen and (min-width: 768px) {
-	.course-item-lp_lesson:not(.full-screen-content-item) .post-navigation {
+	.course-item-lp_lesson:not(.full-screen-content-item) .course-item-nav {
 		padding-left: 300px;
 	}
 }
 
 @media screen and (min-width: 1300px) {
-	.course-item-lp_lesson:not(.full-screen-content-item) .post-navigation {
+	.course-item-lp_lesson:not(.full-screen-content-item) .course-item-nav {
 		padding-left: 400px;
 	}
 }
@@ -3058,6 +3056,16 @@ body.learnpress table.is-style-regular td {
 .learn-press-form.completed p {
 	background: #ebf3fc;
 	padding: .5em;
+}
+
+.learn-press-message,
+.learn-press-form.completed p {
+	font-family: "Roboto", sans-serif;
+}
+
+form[name="learn-press-form-complete-lesson"] {
+	text-align: right;
+	margin-bottom: 2em;
 }
 
 @media screen and (min-width: 900px) {

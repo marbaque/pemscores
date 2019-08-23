@@ -22,9 +22,7 @@ defined( 'ABSPATH' ) || exit();
 <?php foreach ( $messages as $message ) { ?>
 
     <div class="learn-press-message">
-
-		<?php echo $message; ?>
-
+  		<?php echo $message; ?>
     </div>
 
 <?php } ?>

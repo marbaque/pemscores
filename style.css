@@ -278,7 +278,7 @@ textarea {
 	font-size: 14.4px;
 	font-size: 0.9rem;
 	line-height: 1.66;
-	font-family: "Lora", Georgia, Times, serif;
+	font-family: Georgia, Times, serif;
 }
 
 @media screen and (min-width: 600px) {

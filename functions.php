@@ -98,20 +98,20 @@ function pemscores_fonts_url() {
 	 * into your own language.
 	 */
 	$sansSerif = _x( 'on', 'Roboto font: on or off', 'pemscores' );
-	$serif = _x( 'on', 'Lora: on or off', 'pemscores' );
+	//$serif = _x( 'on', 'Lora: on or off', 'pemscores' );
 
-	$font_families = array();
+	//$font_families = array();
 
 	if ( 'off' !== $sansSerif ) {
-		$font_families[] = '$roboto:400,400i,700,700i';
+	 	$font_families[] = '$roboto:400,400i,700,700i';
 	}
 
-	if ( 'off' !== $serif ) {
-		$font_families[] = 'Lora:400,400i,700,700i';
-	}
+	// if ( 'off' !== $serif ) {
+	// 	$font_families[] = 'Lora:400,400i,700,700i';
+	// }
 
 
-	if ( in_array( 'on', array($sansSerif, $serif) ) ) {
+	if ( in_array( 'on', array($sansSerif) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),

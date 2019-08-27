@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, hecho a partir de _s.
-Version: 2.7
+Version: 2.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -2170,9 +2170,8 @@ h1.course-title {
 .recurso-wrap .recurso-media {
 	padding: 0;
 	min-height: 200px;
-	max-height: 400px;
 	position: relative;
-	overflow: hidden;
+	box-sizing: content-box;
 }
 
 .recurso-wrap .recurso-media .recurso-icon {
@@ -2244,8 +2243,6 @@ h1.course-title {
 }
 
 .recurso-wrap .recurso_tags a {
-	color: #ff961e;
-	border-bottom: 1px solid #ff961e;
 	text-decoration: none;
 }
 
@@ -2254,6 +2251,8 @@ h1.course-title {
 	padding: .5em 1em;
 	margin: 1em 0;
 	border: 1px solid #cce2f8;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
 }
 
 .recurso-wrap .recurso_tags.recurso-link a {

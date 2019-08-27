@@ -94,21 +94,21 @@ function pemscores_fonts_url() {
 
 	/**
 	 * Translators: If there are characters in your language that are not
-	 * supported by Roboto and Lora, translate this to 'off'. Do not translate
+	 * supported by Roboto and Roboto+Slab, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
 	$sansSerif = _x( 'on', 'Roboto font: on or off', 'pemscores' );
-	//$serif = _x( 'on', 'Lora: on or off', 'pemscores' );
+	$slab = _x( 'on', 'Roboto+Slab: on or off', 'pemscores' );
 
-	//$font_families = array();
+	$font_families = array();
 
 	if ( 'off' !== $sansSerif ) {
-	 	$font_families[] = '$roboto:400,400i,700,700i';
+	 	$font_families[] = 'Roboto:400,400i,700,700i';
 	}
 
-	// if ( 'off' !== $serif ) {
-	// 	$font_families[] = 'Lora:400,400i,700,700i';
-	// }
+	if ( 'off' !== $slab ) {
+		$font_families[] = 'Roboto+Slab:400,700';
+	}
 
 
 	if ( in_array( 'on', array($sansSerif) ) ) {

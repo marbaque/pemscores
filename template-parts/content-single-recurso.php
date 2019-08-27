@@ -61,21 +61,22 @@ $file = get_field('subir_arch');
 				<?php else : ?>
 				
 					<!-- si es una fuente externa, obtener la captura de pantalla -->
-					<?php if( $fuente == 'ext' ): ?>
+					<?php if( $fuente == 'ext' && $medioClass == "video"  ): ?>
 						<?php
-			
-
-						// echo the function in your template to render the video
+						// echo the function to render the video
 						echo wp_oembed_get( $url );
 						?>
+
+					<?php elseif( $fuente == 'ext' && $medioClass !== "video"  ): ?>
+						<?php echo do_shortcode('[snapshot url="' . $url .'" alt="Captura de pantalla" width="700" height="400"]'); ?>
 
 					<?php elseif( $fuente == 'int' ): ?>
 						<?php
 						if( $file['type'] == 'image' ) {
 							echo '<img src="' . $file['url'] . '" alt="' . $file['filename'] . '" width="200px" height"auto">';
-						
-						} else { 
-							echo '<div class="recurso-icon '  . $medioClass . '"></div>';
+							
+						} else { ?>
+							<?php echo '<div class="recurso-icon '  . $medioClass . '"></div>';
 						} ?>
 					<?php endif; ?>
 

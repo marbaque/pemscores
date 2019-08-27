@@ -62,8 +62,13 @@ $file = get_field('subir_arch');
 				
 					<!-- si es una fuente externa, obtener la captura de pantalla -->
 					<?php if( $fuente == 'ext' ): ?>
-						<?php echo do_shortcode('[snapshot url="' . $url .'" alt="WordPress.org" width="700" height="400"]'); ?>
-					
+						<?php
+			
+
+						// echo the function in your template to render the video
+						echo wp_oembed_get( $url );
+						?>
+
 					<?php elseif( $fuente == 'int' ): ?>
 						<?php
 						if( $file['type'] == 'image' ) {

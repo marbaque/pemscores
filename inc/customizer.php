@@ -33,7 +33,7 @@ function pemscores_customize_register( $wp_customize ) {
 			$wp_customize,
 			'theme_bg_color',
 				array(
-					'label'		=> __( 'Color de fondo del header and footer', 'pemscores'),
+					'label'		=> __( 'Color de fondo de la cabecera and del pie de página', 'pemscores'),
 					'section'	=> 'colors',
 					'settings'	=> 'theme_bg_color'
 				)
@@ -56,7 +56,7 @@ function pemscores_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control(
 			$wp_customize,
 			'interactive_color', array(
-				'label'		=> __( 'Color de interacción (links, etc)', 'pemscores' ),
+				'label'		=> __( 'Color de interacción (links y botones)', 'pemscores' ),
 				'section'	=> 'colors',
 				'settings'	=> 'interactive_color'
 			)
@@ -156,12 +156,15 @@ function pemscores_header_style() {
 			// If the user has set a custom color for the text use that.
 			else :
 		?>
-			.site-title a,
 			.site-description {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>
+			.site-title,
+			.site-title a,
 			.main-navigation a,
+			.main-navigation a:hover,
+			.main-navigation li:hover,
 			button.dropdown-toggle,
 			.menu-toggle,
 			.site-footer,

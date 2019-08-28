@@ -20,12 +20,14 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php echo file_get_contents('https://www.uned.ac.cr/menu/menu_1366.html'); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Omitir e ir al contenido', 'pemscores' ); ?></a>
 
 	<?php if ( get_header_image() && is_front_page() ) : ?>
 	<figure class="header-image">
-			<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
 	</figure><!-- .header-image -->
 	<?php endif; // End header image check. ?>
 

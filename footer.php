@@ -55,6 +55,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<?php echo file_get_contents('https://www.uned.ac.cr/menu/pie.html'); ?>
 
 </body>
 </html>

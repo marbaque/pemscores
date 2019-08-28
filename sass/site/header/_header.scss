@@ -9,7 +9,6 @@
 }
 .site-header {
 	position: relative;
-	//padding: 1em;
 	font-family: $font__headings;
 	color: #fff;
 	background-color: $color__skin;
@@ -93,7 +92,7 @@
 	}
 }
 
-/*
-Header Menu
-*/
+/*--------------------------------------------------------------
+## Menu Header
+--------------------------------------------------------------*/
 @import "header-menu";

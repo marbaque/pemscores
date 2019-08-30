@@ -97,6 +97,20 @@ function pemscores_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Agregar text area para información de créditos en el footer
+	$wp_customize->add_setting( 'pemscores_textarea_setting_id', array(
+		'capability' => 'edit_theme_options',
+		'default' => 'Lorem Ipsum Dolor Sit amet',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'pemscores_textarea_setting_id', array(
+		'type' => 'textarea',
+		'section' => 'edit_theme_options', // // Add a default or your own section
+		'label' => __( 'Texto de colofón', 'pemscores' ),
+		'description' => __( 'Este es el texto de autor o créditos que va en el footer.', 'pemscores' ),
+	) );
+
 }
 add_action( 'customize_register', 'pemscores_customize_register' );
 
@@ -279,4 +293,6 @@ function pemscores_header_style() {
 	}
 }
 endif;
+
+
 

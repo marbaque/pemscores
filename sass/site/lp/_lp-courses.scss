@@ -101,6 +101,10 @@
   color: #fa3c46!important;
 }
 
+ul.curriculum-sections li.item-locked {
+	padding: 0 1em!important;
+}
+
 .lp-single-course {
 
 
@@ -309,6 +313,6 @@ ul.curriculum-sections
   }
 }
 
-.course-review-head {
+.course-review-head { // Esconder título de opiniones porque sale repetido
   display:none;
 }

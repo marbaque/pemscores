@@ -142,3 +142,9 @@
     }
   }
 }
+
+// Esconder cursos con categoría de "privado"
+body:not(.admin-bar) .learn-press-courses .course_category-privado {
+  display: none;
+  visibility: hidden;
+}

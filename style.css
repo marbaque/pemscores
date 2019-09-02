@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, hecho a partir de _s.
-Version: 2.8
+Version: 2.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -2464,6 +2464,10 @@ h1.course-title {
 	color: #fa3c46 !important;
 }
 
+ul.curriculum-sections li.item-locked {
+	padding: 0 1em !important;
+}
+
 .lp-single-course .learn-press-breadcrumb,
 .lp-single-course .learn-press-course-forum-link {
 	font-size: .8em;
@@ -2795,6 +2799,11 @@ h1.course-title {
 	}
 }
 
+body:not(.admin-bar) .learn-press-courses .course_category-privado {
+	display: none;
+	visibility: hidden;
+}
+
 #course-item-content-header {
 	border-bottom: 1px solid #6696c7 !important;
 	background-color: white !important;
@@ -3079,6 +3088,35 @@ form[name="learn-press-form-complete-lesson"] {
 	font-family: "Roboto", sans-serif;
 }
 
+.buddypress-wrap ul.member-header-actions {
+	padding: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: end;
+	    align-items: flex-end;
+}
+
+.buddypress-wrap ul.member-header-actions li {
+	margin: 4px 4px 0 0;
+}
+
+.buddypress-wrap ul.member-header-actions button, .buddypress-wrap ul.member-header-actions a {
+	font-family: "system";
+	font-size: 12px !important;
+	line-height: 1;
+	border-radius: 2px;
+}
+
+.buddypress-wrap ul.member-header-actions button:hover, .buddypress-wrap ul.member-header-actions button:focus, .buddypress-wrap ul.member-header-actions a:hover, .buddypress-wrap ul.member-header-actions a:focus {
+	opacity: 1;
+}
+
+.buddypress-wrap .item-meta span {
+	background: white;
+	padding: 2px 4px;
+	line-height: 1;
+}
+
 .buddypress-wrap .bp-navs {
 	font-size: .8em;
 }
@@ -3107,6 +3145,27 @@ form[name="learn-press-form-complete-lesson"] {
 .buddypress-wrap .bp-navs li.selected a {
 	background: #006edc !important;
 	color: white !important;
+}
+
+.buddypress-wrap .grid.bp-list > li .list-title {
+	font-size: 1.1rem;
+	line-height: 1.2;
+}
+
+.buddypress-wrap .bp-feedback {
+	display: block !important;
+	background: #ebf3fc;
+	box-shadow: 0 1px 8px 4px rgba(0, 0, 0, 0.1);
+	color: #00529a;
+	margin: 1em 0;
+	padding: 1em;
+	border-radius: 4px;
+	border: 1px solid #cce2f8;
+}
+
+.buddypress-wrap a[data-bp-close],
+.buddypress-wrap button[data-bp-close] {
+	background: transparent;
 }
 
 .bp-feedback p {
@@ -3216,6 +3275,10 @@ body.buddypress .site-content .entry-header {
 .bp-navs ul li .count {
 	border: none;
 	padding: 2px 6px;
+}
+
+.widget #members-list .item-meta {
+	font-size: 0.7em;
 }
 
 /* start new bbpress */

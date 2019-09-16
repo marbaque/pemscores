@@ -2951,7 +2951,8 @@ body:not(.admin-bar) .learn-press-courses .course_category-privado {
 	}
 }
 
-.content-item-wrap .recuadro {
+.content-item-wrap .recuadro,
+.hentry .recuadro {
 	background: white;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 	border: 1px solid #cce2f8;
@@ -2964,12 +2965,14 @@ body:not(.admin-bar) .learn-press-courses .course_category-privado {
 	width: auto;
 }
 
-.content-item-wrap .recuadro.icon {
+.content-item-wrap .recuadro.icon,
+.hentry .recuadro.icon {
 	padding-left: 100px;
 	margin: 2em 0 2em;
 }
 
-.content-item-wrap .recuadro.icon img {
+.content-item-wrap .recuadro.icon img,
+.hentry .recuadro.icon img {
 	width: 100px;
 	height: auto;
 	position: absolute;
@@ -2978,13 +2981,15 @@ body:not(.admin-bar) .learn-press-courses .course_category-privado {
 }
 
 @media screen and (min-width: 600px) {
-	.content-item-wrap .recuadro {
+	.content-item-wrap .recuadro,
+	.hentry .recuadro {
 		margin: 2em 0;
 		padding: 2em 3em;
 	}
 }
 
-.content-item-wrap .recuadro .text h3 {
+.content-item-wrap .recuadro .text h3,
+.hentry .recuadro .text h3 {
 	margin: 0 0 .5em;
 	color: #00529a;
 }

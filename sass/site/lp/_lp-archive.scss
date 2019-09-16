@@ -15,8 +15,16 @@
             font-size: 80%;
           }
 
+          .learn-press-breadcrumb,
+          .learn-press-search-course-form {
+            max-width: $query__medium;
+            margin: 0 auto;
+          }
+
           .post-content {
             margin: 0 auto;
+            max-width: 100%!important;
+            width: 100%;
           }
 
           .learn-press-courses {
@@ -117,24 +125,23 @@
 
             @media screen and (min-width: $query__small) { // learn-press-courses
               display: flex;
-      				justify-content: space-around;
+      				justify-content: flex-start;
       				flex-wrap: wrap;
 
               .lp_course {
-                  width: 46%;
-                  margin: 0 0 .5em;
+                  width: 48%;
+                  margin: 0 1% 1em;
 
               }
 
             }
-            // @media screen and (min-width: $query__medium) {
-            //
-            //     .lp_course {
-            //         width: 30%;
-            //
-            //     }
-            //
-            // }
+            @media screen and (min-width: $query__medium) {
+            
+                .lp_course {
+                    width: 31%;            
+                }
+            
+            }
 
           }
         }

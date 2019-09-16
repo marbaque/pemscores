@@ -547,6 +547,65 @@ table:not.is-style-regular td:last-child {
 	padding-right: 0;
 }
 
+table.agenda {
+	margin: 3em 0 !important;
+	line-height: 1.4;
+	border-spacing: 4px;
+	border-collapse: separate;
+}
+
+table.agenda br {
+	content: "" !important;
+	display: block !important;
+	margin-bottom: .5em !important;
+}
+
+table.agenda tr {
+	border: none;
+	transition: all .5s;
+}
+
+table.agenda tr:hover {
+	transform: translateX(0.5em);
+	opacity: .8;
+}
+
+table.agenda td {
+	border: none;
+	padding: 1.5em 1em;
+	margin: 4px;
+	vertical-align: top;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+
+table.agenda td:empty {
+	background-color: #fff !important;
+}
+
+table.agenda td:nth-child(1) {
+	background-color: #fff;
+	font-size: .9em;
+}
+
+table.agenda td:nth-child(2),
+table.agenda td:nth-child(5) {
+	background-color: #9edf7d;
+	font-weight: bold;
+}
+
+table.agenda td:nth-child(3),
+table.agenda td:nth-child(6) {
+	background-color: #FFBC57;
+	font-weight: bold;
+}
+
+table.agenda td:nth-child(4),
+table.agenda td:nth-child(8) {
+	background-color: #b7cdff;
+	font-weight: bold;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -840,7 +899,7 @@ a:hover, a:active {
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: #000;
+	color: #333;
 	display: block;
 	font-size: 15.75px;
 	font-size: 1.05rem;

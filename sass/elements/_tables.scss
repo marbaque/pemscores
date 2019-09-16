@@ -57,3 +57,69 @@ table:not.is-style-regular {
 		padding-right: 0;
 	}
 }
+
+
+// Tabla de agenda
+table.agenda {
+	margin: 3em 0!important;
+	line-height: 1.4;
+	border-spacing: 4px;
+  border-collapse: separate;
+
+	br {
+		content: "" !important;
+    display: block !important;
+    margin-bottom: .5em !important;
+	}
+
+	tr {
+		border: none;
+		transition: all .5s;
+
+		&:hover {
+			transform: translateX(.5em);
+			opacity: .8;
+		}
+	}
+
+	td {
+		border: none;
+		padding: 1.5em 1em;
+		margin: 4px;	
+		vertical-align: top;
+		border-radius: 4px;
+		vertical-align: middle;
+
+		&:empty {
+			background-color: #fff!important;
+		}
+	}
+
+	td:nth-child(1) {
+		background-color: #fff;
+		font-size: .9em;
+	}
+
+	td:nth-child(2),
+	td:nth-child(5) {
+		background-color: #9edf7d;
+		font-weight: bold;
+	}
+	td:nth-child(3),
+	td:nth-child(6) {
+		background-color: #FFBC57;
+		font-weight: bold;
+	}
+
+	td:nth-child(4),
+	td:nth-child(8) {
+		background-color: #b7cdff;
+		font-weight: bold;
+	}
+}
+
+
+
+
+
+

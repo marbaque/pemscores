@@ -54,7 +54,7 @@ add_action( 'wp_head', 'pemscores_pingback_header' );
 
 //Edit the Dashboard Footer
 function change_admin_footer(){
-	 echo '<span id="footer-note">Desarrollado por <li><a href="http://multimedia.uned.ac.cr/" target="_blank">Multimedia UNED</a></li>.</span>';
+	 echo '<p id="footer-note">Desarrollado por <span><a href="http://multimedia.uned.ac.cr/" target="_blank">Multimedia UNED</a></span>.</p>';
 	}
 add_filter('admin_footer_text', 'change_admin_footer');
 

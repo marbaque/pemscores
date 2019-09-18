@@ -180,7 +180,7 @@ add_action( 'after_setup_theme', 'pemscores_setup_theme_supported_features' );
 *	Esconder perfil de buddypress si no esta registrado como usuario
 *	las página correspondienes se deben tener el siguiente slug:
 *	perfil-academia
-* 	registro-academia
+* registro-academia
 */
 add_action( 'template_redirect', function() {
 
@@ -243,35 +243,15 @@ function admin_default_page() {
 }
 add_filter('login_redirect', 'admin_default_page');
 
-// Permitir sólo ciertos bloques para recursos
-add_filter( 'allowed_block_types', 'academia_allowed_block_types', 10, 2 );
 
-function academia_allowed_block_types( $allowed_blocks, $post ) {
-
-	if( $post->post_type === 'recurso' ) {
-		$allowed_blocks = array(
-			'core/paragraph',
-			'core/heading',
-			'core/list'
-		);
-	}
-
-	return $allowed_blocks;
-
+// Desactivar Gutenberg en recursos
+add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+function prefix_disable_gutenberg($current_status, $post_type)
+{
+    // Use your post type key instead of 'product'
+    if ($post_type === 'recurso') return false;
+    return $current_status;
 }
-
-// Cambiar 'enter title here' en recursos
-function pemscores_change_title_text( $title ){
-     $screen = get_current_screen();
-
-     if  ( 'recurso' == $screen->post_type ) {
-          $title = 'Nombre del recurso';
-     }
-
-     return $title;
-}
-
-add_filter( 'enter_title_here', 'pemscores_change_title_text' );
 
 
 // Quitar admin bar de buddypress
@@ -327,3 +307,15 @@ function pemscores_google_analytics() { ?>
   }
   
 add_action( 'wp_head', 'pemscores_google_analytics', 10 );
+
+//Quita las metaboxes de areas y licencias en curso y seccion
+function remove_tags_fields() {
+	remove_meta_box( 'tagsdiv-organizacion_tag' , 'recurso' , 'side' );
+	remove_meta_box( 'tagsdiv-autor_tag' , 'recurso' , 'side' );
+	remove_meta_box( 'coberturadiv' , 'recurso' , 'side' );
+	remove_meta_box( 'tagsdiv-tipo_recurso' , 'recurso' , 'side' );
+	remove_meta_box( 'tagsdiv-tipo_medio' , 'recurso' , 'side' );
+	remove_meta_box( 'tagsdiv-interaccion' , 'recurso' , 'side' );
+	remove_meta_box( 'tagsdiv-temas' , 'recurso' , 'side' );
+}
+add_action( 'admin_menu' , 'remove_tags_fields' );

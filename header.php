@@ -78,7 +78,7 @@
 			<div class="course-title_wrap"><?php the_title( '<h1 class="course-title">', '</h1>' ); ?></div>
 		<?php endif; ?>
 
-		<?php if ( !is_singular('lp_course') && !is_buddypress() ): ?>
+		<?php if ( !is_singular('lp_course') ): ?>
 			<header class="page-header">
 				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 			</header><!-- .entry-header -->

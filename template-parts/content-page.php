@@ -21,9 +21,6 @@
 
 	<div class="entry-content post-content">
 
-		<?php if ( is_buddypress() ): ?>
-			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-		<?php endif; ?>
 		<?php
 			the_content();
 

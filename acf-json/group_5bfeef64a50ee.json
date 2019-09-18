@@ -127,7 +127,8 @@
             },
             "choices": {
                 "cc": "Creative Commons",
-                "copy": "Derechos reservados"
+                "copy": "Derechos reservados",
+                "none": "Sin licencia"
             },
             "allow_null": 0,
             "default_value": "cc",
@@ -152,5 +153,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Elija las categorías correspondientes a este recurso.",
-    "modified": 1557855272
+    "modified": 1568827934
 }

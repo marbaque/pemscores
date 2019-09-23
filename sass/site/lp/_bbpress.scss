@@ -167,8 +167,8 @@ div.bbp-template-notice p,
 	font-size: 17px;
 }
 
-.bbp-body .hentry {
-	display: block!important; // caer encima al flex del tema en el .hentry
+.forums .hentry {
+	display: block!important; // caer encima al flex del tema en el hentry
 }
 
 #bbpress-forums div.bbp-forum-content, #bbpress-forums div.bbp-topic-content, #bbpress-forums div.bbp-reply-content,

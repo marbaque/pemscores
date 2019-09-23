@@ -165,9 +165,10 @@ div.bbp-template-notice p,
 .bbp-reply-content {
 	font-weight: 400;
 	font-size: 17px;
+	width: 100%;
 }
 
-.forums .hentry {
+#bbpress-forums > .forums .hentry {
 	display: block!important; // caer encima al flex del tema en el hentry
 }
 

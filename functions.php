@@ -330,3 +330,8 @@ require get_template_directory() . '/inc/extras.php';
  * Load SVG icon functions.
  */
 require get_template_directory() . '/inc/icon-functions.php';
+
+/**
+ * Load snapshots function.
+ */
+require get_template_directory() . '/inc/mshots.php';

@@ -118,8 +118,7 @@
     <?php elseif ( $licencia == 'none' ): ?>
 
     <li class="no-license">
-        <span class="fa fa-question-circle-o" aria-hidden="true"></span>
-        Sin licencia
+        <i class="small">Licencia de uso desconocida</i>
     </li>
 
 <?php endif; ?>

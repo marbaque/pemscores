@@ -17,7 +17,8 @@
 @media screen and (min-width: $query__medium) {
 	.single.has-sidebar,
 	.page,
-	.learnpress-page {
+	.learnpress-page,
+	.bbpress {
 		.hentry {
 			display: flex;
 			flex-wrap: wrap;
@@ -44,7 +45,8 @@
 	}
 
 	.page,
-	.learnpress-page {
+	.learnpress-page,
+	.bbpress {
 		&.has-page-sidebar {
 			.hentry {
 				flex-direction: row-reverse;

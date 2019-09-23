@@ -144,32 +144,6 @@ button.dropdown-toggle {
 		}
 	}
 }
-.ajustes>a {
-
-	&:before {
-		font-family: 'FontAwesome';
-		content: "\f013";
-		margin-right: .5em;
-	}
-}
-
-.bp-logout-nav>a {
-	
-	&:before {
-		font-family: 'FontAwesome';
-		content: "\f08b";
-		margin-right: .5em;
-	}
-}
-
-.mis-cursos>a {
-
-	&:before {
-		font-family: 'FontAwesome';
-		content: "\f19d";
-		margin-right: .5em;
-	}
-}
 
 body:not(.logged-in) {
 	li.bp-comunidad {

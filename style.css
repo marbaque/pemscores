@@ -4,8 +4,8 @@ Theme Name: pemscores
 Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
-Description: Tema para recursos y contenido educativo, hecho a partir de _s.
-Version: 3.1
+Description: Tema para recursos y cursos de autocapacitación.
+Version: 3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -412,6 +412,10 @@ hr {
 
 li {
 	margin-bottom: 1em;
+}
+
+.small {
+	font-size: .77em;
 }
 
 ul.referencias {
@@ -1141,7 +1145,8 @@ a:hover, a:active {
 @media screen and (min-width: 900px) {
 	.single.has-sidebar .hentry,
 	.page .hentry,
-	.learnpress-page .hentry {
+	.learnpress-page .hentry,
+	.bbpress .hentry {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-wrap: wrap;
@@ -1151,40 +1156,47 @@ a:hover, a:active {
 	}
 	.single.has-sidebar .hentry .entry-header,
 	.page .hentry .entry-header,
-	.learnpress-page .hentry .entry-header {
+	.learnpress-page .hentry .entry-header,
+	.bbpress .hentry .entry-header {
 		-ms-flex: 1 0 100%;
 		    flex: 1 0 100%;
 	}
 	.single.has-sidebar .hentry .post-content,
 	.page .hentry .post-content,
-	.learnpress-page .hentry .post-content {
+	.learnpress-page .hentry .post-content,
+	.bbpress .hentry .post-content {
 		width: 66%;
 	}
 	.single.has-sidebar .hentry .widget-area,
 	.page .hentry .widget-area,
-	.learnpress-page .hentry .widget-area {
+	.learnpress-page .hentry .widget-area,
+	.bbpress .hentry .widget-area {
 		width: 30%;
 	}
 	.single.has-sidebar .learnpress-page .page-sidebar,
 	.page .learnpress-page .page-sidebar,
-	.learnpress-page .learnpress-page .page-sidebar {
+	.learnpress-page .learnpress-page .page-sidebar,
+	.bbpress .learnpress-page .page-sidebar {
 		float: left !important;
 		position: relative;
 	}
 	.page.has-page-sidebar .hentry,
-	.learnpress-page.has-page-sidebar .hentry {
+	.learnpress-page.has-page-sidebar .hentry,
+	.bbpress.has-page-sidebar .hentry {
 		-ms-flex-direction: row-reverse;
 		    flex-direction: row-reverse;
 	}
 	.page:not(.has-page-sidebar) .hentry,
-	.learnpress-page:not(.has-page-sidebar) .hentry {
+	.learnpress-page:not(.has-page-sidebar) .hentry,
+	.bbpress:not(.has-page-sidebar) .hentry {
 		-ms-flex-pack: distribute;
 		    justify-content: space-around;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.page:not(.has-page-sidebar) .post-content,
-	.learnpress-page:not(.has-page-sidebar) .post-content {
+	.learnpress-page:not(.has-page-sidebar) .post-content,
+	.bbpress:not(.has-page-sidebar) .post-content {
 		max-width: 66%;
 	}
 }
@@ -1669,24 +1681,6 @@ button.dropdown-toggle {
 .bp-login-nav > a:hover {
 	color: white;
 	background: #00529a;
-}
-
-.ajustes > a:before {
-	font-family: 'FontAwesome';
-	content: "\f013";
-	margin-right: .5em;
-}
-
-.bp-logout-nav > a:before {
-	font-family: 'FontAwesome';
-	content: "\f08b";
-	margin-right: .5em;
-}
-
-.mis-cursos > a:before {
-	font-family: 'FontAwesome';
-	content: "\f19d";
-	margin-right: .5em;
 }
 
 body:not(.logged-in) li.bp-comunidad {
@@ -2893,24 +2887,27 @@ body:not(.admin-bar) .learn-press-courses .course_category-privado {
 
 .course-curriculum ul.curriculum-sections li.course-item.current {
 	color: #006edc;
-	background-color: #f9f2ea;
+	background-color: #f9f2ea !important;
 }
 
 .course-curriculum ul.curriculum-sections li.course-item.current:before {
 	background: #ff961e;
 }
 
-.course-curriculum ul.curriculum-sections li.course-item i.fa {
-	color: #5abe00 !important;
+.course-curriculum ul.curriculum-sections li.course-item i.course-item-status {
+	color: #ff961e !important;
+}
+
+.course-curriculum ul.curriculum-sections li.course-item.item-preview i.course-item-status {
+	background: #ff961e !important;
 }
 
 .course-curriculum ul.curriculum-sections .section-header {
-	background-color: #00529a;
-	color: #ebf3fc;
+	background-color: #cce2f8;
+	color: #00529a;
 }
 
 .course-curriculum ul.curriculum-sections .section-header .section-title {
-	font-size: 0.9rem !important;
 	font-weight: 900;
 }
 
@@ -3504,6 +3501,10 @@ div.bbp-template-notice p,
 .bbp-reply-content {
 	font-weight: 400;
 	font-size: 17px;
+}
+
+.bbp-body .hentry {
+	display: block !important;
 }
 
 #bbpress-forums div.bbp-forum-content, #bbpress-forums div.bbp-topic-content, #bbpress-forums div.bbp-reply-content,

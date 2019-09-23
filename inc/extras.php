@@ -93,43 +93,6 @@ function wpse_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpse_excerpt_length', 999 );
 
-//capturas de pantalla
-/**
- * This shortcode will allow you to create a snapshot of a remote website and post it
- * on your WordPress site.
- *
- * [snapshot url="http://www.wordpress.org" alt="WordPress.org" width="400" height="300"]
- */
-add_shortcode( 'snapshot', function ( $atts ) {
-	$atts = shortcode_atts( array(
-		'alt'    => '',
-		'url'    => 'http://www.wordpress.org',
-		'width'  => '600',
-		'height' => '440'
-	), $atts );
-	$params = array(
-		'w' => $atts['width'],
-		'h' => $atts['height'],
-	);
-	$url = urlencode( $atts['url'] );
-	$src = 'http://s.wordpress.com/mshots/v1/' . $url . '?' . http_build_query( $params, null, '&' );
-
-	$cache_key = 'snapshot_' . md5( $src );
-	$data_uri = get_transient( $cache_key );
-	if ( ! $data_uri ) {
-		$response = wp_remote_get( $src );
-		if ( 200 === wp_remote_retrieve_response_code( $response ) ) {
-			$image_data = wp_remote_retrieve_body( $response );
-			if ( $image_data && is_string( $image_data ) ) {
-				$src = $data_uri = 'data:image/jpeg;base64,' . base64_encode( $image_data );
-				set_transient( $cache_key, $data_uri, DAY_IN_SECONDS );
-			}
-		}
-	}
-
-	return '<img src="' . esc_attr( $src ) . '" alt="' . esc_attr( $atts['alt'] ) . '"/>';
-} );
-
 
 //Usar gutenberg en lecciones
 add_filter('register_post_type_args', 'learnpress_cpt_add_gutenberg_support', 10, 2);
@@ -319,3 +282,33 @@ function remove_tags_fields() {
 	remove_meta_box( 'tagsdiv-temas' , 'recurso' , 'side' );
 }
 add_action( 'admin_menu' , 'remove_tags_fields' );
+
+// Desabilitar debates nuevos para participantes
+// Solo los keymasters pueden postear temas nuevos
+function buddydev_bbp_restrict_topic_creation( $can ) {
+		
+	$forum_id = 2289;//change your forum id
+	
+	if ( ! bbp_is_user_keymaster() &&  bbp_is_single_forum() ) {
+		$can = false;
+		
+	}
+	
+	return $can;
+	
+
+}
+add_filter( 'bbp_current_user_can_publish_topics', 'buddydev_bbp_restrict_topic_creation' );
+
+function buddydev_restrict_from_posting_topic( $forum_id ) {
+	
+	$restricted_forum_id = 2289;
+	
+	if ( ! bbp_is_user_keymaster() ) {
+		//set error on bbpress and it will not allow creating topic
+		//not the best idea but I personaly don't like the way bbpress does not provide any forum info at other places to hook
+		bbp_add_error( 403, __( 'No puede crear nuevos temas' ) );
+		
+	}
+}
+add_action( 'bbp_new_topic_pre_extras', 'buddydev_restrict_from_posting_topic' );//

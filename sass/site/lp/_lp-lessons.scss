@@ -47,6 +47,7 @@
   }
 }
 
+// Menu de lecciones
 .course-curriculum {
 
   ul.curriculum-sections {
@@ -62,23 +63,29 @@
 
       &.current {
         color: $color__main;
-        background-color: $color__naranja-claro;
+        background-color: $color__naranja-claro!important;
         
         &:before {
           background: $color__naranja;
         }
       }
-      i.fa {
-        color: $color__verde!important;
+      i.course-item-status {
+        color: $color__naranja!important;
       }
+      
+      &.item-preview {
+        i.course-item-status {
+          background: $color__naranja!important;
+        }
+      }
+      
     }
 
     .section-header {
-      background-color: $color__main-oscuro;
-      color: $color__main-superclaro;
+      background-color: $color__main_claro;
+      color: $color__main-oscuro;
 
       .section-title {
-        font-size: .9rem!important;
         font-weight: 900;
       }
       .progress-bg {

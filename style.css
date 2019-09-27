@@ -3058,7 +3058,7 @@ a.toggle-content-item {
 	text-align: center;
 	font-family: "Roboto", sans-serif;
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 2em auto 0;
 }
 
 .learn-press-content-protected-message .lock-icon {
@@ -3196,23 +3196,26 @@ form[name="learn-press-form-complete-lesson"] {
 
 .buddypress-wrap .bp-feedback {
 	display: block !important;
-	background: #ebf3fc;
-	box-shadow: 0 1px 8px 4px rgba(0, 0, 0, 0.1);
-	color: #00529a;
+	background-color: #fff !important;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 	margin: 1em 0;
 	padding: 1em;
-	border-radius: 4px;
+	border-radius: 2px;
 	border: 1px solid #cce2f8;
+}
+
+.buddypress-wrap .bp-feedback .bp-icon {
+	background-color: #ff961e !important;
+}
+
+.buddypress-wrap .bp-feedback p {
+	margin: 1em 0;
+	line-height: 1.5;
 }
 
 .buddypress-wrap a[data-bp-close],
 .buddypress-wrap button[data-bp-close] {
 	background: transparent;
-}
-
-.bp-feedback p {
-	padding: .5em 1em;
-	line-height: 1.4;
 }
 
 @media screen and (min-width: 900px) {

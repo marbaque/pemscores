@@ -448,3 +448,35 @@ a.subscription-toggle {
 	float: none!important;
 	display: block;
 }
+
+// Tabla de cursos en el perfil
+.lp-list-table thead tr th {
+	background: $color__main-oscuro!important;
+	color: #FFF;
+}
+ul.leanpress-buddpress-list-filters li a.active {
+	border-bottom: 2px solid $color__naranja;
+}
+
+.bbp-user-page ul.learn-press-courses .course {
+	padding: .5em!important;
+	border: 1px solid $color__main;
+	position: relative;
+	button {
+		background: #cce2f8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding: .75em;
+    font-family: "Roboto", sans-serif;
+    font-size: .8em;
+    text-align: left;
+    color: #6696c7;
+    text-decoration: none;
+    border: 0;
+		border-top: 1px solid #006edc;
+		border-radius: 0;
+	}
+}

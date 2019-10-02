@@ -65,14 +65,14 @@ function pemscores_setup() {
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'pemscores_custom_background_args', array(
-		'default-color' => 'ffffff',
+		'default-color' => 'f4f4f4',
 		'default-image' => '',
 	) ) );
 
 	// Add theme support for Custom Logo
 	add_theme_support( 'custom-logo', array(
-		'width' => 90,
-		'height' => 90,
+		'width' => 220,
+		'height' => 80,
 		'flex-width' => true,
 	));
 

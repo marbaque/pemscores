@@ -182,3 +182,17 @@ ul.menu_Inst {
 	overflow: auto;
 	background: white;
 }
+
+#footer-sub #footer {
+	background: inherit;
+	font-family: $font__headings;
+	position: relative;
+
+	#iconos {
+    float: none;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+}

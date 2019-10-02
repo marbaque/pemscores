@@ -23,12 +23,11 @@
 
 .custom-logo-link {
 	margin-right: 1em;
-	flex: 0 0 auto;
+	flex: 0 1 auto;
 	
 	img {
 		display: block;
-		height: 80px;
-		width: auto;
+		object-fit: contain;
 	}
 }
 

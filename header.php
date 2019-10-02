@@ -54,14 +54,18 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'pemscores' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				
+				<svg width="20px" height="10px" viewBox="0 0 20 10">
+						<g id="chevron-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<polygon id="Path" fill="#fff" fill-rule="nonzero" points="1.61394061 0.210647783 0.386059386 1.78935222 10 9.26686158 19.6139406 1.78935222 18.3860594 0.210647783 10 6.73313842"></polygon>
+						</g>
+				</svg>
+			</button>
 			<?php wp_nav_menu( array( 
 				'theme_location' => 'primary', 
 				'menu_id' => 'primary-menu'
 				) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
-	
-
 	<div id="content" class="site-content">

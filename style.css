@@ -1418,8 +1418,8 @@ a:hover, a:active {
 		right: 1em;
 		bottom: 2em;
 	}
-	.menu-toggle .icon {
-		fill: #fff;
+	.menu-toggle span {
+		display: none;
 	}
 	.menu-toggle,
 	.menu-toggle:active,

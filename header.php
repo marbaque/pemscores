@@ -61,6 +61,7 @@
 								<polygon id="Path" fill="#fff" fill-rule="nonzero" points="1.61394061 0.210647783 0.386059386 1.78935222 10 9.26686158 19.6139406 1.78935222 18.3860594 0.210647783 10 6.73313842"></polygon>
 						</g>
 				</svg>
+				<span>Contenidos</span>
 			</button>
 			<?php wp_nav_menu( array( 
 				'theme_location' => 'primary', 

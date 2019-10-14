@@ -117,8 +117,10 @@
 		color: currentColor;
 		opacity: .6;
 
-		&:hover {
+		&:hover,
+		&:active {
 			opacity: 1;
+			color: currentColor;
 		}
 	}
 }

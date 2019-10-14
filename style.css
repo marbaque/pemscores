@@ -1341,8 +1341,9 @@ a:hover, a:active {
 	cursor: pointer;
 }
 
-.main-navigation a:hover {
-	background: rgba(255, 255, 255, 0.3);
+.main-navigation a:hover, .main-navigation a:active {
+	background: rgba(255, 255, 255, 0.1);
+	color: currentColor;
 }
 
 .main-navigation ul ul {
@@ -1385,11 +1386,11 @@ a:hover, a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_item > a:hover,
 .main-navigation .current-menu-item > a:hover {
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.1);
 }
 
 .main-navigation .current_page_ancestor {
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.1);
 }
 
 .main-navigation ul ul .current_page_parent,
@@ -2144,8 +2145,9 @@ a:hover, a:active {
 	opacity: .6;
 }
 
-.creditos a:hover {
+.creditos a:hover, .creditos a:active {
 	opacity: 1;
+	color: currentColor;
 }
 
 /*

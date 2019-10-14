@@ -178,6 +178,8 @@ function pemscores_header_style() {
 			.site-title a,
 			.main-navigation a,
 			.main-navigation a:hover,
+			.main-navigation a:active,
+			.main-navigation a:focus,
 			.main-navigation li:hover,
 			button.dropdown-toggle,
 			.menu-toggle,

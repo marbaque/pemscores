@@ -1200,13 +1200,27 @@ a:hover, a:active {
 ## Header
 --------------------------------------------------------------*/
 .header-image {
-	max-height: 60vh;
+	height: 33vh;
 	overflow: hidden;
 }
 
 .header-image img {
-	display: block;
-	width: 100vw;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+@media screen and (min-width: 900px) {
+	.header-image {
+		height: auto;
+		max-height: 60vh;
+		overflow: hidden;
+	}
+	.header-image img {
+		height: auto;
+		display: block;
+		width: 100%;
+	}
 }
 
 .site-header {

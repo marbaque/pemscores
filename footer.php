@@ -58,6 +58,6 @@
 <div id="footer-sub">
 <?php echo file_get_contents('https://www.uned.ac.cr/menu/pie.html'); ?>
 </div>
-
+<?php pemscores_get_svg( array( 'icon' => 'chevron-down', 'fallback' => true ) ); ?>
 </body>
 </html>

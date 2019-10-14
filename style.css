@@ -2554,20 +2554,19 @@ ul.menu_Inst {
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 95%;
 	font-weight: 400;
-	color: #fff;
+	color: #fff !important;
 	transition: all .5s;
 }
 
 .search-form .search-field:focus {
 	width: 100%;
-	outline: 0;
-	border: 0 none;
+	border: 1px solid #333;
 	box-shadow: 0 0 2px white inset;
 	border-radius: 0;
 	outline-color: #00519e;
 	font-style: normal;
-	background-color: #00519e;
-	color: #fff;
+	background-color: white;
+	color: #333 !important;
 }
 
 .search-form .search-field::-webkit-input-placeholder {

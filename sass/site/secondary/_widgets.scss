@@ -324,15 +324,14 @@
         font-family: $font__headings;
         font-size: 95%;
         font-weight: 400;
-        color: #fff;
+        color: #fff!important;
 
         -webkit-transition: all .5s;
         transition: all .5s;
 
         &:focus{
             width: 100%;
-            outline: 0;
-            border: 0 none;
+            border: 1px solid $color__text-screen;
             -moz-box-shadow: 0 0 2px white inset;
             -webkit-box-shadow: 0 0 2px white inset;
             box-shadow: 0 0 2px white inset;
@@ -341,8 +340,8 @@
             border-radius: 0;
             outline-color: $color__skin;
             font-style: normal;
-            background-color: $color__skin;
-            color: #fff;
+						background-color: white;
+						color: $color__text-screen!important;
         }
         &::-webkit-input-placeholder {
             outline: 0;

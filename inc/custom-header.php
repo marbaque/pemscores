@@ -24,8 +24,8 @@ function pemscores_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'pemscores_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
-		'width'                  => 1280,
-		'height'                 => 300,
+		'width'                  => 2000,
+		'height'                 => 800,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'pemscores_header_style',
 	) ) );

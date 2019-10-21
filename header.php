@@ -28,7 +28,8 @@
 
 	<?php if ( get_header_image() && is_front_page() ) : ?>
 	<figure class="header-image">
-		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+		<?php $header_image_data = get_theme_mod( 'header_image_data' ); ?>
+		<?php echo wp_get_attachment_image( $header_image_data->attachment_id, 'full' ); ?>
 	</figure><!-- .header-image -->
 	<?php endif; // End header image check. ?>
 

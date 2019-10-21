@@ -14,13 +14,13 @@
 		&:hover,
 		&:focus {
 			text-decoration: underline;
+			color: currentColor!important;
 		}
 	}
 
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
 	}
-
 }
 
 .site-footer__wrap {
@@ -45,6 +45,7 @@
 
 		}
 	}
+	
 	.info-menu {
 		ul {
 			list-style-type: none;
@@ -129,7 +130,7 @@
 	*	Menu UNED
 */
 #footer {
-  color: #00529E;
+  color: $color__text-input;
   font-size: 0.8em;
   height: 38px;
   font-weight: 500;
@@ -141,15 +142,15 @@
   padding-bottom: 8px;
   text-align: center;
 	max-width:1340px;
-	background: white!important;
+	//background: white!important;
 }
 #footer a {
-  color: #00529E;
+  color: $color__text-input;
 	text-decoration: underline;
 }
 #footer a:hover {
-         color: #007BBF;
-    text-decoration: underline;
+	color: $color__text-screen;
+	text-decoration: underline;
 }
 #footer-inner {
   background-attachment: scroll;
@@ -177,7 +178,7 @@
 
 ul.menu_Inst {
 	overflow: auto;
-	background: white;
+	//background: white;
 }
 
 #footer-sub #footer {

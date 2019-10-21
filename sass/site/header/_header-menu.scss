@@ -29,9 +29,10 @@
 		cursor: pointer;
 
 		&:hover,
-		&:active {
+		&:active,
+		&:focus {
 			background: hsla(0, 0%, 100%, .1);
-			color: currentColor;
+			color: currentColor!important;
 		}
 	}
 

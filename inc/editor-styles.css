@@ -44,3 +44,67 @@ textarea {
 	}
 }
 
+
+/* Tabla de programa */
+table.agenda,
+.is-style-agenda {
+	margin: 3em 0 !important;
+	line-height: 1.3;
+	border-collapse: separate !important;
+	border-spacing: 4px !important;
+}
+
+table.agenda br,
+.is-style-agenda br {
+	content: "" !important;
+	display: block !important;
+	margin-bottom: .5em !important;
+}
+
+table.agenda tr,
+.is-style-agenda tr {
+	border: none;
+	transition: all .5s;
+}
+
+table.agenda td,
+.is-style-agenda td {
+	border: none;
+	padding: 1em;
+	vertical-align: top;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+
+table.agenda td:empty,
+.is-style-agenda td:empty {
+	background-color: #fff !important;
+}
+
+table.agenda td:nth-child(1),
+.is-style-agenda td:nth-child(1) {
+	background-color: #fff;
+	font-size: .9em;
+}
+
+table.agenda td:nth-child(2),
+table.agenda td:nth-child(5),
+.is-style-agenda td:nth-child(2),
+.is-style-agenda td:nth-child(5) {
+	background-color: #9edf7d;
+}
+
+table.agenda td:nth-child(3),
+table.agenda td:nth-child(6),
+.is-style-agenda td:nth-child(3),
+.is-style-agenda td:nth-child(6) {
+	background-color: #FFBC57;
+}
+
+table.agenda td:nth-child(4),
+table.agenda td:nth-child(8),
+.is-style-agenda td:nth-child(4),
+.is-style-agenda td:nth-child(8) {
+	background-color: #b7cdff;
+}
+

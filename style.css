@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, basado en el tema hecho por Morten Rand-Hendriksen para el curso "Building Themes From Scratch Using Underscores".
-Version: 2.5
+Version: 2.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -2190,6 +2190,7 @@ a:hover, a:active {
 	padding-bottom: 8px;
 	text-align: center;
 	max-width: 1340px;
+	background: rgba(255, 255, 255, 0.8) !important;
 }
 
 #footer a {
@@ -2228,6 +2229,7 @@ a:hover, a:active {
 
 ul.menu_Inst {
 	overflow: auto;
+	background: rgba(255, 255, 255, 0.8);
 }
 
 #footer-sub #footer {

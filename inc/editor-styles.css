@@ -403,7 +403,7 @@ a:hover, a:active {
 	border: 1px solid #cce2f8;
 	box-shadow: 2px 2px 5px hsla(0, 0, 0, .1);
 	padding: 1em;
-	font-family: $font__sans;
+	font-family: "Roboto", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	text-align: left;
 	margin: 2em 0;
 	position: relative;

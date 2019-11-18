@@ -17,31 +17,17 @@ defined( 'ABSPATH' ) || exit();
 global $post, $wp_query, $lp_tax_query, $wp_query;
 
 /**
- * @deprecated
- */
-do_action( 'learn_press_before_main_content' );
-
-/**
  * @since 3.0.0
  */
-do_action( 'learn-press/before-main-content' );
-
-/**
- * @deprecated
- */
-do_action( 'learn_press_archive_description' );
-
+ do_action( 'learn-press/before-main-content' ); 	
+	//quitar comentario para mostrar 
+	//la barra de búsqueda de cursos
 /**
  * @since 3.0.0
  */
 do_action( 'learn-press/archive-description' );
 
 if ( LP()->wp_query->have_posts() ) :
-
-	/**
-	 * @deprecated
-	 */
-	do_action( 'learn_press_before_courses_loop' );
 
 	/**
 	 * @since 3.0.0
@@ -63,11 +49,6 @@ if ( LP()->wp_query->have_posts() ) :
 	 */
 	do_action( 'learn_press_after_courses_loop' );
 
-	/**
-	 * @deprecated
-	 */
-	do_action( 'learn-press/after-courses-loop' );
-
 	wp_reset_postdata();
 
 else:
@@ -78,8 +59,3 @@ endif;
  * @since 3.0.0
  */
 do_action( 'learn-press/after-main-content' );
-
-/**
- * @deprecated
- */
-do_action( 'learn_press_after_main_content' );

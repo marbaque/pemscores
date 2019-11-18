@@ -38,6 +38,10 @@ $user = LP_Global::user();
         ?>
     </a>
 
+    <?php if ( get_field('anuncio_curso') ): ?>
+        <div class="anuncio"><?php the_field('anuncio_curso'); ?></div>
+    <?php endif; ?>
+
 	<?php
 
     // @since 3.0.0

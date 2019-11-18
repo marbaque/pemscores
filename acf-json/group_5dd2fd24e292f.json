@@ -1,0 +1,43 @@
+{
+    "key": "group_5dd2fd24e292f",
+    "title": "Avisos de cursos",
+    "fields": [
+        {
+            "key": "field_5dd2fd453d9ad",
+            "label": "Anuncio sencillo",
+            "name": "anuncio_curso",
+            "type": "textarea",
+            "instructions": "Agregue un texto para mostrar en el archivo de cursos. Puede ser un aviso o una descripción corta.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 200,
+            "rows": 6,
+            "new_lines": "wpautop"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "lp_course"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1574109029
+}

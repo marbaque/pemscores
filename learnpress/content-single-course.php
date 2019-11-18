@@ -35,6 +35,11 @@ do_action( 'learn-press/before-main-content' );
 do_action( 'learn-press/before-single-course' );
 
 ?>
+
+<?php if ( get_field('anuncio_curso') ): ?>
+        <div class="anuncio"><?php the_field('anuncio_curso'); ?></div>
+		<?php endif; ?>
+		
 <div id="learn-press-course" class="course-summary">
 	<?php
 	/**

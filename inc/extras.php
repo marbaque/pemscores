@@ -314,17 +314,17 @@ function buddydev_restrict_from_posting_topic( $forum_id ) {
 add_action( 'bbp_new_topic_pre_extras', 'buddydev_restrict_from_posting_topic' );
 
 // Flush permalinks every hour 
-// add_action('my_hourly_event', 'do_this_hourly');
+add_action('my_twicedaily_event', 'do_this_twicedaily');
  
-// function my_activation() {
-//     if ( !wp_next_scheduled( 'my_hourly_event' ) ) {
-//         wp_schedule_event(time(), 'hourly', 'my_hourly_event');
-//     }
-// }
+function my_activation() {
+    if ( !wp_next_scheduled( 'my_twicedaily_event' ) ) {
+        wp_schedule_event(time(), 'twicedaily', 'my_twicedaily_event');
+    }
+}
  
-// add_action('wp', 'my_activation');
+add_action('wp', 'my_activation');
  
-// function do_this_hourly() {
-//     global $wp_rewrite;
-//     $wp_rewrite->flush_rules();
-// }
+function do_this_twicedaily() {
+    global $wp_rewrite;
+    $wp_rewrite->flush_rules();
+}

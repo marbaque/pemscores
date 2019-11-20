@@ -143,13 +143,13 @@ add_action( 'after_setup_theme', 'pemscores_setup_theme_supported_features' );
 *	Esconder perfil de buddypress si no esta registrado como usuario
 *	las página correspondienes se deben tener el siguiente slug:
 *	perfil-academia
-* registro-academia
+* registro-usuario-academia
 */
 add_action( 'template_redirect', function() {
 
     if( ( is_page('perfil-academia') ) ) {
         if (!is_user_logged_in() ) {
-            wp_redirect( site_url( '/registro-academia' ) ); // redirect all...
+            wp_redirect( site_url( '/registro-usuario-academia' ) ); // redirect all...
             exit();
         }
 

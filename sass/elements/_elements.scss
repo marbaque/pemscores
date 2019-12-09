@@ -34,6 +34,11 @@ figure {
 	margin: 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
+figcaption {
+	font-family: $font__sans;
+	font-size: .8em;
+}
+
 .alert-success {
 	padding: 1em;
 	border: 1px solid $color__verde;
@@ -46,6 +51,11 @@ p.small {
 	font-family: $font__system;
 	font-size: .8em;
 	margin: 0 0 .5em;
+}
+
+.wp-block-cover, .wp-block-cover-image {
+	height: auto;
+	margin: 0 0 1em;
 }
 
 @import "tables";

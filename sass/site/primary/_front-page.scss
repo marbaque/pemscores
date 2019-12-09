@@ -156,7 +156,9 @@
 	border: 0;
 	border-top: 1px solid $color__main;
 
-	&:hover {
+	&:hover,
+	&:active,
+	&:focus {
 		background: $color__main;
 		color: $color__main-superclaro;
 	}

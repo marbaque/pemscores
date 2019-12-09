@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y cursos de autocapacitación.
-Version: 3.9
+Version: 4.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -492,6 +492,11 @@ figure {
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
+figcaption {
+	font-family: "Roboto", sans-serif;
+	font-size: .8em;
+}
+
 .alert-success, .hf-form .hf-message.hf-message-success {
 	padding: 1em;
 	border: 1px solid #5abe00;
@@ -504,6 +509,11 @@ p.small {
 	font-family: "system";
 	font-size: .8em;
 	margin: 0 0 .5em;
+}
+
+.wp-block-cover, .wp-block-cover-image {
+	height: auto;
+	margin: 0 0 1em;
 }
 
 table,
@@ -1130,9 +1140,9 @@ a:hover, a:active {
 	background: white;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: calc($size__max-width + 1em)) {
 	.site-content {
-		padding: 2em;
+		padding: 0;
 	}
 }
 
@@ -1921,7 +1931,7 @@ body:not(.logged-in) li.bp-comunidad {
 	border-top: 1px solid #006edc;
 }
 
-.read-more:hover, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:hover, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:hover {
+.read-more:hover, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:hover, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:hover, .read-more:active, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:active, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:active, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:active, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:active, .read-more:focus, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:focus, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:focus, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:focus, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:focus {
 	background: #006edc;
 	color: #ebf3fc;
 }
@@ -2109,7 +2119,7 @@ h1.course-title {
 	width: 100%;
 	border-bottom: 1px solid #cce2f8;
 	position: relative;
-	padding: 2em 1em;
+	padding: 2.5em 1em;
 	-ms-flex: 1 0 100%;
 	    flex: 1 0 100%;
 }
@@ -2118,8 +2128,15 @@ h1.course-title {
 	color: #00529a;
 	margin: 0 auto;
 	max-width: 1280px;
-	padding: .5em;
-	border-bottom: 2px solid #00529a;
+	padding: 0 0 .2em;
+	border-bottom: 3px solid #00529a;
+}
+
+@media screen and (min-width: 900px) {
+	.page-header .page-title {
+		padding: 0 .5em .2em;
+		box-sizing: border-box;
+	}
 }
 
 .page-content,

@@ -2,9 +2,10 @@
 	padding: 1em;
 	background: white;
 
-	@media screen and (min-width: $query__small) {
-		padding: 2em;
+	@media screen and (min-width: calc($size__max-width + 1em)) {
+		padding: 0;
 	}
+
 }
 
 

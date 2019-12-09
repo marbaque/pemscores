@@ -178,15 +178,21 @@ h1.course-title {
 	width: 100%;
 	border-bottom: 1px solid $color__main-claro;
 	position: relative;
-	padding: 2em 1em;
+	padding: 2.5em 1em;
 	flex: 1 0 100%;
 
 	.page-title {
 		color: $color__main-oscuro;
 		margin: 0 auto;
 		max-width: $size__max-width;
-		padding: .5em;
-		border-bottom: 2px solid $color__main-oscuro;	
+		padding: 0 0 .2em;
+		border-bottom: 3px solid $color__main-oscuro;	
+
+		@media screen and(min-width: $query__medium) {
+			padding: 0 .5em .2em;
+			box-sizing: border-box;
+			
+		}
 	}
 }
 

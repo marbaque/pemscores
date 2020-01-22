@@ -3035,22 +3035,51 @@ body.course-item-popup #learn-press-content-item .content-item-wrap ol li, body.
 	width: auto;
 }
 
-.content-item-wrap .recuadro.icon,
-.hentry .recuadro.icon {
-	padding-left: 100px;
-	margin: 2em 0 2em;
+.content-item-wrap .recuadro.icono,
+.hentry .recuadro.icono {
+	background-image: url("images/icons/about_icon.svg");
+	background-repeat: no-repeat;
+	background-position: center 1em;
+	background-size: 5em auto;
+	padding-top: 6em;
 }
 
-.content-item-wrap .recuadro.icon img,
-.hentry .recuadro.icon img {
-	width: 100px;
-	height: auto;
-	position: absolute;
-	top: 1em;
-	left: -20px;
+@media screen and (min-width: 900px) {
+	.content-item-wrap .recuadro.icono,
+	.hentry .recuadro.icono {
+		background-position: 1em 1.5em;
+		background-size: 6em;
+		padding-top: 1em;
+		padding-left: 8.5em;
+	}
 }
 
-@media screen and (min-width: 600px) {
+.content-item-wrap .recuadro.preguntas,
+.hentry .recuadro.preguntas {
+	background-image: url("images/icons/questions_icon.svg");
+}
+
+.content-item-wrap .recuadro.video,
+.hentry .recuadro.video {
+	background-image: url("images/icons/video_icon.svg");
+}
+
+.content-item-wrap .recuadro.actividad,
+.hentry .recuadro.actividad {
+	background-image: url("images/icons/activities_icon.svg");
+}
+
+.content-item-wrap .recuadro.nota,
+.hentry .recuadro.nota {
+	background-image: url("images/icons/info_icon.svg");
+}
+
+.content-item-wrap .recuadro.mirada,
+.hentry .recuadro.mirada {
+	background-image: url("images/icons/mirada_icon.svg");
+}
+
+@media screen and (min-width: 900px) {
 	.content-item-wrap .recuadro,
 	.hentry .recuadro {
 		margin: 2em 0;

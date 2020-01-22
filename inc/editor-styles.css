@@ -374,24 +374,57 @@ a:hover, a:active {
 	background: white;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 	border: 1px solid #cce2f8;
-	padding: 1em 1em 1em 100px;
-	margin: 2em 0 2em 20px;
+	padding: 1em 1.5em;
+	margin: 2em 0;
 	position: relative;
-	min-height: 136px;
+	height: auto;
+	min-height: 100px;
+	display: block;
+	width: auto;
 }
 
-@media screen and (min-width: 600px) {
-	.recuadro {
-		margin: 2em 20px;
+.recuadro.icono {
+	background-image: url("../images/icons/info_icon.svg");
+	background-repeat: no-repeat;
+	background-position: center 1em;
+	background-size: 5em auto;
+	padding-top: 6em;
+}
+
+@media screen and (min-width: 900px) {
+	.recuadro.icono {
+		background-position: 1em 1.5em;
+		background-size: 6em;
+		padding-top: 1em;
+		padding-left: 8.5em;
 	}
 }
 
-.recuadro img {
-	width: 100px;
-	height: auto;
-	position: absolute;
-	top: 1em;
-	left: -20px;
+.recuadro.preguntas {
+	background-image: url("../images/icons/questions_icon.svg");
+}
+
+.recuadro.video {
+	background-image: url("../images/icons/video_icon.svg");
+}
+
+.recuadro.actividad {
+	background-image: url("../images/icons/activities_icon.svg");
+}
+
+.recuadro.nota {
+	background-image: url("../images/icons/info_icon.svg");
+}
+
+.recuadro.mirada {
+	background-image: url("../images/icons/mirada_icon.svg");
+}
+
+@media screen and (min-width: 900px) {
+	.recuadro {
+		margin: 2em 0;
+		padding: 2em 3em;
+	}
 }
 
 .recuadro .text h3 {

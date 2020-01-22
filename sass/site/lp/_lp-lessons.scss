@@ -172,20 +172,38 @@ body.course-item-popup #learn-press-content-item .content-item-wrap {
     display: block;
     width: auto;
 
-    &.icon {
-      padding-left: 100px;
-      margin: 2em 0 2em;
-
-      img {
-        width: 100px;
-        height: auto;
-        position: absolute;
-        top: 1em;
-        left: -20px;
+    &.icono {
+      background-image: url('images/icons/about_icon.svg');
+      background-repeat: no-repeat;
+      background-position: center 1em;
+      background-size: 5em auto;
+      padding-top: 6em;
+      
+      @media screen and(min-width: $query__medium) {
+        background-position: 1em 1.5em;
+        background-size: 6em;
+        padding-top: 1em;
+        padding-left: 8.5em;
       }
     }
 
-    @media screen and (min-width: $query__small) {
+    &.preguntas {
+      background-image: url('images/icons/questions_icon.svg'); 
+    }
+    &.video {
+      background-image: url('images/icons/video_icon.svg');
+    }
+    &.actividad {
+      background-image: url('images/icons/activities_icon.svg');
+    }
+    &.nota {
+      background-image: url('images/icons/info_icon.svg');
+    }
+    &.mirada {
+      background-image: url('images/icons/mirada_icon.svg');
+    }
+
+    @media screen and (min-width: $query__medium) {
       margin: 2em 0;
       padding: 2em 3em;
     }

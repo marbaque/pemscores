@@ -384,7 +384,7 @@ a:hover, a:active {
 }
 
 .recuadro.icono {
-	background-image: url("../images/icons/info_icon.svg");
+	background-image: url("../images/icons/about_icon.svg");
 	background-repeat: no-repeat;
 	background-position: center 1em;
 	background-size: 5em auto;
@@ -413,11 +413,27 @@ a:hover, a:active {
 }
 
 .recuadro.nota {
-	background-image: url("../images/icons/info_icon.svg");
+	background-image: url("../images/icons/note_icon.svg");
 }
 
 .recuadro.mirada {
-	background-image: url("../images/icons/mirada_icon.svg");
+	background-image: url("../images/icons/additional_look_icon.svg");
+}
+
+.recuadro.documento {
+	background-image: url("../images/icons/documents_icon.svg");
+}
+
+.recuadro.audio {
+	background-image: url("../images/icons/audio_icon.svg");
+}
+
+.recuadro.imagen {
+	background-image: url("../images/icons/images_icon.svg");
+}
+
+.recuadro.info {
+	background-image: url("../images/icons/information_icon.svg");
 }
 
 @media screen and (min-width: 900px) {

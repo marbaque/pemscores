@@ -3071,12 +3071,32 @@ body.course-item-popup #learn-press-content-item .content-item-wrap ol li, body.
 
 .content-item-wrap .recuadro.nota,
 .hentry .recuadro.nota {
-	background-image: url("images/icons/info_icon.svg");
+	background-image: url("images/icons/note_icon.svg");
 }
 
 .content-item-wrap .recuadro.mirada,
 .hentry .recuadro.mirada {
-	background-image: url("images/icons/mirada_icon.svg");
+	background-image: url("images/icons/additional_look_icon.svg");
+}
+
+.content-item-wrap .recuadro.documento,
+.hentry .recuadro.documento {
+	background-image: url("images/icons/documents_icon.svg");
+}
+
+.content-item-wrap .recuadro.audio,
+.hentry .recuadro.audio {
+	background-image: url("images/icons/audio_icon.svg");
+}
+
+.content-item-wrap .recuadro.imagen,
+.hentry .recuadro.imagen {
+	background-image: url("images/icons/images_icon.svg");
+}
+
+.content-item-wrap .recuadro.info,
+.hentry .recuadro.info {
+	background-image: url("images/icons/information_icon.svg");
 }
 
 @media screen and (min-width: 900px) {

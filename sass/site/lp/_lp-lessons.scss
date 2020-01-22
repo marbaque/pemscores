@@ -197,10 +197,22 @@ body.course-item-popup #learn-press-content-item .content-item-wrap {
       background-image: url('images/icons/activities_icon.svg');
     }
     &.nota {
-      background-image: url('images/icons/info_icon.svg');
+      background-image: url('images/icons/note_icon.svg');
     }
     &.mirada {
-      background-image: url('images/icons/mirada_icon.svg');
+      background-image: url('images/icons/additional_look_icon.svg');
+    }
+    &.documento {
+      background-image: url('images/icons/documents_icon.svg');
+    }
+    &.audio {
+      background-image: url('images/icons/audio_icon.svg');
+    }
+    &.imagen {
+      background-image: url('images/icons/images_icon.svg');
+    }
+    &.info {
+      background-image: url('images/icons/information_icon.svg');
     }
 
     @media screen and (min-width: $query__medium) {

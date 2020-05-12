@@ -217,7 +217,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'pemscores_post_thumbnail_size
  */
 function pemscores_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar de blog', 'pemscores' ),
+		'name'          => esc_html__( 'Barra lateral del blog', 'pemscores' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Agregue widgets al blog.', 'pemscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
@@ -227,9 +227,9 @@ function pemscores_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar de páginas', 'pemscores' ),
+		'name'          => esc_html__( 'Barra lateral de páginas', 'pemscores' ),
 		'id'            => 'sidebar-2',
-		'description'   => esc_html__( 'Agregue widgets a las páginas.', 'pemscores' ),
+		'description'   => esc_html__( 'Agregue widgets solo a las páginas.', 'pemscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
 		'after_widget'  => '</div></section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -237,7 +237,17 @@ function pemscores_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Widgets de footer', 'pemscores' ),
+		'name'          => esc_html__( 'Barra lateral de cursos', 'pemscores' ),
+		'id'            => 'sidebar-3',
+		'description'   => esc_html__( 'Agregue widgets para mostrar solo en las páginas de cursos.', 'pemscores' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+		'after_widget'  => '</div></section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Barra inferior', 'pemscores' ),
 		'id'            => 'footer-1',
 		'description'   => esc_html__( 'Agregue widgets al footer.', 'pemscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -245,15 +255,7 @@ function pemscores_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Widgets para recursos', 'pemscores' ),
-		'id'            => 'sidebar-3',
-		'description'   => esc_html__( 'Agregue widgets para recursos.', 'pemscores' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
-		'after_widget'  => '</div></section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+
 }
 add_action( 'widgets_init', 'pemscores_widgets_init' );
 

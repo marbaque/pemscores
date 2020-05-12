@@ -32,7 +32,12 @@
 	</div><!-- .entry-content .post-content -->
 
 	<?php
-	get_sidebar( 'page' );
+	if ( is_singular('lp_course') ) {
+		get_sidebar( 'cursos' );
+	} else {
+		get_sidebar( 'page' );
+	}
+	
 	?>
 
 	<?php

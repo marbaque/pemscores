@@ -1,5 +1,11 @@
-# pemscores
+# Pemscores
 Hecho en el Programa Electrónica Multimedia de la UNED de Costa Rica para cursos de autoaprendizaje.
+
+## Instrucciones para editar tema
+
+Clonar el repositorio https://github.com/marbaque/gulp-dev en la carpeta de temas, al lado de este tema.
+Ver las instrucciones en ese repositorio.
+
 ## Features
 
 ### Customizer Options

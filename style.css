@@ -1818,7 +1818,6 @@ body:not(.logged-in) li.bp-comunidad {
 	margin: 1em auto;
 	font-size: 1.2em;
 	font-family: "Roboto", sans-serif;
-	color: #6696c7;
 }
 
 @media screen and (min-width: 600px) {
@@ -1828,7 +1827,7 @@ body:not(.logged-in) li.bp-comunidad {
 }
 
 .paginas-destacadas {
-	overflow-x: scroll;
+	overflow-x: hidden;
 	max-width: 100%;
 	position: relative;
 }
@@ -1850,6 +1849,13 @@ body:not(.logged-in) li.bp-comunidad {
 	display: flex;
 	-ms-flex-pack: justify;
 	    justify-content: space-between;
+}
+
+@media screen and (min-width: 600px) {
+	.paginas-destacadas .paginas-inner {
+		overflow-x: auto;
+		width: 100%;
+	}
 }
 
 .paginas-destacadas .pagina {
@@ -2079,8 +2085,7 @@ body:not(.logged-in) li.bp-comunidad {
 	margin: 0 auto;
 	max-height: 800px;
 	min-height: 400px;
-	-o-object-fit: cover;
-	   object-fit: cover;
+	object-fit: cover;
 }
 
 .course-title_wrap {
@@ -2223,8 +2228,7 @@ h1.course-title {
 
 .recurso-wrap .recurso-media img {
 	padding: 0;
-	-o-object-fit: cover;
-	   object-fit: cover;
+	object-fit: cover;
 	width: 100%;
 }
 

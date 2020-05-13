@@ -51,7 +51,6 @@
 	margin: 1em auto;
 	font-size: 1.2em;
 	font-family: $font__sans;
-	color: $color__main-bordes;
 
 	@media screen and (min-width: $query__small) {
 		margin: 3em auto 1em;
@@ -60,7 +59,7 @@
 
 //paginas-destacadas
 .paginas-destacadas {
-	overflow-x: scroll;
+	overflow-x: hidden;
 	max-width: 100%;
 	position: relative;
 
@@ -76,16 +75,21 @@
 		overflow-x: scroll;
 		display: flex;
 		justify-content: space-between;
+
+		@media screen and (min-width: $query__small) {
+			overflow-x: auto;
+			width: 100%;
+		}
 	}
 
 	.pagina {
 		background: $color__main-superclaro;
-    border: 1px solid $color__main-bordes;
+    	border: 1px solid $color__main-bordes;
 		padding: 1em 1.5em 2.5em;
 		margin-bottom: 24px;
 		width: 90%;
 		flex-shrink: 0;
-    position: relative;
+    	position: relative;
 		color: $color__main-bordes;
 		scroll-snap-align: center;
 		margin-right: 1em;

@@ -34,8 +34,8 @@
 	</div>
 
 	<?php
-	if (is_active_sidebar('sidebar-3')) {
-		dynamic_sidebar('sidebar-3');
+	if (is_active_sidebar('sidebar-4')) {
+		dynamic_sidebar('sidebar-4');
 	}
 	?>
 

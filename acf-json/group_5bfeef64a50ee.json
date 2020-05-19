@@ -131,7 +131,7 @@
                 "none": "Sin licencia"
             },
             "allow_null": 0,
-            "default_value": "cc",
+            "default_value": "copy",
             "layout": "horizontal",
             "return_format": "value"
         }
@@ -153,5 +153,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Elija las categorías correspondientes a este recurso.",
-    "modified": 1568827934
+    "modified": 1589776118
 }

@@ -2067,24 +2067,18 @@ body:not(.logged-in) li.bp-comunidad {
 /* Single Post Featured Images */
 .full-bleed {
 	width: 100%;
-	min-height: 400px;
-	max-height: 640px;
+	min-height: 300px;
+	max-height: 600px;
 	border-bottom: 1px solid #cce2f8;
 	overflow: hidden;
 	position: relative;
 }
 
-@media screen and (min-width: 900px) {
-	.full-bleed {
-		max-height: 800px;
-	}
-}
-
 .full-bleed img {
 	display: block;
 	margin: 0 auto;
-	max-height: 800px;
-	min-height: 400px;
+	max-height: 600px;
+	min-height: 300px;
 	object-fit: cover;
 }
 
@@ -2441,14 +2435,14 @@ h1.course-title {
 	border: 1px solid #006edc;
 	overflow: hidden;
 	margin-bottom: 1em;
-	font-size: .8em;
+	font-size: 0.8em;
 }
 
 .course .post-content .course-overview_section .curriculum-sections li.section .section-header {
 	border: none;
 	background-color: #cce2f8;
 	color: #00529a;
-	padding: .5em 1em;
+	padding: 0.5em 1em;
 }
 
 .course .post-content .course-overview_section .curriculum-sections li.section .section-header h5 {
@@ -2481,6 +2475,32 @@ h1.course-title {
 	}
 }
 
+.course .post-content .course-tabs ul.course-nav-tabs {
+	margin-bottom: 0;
+	font-size: 80%;
+	border-color: #f4f4f4;
+	font-family: "Roboto", sans-serif;
+}
+
+.course .post-content .course-tabs ul.course-nav-tabs li.course-nav {
+	background: white;
+	border-radius: 4px 4px 0 0;
+	margin: 0 0.3em;
+	border-color: white;
+	opacity: 0.5;
+}
+
+.course .post-content .course-tabs ul.course-nav-tabs li.course-nav.active {
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	opacity: 1;
+}
+
+.course .post-content .course-tab-panel {
+	background: white;
+	padding: 2em 0;
+	font-size: 90%;
+}
+
 .course-item.item-locked .course-item-status:before {
 	color: #fa3c46 !important;
 }
@@ -2491,7 +2511,7 @@ ul.curriculum-sections li.item-locked {
 
 .lp-single-course .learn-press-breadcrumb,
 .lp-single-course .learn-press-course-forum-link {
-	font-size: .8em;
+	font-size: 0.8em;
 	border: none;
 }
 
@@ -2523,7 +2543,8 @@ ul.curriculum-sections li.item-locked {
 	width: 100%;
 }
 
-.widget .learn-press-course-results-progress .items-progress, .widget .learn-press-course-results-progress .course-progress {
+.widget .learn-press-course-results-progress .items-progress,
+.widget .learn-press-course-results-progress .course-progress {
 	padding: 0;
 	margin: 0 0 1em;
 }
@@ -2547,11 +2568,12 @@ ul.curriculum-sections li.item-locked {
 	font-family: "Roboto", sans-serif;
 }
 
-.course-remaining-time .lp-label.label-enrolled, .course-remaining-time .lp-label.label-started {
+.course-remaining-time .lp-label.label-enrolled,
+.course-remaining-time .lp-label.label-started {
 	background: #00b3b3;
 	border-radius: 0;
-	padding: .4em;
-	margin-right: .25em;
+	padding: 0.4em;
+	margin-right: 0.25em;
 }
 
 .course-meta,
@@ -2575,7 +2597,8 @@ ul.curriculum-sections li.item-locked {
 	font-family: "Roboto", sans-serif;
 }
 
-.learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
+.learn-press-course-results-progress .items-progress,
+.learn-press-course-results-progress .course-progress {
 	padding: 1em;
 	background: white;
 	padding: 1em;
@@ -2594,7 +2617,8 @@ ul.curriculum-sections li.item-locked {
 		-ms-flex-pack: justify;
 		    justify-content: space-between;
 	}
-	.learn-press-course-results-progress .items-progress, .learn-press-course-results-progress .course-progress {
+	.learn-press-course-results-progress .items-progress,
+	.learn-press-course-results-progress .course-progress {
 		float: none !important;
 	}
 }
@@ -2605,11 +2629,12 @@ ul.curriculum-sections li.item-locked {
 	margin: 1em 0;
 }
 
-.course-remaining-time .lp-label.label-enrolled, .course-remaining-time .lp-label.label-started {
+.course-remaining-time .lp-label.label-enrolled,
+.course-remaining-time .lp-label.label-started {
 	background: #00b3b3;
 	border-radius: 0;
-	padding: .4em;
-	margin-right: .25em;
+	padding: 0.4em;
+	margin-right: 0.25em;
 }
 
 .course-price {
@@ -2673,14 +2698,14 @@ ul.curriculum-sections li.item-locked {
 }
 
 #course-reviews .course-reviews-list .review-author-info .review-title {
-	margin: 0 0 .5em;
+	margin: 0 0 0.5em;
 	font-style: normal;
 	font-size: 1em;
 	width: auto;
 }
 
 #course-reviews .course-reviews-list .review-text {
-	font-size: .9em;
+	font-size: 0.9em;
 	-ms-flex: 1 0 100%;
 	    flex: 1 0 100%;
 }
@@ -2826,8 +2851,8 @@ ul.curriculum-sections li.item-locked {
 		    justify-content: flex-start;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
-		-ms-flex-align: start;
-		    align-items: flex-start;
+		-ms-flex-align: stretch;
+		    align-items: stretch;
 	}
 	.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
 		width: 48%;

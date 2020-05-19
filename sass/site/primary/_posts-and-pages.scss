@@ -125,22 +125,22 @@
 
 .full-bleed {
 	width: 100%;
-	min-height: 400px;
-	max-height: 640px;
+	min-height: 300px;
+	max-height: 600px;
 	border-bottom: 1px solid $color__main-claro;
 	overflow: hidden;
 	position: relative;
 
 	@media screen and (min-width: $query__medium) {
-		max-height: 800px;
+		//max-height: 800px;
 	}
 
 
 	img {
 		display: block;
 		margin: 0 auto;
-		max-height: 800px;
-		min-height: 400px;
+		max-height: 600px;
+		min-height: 300px;
 		object-fit: cover;
   	
 	}

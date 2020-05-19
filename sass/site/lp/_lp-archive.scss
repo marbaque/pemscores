@@ -131,7 +131,7 @@
               display: flex;
       				justify-content: flex-start;
               flex-wrap: wrap;
-              align-items: flex-start;
+              align-items: stretch;
 
               .lp_course {
                   width: 48%;
@@ -145,7 +145,6 @@
                 .lp_course {
                     width: 31%;            
                 }
-            
             }
 
           }

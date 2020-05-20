@@ -43,7 +43,7 @@ defined('ABSPATH') || exit();
 
 			<!-- Custom tab Referencias -->
 			<li class="<?php echo join(' ', $classes); ?>">
-				<a href="?tab=tab-referencias" data-tab="#lp_ref">Referencias</a>
+				<a href="?tab=tab-referencias" data-tab="#tab-referencias">Referencias</a>
 			</li>
 
 		<?php endif; ?>
@@ -52,7 +52,7 @@ defined('ABSPATH') || exit();
 
 			<!-- Custom tab Creditos -->
 			<li class="<?php echo join(' ', $classes); ?>">
-				<a href="?tab=tab-creditos" data-tab="#lp_cred">Créditos</a>
+				<a href="?tab=tab-creditos" data-tab="#tab-creditos">Créditos</a>
 			</li>
 
 		<?php endif; ?>
@@ -83,7 +83,7 @@ defined('ABSPATH') || exit();
 	<?php if (get_field('lp_referencias')) : ?>
 
 		<!-- Custom tab panel Referencias -->
-		<div class="course-tab-panel-referencias course-tab-panel<?php echo !empty($tab['active']) && $tab['active'] ? ' active' : ''; ?>" id="lp_ref">
+		<div class="course-tab-panel-referencias course-tab-panel" id="tab-referencias">
 
 			<?php the_field('lp_referencias'); ?>
 
@@ -94,7 +94,7 @@ defined('ABSPATH') || exit();
 	<?php if (get_field('lp_creditos')) : ?>
 
 		<!-- Custom tab panel Creditos -->
-		<div class="course-tab-panel-creditos course-tab-panel<?php echo !empty($tab['active']) && $tab['active'] ? ' active' : ''; ?>" id="lp_cred">
+		<div class="course-tab-panel-creditos course-tab-panel" id="tab-creditos">
 
 			<?php the_field('lp_creditos'); ?>
 

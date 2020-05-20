@@ -2067,17 +2067,23 @@ body:not(.logged-in) li.bp-comunidad {
 /* Single Post Featured Images */
 .full-bleed {
 	width: 100%;
-	min-height: 300px;
-	max-height: 600px;
+	min-height: 200px;
+	max-height: 320px;
 	border-bottom: 1px solid #cce2f8;
 	overflow: hidden;
 	position: relative;
 }
 
+@media screen and (min-width: 1200px) {
+	.full-bleed {
+		max-height: 800px;
+	}
+}
+
 .full-bleed img {
 	display: block;
 	margin: 0 auto;
-	max-height: 600px;
+	max-height: 800px;
 	min-height: 300px;
 	object-fit: cover;
 }
@@ -2498,7 +2504,6 @@ h1.course-title {
 .course .post-content .course-tab-panel {
 	background: white;
 	padding: 2em 0;
-	font-size: 90%;
 }
 
 .course-item.item-locked .course-item-status:before {
@@ -2871,19 +2876,16 @@ ul.curriculum-sections li.item-locked {
 	background-position: .75em 1em;
 	background-size: 32px;
 	font-size: .9em;
-	line-height: 1.3;
+	line-height: 1.5;
 	padding: .5em 1em .5em 54px;
 	margin: 0 0 1.5em;
 	border-radius: 4px;
-	min-height: 60px;
+	width: 100%;
 	max-width: 500px;
 	display: block;
 	font-family: "Roboto", sans-serif;
 	color: #888;
-}
-
-.anuncio p {
-	margin: .5em 0;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 body:not(.admin-bar) .learn-press-courses .course_category-privado {

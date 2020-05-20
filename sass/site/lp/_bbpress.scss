@@ -32,21 +32,24 @@
     width: 100% !important;
 }
 .bbp-body {
-    border: 0 none !important;
+    //border: 0 none !important;
 }
 .bbp-topics {
-    border: 0 none !important;
+    //border: 0 none !important;
 }
 .bbp-topics .type-topic {
-    border: 0 none !important;
-    margin: 5px 0 !important;
+    border-bottom: 1px solid $color__main-bordes!important;
 }
 #bbpress-forums .type-topic.odd {
-    border: 1px solid #eee !important;
+    background-color: inherit;
+}
+#bbpress-forums div.odd {
+	background-color: $color__main-superclaro;
 }
 .bbp-topic-freshness a,
 .bbp-topic-freshness-author {
-    color: #aaa !important;
+	color: $color__gris;
+	font-size: .8rem;
 }
 .resolved,
 .bbp-footer,
@@ -78,19 +81,21 @@ li.bbp-forum-freshness {
 .bbp-topics ul.super-sticky,
 .bbp-topics ul.sticky,
 .bbp-forum-content ul.sticky {
-	font-size: 1em;
-	background-color: $color__verde-claro!important;
-	border-color: $color__verde;
+	border-width: 1px;
+	background-color: $color__main-superclaro!important;
 }
 .bbp-topics-front ul.super-sticky .bbp-topic-permalink,
 .bbp-topics ul.super-sticky .bbp-topic-permalink,
 .bbp-topics ul.sticky .bbp-topic-permalink,
 .bbp-forum-content ul.sticky .bbp-topic-permalink {
 	font-weight: bold;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	display: block;
 }
 
 #bbpress-forums ul {
-	border: 0 !important;
+	border: 0 none;
 	position:relative;
 }
 
@@ -159,7 +164,11 @@ div.bbp-topic-tags,
 div.bbp-template-notice p,
 #bbpress-forums .bbp-forum-info .bbp-forum-content, #bbpress-forums p.bbp-topic-meta {
 	font-weight: 400;
-	font-size: 13px;
+	font-size: 80%;
+	max-width: 40%;
+	span {
+		white-space: normal;
+	}
 }
 
 .bbp-reply-content {
@@ -235,16 +244,15 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 #bbpress-forums .bbp-replies .type-topic,
 #bbpress-forums .bbp-replies .type-reply{
 	margin-bottom: 20px !important;
-	border: 1px solid $color__main-bordes;
+	border-bottom: 1px solid $color__main-bordes;
+	border-top: 0 none;
 }
 
 #bbp-search-results .bbp-topic-title,
 #bbp-search-results .bbp-topic-author {
 	padding: 20px;
 }
-#bbpress-forums ul.bbp-replies {
-	border-width: 0;
-}
+
 
 .bbp-reply-header {
 	border-left: 1px solid #DDD;
@@ -296,7 +304,12 @@ div.bbp-breadcrumb {
 }
 
 .bbp-pagination {
+	background-color: $color__main;
+	color: $color__main-claro;
 	float: none;
+	display: block;
+	clear: both;
+	font-size: 90%;
 }
 
 .bbp-pagination:after {
@@ -364,6 +377,7 @@ div.bbp-breadcrumb {
 .bbp-topic-content {
 	border-top: 0;
 	overflow: hidden;
+	font-size: 1em;
 }
 
 .bbp-author-ip {
@@ -375,8 +389,8 @@ div.bbp-breadcrumb {
 	background: #FFF;
 	border: 0;
 	padding-bottom: 3px;
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 	color:#aaa;
 }
 
@@ -447,6 +461,14 @@ a.subscription-toggle {
 	padding: .5em;
 	float: none!important;
 	display: block;
+
+	.bbp-pagination-links {
+		span.current,
+		a:hover {
+			color: $color__main-oscuro!important;
+			background-color: $color__main-claro!important;
+		}
+	}
 }
 
 // Tabla de cursos en el perfil
@@ -479,4 +501,59 @@ ul.leanpress-buddpress-list-filters li a.active {
 		border-top: 1px solid #006edc;
 		border-radius: 0;
 	}
+}
+
+/*Estilos para bbpress de customizer*/
+.bbp-reply-content {
+	line-height: 1.5
+}
+.bbp-body .hentry ol,
+.bbp-body .hentry ul {
+	margin-left:1em!important;
+	padding-left: 1em!important;
+}
+#favorite-toggle,
+#subscription-toggle {
+	margin: 0 0 1em!important;
+}
+a.favorite-toggle {
+    font-size: 1rem;
+    border-radius: .2em;
+    background-color: #f6c348;
+    color: white;
+    padding: .5em;
+		display: inline-block;
+}
+a.subscription-toggle {
+	display: inline-block;
+}
+/*widget respuestas recientes bbpress*/
+.bbp-replies-widget {
+	font-size: 0.85em;
+}
+.bbp-replies-widget .bbp-author-avatar {
+	margin-right: 0.25em;
+}
+.bbp-replies-widget .bbp-author-name {
+	font-weight: bold;
+}
+.bbp-replies-widget time {
+	font-size: 0.8em;
+	color: graytext;
+}
+.bbp-replies-widget .bbp-reply-topic-title {
+	font-style: italic;
+}
+
+.bp-comunidad > a:before {
+	content: none;
+	margin-right: 0;
+}
+.coblocks-form__submitted {
+	background-color: #f4f4f4;
+	padding: 1em;
+}
+.coblocks-form__submitted {
+	background-color: #f4f4f4;
+	padding: 1em;
 }

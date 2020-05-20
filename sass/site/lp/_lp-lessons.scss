@@ -339,3 +339,13 @@ form[name="learn-press-form-complete-lesson"] {
   text-align: right;
   margin-bottom: 2em;
 }
+
+
+/*tablas en contenidos de curso*/
+#learn-press-content-item table td,
+.hentry table td,
+.content-area table td {
+	padding: .5em!important;
+}
+
+

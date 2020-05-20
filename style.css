@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y cursos de autocapacitación.
-Version: 4.3
+Version: 4.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -2427,6 +2427,11 @@ h1.course-title {
 	font-size: inherit;
 }
 
+.course .anuncio {
+	width: auto;
+	display: inline-block;
+}
+
 .course .post-content .course-overview_section {
 	margin-bottom: 1em;
 	background: white;
@@ -2719,6 +2724,19 @@ ul.curriculum-sections li.item-locked {
 	display: none;
 }
 
+/*esconder autor de curso*/
+.course-info .course-instructor,
+#cuestionarios-personal-li {
+	display: none !important;
+	visibility: none !important;
+}
+
+/*estilo de referencias*/
+.course-tab-panel-referencias,
+.course-tab-panel-creditos {
+	font-size: 0.9em;
+}
+
 .archive-view.learnpress .site .site-content .page-header {
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
@@ -2803,7 +2821,7 @@ ul.curriculum-sections li.item-locked {
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .cat-links a {
 	border: 0;
 	display: block;
-	margin-bottom: .5em;
+	margin-bottom: 0.5em;
 	color: #006edc;
 }
 
@@ -2813,7 +2831,7 @@ ul.curriculum-sections li.item-locked {
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .course-tags {
 	margin-top: 1em;
-	font-size: .9em;
+	font-size: 0.9em;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .course-tags a {
@@ -2842,7 +2860,7 @@ ul.curriculum-sections li.item-locked {
 	border: 0;
 	border-top: 1px solid #6696c7;
 	font-size: 90%;
-	padding: .5em 1em;
+	padding: 0.5em 1em;
 	text-align: left;
 	color: #6696c7;
 	border-radius: 0;
@@ -2856,8 +2874,8 @@ ul.curriculum-sections li.item-locked {
 		    justify-content: flex-start;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
-		-ms-flex-align: stretch;
-		    align-items: stretch;
+		-ms-flex-align: start;
+		    align-items: flex-start;
 	}
 	.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
 		width: 48%;
@@ -2873,11 +2891,11 @@ ul.curriculum-sections li.item-locked {
 
 .anuncio {
 	background: url("images/icons/info_simple.svg") no-repeat #fff;
-	background-position: .75em 1em;
+	background-position: 0.75em 1em;
 	background-size: 32px;
-	font-size: .9em;
+	font-size: 0.9em;
 	line-height: 1.5;
-	padding: .5em 1em .5em 54px;
+	padding: 0.5em 1em 0.5em 54px;
 	margin: 0 0 1.5em;
 	border-radius: 4px;
 	width: 100%;
@@ -2885,7 +2903,7 @@ ul.curriculum-sections li.item-locked {
 	display: block;
 	font-family: "Roboto", sans-serif;
 	color: #888;
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
 body:not(.admin-bar) .learn-press-courses .course_category-privado {
@@ -3242,6 +3260,13 @@ form[name="learn-press-form-complete-lesson"] {
 	margin-bottom: 2em;
 }
 
+/*tablas en contenidos de curso*/
+#learn-press-content-item table td,
+.hentry table td,
+.content-area table td {
+	padding: 0.5em !important;
+}
+
 @media screen and (min-width: 900px) {
 	.profile .page .post-content {
 		width: 100;
@@ -3484,26 +3509,22 @@ body.buddypress .site-content .entry-header {
 	width: 100% !important;
 }
 
-.bbp-body {
-	border: 0 none !important;
-}
-
-.bbp-topics {
-	border: 0 none !important;
-}
-
 .bbp-topics .type-topic {
-	border: 0 none !important;
-	margin: 5px 0 !important;
+	border-bottom: 1px solid #6696c7 !important;
 }
 
 #bbpress-forums .type-topic.odd {
-	border: 1px solid #eee !important;
+	background-color: inherit;
+}
+
+#bbpress-forums div.odd {
+	background-color: #ebf3fc;
 }
 
 .bbp-topic-freshness a,
 .bbp-topic-freshness-author {
-	color: #aaa !important;
+	color: #888;
+	font-size: .8rem;
 }
 
 .resolved,
@@ -3541,9 +3562,8 @@ li.bbp-forum-freshness {
 .bbp-topics ul.recurso-wrap,
 .bbp-forum-content ul.sticky,
 .bbp-forum-content ul.recurso-wrap {
-	font-size: 1em;
-	background-color: #eaf7df !important;
-	border-color: #5abe00;
+	border-width: 1px;
+	background-color: #ebf3fc !important;
 }
 
 .bbp-topics-front ul.super-sticky .bbp-topic-permalink,
@@ -3553,10 +3573,13 @@ li.bbp-forum-freshness {
 .bbp-forum-content ul.sticky .bbp-topic-permalink,
 .bbp-forum-content ul.recurso-wrap .bbp-topic-permalink {
 	font-weight: bold;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	display: block;
 }
 
 #bbpress-forums ul {
-	border: 0 !important;
+	border: 0 none;
 	position: relative;
 }
 
@@ -3622,7 +3645,13 @@ div.bbp-topic-tags,
 div.bbp-template-notice p,
 #bbpress-forums .bbp-forum-info .bbp-forum-content, #bbpress-forums p.bbp-topic-meta {
 	font-weight: 400;
-	font-size: 13px;
+	font-size: 80%;
+	max-width: 40%;
+}
+
+div.bbp-template-notice p span,
+#bbpress-forums .bbp-forum-info .bbp-forum-content span, #bbpress-forums p.bbp-topic-meta span {
+	white-space: normal;
 }
 
 .bbp-reply-content {
@@ -3694,16 +3723,13 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 #bbpress-forums .bbp-replies .type-topic,
 #bbpress-forums .bbp-replies .type-reply {
 	margin-bottom: 20px !important;
-	border: 1px solid #6696c7;
+	border-bottom: 1px solid #6696c7;
+	border-top: 0 none;
 }
 
 #bbp-search-results .bbp-topic-title,
 #bbp-search-results .bbp-topic-author {
 	padding: 20px;
-}
-
-#bbpress-forums ul.bbp-replies {
-	border-width: 0;
 }
 
 .bbp-reply-header {
@@ -3750,7 +3776,12 @@ div.bbp-breadcrumb {
 }
 
 .bbp-pagination {
+	background-color: #006edc;
+	color: #cce2f8;
 	float: none;
+	display: block;
+	clear: both;
+	font-size: 90%;
 }
 
 .bbp-pagination:after {
@@ -3814,6 +3845,7 @@ div.bbp-breadcrumb {
 .bbp-topic-content {
 	border-top: 0;
 	overflow: hidden;
+	font-size: 1em;
 }
 
 .bbp-author-ip {
@@ -3825,8 +3857,8 @@ div.bbp-breadcrumb {
 	background: #FFF;
 	border: 0;
 	padding-bottom: 3px;
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 	color: #aaa;
 }
 
@@ -3905,6 +3937,12 @@ a.subscription-toggle:hover, a.subscription-toggle:active {
 	display: block;
 }
 
+.bbp-pagination .bbp-pagination-links span.current,
+.bbp-pagination .bbp-pagination-links a:hover {
+	color: #00529a !important;
+	background-color: #cce2f8 !important;
+}
+
 .lp-list-table thead tr th {
 	background: #00529a !important;
 	color: #FFF;
@@ -3936,6 +3974,72 @@ ul.leanpress-buddpress-list-filters li a.active {
 	border: 0;
 	border-top: 1px solid #006edc;
 	border-radius: 0;
+}
+
+/*Estilos para bbpress de customizer*/
+.bbp-reply-content {
+	line-height: 1.5;
+}
+
+.bbp-body .hentry ol,
+.bbp-body .hentry ul {
+	margin-left: 1em !important;
+	padding-left: 1em !important;
+}
+
+#favorite-toggle,
+#subscription-toggle {
+	margin: 0 0 1em !important;
+}
+
+a.favorite-toggle {
+	font-size: 1rem;
+	border-radius: .2em;
+	background-color: #f6c348;
+	color: white;
+	padding: .5em;
+	display: inline-block;
+}
+
+a.subscription-toggle {
+	display: inline-block;
+}
+
+/*widget respuestas recientes bbpress*/
+.bbp-replies-widget {
+	font-size: 0.85em;
+}
+
+.bbp-replies-widget .bbp-author-avatar {
+	margin-right: 0.25em;
+}
+
+.bbp-replies-widget .bbp-author-name {
+	font-weight: bold;
+}
+
+.bbp-replies-widget time {
+	font-size: 0.8em;
+	color: graytext;
+}
+
+.bbp-replies-widget .bbp-reply-topic-title {
+	font-style: italic;
+}
+
+.bp-comunidad > a:before {
+	content: none;
+	margin-right: 0;
+}
+
+.coblocks-form__submitted {
+	background-color: #f4f4f4;
+	padding: 1em;
+}
+
+.coblocks-form__submitted {
+	background-color: #f4f4f4;
+	padding: 1em;
 }
 
 /*--------------------------------------------------------------

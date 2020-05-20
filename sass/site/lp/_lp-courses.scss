@@ -8,6 +8,11 @@
 		}
 	}
 
+	.anuncio {
+		width: auto;
+		display: inline-block;
+	}
+
 	.post-content {
 		.course-overview_section {
 			margin-bottom: 1em;
@@ -296,4 +301,17 @@ ul.curriculum-sections li.item-locked {
 .course-review-head {
 	// Esconder título de opiniones porque sale repetido
 	display: none;
+}
+
+/*esconder autor de curso*/
+.course-info .course-instructor,
+#cuestionarios-personal-li {
+	display: none !important;
+	visibility: none !important;
+}
+
+/*estilo de referencias*/
+.course-tab-panel-referencias,
+.course-tab-panel-creditos {
+	font-size: 0.9em;
 }

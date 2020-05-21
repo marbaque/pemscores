@@ -30,7 +30,6 @@
 
 	a {
 		font-weight: 700;
-
 	}
 }
 .migajas,
@@ -44,15 +43,15 @@
 
 	a {
 		color: currentColor;
-		border: none!important;
-		padding: 0!important; //lleva important porque el enlace tiene class .post lo que hereda estilos del post de archive
+		border: none !important;
+		padding: 0 !important; //lleva important porque el enlace tiene class .post lo que hereda estilos del post de archive
 	}
 }
 
 .byline {
 	&::after {
 		content: "|";
-		margin: 0 .5em;
+		margin: 0 0.5em;
 	}
 }
 
@@ -60,12 +59,12 @@
 .edit-link {
 	&::before {
 		content: "|";
-		margin: 0 .5em;
+		margin: 0 0.5em;
 	}
 }
 
 .byline,
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
 }
 
@@ -81,14 +80,12 @@
 /* Custom Post Meta rules for single post / no sidebar. */
 
 .no-sidebar {
-
 	.entry-meta {
 		margin-top: 1.5em;
 	}
 
 	@media screen and (min-width: $query__medium) {
 		.post-content__wrap {
-
 			.entry-meta {
 				margin-top: 2.25em;
 				font-size: 80%;
@@ -117,7 +114,6 @@
 				display: inline;
 			}
 		}
-
 	}
 }
 
@@ -135,14 +131,12 @@
 		max-height: 800px;
 	}
 
-
 	img {
 		display: block;
 		margin: 0 auto;
 		max-height: 800px;
 		min-height: 300px;
 		object-fit: cover;
-  	
 	}
 }
 // título del curso cuando hay imagen
@@ -155,15 +149,15 @@ h1.course-title {
 	font-size: 2rem;
 	margin: 0 auto;
 	max-width: $size__max-width;
-	padding: .5em;
-	
+	padding: 0.5em;
+
 	@media screen and (min-width: $query__small) {
 		font-size: 2.5rem;
 	}
 
 	@media screen and (min-width: $query__medium) {
 		font-size: 3.5rem;
-	}	
+	}
 }
 
 // Títulos de single posts
@@ -185,13 +179,12 @@ h1.course-title {
 		color: $color__main-oscuro;
 		margin: 0 auto;
 		max-width: $size__max-width;
-		padding: 0 0 .2em;
-		border-bottom: 3px solid $color__main-oscuro;	
+		padding: 0 0 0.2em;
+		border-bottom: 3px solid $color__main-oscuro;
 
 		@media screen and(min-width: $query__medium) {
-			padding: 0 .5em .2em;
+			padding: 0 0.5em 0.2em;
 			box-sizing: border-box;
-			
 		}
 	}
 }
@@ -203,12 +196,10 @@ h1.course-title {
 }
 
 .single:not(.learnpress) {
-
 	.entry-content {
 		background: white;
 		padding: 1em 1em 2em;
 	}
-
 }
 
 .page-links {
@@ -232,7 +223,7 @@ h1.course-title {
 	position: relative;
 	@extend .sticky;
 	border: 2px solid $color__main-claro;
-	border-radius: .2em;
+	border-radius: 0.2em;
 	font-family: $font__sans;
 
 	.recurso-header {
@@ -265,7 +256,6 @@ h1.course-title {
 			background-size: 80%;
 			background: url(images/icons/document_format_icon.svg) no-repeat center center;
 
-			
 			&.video {
 				background: url(images/icons/video_format_icon.svg) no-repeat center center;
 				background-size: 80%;
@@ -283,18 +273,16 @@ h1.course-title {
 				background-size: 80%;
 			}
 		}
-		
 
 		img {
 			padding: 0;
 			object-fit: cover;
 			width: 100%;
 		}
-
 	}
 	.recurso-content {
 		padding: 2em 1em;
-		font-size: .9em;
+		font-size: 0.9em;
 
 		h1.entry-title {
 			font-size: 1.5em;
@@ -302,7 +290,7 @@ h1.course-title {
 		}
 
 		.termino {
-			margin: 0 .15em;
+			margin: 0 0.15em;
 		}
 	}
 
@@ -320,7 +308,7 @@ h1.course-title {
 		}
 
 		p {
-			margin: .5em 0;
+			margin: 0.5em 0;
 		}
 
 		a {
@@ -331,31 +319,33 @@ h1.course-title {
 
 		&.recurso-link {
 			background: #fff;
-			padding: .5em 1em;
+			padding: 0.5em 1em;
 			margin: 1em 0;
 			border: 1px solid $color__main-claro;
-			box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 			border-radius: 2px;
 
-			a { //separar el link si es muy largo siempre
+			a {
+				//separar el link si es muy largo siempre
 				border-bottom: 1px solid white;
 				text-decoration: none;
 				overflow-wrap: break-word;
-  			word-wrap: break-word;
-			  word-break: break-word;
+				word-wrap: break-word;
+				word-break: break-word;
 				hyphens: auto;
 			}
 		}
 	}
 
-	.cc-license { //estilos para el texto de CC
+	.cc-license {
+		//estilos para el texto de CC
 		padding: 1em 0 0;
-		font-size: .8em;
+		font-size: 0.8em;
 		border-top: 2px solid $color__main-claro;
 
 		a:first-child {
 			float: left;
-			margin: 0 .5em .5em 0;
+			margin: 0 0.5em 0.5em 0;
 			border: none;
 		}
 		br {
@@ -364,7 +354,6 @@ h1.course-title {
 	}
 
 	@media screen and (min-width: $query__medium) {
-		
 		.recurso-inner {
 			display: flex;
 			align-items: flex-start;
@@ -378,17 +367,15 @@ h1.course-title {
 			width: 50%;
 			padding: 2em;
 		}
-
 	}
 }
 
 .recurso-secundario {
-
 	@media screen and (min-width: $query__medium) {
 		display: flex;
 		justify-content: space-around;
 		align-items: flex-start;
-		
+
 		.content-area {
 			width: $size__ratio-large;
 		}
@@ -410,9 +397,9 @@ h1.course-title {
 		background: $color__main-superclaro;
 
 		h4 {
-			margin: 0 0 .5em;
+			margin: 0 0 0.5em;
 		}
-	
+
 		ul {
 			list-style: none;
 			padding-left: 0;
@@ -436,11 +423,11 @@ h1.course-title {
 	#learn-press-profile-header {
 		//background: none;
 	}
-	.lp-profile-avatar  {
+	.lp-profile-avatar {
 		position: relative;
 
-		img{
-			border-radius: 50%!important;
+		img {
+			border-radius: 50% !important;
 		}
 		.profile-name {
 			position: absolute;
@@ -449,10 +436,7 @@ h1.course-title {
 			top: 20%;
 			width: 100%;
 			min-width: 200px;
-
-
 		}
-
 	}
 }
 
@@ -473,7 +457,7 @@ h1.course-title {
 	border-top: 1px solid $color__main-bordes;
 }
 // Widget de rate my post
-.rmp-tr-posts__star-rating, 
+.rmp-tr-posts__star-rating,
 .rmp-tr-posts__link {
 	text-align: left;
 	max-width: inherit;
@@ -482,4 +466,9 @@ h1.course-title {
 .rmp-tr-posts__link {
 	margin-bottom: 2em;
 	font-size: 1em;
+}
+
+// Hide instructor
+.course-nav-tab-instructor {
+	display: none !important;
 }

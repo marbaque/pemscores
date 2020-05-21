@@ -15,6 +15,7 @@
 
 	.post-content {
 		.course-curriculum {
+			padding: 0 !important;
 			.curriculum-sections {
 				li.section {
 					border-radius: 4px;
@@ -83,7 +84,12 @@
 		}
 		.course-tab-panel {
 			background: white;
-			padding: 2em 0;
+			padding: 1em 0;
+
+			@media screen and (min-width: $query__medium) {
+				padding: 2em;
+				border: 2px solid $color__gris-claro;
+			}
 		}
 	}
 }

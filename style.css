@@ -2436,6 +2436,10 @@ h1.course-title {
 	display: inline-block;
 }
 
+.course .post-content .course-curriculum {
+	padding: 0 !important;
+}
+
 .course .post-content .course-curriculum .curriculum-sections li.section {
 	border-radius: 4px;
 	border: 1px solid #006edc;
@@ -2503,7 +2507,14 @@ h1.course-title {
 
 .course .post-content .course-tab-panel {
 	background: white;
-	padding: 2em 0;
+	padding: 1em 0;
+}
+
+@media screen and (min-width: 900px) {
+	.course .post-content .course-tab-panel {
+		padding: 2em;
+		border: 2px solid #f4f4f4;
+	}
 }
 
 .course-item.item-locked .course-item-status:before {

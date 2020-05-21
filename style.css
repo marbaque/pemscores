@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y cursos de autocapacitación.
-Version: 4.5
+Version: 4.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -2432,7 +2432,7 @@ h1.course-title {
 	display: inline-block;
 }
 
-.course .post-content .course-overview_section {
+.course .post-content .course-curriculum {
 	margin-bottom: 1em;
 	background: white;
 	padding: 1em 1em 2em;
@@ -2441,7 +2441,7 @@ h1.course-title {
 	border-radius: 4px;
 }
 
-.course .post-content .course-overview_section .curriculum-sections li.section {
+.course .post-content .course-curriculum .curriculum-sections li.section {
 	border-radius: 4px;
 	border: 1px solid #006edc;
 	overflow: hidden;
@@ -2449,46 +2449,46 @@ h1.course-title {
 	font-size: 0.8em;
 }
 
-.course .post-content .course-overview_section .curriculum-sections li.section .section-header {
+.course .post-content .course-curriculum .curriculum-sections li.section .section-header {
 	border: none;
 	background-color: #cce2f8;
 	color: #00529a;
 	padding: 0.5em 1em;
 }
 
-.course .post-content .course-overview_section .curriculum-sections li.section .section-header h5 {
+.course .post-content .course-curriculum .curriculum-sections li.section .section-header h5 {
 	font-weight: 400;
 }
 
-.course .post-content .course-overview_section .curriculum-sections li.section .section-content {
+.course .post-content .course-curriculum .curriculum-sections li.section .section-content {
 	margin: 0;
 }
 
-.course .post-content .course-overview_section .curriculum-sections li.section .section-content .course-item a {
+.course .post-content .course-curriculum .curriculum-sections li.section .section-content .course-item a {
 	font-size: 1.1em;
 }
 
-.course .post-content .course-overview_section .curriculum-sections li.section .section-content a {
+.course .post-content .course-curriculum .curriculum-sections li.section .section-content a {
 	padding: 0 1em;
 }
 
-.course .post-content .course-overview_section .course-author > h3 {
+.course .post-content .course-curriculum .course-author > h3 {
 	display: none;
 }
 
-.course .post-content .course-overview_section:first-of-type {
+.course .post-content .course-curriculum:first-of-type {
 	margin-top: 1em;
 }
 
 @media screen and (min-width: 600px) {
-	.course .post-content .course-overview_section {
+	.course .post-content .course-curriculum {
 		padding: 1em 2em 2em;
 	}
 }
 
 .course .post-content .course-tabs ul.course-nav-tabs {
 	margin-bottom: 0;
-	font-size: 80%;
+	font-size: 90%;
 	border-color: #f4f4f4;
 	font-family: "Roboto", sans-serif;
 }
@@ -2498,7 +2498,7 @@ h1.course-title {
 	border-radius: 4px 4px 0 0;
 	margin: 0 0.3em;
 	border-color: white;
-	opacity: 0.5;
+	opacity: 0.75;
 }
 
 .course .post-content .course-tabs ul.course-nav-tabs li.course-nav.active {
@@ -2557,6 +2557,7 @@ ul.curriculum-sections li.item-locked {
 .widget .learn-press-course-results-progress .course-progress {
 	padding: 0;
 	margin: 0 0 1em;
+	background-color: transparent;
 }
 
 .widget .avatar-cont {
@@ -2604,6 +2605,7 @@ ul.curriculum-sections li.item-locked {
 	display: block;
 	padding: 0;
 	margin-right: 0 !important;
+	margin-bottom: 2em;
 	font-family: "Roboto", sans-serif;
 }
 

@@ -14,7 +14,7 @@
 	}
 
 	.post-content {
-		.course-overview_section {
+		.course-curriculum {
 			margin-bottom: 1em;
 			background: white;
 			padding: 1em 1em 2em;
@@ -70,7 +70,7 @@
 		.course-tabs {
 			ul.course-nav-tabs {
 				margin-bottom: 0;
-				font-size: 80%;
+				font-size: 90%;
 				border-color: #f4f4f4;
 				font-family: $font__sans;
 
@@ -79,7 +79,7 @@
 					border-radius: 4px 4px 0 0;
 					margin: 0 0.3em;
 					border-color: white;
-					opacity: 0.5;
+					opacity: 0.75;
 
 					&.active {
 						@include altura1;
@@ -138,6 +138,7 @@ ul.curriculum-sections li.item-locked {
 		.course-progress {
 			padding: 0;
 			margin: 0 0 1em;
+			background-color: transparent;
 		}
 	}
 	.avatar-cont {
@@ -193,6 +194,7 @@ ul.curriculum-sections li.item-locked {
 	display: block;
 	padding: 0;
 	margin-right: 0 !important;
+	margin-bottom: 2em;
 	font-family: $font__sans;
 
 	.items-progress,

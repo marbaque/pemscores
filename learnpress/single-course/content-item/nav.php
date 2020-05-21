@@ -38,7 +38,6 @@ $completed = $user->has_completed_item( $item->get_id(), $course->get_id() );
 		</div>
 <?php endif; ?>
 	
-	<?php if ( $completed ): ?>
 	
 		<?php if ( $next_item ): ?>
 			<div class="next">
@@ -48,6 +47,5 @@ $completed = $user->has_completed_item( $item->get_id(), $course->get_id() );
 					</a>
 			</div>
 		<?php endif; ?>
-	<?php endif; ?>
 
 </div>

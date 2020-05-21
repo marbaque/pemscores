@@ -881,7 +881,7 @@ a:hover, a:active {
 .paging-navigation a {
 	display: block !important;
 	text-decoration: none;
-	padding: .5em;
+	padding: 0.5em;
 	border: 1px solid #6696c7;
 	color: #6696c7;
 }
@@ -916,7 +916,7 @@ a:hover, a:active {
 .post-navigation .meta-nav {
 	font-weight: 700;
 	display: block;
-	margin-bottom: .5em;
+	margin-bottom: 0.5em;
 }
 
 .comment-navigation .nav-previous,
@@ -950,21 +950,18 @@ a:hover, a:active {
 
 .course-item-lp_lesson .course-item-nav {
 	background-color: white;
-	overflow: hidden;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	margin: 0 !important;
-	box-sizing: border-box;
-	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
 	font-family: "Roboto", sans-serif;
-	font-size: .8em;
+	font-size: 0.9em;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	border-top: 1px solid #6696c7 !important;
 }
 
 .course-item-lp_lesson .course-item-nav .prev,
 .course-item-lp_lesson .course-item-nav .next {
-	padding: .5em;
+	padding: 0.5em;
 	max-width: 50%;
 }
 
@@ -975,31 +972,23 @@ a:hover, a:active {
 	}
 }
 
+.course-item-lp_lesson .course-item-nav .prev:hover,
+.course-item-lp_lesson .course-item-nav .next:hover {
+	background-color: #ebf3fc;
+}
+
 .course-item-lp_lesson .course-item-nav .prev a,
 .course-item-lp_lesson .course-item-nav .next a {
 	width: 100%;
 }
 
 .course-item-lp_lesson .course-item-nav .prev {
-	background-color: #ebf3fc;
 	margin-right: auto;
 }
 
 .course-item-lp_lesson .course-item-nav .next {
 	text-align: right;
 	margin-left: auto;
-}
-
-@media screen and (min-width: 768px) {
-	.course-item-lp_lesson:not(.full-screen-content-item) .course-item-nav {
-		padding-left: 300px;
-	}
-}
-
-@media screen and (min-width: 1300px) {
-	.course-item-lp_lesson:not(.full-screen-content-item) .course-item-nav {
-		padding-left: 400px;
-	}
 }
 
 .pagination {
@@ -1017,7 +1006,7 @@ a:hover, a:active {
 
 .pagination a,
 .pagination span {
-	padding: .5em 1em;
+	padding: 0.5em 1em;
 	background: white;
 	border: 1px solid #6696c7;
 	margin: 0 2px 4px;
@@ -2974,6 +2963,11 @@ body:not(.admin-bar) .learn-press-courses .course_category-privado {
 	    order: 4;
 	-ms-flex: 1 0 60px;
 	    flex: 1 0 60px;
+}
+
+.course-item-title,
+.question-title {
+	margin-top: 3em;
 }
 
 .course-curriculum ul.curriculum-sections li.course-item {

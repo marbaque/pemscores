@@ -2432,15 +2432,6 @@ h1.course-title {
 	display: inline-block;
 }
 
-.course .post-content .course-curriculum {
-	margin-bottom: 1em;
-	background: white;
-	padding: 1em 1em 2em;
-	border: 1px solid #cce2f8;
-	box-shadow: -1px 2px 2px rgba(26, 26, 26, 0.1);
-	border-radius: 4px;
-}
-
 .course .post-content .course-curriculum .curriculum-sections li.section {
 	border-radius: 4px;
 	border: 1px solid #006edc;

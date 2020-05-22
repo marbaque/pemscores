@@ -1436,7 +1436,7 @@ a:hover, a:active {
 }
 
 .archive-view .recurso .recurso__content .recurso__text .entry-title {
-	font-size: 1em;
+	font-size: 1.4em;
 	margin-bottom: 0.5em;
 	margin-top: 0;
 	padding-right: 1.5em;
@@ -2288,6 +2288,30 @@ h1.course-title {
 
 .recurso-wrap .cc-license br {
 	display: none;
+}
+
+.recurso-wrap .descripcion {
+	padding: 1em;
+	background-color: #f4f4f4;
+	font-family: Georgia, Times, serif;
+}
+
+.recurso-wrap .descripcion h2 {
+	font-size: 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.recurso-wrap .descripcion {
+		padding: 1em 2em;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.recurso-wrap .descripcion {
+		padding: 1em 4em;
+		margin: 0 auto;
+	}
 }
 
 @media screen and (min-width: 900px) {

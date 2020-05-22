@@ -1,16 +1,20 @@
 .comments-area {
 	width: 100%;
 	margin: 3em 0;
-	padding: 1.5em 0;
+	padding: 0;
 	border-top: 1px solid hsl(0, 0%, 80%);
-	font-family: $font__system;
-	font-size: .9em;
+	font-family: $font__sans;
 }
 
 .comments-title {
 	margin-bottom: 2em;
+	margin-top: 0;
 	font-size: 1.5em;
 	font-weight: 300;
+	background-color: $color__main;
+	display: inline-block;
+	color: $color__main-claro;
+	padding: 4px;
 }
 
 .comment-list {
@@ -25,13 +29,22 @@
 
 .comment-body {
 	border-bottom: 1px solid #c3c3c3;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
+	border: 1px solid $color__gris-medio;
+	border-left: 6px solid $color__naranja;
+	padding: 1em;
+	border-radius: 0 8px 8px 0;
+	background-clip: border-box;
+
+	@media screen and (min-width: $query__small) {
+		padding: 2.5em 2em 1.5em 1.5em;
+	}
 }
 
 .comment-meta {
 	position: relative;
 	margin-left: 70px;
-	font-size: 80%;
+	font-size: 90%;
 }
 
 .comment-meta,
@@ -48,88 +61,29 @@
 }
 
 .comment {
-
 	.avatar {
 		position: absolute;
 		top: -5px;
 		left: -70px;
-		width: 50px;
-		height: 50px;
+		width: 40px;
+		height: 40px;
 		border-radius: 50px;
 	}
-
 }
 
 .children {
-	margin-left: 1em;
 	padding-left: 0;
-
-	@media screen and (min-width: $query__medium) {
-		margin-left: 2em;
-	}
+	margin-left: 0;
 }
-
-.no-sidebar {
-
-	.children {
-
-		@media screen and (min-width: $query__medium) {
-
-			margin-left: 2em;
-
-			.comment-meta {
-				margin-left: 80px;
-				font-size: 90%;
-			}
-
-			.comment .avatar {
-				top: -7px;
-				left: -80px;
-				width: 60px;
-				height: 60px;
-			}
-
-			.comment-content {
-				margin-left: 80px;
-			}
-
-		}
-	}
-
-
-	@media screen and (min-width: $size__max-width) {
-
-		.children {
-			margin-left: 3em;
-		}
-
-		.comment-meta {
-			margin-left: 90px;
-		}
-
-		.comment .avatar {
-			top: -8px;
-			left: -90px;
-			width: 70px;
-			height: 70px;
-		}
-
-		.comment-content {
-			margin-left: 90px;
-		}
-	}
-}
-
-
 
 .comment-metadata {
-    margin-top: .2em;
-	padding-bottom: .5em;
-	font-size: .8em;
+	margin-top: 0.25em;
+	padding-bottom: 1em;
 	line-height: 1em;
+	color: $color__gris;
 
 	a {
-		color: #7D7D7D;
+		color: $color__gris-medio;
 
 		&:hover,
 		&:focus {
@@ -139,12 +93,12 @@
 }
 
 .comment-author {
-	font-size: 1.4em;
-	line-height: 1.3em;
+	font-size: 1.25em;
+	line-height: 1.4em;
 }
 
 .says {
-	font-size: 80%;
+	color: $color__gris;
 }
 
 .reply {
@@ -153,8 +107,8 @@
 
 	a {
 		display: inline-block;
-		padding: .5em 1.4em;
-		font-family: $font__system;
+		padding: 0.5em 1.4em;
+		font-family: $font__sans;
 		font-size: 85%;
 		color: #000;
 		line-height: 1.3em;
@@ -169,8 +123,8 @@
 	}
 }
 
-
 .comment-content {
+	font-family: $font__serif;
 
 	ol {
 		list-style-type: decimal;
@@ -179,7 +133,6 @@
 	a {
 		word-wrap: break-word;
 	}
-
 }
 
 .bypostauthor .avatar {
@@ -190,7 +143,6 @@
 }
 
 /* Comment Form */
-
 
 .comment-reply-title {
 	margin-bottom: 1em;
@@ -212,30 +164,18 @@
 	}
 
 	.form-submit input {
-		padding: .5em 1.4em;
-		font-size: 85%;
-		color: #000;
-		line-height: 1.3em;
-		text-decoration: none;
-		border: 1px solid #c3c3c3;
-
-		&:hover,
-		&:focus {
-			color: #fff;
-			background: $color__interactive;
-			border-color: $color__interactive;
-		}
+		@extend .botones;
 	}
 
 	label {
 		width: 33%;
 		display: block;
 		font-style: italic;
-		padding-bottom: .4em;
+		padding-bottom: 0.4em;
 	}
 
 	.required {
-		color: #D54E21;
+		color: #d54e21;
 	}
 }
 

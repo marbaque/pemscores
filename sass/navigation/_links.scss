@@ -19,12 +19,3 @@ a {
 		outline: 0;
 	}
 }
-
-
-.botones { // link con apariencia de botón
-	color: $color__verde!important;
-
-	&:hover {
-		border: 2px solid $color__verde!important;
-	}
-}

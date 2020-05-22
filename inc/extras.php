@@ -235,7 +235,7 @@ add_action('init', 'remove_admin_bar_user', 10001);
 function remove_admin_bar_user()
 {
 
-	if (current_user_can('administrator') || current_user_can('editor') || current_user_can('author') || current_user_can('especialista_ifcmdl')) {
+	if (current_user_can('administrator') || current_user_can('editor') || current_user_can('author') || current_user_can('lp_teacher')) {
 
 		show_admin_bar(true);
 	} else {

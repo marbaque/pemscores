@@ -2332,6 +2332,10 @@ h1.course-title {
 	}
 }
 
+.recurso-secundario {
+	width: 100%;
+}
+
 @media screen and (min-width: 900px) {
 	.recurso-secundario {
 		display: -ms-flexbox;

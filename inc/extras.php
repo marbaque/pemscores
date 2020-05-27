@@ -257,6 +257,7 @@ function add_custom_mime_types($mimes)
 		'pptx'	=>	'application/vnd.openxmlformats-officedocument.presentationml.presentation',
 		'pps'	=>	'application/vnd.openxmlformats-officedocument.presentationml.slideshow',
 		'dotx'	=>	'application/vnd.openxmlformats-officedocument.wordprocessingml.template',
+		'epub'	=>	'application/epub+zip',
 	));
 }
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template for displaying course content within the loop.
  *
@@ -12,43 +13,44 @@
 /**
  * Prevent loading this file directly
  */
-defined( 'ABSPATH' ) || exit();
+defined('ABSPATH') || exit();
 
 $user = LP_Global::user();
 ?>
 
 <li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php
+    <?php
     // @deprecated
-    //do_action( 'learn_press_before_courses_loop_item' );
+    // do_action( 'learn_press_before_courses_loop_item' );
 
     // @since 3.0.0
-    //do_action( 'learn-press/before-courses-loop-item' );
+    // do_action( 'learn-press/before-courses-loop-item' );
     ?>
 
     <a href="<?php the_permalink(); ?>" class="course-permalink">
 
-		<?php
+        <?php
         // @deprecated
-        do_action( 'learn_press_courses_loop_item_title' );
+        do_action('learn_press_courses_loop_item_title');
 
         // @since 3.0.0
-        do_action( 'learn-press/courses-loop-item-title' );
+        do_action('learn-press/courses-loop-item-title');
         ?>
     </a>
 
-    <?php if ( get_field('anuncio_curso') ): ?>
+    <?php if (get_field('anuncio_curso')) : ?>
         <div class="anuncio"><?php the_field('anuncio_curso'); ?></div>
     <?php endif; ?>
 
-	<?php
+    <?php
 
     // @since 3.0.0
-	do_action( 'learn-press/after-courses-loop-item' );
+    do_action('learn-press/after-courses-loop-item');
 
-	// @deprecated
-    do_action( 'learn_press_after_courses_loop_item' );
+    // @deprecated
+    do_action('learn_press_after_courses_loop_item');
     ?>
+
 
 </li>

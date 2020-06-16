@@ -7,28 +7,29 @@
 }
 
 .cat-links {
-	font-size: 90%;
-	font-weight: 700;
-
 	a {
 		text-decoration: none;
 		text-transform: uppercase;
 		color: $color__interactive;
+		font-size: 90%;
+		letter-spacing: 1px;
 
 		&:focus,
 		&:hover {
-			background-color: $color__interactive;
-			color: white;
+			text-decoration: underline;
 		}
 	}
 }
 
 .entry-meta,
 .entry-footer {
-	//font-family: $font__sans;
+	font-family: $font__sans;
 	font-size: 90%;
 
+	color: $color__gris;
+
 	a {
+		color: $color__gris;
 		font-weight: 700;
 	}
 }
@@ -198,7 +199,7 @@ h1.course-title {
 .single:not(.learnpress) {
 	.entry-content {
 		background: white;
-		padding: 1em 1em 2em;
+
 	}
 }
 

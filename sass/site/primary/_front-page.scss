@@ -1,8 +1,12 @@
 // Más estilos de la pagina principal front-page
 //hero-banner
 @keyframes paneo {
-  0%   { background-position-x: 3173px; }
-  100% { background-position-x: 0; }
+	0% {
+		background-position-x: 3173px;
+	}
+	100% {
+		background-position-x: 0;
+	}
 }
 
 .hero-banner {
@@ -10,20 +14,20 @@
 	height: 500px;
 	overflow: auto;
 	background-image: url("images/fondo-ilustrado.svg");
-  background-repeat: repeat-x;
-  background-color: $color__main-superclaro;
-  background-position: left bottom;
-  background-size: auto 370px;
+	background-repeat: repeat-x;
+	background-color: $color__main-superclaro;
+	background-position: left bottom;
+	background-size: auto 370px;
 	//border-bottom: 1px solid $color__main-bordes;
 	padding: 0 1em;
 
-  @media screen and (min-width: $query__small) {
+	@media screen and (min-width: $query__small) {
 		animation-name: paneo; /* IE 10+, Fx 29+ */
 		animation-duration: 60s;
 		animation-iteration-count: 1;
 		animation-timing-function: linear;
 		animation-timing-function: ease-out;
-  }
+	}
 
 	.hero-title {
 		width: 410px;
@@ -36,11 +40,10 @@
 }
 
 .search-section {
-
 	.home-search {
 		width: 100%;
-    max-width: $query__small;
-    margin: 0 auto;
+		max-width: $query__small;
+		margin: 0 auto;
 		text-align: center;
 		padding: 1em 0;
 	}
@@ -84,12 +87,12 @@
 
 	.pagina {
 		background: $color__main-superclaro;
-    	border: 1px solid $color__main-bordes;
-		padding: 1em 1.5em 2.5em;
+		border: 1px solid $color__main-bordes;
+		padding: 1em 1.5em 4.5em;
 		margin-bottom: 24px;
 		width: 90%;
 		flex-shrink: 0;
-    	position: relative;
+		position: relative;
 		color: $color__main-bordes;
 		scroll-snap-align: center;
 		margin-right: 1em;
@@ -102,28 +105,25 @@
 
 		h3 {
 			font-size: 1.1em;
-			margin: .5em 0;
+			margin: 0.5em 0;
 
-      a {
+			a {
 				text-decoration: none;
-        color: $color__main-bordes;
+				color: $color__main-bordes;
 			}
 		}
 
 		p {
 			font-family: $font__sans;
-			font-size: .8em;
+			font-size: 0.8em;
 			line-height: 1.4;
 		}
-
 	}
-
 }
 
 .bloqueA,
 .bloqueB,
 .bloqueC {
-
 	&:before {
 		content: "";
 		width: 100%;
@@ -135,30 +135,30 @@
 	}
 }
 .bloqueA:before {
-	background-image: url('images/icons/about_icon.svg');
+	background-image: url("images/icons/about_icon.svg");
 }
 .bloqueB:before {
-	background-image: url('images/icons/self_training_icon.svg');
+	background-image: url("images/icons/self_training_icon.svg");
 }
 .bloqueC:before {
-	background-image: url('images/icons/help_icon.svg');
+	background-image: url("images/icons/help_icon.svg");
 }
 
 .read-more {
-  background: $color__main-claro;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  padding: .75em;
-  font-family: $font__sans;
-	font-size: .8em;
+	background: $color__main-claro;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	padding: 0.75em;
+	font-family: $font__sans;
 	text-align: left;
-  color: $color__main-bordes;
-  text-decoration: none;
+	color: $color__main-bordes;
+	text-decoration: none;
 	border: 0;
 	border-top: 1px solid $color__main;
+	transition: background-color 0.5s;
 
 	&:hover,
 	&:active,
@@ -166,10 +166,14 @@
 		background: $color__main;
 		color: $color__main-superclaro;
 	}
-  .icon {
-    right: 1em;
-    top: .75em;
-    position: absolute;
-    margin-top: 4px;
-  }
+	.icon {
+		position: absolute;
+		right: 0.5em;
+		top: calc(50% - 8px);
+		transition: all 0.5s;
+	}
+
+	&:hover .icon {
+		right: 1.5em;
+	}
 }

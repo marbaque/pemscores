@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template for displaying archive course content.
  *
@@ -12,33 +13,33 @@
 /**
  * Prevent loading this file directly
  */
-defined( 'ABSPATH' ) || exit();
+defined('ABSPATH') || exit();
 
 global $post, $wp_query, $lp_tax_query, $wp_query;
 
 /**
  * @since 3.0.0
  */
- do_action( 'learn-press/before-main-content' ); 	
-	//quitar comentario para mostrar 
-	//la barra de búsqueda de cursos
+// do_action( 'learn-press/before-main-content' ); 	
+//quitar comentario para mostrar 
+//la barra de búsqueda de cursos
 /**
  * @since 3.0.0
  */
-do_action( 'learn-press/archive-description' );
+do_action('learn-press/archive-description');
 
-if ( LP()->wp_query->have_posts() ) :
+if (LP()->wp_query->have_posts()) :
 
 	/**
 	 * @since 3.0.0
 	 */
-	do_action( 'learn-press/before-courses-loop' );
+	do_action('learn-press/before-courses-loop');
 
 	learn_press_begin_courses_loop();
 
-	while ( LP()->wp_query->have_posts() ) : LP()->wp_query->the_post();
+	while (LP()->wp_query->have_posts()) : LP()->wp_query->the_post();
 
-		learn_press_get_template_part( 'content', 'course' );
+		learn_press_get_template_part('content', 'course');
 
 	endwhile;
 
@@ -47,15 +48,15 @@ if ( LP()->wp_query->have_posts() ) :
 	/**
 	 * @since 3.0.0
 	 */
-	do_action( 'learn_press_after_courses_loop' );
+	do_action('learn_press_after_courses_loop');
 
 	wp_reset_postdata();
 
-else:
-	learn_press_display_message( __( 'No course found.', 'learnpress' ), 'error' );
+else :
+	learn_press_display_message(__('No course found.', 'learnpress'), 'error');
 endif;
 
 /**
  * @since 3.0.0
  */
-do_action( 'learn-press/after-main-content' );
+do_action('learn-press/after-main-content');

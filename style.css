@@ -343,11 +343,14 @@ h6 {
 }
 
 p {
-	margin-top: .5em;
+	margin-top: 0.5em;
 	margin-bottom: 1em;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
 
@@ -355,14 +358,14 @@ blockquote {
 	position: relative;
 	margin: 0 0 1em;
 	background: #eee;
-	padding: 1em 2em .5em 5em;
+	padding: 1em 2em 0.5em 5em;
 	font-style: italic;
 }
 
 blockquote:before {
 	position: absolute;
-	top: -.2em;
-	left: -.13em;
+	top: -0.2em;
+	left: -0.13em;
 	content: "“";
 	font-size: 12em;
 	line-height: 100%;
@@ -385,18 +388,23 @@ pre {
 	padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
@@ -415,13 +423,27 @@ li {
 }
 
 .small {
-	font-size: .77em;
+	font-size: 0.77em;
 }
 
 ul.referencias {
 	list-style: none;
 	padding-left: 1.4em;
 	text-indent: -1.4em;
+}
+
+ul.referencias a {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	/* Adds a hyphen where the word breaks */
+	-webkit-hyphens: auto;
+	    -ms-hyphens: auto;
+	        hyphens: auto;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	background-color: transparent;
+	line-height: 1.3;
 }
 
 /*--------------------------------------------------------------
@@ -563,6 +585,7 @@ td:last-child {
 --------------------------------------------------------------*/
 button,
 .botones,
+.wp-block-button .wp-block-button__link,
 .comment-form .form-submit input,
 .lp-button,
 input[type="button"],
@@ -573,20 +596,20 @@ input[type="submit"] {
 	background: #eaf7df;
 	border: 2px solid #5abe00;
 	color: #408503;
-	font-weight: 700;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1;
+	line-height: 1.3;
 	padding: .75em 1.5em;
 	border-radius: 4px;
 }
 
 button:hover, button:active, button:focus,
 .botones:hover,
+.wp-block-button .wp-block-button__link:hover,
 .comment-form .form-submit input:hover,
 .botones:active,
+.wp-block-button .wp-block-button__link:active,
 .comment-form .form-submit input:active,
 .botones:focus,
+.wp-block-button .wp-block-button__link:focus,
 .comment-form .form-submit input:focus,
 .lp-button:hover,
 .lp-button:active,
@@ -901,6 +924,7 @@ a:hover, a:active {
 	-ms-flex-align: stretch;
 	    align-items: stretch;
 	padding: 0;
+	width: 100%;
 }
 
 .comment-navigation,
@@ -1204,26 +1228,69 @@ a:hover, a:active {
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .post,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .page,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .curso,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .recurso,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_quiz,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_course,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .hentry {
 	position: relative;
 	background: white;
 	border: 1px solid #006edc;
-	padding: 1em 1em 3em;
+	padding: 0;
 	overflow: hidden;
 	font-family: "Roboto", sans-serif;
+	border-radius: 4px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .post .post__content,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .page .post__content,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .curso .post__content,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_quiz .post__content,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_course .post__content,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .hentry .post__content {
+	padding: 1em 1em 4em;
 }
 
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .post .entry-title a,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .page .entry-title a,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .curso .entry-title a,
-.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .recurso .entry-title a,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_quiz .entry-title a,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_course .entry-title a,
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .hentry .entry-title a {
+	color: #00529a;
 	text-decoration: none;
+}
+
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .post .index-image,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .page .index-image,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .curso .index-image,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_quiz .index-image,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_course .index-image,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .hentry .index-image {
+	width: 100%;
+	height: auto;
+}
+
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .post .entry-meta,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .page .entry-meta,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .curso .entry-meta,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_quiz .entry-meta,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_course .entry-meta,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .hentry .entry-meta {
+	color: #888;
+}
+
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .post .entry-meta a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .page .entry-meta a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .curso .entry-meta a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_quiz .entry-meta a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .lp_course .entry-meta a,
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .hentry .entry-meta a {
+	color: #888;
+}
+
+.archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) .recurso {
+	padding: 1em 1em 4em;
+	overflow: auto;
 }
 
 @media screen and (min-width: 900px) {
@@ -1346,28 +1413,6 @@ a:hover, a:active {
 .index-image a:focus > img,
 .index-image a:hover > img {
 	opacity: .8;
-}
-
-.continue-reading {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	font-size: .9rem;
-	width: 100%;
-	font-family: "Roboto", sans-serif;
-}
-
-.continue-reading a {
-	display: block;
-	padding: .5em 1em;
-	text-decoration: none;
-	background: #cce2f8;
-	border: 0;
-	border-top: 1px solid #6696c7;
-}
-
-.continue-reading a .icon {
-	position: absolute;
 }
 
 .archive-view .widgets-recursos {
@@ -1848,7 +1893,7 @@ body:not(.logged-in) li.bp-comunidad {
 .paginas-destacadas .pagina {
 	background: #ebf3fc;
 	border: 1px solid #6696c7;
-	padding: 1em 1.5em 2.5em;
+	padding: 1em 1.5em 4.5em;
 	margin-bottom: 24px;
 	width: 90%;
 	-ms-flex-negative: 0;
@@ -1869,7 +1914,7 @@ body:not(.logged-in) li.bp-comunidad {
 
 .paginas-destacadas .pagina h3 {
 	font-size: 1.1em;
-	margin: .5em 0;
+	margin: 0.5em 0;
 }
 
 .paginas-destacadas .pagina h3 a {
@@ -1879,7 +1924,7 @@ body:not(.logged-in) li.bp-comunidad {
 
 .paginas-destacadas .pagina p {
 	font-family: "Roboto", sans-serif;
-	font-size: .8em;
+	font-size: 0.8em;
 	line-height: 1.4;
 }
 
@@ -1907,33 +1952,37 @@ body:not(.logged-in) li.bp-comunidad {
 	background-image: url("images/icons/help_icon.svg");
 }
 
-.read-more, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a {
+.read-more, .continue-reading, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a {
 	background: #cce2f8;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	display: block;
 	width: 100%;
-	padding: .75em;
+	padding: 0.75em;
 	font-family: "Roboto", sans-serif;
-	font-size: .8em;
 	text-align: left;
 	color: #6696c7;
 	text-decoration: none;
 	border: 0;
 	border-top: 1px solid #006edc;
+	transition: background-color 0.5s;
 }
 
-.read-more:hover, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:hover, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:hover, .read-more:active, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:active, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:active, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:active, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:active, .read-more:focus, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:focus, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:focus, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:focus, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:focus {
+.read-more:hover, .continue-reading:hover, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:hover, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:hover, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:hover, .read-more:active, .continue-reading:active, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:active, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:active, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:active, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:active, .read-more:focus, .continue-reading:focus, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:focus, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:focus, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:focus, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:focus {
 	background: #006edc;
 	color: #ebf3fc;
 }
 
-.read-more .icon, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button .icon, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a .icon, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a .icon, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a .icon {
-	right: 1em;
-	top: .75em;
+.read-more .icon, .continue-reading .icon, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button .icon, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a .icon, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a .icon, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a .icon {
 	position: absolute;
-	margin-top: 4px;
+	right: 0.5em;
+	top: calc(50% - 8px);
+	transition: all 0.5s;
+}
+
+.read-more:hover .icon, .continue-reading:hover .icon, .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons button:hover .icon, .bp-widget-area .widget.widget_lp-widget-recent-courses .widget-footer a:hover .icon, .bp-widget-area .widget.widget_lp-widget-featured-courses .widget-footer a:hover .icon, .bp-widget-area .widget.widget_lp-widget-popular-courses .widget-footer a:hover .icon {
+	right: 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -1947,29 +1996,28 @@ body:not(.logged-in) li.bp-comunidad {
 	margin: 0 0 1.5em;
 }
 
-.cat-links {
-	font-size: 90%;
-	font-weight: 700;
-}
-
 .cat-links a {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #6BA6C5;
+	font-size: 90%;
+	letter-spacing: 1px;
 }
 
 .cat-links a:focus, .cat-links a:hover {
-	background-color: #6BA6C5;
-	color: white;
+	text-decoration: underline;
 }
 
 .entry-meta,
 .entry-footer {
+	font-family: "Roboto", sans-serif;
 	font-size: 90%;
+	color: #888;
 }
 
 .entry-meta a,
 .entry-footer a {
+	color: #888;
 	font-weight: 700;
 }
 
@@ -2139,7 +2187,6 @@ h1.course-title {
 
 .single:not(.learnpress) .entry-content {
 	background: white;
-	padding: 1em 1em 2em;
 }
 
 .page-links {
@@ -2795,11 +2842,20 @@ ul.curriculum-sections li.item-locked {
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course {
 	position: relative;
-	background: #f4f4f4;
 	border: 1px solid #006edc;
-	padding: 1em 1em 4em;
 	margin-bottom: 1em;
 	font-family: "Roboto", sans-serif;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-thumbnail {
+	width: 100%;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-thumbnail img {
+	width: 100%;
+	height: auto;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-permalink {
@@ -2808,27 +2864,28 @@ ul.curriculum-sections li.item-locked {
 	color: #00529a;
 }
 
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-thumbnail {
-	text-align: center;
-}
-
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-thumbnail img {
-	margin: 0 auto;
-}
-
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-title {
 	line-height: 1.2;
 	font-weight: 700;
 	color: #00529a;
+	padding: 0 1em;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info {
 	display: block;
 	width: 100%;
+	padding: 1em 1em 2em;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info .course-price {
-	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info .course-price .price {
+	background-color: #ff961e;
+	border-radius: 0;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .course-info .course-instructor {
@@ -2839,29 +2896,26 @@ ul.curriculum-sections li.item-locked {
 	display: block;
 	clear: both;
 	text-transform: uppercase;
-	line-height: 1.4;
 	margin-top: 1em;
 }
 
-.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .cat-links a {
-	border: 0;
-	display: block;
-	margin-bottom: 0.5em;
-	color: #006edc;
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .cat-links,
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .course-tags {
+	line-height: 1.4;
+	font-size: 1em;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .cat-links a:after {
+	content: " | ";
 	font-weight: 700;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .course-tags {
 	margin-top: 1em;
-	font-size: 0.9em;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-tags .course-tags a {
 	color: #888;
-	font-weight: 700;
 }
 
 .archive-view.learnpress .site .site-content article.page .learn-press-courses .lp_course .lp-course-buttons {
@@ -2884,11 +2938,16 @@ ul.curriculum-sections li.item-locked {
 	background: #cce2f8;
 	border: 0;
 	border-top: 1px solid #6696c7;
-	font-size: 90%;
 	padding: 0.5em 1em;
 	text-align: left;
 	color: #6696c7;
 	border-radius: 0;
+}
+
+.archive-view.learnpress .site .site-content article.page .learn-press-courses .anuncio {
+	margin: 0 1em;
+	width: 100%;
+	box-shadow: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -4431,7 +4490,7 @@ a.subscription-toggle {
 .widget ol li {
 	display: block;
 	line-height: 1.2;
-	margin-bottom: 0;
+	margin-bottom: 0.75em;
 }
 
 .widget ul li ul,
@@ -4478,7 +4537,7 @@ a.subscription-toggle {
 
 /* Archive and Categories widgets */
 .widget_archive li {
-	color: #7D7D7D;
+	margin-bottom: 1em;
 }
 
 .widget_categories .children {
@@ -4824,93 +4883,13 @@ a.subscription-toggle {
 }
 
 /* Widgets de recursos */
-.widgets-recursos .searchandfilter h4 {
-	margin: 0;
-	font-size: .9em;
+.recursos-relacionados li {
+	margin-bottom: 1.5em;
+	font-size: 1.2em;
+}
+
+.recursos-relacionados li a {
 	color: #00529a;
-}
-
-.widgets-recursos .searchandfilter label {
-	width: auto;
-}
-
-.widgets-recursos .searchandfilter input[type="radio"] {
-	margin-right: 8px;
-}
-
-.widgets-recursos .searchandfilter ul {
-	display: block;
-}
-
-.widgets-recursos .searchandfilter > div > ul > li:first-child {
-	margin: 0 !important;
-	padding: 0;
-}
-
-.widgets-recursos .searchandfilter > div > ul > li:not(:first-child),
-.widgets-recursos .searchandfilter > div > ul > li:not(:last-child) {
-	margin-top: 1em;
-}
-
-.widgets-recursos .searchandfilter select {
-	-webkit-appearance: button;
-	-webkit-border-radius: 2px;
-	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-	-webkit-padding-end: 20px;
-	-webkit-padding-start: 2px;
-	-webkit-user-select: none;
-	background-image: url(images/arrow-down.png), -webkit-linear-gradient(#ebf3fc, #cce2f8);
-	background-position: 97% center;
-	background-repeat: no-repeat;
-	border: 1px solid #006edc;
-	border-radius: 4px;
-	color: #444;
-	font-size: inherit;
-	margin: 0;
-	overflow: hidden;
-	padding: 5px 10px;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	width: 100%;
-}
-
-.widgets-recursos .searchandfilter > div > ul > li {
-	font-size: 95%;
-}
-
-.widgets-recursos .searchandfilter > div > ul > li label {
-	margin-left: 28px;
-	text-indent: -26px;
-}
-
-.widgets-recursos .searchandfilter li {
-	margin-bottom: .5em;
-	padding: 0;
-}
-
-.widgets-recursos .searchandfilter input[name="ofsearch"] {
-	margin-bottom: 1em;
-}
-
-.widgets-recursos .searchandfilter .fa-search {
-	top: 20px;
-	right: 24px;
-	font-size: 20px;
-}
-
-.widgets-recursos .searchandfilter input[type="Submit"] {
-	margin-top: 1em;
-	text-align: right;
-}
-
-.widgets-recursos a.clean-search {
-	display: block;
-	font-size: .8em;
-	margin-top: 1em;
-}
-
-.widget.popular-posts .wpp-list li {
-	margin: .75em 0;
 }
 
 .widget.bbp_widget_login form.bbp-login-form fieldset {

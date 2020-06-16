@@ -28,11 +28,13 @@
 	}
 }
 
+// Naveación de posts
 .nav-links {
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
 	padding: 0;
+	width: 100%;
 }
 
 .comment-navigation,

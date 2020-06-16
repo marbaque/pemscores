@@ -1,25 +1,47 @@
 .archive-view:not(.learnpress):not(.forum-archive):not(.topic-tag):not(.forum-search) {
-	
+
 	.post,
 	.page,
 	.curso,
-	.recurso,
 	.lp_quiz,
 	.lp_course,
 	.hentry {
 		position: relative;
 		background: white;
 		border: 1px solid $color__main;
-		padding: 1em 1em 3em;
+		padding: 0;
 		overflow: hidden;
 		font-family: $font__sans;
+		border-radius: 4px;
+		box-shadow: 0 2px 12px rgba($color: #000000, $alpha: 0.2);
+
+		.post__content {
+			padding: 1em 1em 4em;
+		}
 
 		.entry-title {
-
 			a {
+				color: $color__main-oscuro;
 				text-decoration: none;
 			}
 		}
+
+		.index-image {
+			width: 100%;
+			height: auto;
+		}
+
+		.entry-meta {
+			color: $color__gris;
+			
+			a {
+				color: $color__gris;
+			}
+		}
+	}
+	.recurso {
+		padding: 1em 1em 4em;
+		overflow: auto;	
 	}
 
 	@media screen and (min-width: $query__medium) {
@@ -160,25 +182,7 @@
 }
 
 .continue-reading {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	font-size: .9rem;
-	width: 100%;
-	font-family: $font__sans;
-
-	a {
-		display: block;
-		padding: .5em 1em;
-		text-decoration: none;
-		background: $color__main-claro;
-		border: 0;
-		border-top: 1px solid $color__main-bordes;
-
-		.icon {
-			position: absolute
-		}
-	}
+	@extend .read-more;
 
 }
 

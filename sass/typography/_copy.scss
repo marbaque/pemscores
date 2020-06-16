@@ -1,9 +1,12 @@
 p {
-	margin-top: .5em;
+	margin-top: 0.5em;
 	margin-bottom: 1em;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
 
@@ -11,13 +14,13 @@ blockquote {
 	position: relative;
 	margin: 0 0 1em;
 	background: $color__background-pre;
-	padding: 1em 2em .5em 5em;
+	padding: 1em 2em 0.5em 5em;
 	font-style: italic;
 
 	&:before {
 		position: absolute;
-		top: -.2em;
-		left: -.13em;
+		top: -0.2em;
+		left: -0.13em;
 		content: "“";
 		font-size: 12em;
 		line-height: 100%;
@@ -40,17 +43,22 @@ pre {
 	padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
 	font-family: $font__code;
 	@include font-size(0.9375);
 }
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted $color__border-abbr;
 	cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
 	background: $color__background-ins;
 	text-decoration: none;
 }
@@ -69,12 +77,35 @@ li {
 }
 
 .small {
-	font-size: .77em;
+	font-size: 0.77em;
 }
 
 // Estilo para referencias
 ul.referencias {
 	list-style: none;
 	padding-left: 1.4em;
-	text-indent: -1.4em
+	text-indent: -1.4em;
+
+	a {
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+
+		/* Adds a hyphen where the word breaks */
+		hyphens: auto;
+	}
+}
+
+// Estilos para bloques
+
+.wp-block-button {
+	.wp-block-button__link {
+		@extend .botones;
+	}
+
+	&.is-style-outline {
+		.wp-block-button__link {
+			background-color: transparent;
+			line-height: 1.3;
+		}
+	}
 }

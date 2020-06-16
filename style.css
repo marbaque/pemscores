@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y cursos de autocapacitación.
-Version: 4.9.2
+Version: 4.9.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -675,7 +675,7 @@ textarea:focus {
 
 select {
 	border: 1px solid #6696c7;
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 select:focus {
@@ -689,7 +689,7 @@ textarea {
 
 label,
 fieldset {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 .hf-form {
@@ -785,7 +785,7 @@ fieldset {
 }
 
 #buddypress form.standard-form div.show {
-	font-family: "system";
+	font-family: "Roboto", sans-serif;
 }
 
 #buddypress form.standard-form input[type="checkbox"] {
@@ -2681,9 +2681,8 @@ ul.curriculum-sections li.item-locked {
 
 .learn-press-course-results-progress .items-progress,
 .learn-press-course-results-progress .course-progress {
-	padding: 1em;
+	padding: 0;
 	background: white;
-	padding: 1em;
 	margin: 0 !important;
 }
 
@@ -2708,7 +2707,7 @@ ul.curriculum-sections li.item-locked {
 .course-remaining-time {
 	font-family: "Roboto", sans-serif;
 	font-size: 80%;
-	margin: 1em 0;
+	margin: 3em 0 4em;
 }
 
 .course-remaining-time .lp-label.label-enrolled,
@@ -2749,11 +2748,15 @@ ul.curriculum-sections li.item-locked {
 	font-family: "Roboto", sans-serif;
 }
 
-#course-reviews .course-reviews-list {
+.course-tab-panel-reviews .course-reviews-list {
 	padding-left: 0;
 }
 
-#course-reviews .course-reviews-list li {
+.course-tab-panel-reviews .course-reviews-list .review-number {
+	font-family: "Roboto", sans-serif;
+}
+
+.course-tab-panel-reviews .course-reviews-list li {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
@@ -2761,33 +2764,32 @@ ul.curriculum-sections li.item-locked {
 	border-color: #cce2f8;
 }
 
-#course-reviews .course-reviews-list .review-author {
+.course-tab-panel-reviews .course-reviews-list .review-author {
 	-ms-flex: 0 0 80px;
 	    flex: 0 0 80px;
 }
 
-#course-reviews .course-reviews-list .review-author img {
+.course-tab-panel-reviews .course-reviews-list .review-author img {
 	border-radius: 50%;
 }
 
-#course-reviews .course-reviews-list .review-author-info {
+.course-tab-panel-reviews .course-reviews-list .review-author-info {
 	-ms-flex: 1;
 	    flex: 1;
 }
 
-#course-reviews .course-reviews-list .review-author-info .user-name {
+.course-tab-panel-reviews .course-reviews-list .review-author-info .user-name {
 	font-size: 1.2em;
 }
 
-#course-reviews .course-reviews-list .review-author-info .review-title {
+.course-tab-panel-reviews .course-reviews-list .review-author-info .review-title {
 	margin: 0 0 0.5em;
 	font-style: normal;
 	font-size: 1em;
 	width: auto;
 }
 
-#course-reviews .course-reviews-list .review-text {
-	font-size: 0.9em;
+.course-tab-panel-reviews .course-reviews-list .review-text {
 	-ms-flex: 1 0 100%;
 	    flex: 1 0 100%;
 }
@@ -2807,6 +2809,38 @@ ul.curriculum-sections li.item-locked {
 .course-tab-panel-referencias,
 .course-tab-panel-creditos {
 	font-size: 0.9em;
+}
+
+.course-students-list .filter-students label.students-list-filter {
+	font-family: "Roboto", sans-serif;
+}
+
+.course-students-list .filter-students select {
+	padding: 0.5em;
+	border-radius: 4px;
+	margin-left: 0.5em;
+}
+
+.course-students-list .students.empty {
+	font-family: "Roboto", sans-serif;
+}
+
+.course-students-list .students li {
+	border-radius: 4px;
+	padding: 1em;
+	border: 1px solid #6696c7;
+	background-color: #ebf3fc;
+	max-width: 100%;
+	font-family: "Roboto", sans-serif;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-line-pack: center;
+	    align-content: center;
+}
+
+.course-students-list .students li .name {
+	line-height: 1.2;
+	font-size: 0.8em;
 }
 
 .archive-view.learnpress .site .site-content .page-header {
@@ -4880,6 +4914,14 @@ a.subscription-toggle {
 
 .searchandfilter.home-searchandfilter ul input[value="Submit"] {
 	display: none;
+}
+
+/* Widget de entradas recientes */
+.widget .post-date {
+	font-size: 0.8em;
+	color: gray;
+	display: block;
+	margin-top: 0.5em;
 }
 
 /* Widgets de recursos */

@@ -28,7 +28,7 @@ textarea {
 
 select {
 	border: 1px solid $color__main-bordes;
-	font-family: $font__system;
+	font-family: $font__sans;
 
 	&:focus{
 			outline: 2;
@@ -42,7 +42,7 @@ textarea {
 
 label,
 fieldset {
-	font-family: $font__system;
+	font-family: $font__sans;
 }
 
 // HTML Form
@@ -135,7 +135,7 @@ fieldset {
 		}
 
 		div.show {
-			font-family: $font__system;
+			font-family: $font__sans;
 		}
 
 		input[type="checkbox"] {

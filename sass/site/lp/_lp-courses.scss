@@ -198,9 +198,8 @@ ul.curriculum-sections li.item-locked {
 
 	.items-progress,
 	.course-progress {
-		padding: 1em;
+		padding: 0;
 		background: white;
-		padding: 1em;
 		margin: 0 !important;
 	}
 	h4 {
@@ -221,7 +220,7 @@ ul.curriculum-sections li.item-locked {
 .course-remaining-time {
 	font-family: $font__sans;
 	font-size: 80%;
-	margin: 1em 0;
+	margin: 3em 0 4em;
 	.lp-label.label-enrolled,
 	.lp-label.label-started {
 		background: hsla(180, 100%, 35%, 1);
@@ -259,9 +258,14 @@ ul.curriculum-sections li.item-locked {
 }
 
 //Sección de star reviews y opiniones
-#course-reviews {
+.course-tab-panel-reviews {
+
 	.course-reviews-list {
 		padding-left: 0;
+
+		.review-number {
+			font-family: $font__sans;
+		}
 
 		li {
 			display: flex;
@@ -293,7 +297,6 @@ ul.curriculum-sections li.item-locked {
 		}
 
 		.review-text {
-			font-size: 0.9em;
 			flex: 1 0 100%;
 		}
 	}
@@ -315,4 +318,40 @@ ul.curriculum-sections li.item-locked {
 .course-tab-panel-referencias,
 .course-tab-panel-creditos {
 	font-size: 0.9em;
+}
+
+
+// Students list plugin
+.course-students-list {
+	.filter-students {
+		label.students-list-filter {
+			font-family: $font__sans;
+		}
+		select {
+			padding: 0.5em;
+			border-radius: 4px;
+			margin-left: 0.5em;
+		}
+	}
+
+	.students.empty {
+		font-family: $font__sans;
+	}
+	.students {
+		li {
+			border-radius: 4px;
+			padding: 1em;
+			border: 1px solid $color__main-bordes;
+			background-color: $color__main-superclaro;
+			max-width: 100%;
+			font-family: $font__sans;
+			display: flex;
+			align-content: center;
+
+			.name {
+				line-height: 1.2;
+				font-size: 0.8em;
+			}
+		}
+	}
 }

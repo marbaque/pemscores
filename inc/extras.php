@@ -171,20 +171,3 @@ function pemscores_breadcrumbs() {
   
   }
 }
-
-
-/**
- * Gutenberg scripts and styles
- * @link https://www.billerickson.net/block-styles-in-gutenberg/
- */
-function be_gutenberg_scripts() {
-
-	wp_enqueue_script(
-		'be-editor', 
-		get_stylesheet_directory_uri() . '/js/editor.js', 
-		array( 'wp-blocks', 'wp-dom' ), 
-		filemtime( get_stylesheet_directory() . '/js/editor.js' ),
-		true
-	);
-}
-add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );

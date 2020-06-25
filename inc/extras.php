@@ -58,14 +58,6 @@ function change_admin_footer(){
 	}
 add_filter('admin_footer_text', 'change_admin_footer');
 
-// Editor styles
-/**
- * Enqueue block editor style
- */
-function legit_block_editor_styles() {
-	wp_enqueue_style( 'legit-editor-styles', get_theme_file_uri( '/inc/editor-styles.css' ), false, '1.0', 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'legit_block_editor_styles' );
 
 /* 
 ** Migajas personalizadas 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * pemscores functions and definitions.
  *
@@ -7,85 +8,95 @@
  * @package pemscores
  */
 
-if ( ! function_exists( 'pemscores_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function pemscores_setup() {
-	/*
+if (!function_exists('pemscores_setup')) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 */
+	function pemscores_setup()
+	{
+		/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on pemscores, use a find and replace
 	 * to change 'pemscores' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'pemscores', get_template_directory() . '/languages' );
+		load_theme_textdomain('pemscores', get_template_directory() . '/languages');
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support('automatic-feed-links');
 
-	/*
+		/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
 	 * hard-coded <title> tag in the document head, and expect WordPress to
 	 * provide it for us.
 	 */
-	add_theme_support( 'title-tag' );
+		add_theme_support('title-tag');
 
-	/*
+		/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'pemscores-full-bleed', 2000, 1200, true );
-	add_image_size( 'pemscores-index-img', 1000, 550, true );
+		add_theme_support('post-thumbnails');
+		add_image_size('pemscores-full-bleed', 2000, 1200, true);
+		add_image_size('pemscores-index-img', 1000, 550, true);
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Cabecera', 'pemscores' ),
-		'social' => esc_html__( 'Social Media Menu', 'pemscores' ),
-		'info' => esc_html__( 'Info del sitio', 'pemscores' ),
-	) );
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus(array(
+			'primary' => esc_html__('Cabecera', 'pemscores'),
+			'social' => esc_html__('Social Media Menu', 'pemscores'),
+			'info' => esc_html__('Info del sitio', 'pemscores'),
+		));
 
-	/*
+		/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+		add_theme_support('html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		));
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'pemscores_custom_background_args', array(
-		'default-color' => 'f4f4f4',
-		'default-image' => '',
-	) ) );
+		// Set up the WordPress core custom background feature.
+		add_theme_support('custom-background', apply_filters('pemscores_custom_background_args', array(
+			'default-color' => 'f4f4f4',
+			'default-image' => '',
+		)));
 
-	// Add theme support for Custom Logo
-	add_theme_support( 'custom-logo', array(
-		'width' => 220,
-		'height' => 80,
-		'flex-width' => true,
-	));
+		// Add theme support for Custom Logo
+		add_theme_support('custom-logo', array(
+			'width' => 220,
+			'height' => 80,
+			'flex-width' => true,
+		));
 
-	
-}
+		/* Cargar estilos en el editor clásico */
+		add_editor_style(array(get_template_directory_uri() . '/inc/editor-styles.css', pemscores_fonts_url()));
+
+		/* Enqueue block editor style */
+		function legit_block_editor_styles()
+		{
+			wp_enqueue_style('legit-editor-styles', get_theme_file_uri('/inc/editor-styles.css'), false, '1.0', 'all');
+		}
+		add_action('enqueue_block_editor_assets', 'legit_block_editor_styles');
+	}
 endif;
-add_action( 'after_setup_theme', 'pemscores_setup' );
+add_action('after_setup_theme', 'pemscores_setup');
 
 
 /**
  * Register custom fonts.
  */
-function pemscores_fonts_url() {
+function pemscores_fonts_url()
+{
 	$fonts_url = '';
 
 	/**
@@ -93,31 +104,31 @@ function pemscores_fonts_url() {
 	 * supported by Futura PT and Meta Serif Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$futura = _x( 'on', 'Futura PT font: on or off', 'pemscores' );
-	$proximaNova = _x( 'on', 'Proxima Nova: on or off', 'pemscores' );
+	$futura = _x('on', 'Futura PT font: on or off', 'pemscores');
+	$proximaNova = _x('on', 'Proxima Nova: on or off', 'pemscores');
 
 	$font_families = array();
 
-	if ( 'off' !== $futura ) {
+	if ('off' !== $futura) {
 		$font_families[] = 'futura-pt:400,400i,600,600i';
 	}
 
-	if ( 'off' !== $proximaNova ) {
+	if ('off' !== $proximaNova) {
 		$font_families[] = 'proxima-nova:400,400i,700,700i';
 	}
 
 
-	if ( in_array( 'on', array($futura, $proximaNova) ) ) {
+	if (in_array('on', array($futura, $proximaNova))) {
 
 		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
+			'family' => urlencode(implode('|', $font_families)),
+			'subset' => urlencode('latin,latin-ext'),
 		);
 
-		$fonts_url = add_query_arg( $query_args, 'https://use.typekit.net/oma6nzd.css' );
+		$fonts_url = add_query_arg($query_args, 'https://use.typekit.net/oma6nzd.css');
 	}
 
-	return esc_url_raw( $fonts_url );
+	return esc_url_raw($fonts_url);
 }
 
 /**
@@ -129,8 +140,9 @@ function pemscores_fonts_url() {
  * @param string $relation_type  The relation type the URLs are printed.
  * @return array $urls           URLs to print for resource hints.
  */
-function pemscores_resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( 'pemscores-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+function pemscores_resource_hints($urls, $relation_type)
+{
+	if (wp_style_is('pemscores-fonts', 'queue') && 'preconnect' === $relation_type) {
 		$urls[] = array(
 			'href' => 'https://use.typekit.net',
 			'crossorigin',
@@ -139,7 +151,7 @@ function pemscores_resource_hints( $urls, $relation_type ) {
 
 	return $urls;
 }
-add_filter( 'wp_resource_hints', 'pemscores_resource_hints', 10, 2 );
+add_filter('wp_resource_hints', 'pemscores_resource_hints', 10, 2);
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -148,10 +160,11 @@ add_filter( 'wp_resource_hints', 'pemscores_resource_hints', 10, 2 );
  *
  * @global int $content_width
  */
-function pemscores_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'pemscores_content_width', 640 );
+function pemscores_content_width()
+{
+	$GLOBALS['content_width'] = apply_filters('pemscores_content_width', 640);
 }
-add_action( 'after_setup_theme', 'pemscores_content_width', 0 );
+add_action('after_setup_theme', 'pemscores_content_width', 0);
 
 
 /**
@@ -165,20 +178,21 @@ add_action( 'after_setup_theme', 'pemscores_content_width', 0 );
  *                      values in pixels (in that order).
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
-function pemscores_content_image_sizes_attr( $sizes, $size ) {
+function pemscores_content_image_sizes_attr($sizes, $size)
+{
 	$width = $size[0];
 
-	if ( 900 <= $width ) {
+	if (900 <= $width) {
 		$sizes = '(min-width: 900px) 700px, 900px';
 	}
 
-	if ( is_active_sidebar( 'sidebar-1' ) || is_active_sidebar( 'sidebar-2' ) ) {
+	if (is_active_sidebar('sidebar-1') || is_active_sidebar('sidebar-2')) {
 		$sizes = '(min-width: 900px) 600px, 900px';
 	}
 
 	return $sizes;
 }
-add_filter( 'wp_calculate_image_sizes', 'pemscores_content_image_sizes_attr', 10, 2 );
+add_filter('wp_calculate_image_sizes', 'pemscores_content_image_sizes_attr', 10, 2);
 
 /**
  * Filter the `sizes` value in the header image markup.
@@ -190,13 +204,14 @@ add_filter( 'wp_calculate_image_sizes', 'pemscores_content_image_sizes_attr', 10
  * @param array  $attr   Array of the attributes for the image tag.
  * @return string The filtered header image HTML.
  */
-function pemscores_header_image_tag( $html, $header, $attr ) {
-	if ( isset( $attr['sizes'] ) ) {
-		$html = str_replace( $attr['sizes'], '100vw', $html );
+function pemscores_header_image_tag($html, $header, $attr)
+{
+	if (isset($attr['sizes'])) {
+		$html = str_replace($attr['sizes'], '100vw', $html);
 	}
 	return $html;
 }
-add_filter( 'get_header_image_tag', 'pemscores_header_image_tag', 10, 3 );
+add_filter('get_header_image_tag', 'pemscores_header_image_tag', 10, 3);
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -209,10 +224,11 @@ add_filter( 'get_header_image_tag', 'pemscores_header_image_tag', 10, 3 );
  * @param array $size       Registered image size or flat array of height and width dimensions.
  * @return string A source size value for use in a post thumbnail 'sizes' attribute.
  */
-function pemscores_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
+function pemscores_post_thumbnail_sizes_attr($attr, $attachment, $size)
+{
 
-	if ( !is_singular() ) {
-		if ( is_active_sidebar( 'sidebar-1' ) ) {
+	if (!is_singular()) {
+		if (is_active_sidebar('sidebar-1')) {
 			$attr['sizes'] = '(max-width: 900px) 90vw, 800px';
 		} else {
 			$attr['sizes'] = '(max-width: 1000px) 90vw, 1000px';
@@ -223,7 +239,7 @@ function pemscores_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 
 	return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'pemscores_post_thumbnail_sizes_attr', 10, 3 );
+add_filter('wp_get_attachment_image_attributes', 'pemscores_post_thumbnail_sizes_attr', 10, 3);
 
 
 
@@ -233,90 +249,92 @@ add_filter( 'wp_get_attachment_image_attributes', 'pemscores_post_thumbnail_size
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function pemscores_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Barra lateral', 'pemscores' ),
+function pemscores_widgets_init()
+{
+	register_sidebar(array(
+		'name'          => esc_html__('Barra lateral', 'pemscores'),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Agregue widgets al blog.', 'pemscores' ),
+		'description'   => esc_html__('Agregue widgets al blog.', 'pemscores'),
 		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
 		'after_widget'  => '</div></section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	));
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Barra lateral de páginas', 'pemscores' ),
+	register_sidebar(array(
+		'name'          => esc_html__('Barra lateral de páginas', 'pemscores'),
 		'id'            => 'sidebar-2',
-		'description'   => esc_html__( 'Agregue widgets a las páginas.', 'pemscores' ),
+		'description'   => esc_html__('Agregue widgets a las páginas.', 'pemscores'),
 		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
 		'after_widget'  => '</div></section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	));
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Widgets de footer', 'pemscores' ),
+	register_sidebar(array(
+		'name'          => esc_html__('Widgets de footer', 'pemscores'),
 		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Agregue widgets al footer.', 'pemscores' ),
+		'description'   => esc_html__('Agregue widgets al footer.', 'pemscores'),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
-
+	));
 }
-add_action( 'widgets_init', 'pemscores_widgets_init' );
+add_action('widgets_init', 'pemscores_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
-function pemscores_scripts() {
+function pemscores_scripts()
+{
 	// Enqueue Typekit Fonts: Europa and Proxima Nova
-	wp_enqueue_style( 'pemscores-fonts', pemscores_fonts_url() );
+	wp_enqueue_style('pemscores-fonts', pemscores_fonts_url());
 
-	wp_enqueue_style( 'pemscores-style', get_stylesheet_uri() );
+	wp_enqueue_style('pemscores-style', get_stylesheet_uri());
 
-	wp_enqueue_script( 'pemscores-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20191215', true );
-	
+	wp_enqueue_script('pemscores-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20191215', true);
+
 	// wp_localize_script( 'pemscores-navigation', 'pemscoresScreenReaderText', array(
 	// 	'expand' => __( 'Expand child menu', 'pemscores'),
 	// 	'collapse' => __( 'Collapse child menu', 'pemscores'),
 	// ));
 
-	wp_enqueue_script( 'pemscores-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20161201', true );
+	wp_enqueue_script('pemscores-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20161201', true);
 
-	wp_enqueue_script( 'pemscores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script('pemscores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
 	}
 }
-add_action( 'wp_enqueue_scripts', 'pemscores_scripts' );
+add_action('wp_enqueue_scripts', 'pemscores_scripts');
 
 // Load superfish scripts
-function myprefix_load_superfish_scripts() {
+function myprefix_load_superfish_scripts()
+{
 
 	// load jquery if it isn't
 	//wp_enqueue_script( 'jquery' );
 
 	//Hoverintent
-	wp_enqueue_script( 'hoverinent', get_template_directory_uri() . '/js/hoverintent.js' );
+	wp_enqueue_script('hoverinent', get_template_directory_uri() . '/js/hoverintent.js');
 
 
 	// SuperFish Scripts
-	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.js' );
-	wp_enqueue_script( 'superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js' );
+	wp_enqueue_script('superfish', get_template_directory_uri() . '/js/superfish.js');
+	wp_enqueue_script('superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js');
 
 	//Cargar estilos del menú UNED
 	wp_enqueue_style('menu-uned', 'https://www.uned.ac.cr/menu/style_menu.css');
 }
-add_action( 'wp_enqueue_scripts', 'myprefix_load_superfish_scripts' );
+add_action('wp_enqueue_scripts', 'myprefix_load_superfish_scripts');
 
 /* Permitir responsive embeds */
-add_theme_support( 'responsive-embeds' );
+add_theme_support('responsive-embeds');
 
 /* Permitir estilos de blocks en frontend */
-add_theme_support( 'wp-block-styles' );
+add_theme_support('wp-block-styles');
 
 /**
  * Implement the Custom Header feature.

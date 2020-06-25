@@ -18,14 +18,16 @@ textarea {
 	font-size: 16.2px;
 	font-size: 1.08rem;
 	line-height: 1.66;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
 }
 
 .editor-styles-wrapper p {
-	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "proxima-nova", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
 }
 
 
 /* post title */
+h1, h2, h3, h4, h5,
 .editor-post-title__block .editor-post-title__input,
 .wp-block-heading h1, 
 .wp-block-heading h2, 

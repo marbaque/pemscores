@@ -860,6 +860,12 @@ a:hover, a:active {
 	border-bottom-style: dashed;
 }
 
+a[href$=".jpg"],
+a[href$=".png"],
+a[href$=".gif"] {
+	border: none;
+}
+
 /*--------------------------------------------------------------
 ## Content Navigation
 --------------------------------------------------------------*/

@@ -34,3 +34,9 @@ a {
 		}
 	}
 }
+
+a[href$=".jpg"],
+a[href$=".png"],
+a[href$=".gif"] {
+	border: none;
+}

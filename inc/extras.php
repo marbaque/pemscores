@@ -101,26 +101,29 @@ function pemscores_breadcrumbs() {
       echo $currentBefore . get_the_time('Y') . $currentAfter;
   
     } elseif ( is_single() && !is_attachment() ) {
+      echo '<li>';
       if (has_category()) {
         $cat = get_the_category(); $cat = $cat[0];
-        echo '<li>';
         echo get_category_parents($cat, TRUE, ' ' . '</li>' . $delimiter);
-        echo $currentBefore;
-        the_title();
-        echo $currentAfter;
       }
+      echo $currentBefore;
+      the_title();
+      echo $currentAfter;
+      
 			
   
     } elseif ( is_attachment() ) {
       $parent = get_post($post->post_parent);
+
       if (has_category()) {
         $cat = get_the_category($parent->ID); $cat = $cat[0];
         echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-        echo '<li><a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a></li>' . $delimiter;
-        echo $currentBefore;
-        the_title();
-        echo $currentAfter;
       }
+      
+      echo '<li><a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a></li>' . $delimiter;
+      echo $currentBefore;
+      the_title();
+      echo $currentAfter;
       
   
     } elseif ( is_page() && !$post->post_parent ) {

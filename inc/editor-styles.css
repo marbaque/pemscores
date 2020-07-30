@@ -41,7 +41,8 @@ h1, h2, h3, h4, h5,
 /* Ancho del editor de gutenberg */
 @media screen and ( min-width: 768px ) {
 	.edit-post-visual-editor .editor-post-title__block,
-	.edit-post-visual-editor .editor-block-list__block {
+	.edit-post-visual-editor .editor-block-list__block,
+	.block-editor-block-list__layout>div {
 		max-width:	900px;
 	}
 }
@@ -110,3 +111,309 @@ table.agenda td:nth-child(8),
 	background-color: #b7cdff;
 }
 
+
+/****************** Styles from 20 20 *********************/
+body {
+	background: tomato;
+}
+.singular .intro-text {
+	font-size: 3.2rem;
+	letter-spacing: -0.03125em;
+	line-height: 1.375;
+}
+
+/* Blocks -------------------------------- */
+
+/* BLOCK: COLUMNS */
+
+.wp-block-columns.alignfull + .wp-block-columns.alignfull {
+	margin-top: -6rem;
+}
+
+/* BLOCK: GALLERY */
+
+figure.wp-block-gallery.alignfull {
+	margin-bottom: 10rem;
+	margin-top: 10rem;
+}
+
+/* BLOCK: GROUP */
+
+.entry-content > .wp-block-group.alignwide.has-background,
+.entry-content > .wp-block-group.alignfull.has-background {
+	padding: 8rem 6rem;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/* BLOCK: PULLQUOTE */
+
+.wp-block-pullquote.alignwide blockquote p,
+.wp-block-pullquote.alignfull blockquote p {
+	font-size: 6.4rem;
+}
+
+.wp-block-pullquote.is-style-solid-color.alignwide,
+.wp-block-pullquote.is-style-solid-color.alignfull {
+	padding: 9rem 4rem 8rem;
+}
+
+/* Entry Content ------------------------- */
+
+/* ALIGNMENT CLASSES */
+
+.entry-content > .alignfull {
+	margin-bottom: 10rem;
+	margin-top: 10rem;
+}
+
+[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > .alignleft,
+[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > p .alignleft,
+[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	right: calc((100% - 58rem) / 2 + 58rem - 2rem);
+}
+
+[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > .alignright,
+[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > p .alignright,
+[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	left: calc((100% - 58rem) / 2 + 58rem + 6rem);
+}
+
+/* Comments ------------------------------ */
+
+.comment-reply-title {
+	font-size: 5.6rem;
+	line-height: 1.2;
+	margin-bottom: 6rem;
+}
+
+.comment-respond p.comment-notes,
+.comment-respond p.logged-in-as {
+	margin: -4rem 0 6rem 0;
+}
+
+.comments .comment-respond .comment-reply-title {
+	font-size: 4.8rem;
+}
+
+.comments .comment-respond p.comment-notes,
+.comments .comment-respond p.logged-in-as {
+	margin: -4.5rem 0 4rem 0;
+}
+
+/* Site Pagination ----------------------- */
+
+/* Widgets ------------------------------- */
+
+.widget-content {
+	font-size: 2.1rem;
+}
+
+/* Site Footer --------------------------- */
+
+.footer-menu {
+	font-size: 2.4rem;
+	margin: -1.5rem 0 0 -3rem;
+}
+
+.footer-menu li {
+	margin: 1.5rem 0 0 3rem;
+}
+
+ul.footer-social {
+	margin: -1rem 0 0 -1rem;
+}
+
+ul.footer-social li {
+	margin: 1rem 0 0 1rem;
+}
+
+.footer-social a {
+	height: 4.4rem;
+	width: 4.4rem;
+}
+
+.footer-social a::before {
+	font-size: 2rem;
+}
+
+/* FOOTER WIDGETS */
+
+.footer-widgets-wrapper {
+	margin-left: -6rem;
+	width: calc(100% + 6rem);
+}
+
+.footer-widgets {
+	margin-left: 6rem;
+}
+
+}
+
+@media ( min-width: 1240px ) {
+
+
+/* Blocks -------------------------------- */
+
+body.template-full-width .entry-content > .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: calc(( 100vw - 120rem ) / 2);
+}
+
+body.template-full-width .entry-content > .alignright {
+
+	/*rtl:ignore*/
+	margin-right: calc(( 100vw - 120rem ) / 2);
+}
+
+}
+
+@media ( min-width: 1280px ) {
+
+/* Blocks -------------------------------- */
+
+/* BLOCK: GALLERY */
+
+figure.wp-block-gallery.alignleft {
+
+	/*rtl:ignore*/
+	margin-left: -31rem;
+}
+
+figure.wp-block-gallery.alignright {
+
+	/*rtl:ignore*/
+	margin-right: -31rem;
+}
+
+/* BLOCK: SEPARATOR */
+
+.wp-block-separator.is-style-wide {
+	max-width: 120rem;
+	width: 120rem;
+}
+
+/* Entry Content ------------------------- */
+
+/* ALIGNMENT CLASSES */
+
+.entry-content > .alignleft,
+.entry-content > p .alignleft,
+.entry-content > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	right: calc((100vw - 58rem) / 2 + 58rem + 4rem);
+
+	/*rtl:ignore*/
+	margin-left: -31rem;
+}
+
+.entry-content > .alignright,
+.entry-content > p .alignright,
+.entry-content > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	left: calc((100vw - 58rem) / 2 + 58rem + 4rem);
+
+	/*rtl:ignore*/
+	margin-right: -31rem;
+}
+
+.entry-content > .alignwide {
+	max-width: 120rem;
+	width: 120rem;
+}
+
+[class*="__inner-container"] > .alignwide {
+	max-width: 120rem;
+	width: 100%;
+}
+
+.alignleft,
+.alignright,
+.entry-content > .alignleft,
+.entry-content > p .alignleft,
+.entry-content > .wp-block-image .alignleft,
+.entry-content > .alignright,
+.entry-content > p .alignright,
+.entry-content > .wp-block-image .alignright,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > .alignleft,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > p .alignleft,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft,
+[class*="wp-block"].alignfull [class*="__inner-container"] > .alignleft,
+[class*="wp-block"].alignfull [class*="__inner-container"] > p .alignleft,
+[class*="wp-block"].alignfull [class*="__inner-container"] > .wp-block-image .alignleft,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > .alignright,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > p .alignright,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright,
+[class*="wp-block"].alignfull [class*="__inner-container"] > .alignright,
+[class*="wp-block"].alignfull [class*="__inner-container"] > p .alignright,
+[class*="wp-block"].alignfull [class*="__inner-container"] > .wp-block-image .alignright {
+	max-width: 25rem;
+}
+
+/* Template: Full Width ------------------ */
+
+body.template-full-width .alignfull:not(.has-background) > .wp-block-group__inner-container > p:not(.has-background-color) {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+body.template-full-width [class*="wp-block"].alignfull [class*="__inner-container"] > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 0;
+}
+
+body.template-full-width [class*="wp-block"].alignfull [class*="__inner-container"] > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 0;
+}
+
+}
+
+@media ( min-width: 1330px ) {
+
+
+/* Entry Content ------------------------- */
+
+/* ALIGNMENT CLASSES */
+
+.alignleft,
+.alignright,
+.entry-content > .alignleft,
+.entry-content > p .alignleft,
+.entry-content > .wp-block-image .alignleft,
+.entry-content > .alignright,
+.entry-content > p .alignright,
+.entry-content > .wp-block-image .alignright,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > .alignleft,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > p .alignleft,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft,
+[class*="wp-block"].alignfull [class*="__inner-container"] > .alignleft,
+[class*="wp-block"].alignfull [class*="__inner-container"] > p .alignleft,
+[class*="wp-block"].alignfull [class*="__inner-container"] > .wp-block-image .alignleft,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > .alignright,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > p .alignright,
+[class*="wp-block"].alignwide:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright,
+[class*="wp-block"].alignfull [class*="__inner-container"] > .alignright,
+[class*="wp-block"].alignfull [class*="__inner-container"] > p .alignright,
+[class*="wp-block"].alignfull [class*="__inner-container"] > .wp-block-image .alignright {
+	max-width: 29rem;
+}
+
+/* Blocks -------------------------------- */
+
+/* BLOCK: PULLQUOTE */
+
+.wp-block-pullquote.is-style-solid-color.alignleft::before,
+.wp-block-pullquote.is-style-solid-color.alignright::before {
+	top: 0;
+}
+}

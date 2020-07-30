@@ -126,9 +126,37 @@
 	}
 }
 
-/*
-	*	Menu UNED
-*/
+// Menu inst
+.menu_Inst,
+.toggle {
+	font-size: 0.7em;
+}
+
+.tools {
+	display: none;
+	visibility: none;
+}
+
+ul.menu_Inst {
+	overflow: auto;
+	background: #fff;
+}
+
+// Footer UNED
+#footer-sub #footer {
+	background: inherit;
+	font-family: $font__headings;
+	position: relative;
+
+	#iconos {
+    float: none;
+    margin: 0;
+    position: absolute;
+    right: 4px;
+    top: 0px;
+	}
+}
+
 #footer {
   color: $color__text-input;
   font-size: 0.8em;
@@ -168,29 +196,4 @@
   margin-right: auto;
   margin-top: 0;
   max-width: 1280px;
-}
-
-// Estilos para el menu inst
-.menu_Inst,
-.toggle {
-	font-size: 0.7em;
-}
-
-ul.menu_Inst {
-	overflow: auto;
-	background:hsla(0, 100, 100, .8);
-}
-
-#footer-sub #footer {
-	background: inherit;
-	font-family: $font__headings;
-	position: relative;
-
-	#iconos {
-    float: none;
-    margin: 0;
-    position: absolute;
-    right: 4px;
-    top: 0px;
-	}
 }

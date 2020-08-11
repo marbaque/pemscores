@@ -2461,6 +2461,7 @@ ul.menu_Inst {
 
 .widget {
 	margin: 0 0 2em;
+	padding: 0 0 2em;
 	/* Make sure select elements fit in widgets. */
 }
 
@@ -2511,13 +2512,13 @@ ul.menu_Inst {
 }
 
 .widget-inner {
-	background: white;
-	padding: 1em 1em 2em;
+	background: #f0f0f0;
+	padding: 2em 1em;
 }
 
 .widget-title {
 	margin-top: 0;
-	margin-bottom: .5em;
+	margin-bottom: 0.5em;
 	font-size: 1.4em;
 }
 

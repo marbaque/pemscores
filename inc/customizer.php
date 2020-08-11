@@ -33,7 +33,7 @@ function pemscores_customize_register( $wp_customize ) {
 			$wp_customize,
 			'theme_bg_color',
 				array(
-					'label'		=> __( 'Color de fondo de la cabecera and del pie de página', 'pemscores'),
+					'label'		=> __( 'Color de fondo de la cabecera y del pie de página', 'pemscores'),
 					'section'	=> 'colors',
 					'settings'	=> 'theme_bg_color'
 				)

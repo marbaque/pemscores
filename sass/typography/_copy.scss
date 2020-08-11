@@ -1,9 +1,12 @@
 p {
-	margin-top: .5em;
+	margin-top: 0.5em;
 	margin-bottom: 1em;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
 
@@ -11,13 +14,13 @@ blockquote {
 	position: relative;
 	margin: 0 0 1em;
 	background: $color__background-pre;
-	padding: 2em 2em .5em 5em;
+	padding: 2em 2em 0.5em 5em;
 	font-style: italic;
-	
+
 	&:before {
 		position: absolute;
-		top: -.2em;
-		left: -.13em;
+		top: -0.2em;
+		left: -0.13em;
 		content: "“";
 		font-family: $font__headings;
 		font-size: 12em;
@@ -41,17 +44,22 @@ pre {
 	padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
 	font-family: $font__code;
 	@include font-size(0.9375);
 }
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted $color__border-abbr;
 	cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
 	background: $color__background-ins;
 	text-decoration: none;
 }
@@ -60,44 +68,26 @@ big {
 	font-size: 125%;
 }
 
-/* Gutenberg Blocks */
-.wp-block-button {
-	
-	&:not(.is-style-outline) {
-		a {
-			border: none;
-
-			&:hover {
-				border: none;
-				color: currentColor;
-			}
-		}
-	}
-
-	
-}
-
 .wp-block-image {
-
 	figure {
 		padding: 8px;
 		border: 1px solid hsl(0, 0%, 80%);
 
 		a {
-			border: none!important;
+			border: none !important;
 		}
 	}
 }
 
 p.has-drop-cap:first-letter {
 	font-family: $font__headings;
-	font-weight: 700!important;
-	font-size: 8em!important;	
+	font-weight: 700 !important;
+	font-size: 8em !important;
 }
 
 .wp-block-file {
 	a.wp-block-file__button {
-		border: none!important;
+		border: none !important;
 	}
 }
 
@@ -137,7 +127,7 @@ p.has-drop-cap:first-letter {
 	margin: 0;
 	padding: 0;
 	background-color: inherit;
-	
+
 	&::before {
 		content: "";
 	}
@@ -218,4 +208,66 @@ p.has-drop-cap:first-letter {
 
 .wp-block-pullquote.is-style-solid-color cite {
 	color: inherit;
+}
+
+/* Block: Button ----------------------------- */
+
+.wp-block-button {
+	margin: 3rem 0;
+
+	&:not(.is-style-outline) {
+		.wp-block-button__link {
+			border: none;
+			&:hover,
+			&:active {
+				border: inherit;
+				color: currentColor;
+				opacity: 0.75;
+			}
+		}
+	}
+}
+
+.wp-block-button.is-style-outline {
+	color: $color__interactive;
+}
+
+.is-style-outline .wp-block-button__link:not(.has-text-color) {
+	color: inherit;
+}
+
+.is-style-outline .wp-block-button__link {
+	padding: calc(1.1em - 0.2rem) calc(1.44em - 0.2rem);
+	
+	&:hover {
+		border-style: solid;
+	}
+}
+
+button,
+.button,
+.faux-button,
+.wp-block-button__link,
+.wp-block-file .wp-block-file__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	appearance: none;
+	background: $color__interactive;
+	border: none;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	//font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.0333em;
+	line-height: 1.25;
+	margin: 0;
+	opacity: 1;
+	padding: 1.1em 1.44em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: opacity 0.15s linear;
 }

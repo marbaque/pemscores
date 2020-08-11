@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*!
 Theme Name: pemscores
-Theme URI: https://github.com/marbaque/pemscores/
+Theme URI: https://github.com/marbaque/pemscores/tree/saps
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, basado en el tema hecho por Morten Rand-Hendriksen para el curso "Building Themes From Scratch Using Underscores".
-Version: 2.8
+Version: 2.8.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -327,11 +327,14 @@ h6 {
 }
 
 p {
-	margin-top: .5em;
+	margin-top: 0.5em;
 	margin-bottom: 1em;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
 
@@ -339,14 +342,14 @@ blockquote {
 	position: relative;
 	margin: 0 0 1em;
 	background: #eee;
-	padding: 2em 2em .5em 5em;
+	padding: 2em 2em 0.5em 5em;
 	font-style: italic;
 }
 
 blockquote:before {
 	position: absolute;
-	top: -.2em;
-	left: -.13em;
+	top: -0.2em;
+	left: -0.13em;
 	content: "“";
 	font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 12em;
@@ -370,34 +373,29 @@ pre {
 	padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 16.875px;
 	font-size: 1.125rem;
 }
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
 
 big {
 	font-size: 125%;
-}
-
-/* Gutenberg Blocks */
-.wp-block-button:not(.is-style-outline) a {
-	border: none;
-}
-
-.wp-block-button:not(.is-style-outline) a:hover {
-	border: none;
-	color: currentColor;
 }
 
 .wp-block-image figure {
@@ -535,6 +533,66 @@ p.has-drop-cap:first-letter {
 
 .wp-block-pullquote.is-style-solid-color cite {
 	color: inherit;
+}
+
+/* Block: Button ----------------------------- */
+.wp-block-button {
+	margin: 3rem 0;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+	border: none;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover, .wp-block-button:not(.is-style-outline) .wp-block-button__link:active {
+	border: inherit;
+	color: currentColor;
+	opacity: 0.75;
+}
+
+.wp-block-button.is-style-outline {
+	color: #ee8925;
+}
+
+.is-style-outline .wp-block-button__link:not(.has-text-color) {
+	color: inherit;
+}
+
+.is-style-outline .wp-block-button__link {
+	padding: calc(1.1em - 0.2rem) calc(1.44em - 0.2rem);
+}
+
+.is-style-outline .wp-block-button__link:hover {
+	border-style: solid;
+}
+
+button,
+.button,
+.faux-button,
+.wp-block-button__link,
+.wp-block-file .wp-block-file__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	background: #ee8925;
+	border: none;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 700;
+	letter-spacing: 0.0333em;
+	line-height: 1.25;
+	margin: 0;
+	opacity: 1;
+	padding: 1.1em 1.44em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: opacity 0.15s linear;
 }
 
 /*--------------------------------------------------------------
@@ -1850,6 +1908,8 @@ a[href$=".gif"] {
 	border-top: 1px solid #e6e6e6;
 	border-bottom: 1px solid #e6e6e6;
 	overflow: hidden;
+	background-color: #3c6994;
+	background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2300519e' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 @media screen and (min-width: 600px) {
@@ -1876,6 +1936,8 @@ a[href$=".gif"] {
 .full-bleed img {
 	display: block;
 	margin: 0 auto;
+	object-fit: cover;
+	width: 100%;
 }
 
 .page-content,

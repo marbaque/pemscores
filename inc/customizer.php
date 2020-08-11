@@ -232,7 +232,8 @@ function pemscores_header_style() {
 			.entry-summary a:hover,
 			.comment-content a:focus,
 			.comment-content a:hover,
-			.cat-links a {
+			.cat-links a,
+			.wp-block-button.is-style-outline {
 				color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 
@@ -279,7 +280,8 @@ function pemscores_header_style() {
 			.reply a:hover,
 			.reply a:focus,
 			.comment-form .form-submit input:hover,
-			.comment-form .form-submit input:focus {
+			.comment-form .form-submit input:focus,
+			.wp-block-button:not(.is-style-outline) .wp-block-button__link {
 				background-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 

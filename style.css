@@ -1298,6 +1298,13 @@ a[href$=".gif"] {
 	margin-bottom: 0.5em;
 }
 
+.archive-view .post:active,
+.archive-view .page:active {
+	outline-style: solid;
+	outline-width: 2px;
+	outline-color: #ee8925;
+}
+
 @media screen and (min-width: 900px) {
 	.archive-view.has-sidebar .site-content {
 		display: -ms-flexbox;

@@ -266,6 +266,11 @@ function pemscores_header_style() {
 				border-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 
+			.archive-view .post:active, 
+			.archive-view .page:active {
+				outline-color: <?php echo esc_attr( $interactive_color ); ?>;
+			}
+
 			.comment-navigation a:hover,
 			.comment-navigation a:focus,
 			.posts-navigation a:hover,

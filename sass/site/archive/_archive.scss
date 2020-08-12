@@ -22,6 +22,12 @@
 			}
 		}
 
+		&:active {
+			outline-style: solid;
+			outline-width: 2px;
+			outline-color: $color__interactive;
+		}
+
 		
 	}
 

@@ -233,7 +233,8 @@ function pemscores_header_style() {
 			.comment-content a:focus,
 			.comment-content a:hover,
 			.cat-links a,
-			.wp-block-button.is-style-outline {
+			.wp-block-button.is-style-outline,
+			aside.filters ul li label {
 				color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 
@@ -281,7 +282,8 @@ function pemscores_header_style() {
 			.reply a:focus,
 			.comment-form .form-submit input:hover,
 			.comment-form .form-submit input:focus,
-			.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+			.wp-block-button:not(.is-style-outline) .wp-block-button__link,
+			aside.filters ul li.checked label {
 				background-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 

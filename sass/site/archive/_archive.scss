@@ -118,23 +118,24 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	font-family: $font__headings;
-	background: hsl(0, 0%, 96%);
+	background: $color__lightgray;
 	padding: 1em;
 	text-align: right;
 
 	a {
-		//display: block;
 		padding: .75em 1em;
 		font-size: 90%;
+		font-weight: 700;
 		text-decoration: none;
-		background: hsl(0, 0%, 85%);
-		border-radius: 4px;
+		background-color: transparent;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: background-color 0.1s linear;
 
 		&:focus,
 		&:hover {
 			color: white;
-			background: $color__interactive;
+			background-color: $color__interactive;
 		}
 	}
 

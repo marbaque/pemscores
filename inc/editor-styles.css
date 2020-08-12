@@ -113,9 +113,6 @@ table.agenda td:nth-child(8),
 
 
 /****************** Styles from 20 20 *********************/
-body {
-	background: tomato;
-}
 .singular .intro-text {
 	font-size: 3.2rem;
 	letter-spacing: -0.03125em;

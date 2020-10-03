@@ -21,6 +21,7 @@ Estilos para el bloque Galería de sitios.
     margin-bottom: 1em;
     background: white;
     border: 1px solid lightgrey;
+    transition: 0.25s all;
 }
 .item-sitio:hover {
     border: 1px solid #0947a4;
@@ -53,13 +54,22 @@ Estilos para el bloque Galería de sitios.
 }
 .item-sitio .nombre-sitio {
     font-size: 1.5em;
-    line-height: 1.5;
+    line-height: 1.25;
 }
 .item-sitio .nombre-sitio a {
     outline-style: hidden!important;
 }
 .texto-sitio .info-sitio {
     font-size: 0.9em;
+}
+.texto-sitio .mu-fecha {
+    color: grey;
+    font-size: 0.8em;
+}
+.texto-sitio .mu-fecha svg {
+    margin-top: 1em;
+    margin-bottom: -0.25em;
+    margin-right: 0.25em;
 }
 
 @media screen and (min-width: 600px) {
@@ -70,12 +80,11 @@ Estilos para el bloque Galería de sitios.
     }
     .item-sitio {
         flex: 0 0 48%;
-        margin: 0 1% 1em;
+        margin: 0 1% 2em;
     }
 }
 @media screen and (min-width: 900px) {
     .item-sitio {
         flex: 0 0 30%;
-        margin: 0 1% 1em;
     }
 }

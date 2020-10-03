@@ -546,7 +546,7 @@ p.has-drop-cap:first-letter {
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover, .wp-block-button:not(.is-style-outline) .wp-block-button__link:active {
 	border: inherit;
-	color: currentColor;
+	color: #fff;
 	opacity: 0.75;
 }
 
@@ -593,6 +593,17 @@ input[type="submit"] {
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: opacity 0.15s linear;
+}
+
+button:hover,
+.button:hover,
+.faux-button:hover,
+.wp-block-button__link:hover,
+.wp-block-file .wp-block-file__button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -971,7 +982,7 @@ a[href$=".gif"] {
 
 .nav-links {
 	margin: 0 auto;
-	padding: 0 .4em;
+	padding: 0 0.4em;
 }
 
 .nav-previous {
@@ -1049,7 +1060,7 @@ a[href$=".gif"] {
 
 .pagination a,
 .pagination span {
-	padding: .5em 1em;
+	padding: 0.5em 1em;
 	background: white;
 }
 
@@ -1073,6 +1084,49 @@ a[href$=".gif"] {
 
 .pagination .next .icon {
 	margin-left: 1em;
+}
+
+/* migajas personalizadas */
+.migajas {
+	margin: 0 0 1em;
+	-ms-flex: 1 0 100%;
+	    flex: 1 0 100%;
+}
+
+.migajas ul {
+	font-size: 0.8em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: start;
+	    justify-content: flex-start;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	max-width: 100%;
+}
+
+.migajas ul li {
+	padding: 10px;
+	background: #f0f0f0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.migajas ul li a {
+	color: inherit;
+}
+
+.migajas > ul > li:nth-child(1) {
+	-ms-flex: 0 0 auto;
+	    flex: 0 0 auto;
+}
+
+.migajas .separator {
+	padding: 10px 2px;
+	background: #f4f4f4;
 }
 
 /*--------------------------------------------------------------
@@ -1974,28 +2028,6 @@ a[href$=".gif"] {
 
 .subheader {
 	font-style: italic;
-}
-
-#breadcrumbs {
-	list-style: none;
-	margin: 0 0 1em;
-	overflow: hidden;
-	padding: 0;
-	-ms-flex: 1 0 100%;
-	    flex: 1 0 100%;
-	font-size: 1rem;
-}
-
-#breadcrumbs li {
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: .5em;
-}
-
-#breadcrumbs .separator {
-	font-weight: 100;
-	color: #ccc;
-	margin-right: .25em;
 }
 
 /*--------------------------------------------------------------

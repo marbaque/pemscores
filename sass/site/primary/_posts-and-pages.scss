@@ -215,25 +215,3 @@
 .subheader {
 	font-style: italic;
 }
-
-// Migajas
-#breadcrumbs{
-	list-style: none;
-	margin: 0 0 1em;
-	overflow: hidden;
-	padding: 0;
-	flex: 1 0 100%;
-	font-size: 1rem;
-}
-
-#breadcrumbs li{
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: .5em;
-}
-
-#breadcrumbs .separator{
-	font-weight:100;
-	color:#ccc;
-	margin-right: .25em;
-}

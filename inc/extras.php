@@ -71,7 +71,7 @@ function pemscores_breadcrumbs() {
   
   if ( !is_home() && !is_front_page() || is_paged() ) {
   
-    echo '<ul id="breadcrumbs">';
+    echo '<div class="migajas"><ul id="breadcrumbs">';
   
     global $post;
     $home = get_bloginfo('url');
@@ -175,7 +175,7 @@ function pemscores_breadcrumbs() {
           echo ')' . $currentAfter;
     }
   
-    echo '</ul>';
+    echo '</ul></div>';
   
   }
 }

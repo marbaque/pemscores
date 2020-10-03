@@ -370,3 +370,8 @@ require get_template_directory() . '/inc/icon-functions.php';
  * Load custom fields.
  */
 require get_template_directory() . '/inc/custom-fields.php';
+
+/**
+ * Registrar bloques con ACF.
+ */
+require get_template_directory() . '/inc/acf-blocks.php';

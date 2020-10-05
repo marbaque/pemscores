@@ -22,11 +22,14 @@ Estilos para el bloque Galería de sitios.
     background: white;
     border: 1px solid lightgrey;
     transition: 0.25s all;
+    position: relative;
+    padding: 0 0 2.5em;
 }
 .item-sitio:hover {
     border: 1px solid #0947a4;
 }
-.item-sitio:active {
+.item-sitio:active,
+.item-sitio:focus {
     background: #0947a4;
     border: 1px solid #0947a4;
     color: white;
@@ -49,24 +52,25 @@ Estilos para el bloque Galería de sitios.
     opacity: 0.8;
 }
 .item-sitio .texto-sitio {
-    padding: 1em 1em;
+    padding: 1em;
     line-height: 1.2;
 }
 .item-sitio .nombre-sitio {
     font-size: 1.5em;
-    line-height: 1.25;
 }
 .item-sitio .nombre-sitio a {
-    outline-style: hidden!important;
+    /* border-bottom: none; */
 }
 .texto-sitio .info-sitio {
     font-size: 0.9em;
 }
-.texto-sitio .mu-fecha {
-    color: grey;
+.item-sitio .mu-fecha {
     font-size: 0.8em;
+    padding: 0 1em;
+    bottom: 0;
+    position: absolute;
 }
-.texto-sitio .mu-fecha svg {
+.item-sitio .mu-fecha svg {
     margin-top: 1em;
     margin-bottom: -0.25em;
     margin-right: 0.25em;

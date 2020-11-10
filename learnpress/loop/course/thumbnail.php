@@ -4,9 +4,9 @@
  *
  * This template can be overridden by copying it to yourtheme/learnpress/loop/course/thumbnail.php.
  *
- * @author  ThimPress
+ * @author   ThimPress
  * @package  Learnpress/Templates
- * @version  3.0.0
+ * @version  3.0.1
  */
 
 /**
@@ -15,10 +15,24 @@
 defined( 'ABSPATH' ) || exit();
 
 $course = LP_Global::course();
+
+if ( ! $course ) {
+	return;
+}
 ?>
 
 <div class="course-thumbnail">
 
-	<?php echo $course->get_image( 'course_thumbnail' ); ?>
+	<?php
+	/**
+	 * Editor tungnx
+	 * Check case $course->get_image return boolean
+	 */
+	$el_image = $course->get_image( 'course_thumbnail' );
+
+	if ( is_string( $el_image ) ) {
+		echo $el_image;
+	}
+	?>
 
 </div>

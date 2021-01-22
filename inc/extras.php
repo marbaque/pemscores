@@ -83,7 +83,7 @@ function pemscores_breadcrumbs() {
       $thisCat = $cat_obj->term_id;
       $thisCat = get_category($thisCat);
       $parentCat = get_category($thisCat->parent);
-      if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter));
+      if ($thisCat->parent != 0) echo($currentBefore . get_category_parents($parentCat, TRUE, ' ' . $delimiter) . $currentAfter);
       echo $currentBefore . 'Archivado en categoría &#39;';
       single_cat_title();
       echo '&#39;' . $currentAfter;

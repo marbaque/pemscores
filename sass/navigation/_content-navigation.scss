@@ -113,7 +113,8 @@
 .pagination {
 	font-family: $font__system;
 
-	.nav-links {
+	.nav-links,
+	.page-numbers {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
@@ -149,5 +150,14 @@
 
 	.next .icon {
 		margin-left: 1em;
+	}
+	ul.page-numbers {
+		list-style: none;
+		padding: 0;
+		margin: 1em auto;
+		width: auto;
+		li {
+			display: inline;
+		}
 	}
 }

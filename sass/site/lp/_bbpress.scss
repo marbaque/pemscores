@@ -218,9 +218,6 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 .bbp-reply-author:after {
     clear: both;
 }
-.bbp-reply-author {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
 
 .bbp-header .bbp-reply-author,
 .bbp-footer .bbp-reply-author {

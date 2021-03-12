@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y cursos de autocapacitación.
-Version: 4.9.4
+Version: 4.9.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -2303,9 +2303,6 @@ h1.course-title {
 .course .post-content .course-curriculum .course-author > h3 {
   display: none;
 }
-.course .post-content .course-curriculum:first-of-type {
-  margin-top: 1em;
-}
 @media screen and (min-width: 600px) {
   .course .post-content .course-curriculum {
     padding: 1em 2em 2em;
@@ -3422,11 +3419,6 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
 
 .bbp-reply-author:after {
   clear: both;
-}
-
-.bbp-reply-author {
-  zoom: 1;
-  /* For IE 6/7 (trigger hasLayout) */
 }
 
 .bbp-header .bbp-reply-author,

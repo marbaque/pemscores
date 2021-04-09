@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y cursos de autocapacitación.
-Version: 4.9.7
+Version: 4.9.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -2342,16 +2342,6 @@ h1.course-title {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
-.course .post-content .course-tab-panel {
-  background: white;
-  padding: 1em 0;
-}
-@media screen and (min-width: 900px) {
-  .course .post-content .course-tab-panel {
-    padding: 2em;
-    border: 2px solid #f4f4f4;
-  }
-}
 
 .course-item.item-locked .course-item-status:before {
   color: #fa3c46 !important;
@@ -2445,7 +2435,7 @@ ul.curriculum-sections li.item-locked {
 }
 .learn-press-course-results-progress .items-progress,
 .learn-press-course-results-progress .course-progress {
-  padding: 0;
+  padding: 0 !important;
   background: white;
   margin: 0 !important;
 }
@@ -2550,9 +2540,23 @@ ul.curriculum-sections li.item-locked {
 }
 
 /*estilo de referencias*/
-.course-tab-panel-referencias,
-.course-tab-panel-creditos {
-  font-size: 0.9em;
+.accordion {
+  margin: 1em 0;
+}
+.accordion button {
+  border: none;
+  background-color: #cce2f8;
+  color: #00529a;
+  padding: 0.5em 1em;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+.accordion .accordion-panel {
+  font-size: 0.8em;
+  display: none;
+  padding: 1em;
+  column-count: 2;
 }
 
 .course-students-list .filter-students label.students-list-filter {

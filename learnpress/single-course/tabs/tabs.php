@@ -24,45 +24,10 @@ defined('ABSPATH') || exit();
 
 <div id="learn-press-course-tabs" class="course-tabs">
 
-	<ul class="learn-press-nav-tabs course-nav-tabs">
-
-		<?php foreach ($tabs as $key => $tab) { ?>
-
-			<?php $classes = array('course-nav course-nav-tab-' . esc_attr($key));
-			if (!empty($tab['active']) && $tab['active']) {
-				$classes[] = 'active default';
-			} ?>
-
-			<li class="<?php echo join(' ', $classes); ?>">
-				<a href="?tab=<?php echo esc_attr($tab['id']); ?>" data-tab="#<?php echo esc_attr($tab['id']); ?>"><?php echo $tab['title']; ?></a>
-			</li>
-
-		<?php } ?>
-
-		<?php if (get_field('lp_referencias')) : ?>
-
-			<!-- Custom tab Referencias -->
-			<li class="<?php echo join(' ', $classes); ?>">
-				<a href="?tab=tab-referencias" data-tab="#tab-referencias">Referencias</a>
-			</li>
-
-		<?php endif; ?>
-
-		<?php if (get_field('lp_creditos')) : ?>
-
-			<!-- Custom tab Creditos -->
-			<li class="<?php echo join(' ', $classes); ?>">
-				<a href="?tab=tab-creditos" data-tab="#tab-creditos">Créditos</a>
-			</li>
-
-		<?php endif; ?>
-
-	</ul>
-
 	<?php foreach ($tabs as $key => $tab) { ?>
 
-		<div class="course-tab-panel-<?php echo esc_attr($key); ?> course-tab-panel<?php echo !empty($tab['active']) && $tab['active'] ? ' active' : ''; ?>" id="<?php echo esc_attr($tab['id']); ?>">
-
+		<div class="course-overview_section">
+			<h3><?php echo $tab['title']; ?></h3>
 			<?php
 			if (apply_filters('learn_press_allow_display_tab_section', true, $key, $tab)) {
 				if (is_callable($tab['callback'])) {
@@ -83,9 +48,12 @@ defined('ABSPATH') || exit();
 	<?php if (get_field('lp_referencias')) : ?>
 
 		<!-- Custom tab panel Referencias -->
-		<div class="course-tab-panel-referencias course-tab-panel" id="tab-referencias">
+		<div class="accordion" id="tab-referencias">
 
-			<?php the_field('lp_referencias'); ?>
+			<button class="accordion-control">Referencias</button>
+			<div class="accordion-panel">
+				<?php the_field('lp_referencias'); ?>
+			</div>
 
 		</div>
 
@@ -94,9 +62,11 @@ defined('ABSPATH') || exit();
 	<?php if (get_field('lp_creditos')) : ?>
 
 		<!-- Custom tab panel Creditos -->
-		<div class="course-tab-panel-creditos course-tab-panel" id="tab-creditos">
-
-			<?php the_field('lp_creditos'); ?>
+		<div class="accordion" id="tab-creditos">
+			<button class="accordion-control">Créditos</button>
+			<div class="accordion-panel">
+				<?php the_field('lp_creditos'); ?>
+			</div>
 
 		</div>
 

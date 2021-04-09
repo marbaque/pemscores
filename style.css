@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/pemscores/
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y cursos de autocapacitación.
-Version: 4.9.5
+Version: 4.9.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -1700,6 +1700,10 @@ body:not(.logged-in) li.bp-comunidad {
   font-size: 1.2em;
   font-family: "Roboto", sans-serif;
 }
+.fp-content .intro-text {
+  margin: 0 auto 2em;
+  max-width: 730px;
+}
 @media screen and (min-width: 600px) {
   .fp-content {
     margin: 3em auto 1em;
@@ -1833,6 +1837,7 @@ body:not(.logged-in) li.bp-comunidad {
   color: #6BA6C5;
   font-size: 90%;
   letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
 }
 .cat-links a:focus, .cat-links a:hover {
   text-decoration: underline;
@@ -2054,22 +2059,22 @@ h1.course-title {
   width: 200px;
   height: 200px;
   background-size: 80%;
-  background: url(images/icons/document_format_icon.svg) no-repeat center center;
+  background: url("images/icons/document_format_icon.svg") no-repeat center center;
 }
 .recurso-wrap .recurso-media .recurso-icon.video {
-  background: url(images/icons/video_format_icon.svg) no-repeat center center;
+  background: url("images/icons/video_format_icon.svg") no-repeat center center;
   background-size: 80%;
 }
 .recurso-wrap .recurso-media .recurso-icon.audio {
-  background: url(images/icons/audio_format_icon.svg) no-repeat center center;
+  background: url("images/icons/audio_format_icon.svg") no-repeat center center;
   background-size: 100%;
 }
 .recurso-wrap .recurso-media .recurso-icon.sitio-web {
-  background: url(images/icons/web_site_format_icon.svg) no-repeat center center;
+  background: url("images/icons/web_site_format_icon.svg") no-repeat center center;
   background-size: 80%;
 }
 .recurso-wrap .recurso-media .recurso-icon.imagen {
-  background: url(images/icons/image_format_icon.svg) no-repeat center center;
+  background: url("images/icons/image_format_icon.svg") no-repeat center center;
   background-size: 80%;
 }
 .recurso-wrap .recurso-media img {
@@ -2257,6 +2262,18 @@ h1.course-title {
 
 .course-nav-tab-instructor {
   display: none !important;
+}
+
+.wp-block-coblocks-alert {
+  background: #f8efe5;
+  padding: 1em;
+  border-radius: 4px;
+  margin-bottom: 1.5em;
+  color: #5e4220;
+}
+
+.wp-block-coblocks-alert__title {
+  font-family: "Roboto", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -3497,6 +3514,12 @@ div.bbp-breadcrumb {
   float: left;
 }
 
+.learnpress-page .bbp-breadcrumb,
+.learnpress-page #subscription-toggle,
+.learnpress-page .favorite-toggle {
+  display: none;
+}
+
 .bbp-pagination {
   background-color: #006edc;
   color: #cce2f8;
@@ -3539,7 +3562,7 @@ div.bbp-breadcrumb {
 #bbpress-forums div.bbp-template-notice img.avatar,
 #bbpress-forums .widget_display_topics img.avatar,
 #bbpress-forums .widget_display_replies img.avatar {
-  margin-bottom: -0.5em;
+  margin-bottom: 3em;
   width: 2em;
   height: 2em;
 }

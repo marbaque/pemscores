@@ -300,6 +300,12 @@ div.bbp-breadcrumb {
 	float: left;
 }
 
+.learnpress-page .bbp-breadcrumb,
+.learnpress-page #subscription-toggle,
+.learnpress-page .favorite-toggle{
+	display: none;
+}
+
 .bbp-pagination {
 	background-color: $color__main;
 	color: $color__main-claro;
@@ -346,7 +352,7 @@ div.bbp-breadcrumb {
 #bbpress-forums div.bbp-template-notice img.avatar, 
 #bbpress-forums .widget_display_topics img.avatar, 
 #bbpress-forums .widget_display_replies img.avatar {
-	margin-bottom: -.5em;
+	margin-bottom: 3em;
 	width: 2em;
 	height: 2em;
 }

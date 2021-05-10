@@ -14,8 +14,14 @@
     }
 
     .post-content {
+        .course-description {
+            padding: 1em 0;
+            @media screen and (min-width: $query__medium) {
+                padding: 1em;
+            }
+        }
         .course-curriculum {
-            padding: 0 !important;
+            
             .curriculum-sections {
                 li.section {
                     border-radius: 4px;

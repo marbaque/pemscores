@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template for displaying overview tab of single course.
  *
@@ -12,7 +13,7 @@
 /**
  * Prevent loading this file directly
  */
-defined( 'ABSPATH' ) || exit();
+defined('ABSPATH') || exit();
 ?>
 
 <?php global $course; ?>
@@ -23,24 +24,51 @@ defined( 'ABSPATH' ) || exit();
 	/**
 	 * @deprecated
 	 */
-	do_action( 'learn_press_begin_single_course_description' );
+	do_action('learn_press_begin_single_course_description');
 
 	/**
 	 * @since 3.0.0
 	 */
-	do_action( 'learn-press/before-single-course-description' );
+	do_action('learn-press/before-single-course-description');
 
 	echo $course->get_content();
 
 	/**
 	 * @since 3.0.0
 	 */
-	do_action( 'learn-press/after-single-course-description' );
+	do_action('learn-press/after-single-course-description');
 
 	/**
 	 * @deprecated
 	 */
-	do_action( 'learn_press_end_single_course_description' );
+	do_action('learn_press_end_single_course_description');
 	?>
+
+	<?php if (get_field('lp_referencias')) : ?>
+
+		<!-- Custom tab panel Referencias -->
+		<div class="accordion" id="tab-referencias">
+
+			<button class="accordion-control">Referencias</button>
+			<div class="accordion-panel">
+				<?php the_field('lp_referencias'); ?>
+			</div>
+
+		</div>
+
+	<?php endif; ?>
+
+	<?php if (get_field('lp_creditos')) : ?>
+
+		<!-- Custom tab panel Creditos -->
+		<div class="accordion" id="tab-creditos">
+			<button class="accordion-control">Créditos</button>
+			<div class="accordion-panel">
+				<?php the_field('lp_creditos'); ?>
+			</div>
+
+		</div>
+
+	<?php endif; ?>
 
 </div>

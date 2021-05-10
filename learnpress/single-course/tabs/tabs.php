@@ -24,52 +24,44 @@ defined('ABSPATH') || exit();
 
 <div id="learn-press-course-tabs" class="course-tabs">
 
-	<?php foreach ($tabs as $key => $tab) { ?>
+<ul class="learn-press-nav-tabs course-nav-tabs">
 
-		<div class="course-overview_section">
-			<h3><?php echo $tab['title']; ?></h3>
-			<?php
-			if (apply_filters('learn_press_allow_display_tab_section', true, $key, $tab)) {
-				if (is_callable($tab['callback'])) {
-					call_user_func($tab['callback'], $key, $tab);
-				} else {
-					/**
-					 * @since 3.0.0
-					 */
-					do_action('learn-press/course-tab-content', $key, $tab);
-				}
-			}
-			?>
+<?php foreach ( $tabs as $key => $tab ) { ?>
 
-		</div>
+	<?php $classes = array( 'course-nav course-nav-tab-' . esc_attr( $key ) );
+	if ( ! empty( $tab['active'] ) && $tab['active'] ) {
+		$classes[] = 'active default';
+	} ?>
 
-	<?php } ?>
+	<li class="<?php echo join( ' ', $classes ); ?>">
+		<a href="?tab=<?php echo esc_attr( $tab['id'] ); ?>"
+		   data-tab="#<?php echo esc_attr( $tab['id'] ); ?>"><?php echo $tab['title']; ?></a>
+	</li>
 
-	<?php if (get_field('lp_referencias')) : ?>
+<?php } ?>
 
-		<!-- Custom tab panel Referencias -->
-		<div class="accordion" id="tab-referencias">
+</ul>
 
-			<button class="accordion-control">Referencias</button>
-			<div class="accordion-panel">
-				<?php the_field('lp_referencias'); ?>
-			</div>
+<?php foreach ( $tabs as $key => $tab ) { ?>
 
-		</div>
+<div class="course-tab-panel-<?php echo esc_attr( $key ); ?> course-tab-panel<?php echo ! empty( $tab['active'] ) && $tab['active'] ? ' active' : ''; ?>"
+	 id="<?php echo esc_attr( $tab['id'] ); ?>">
 
-	<?php endif; ?>
+	<?php
+	if ( apply_filters( 'learn_press_allow_display_tab_section', true, $key, $tab ) ) {
+		if ( is_callable( $tab['callback'] ) ) {
+			call_user_func( $tab['callback'], $key, $tab );
+		} else {
+			/**
+			 * @since 3.0.0
+			 */
+			do_action( 'learn-press/course-tab-content', $key, $tab );
+		}
+	}
+	?>
 
-	<?php if (get_field('lp_creditos')) : ?>
+</div>
 
-		<!-- Custom tab panel Creditos -->
-		<div class="accordion" id="tab-creditos">
-			<button class="accordion-control">Créditos</button>
-			<div class="accordion-panel">
-				<?php the_field('lp_creditos'); ?>
-			</div>
-
-		</div>
-
-	<?php endif; ?>
+<?php } ?>
 
 </div>

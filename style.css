@@ -421,12 +421,12 @@ li {
   font-size: 0.77em;
 }
 
-ul.referencias {
+#tab-referencias ul {
   list-style: none;
   padding-left: 1.4em;
   text-indent: -1.4em;
 }
-ul.referencias a {
+#tab-referencias ul a {
   overflow-wrap: break-word;
   word-wrap: break-word;
   /* Adds a hyphen where the word breaks */

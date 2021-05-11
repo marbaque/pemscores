@@ -1,4 +1,4 @@
-$font__serif: Georgia, Times, serif;
+$font__serif: "Roboto Slab", Georgia, serif;
 $font__sans: "Roboto", sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
@@ -20,12 +20,8 @@ $font__system: "system";
 @mixin word-wrap() {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  -ms-word-break: break-all;
   word-break: break-all;
   word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
   hyphens: auto;
 }
 @mixin ellipsis() {

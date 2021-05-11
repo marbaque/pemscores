@@ -154,6 +154,7 @@ $file = get_field('subir_arch');
 					wp_reset_postdata();
 
 					?>
+					<a href="<?php echo get_post_type_archive_link( 'recurso' ); ?>">Ver todos</a>
 				</div>
 
 

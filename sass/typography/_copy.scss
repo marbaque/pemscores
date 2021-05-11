@@ -81,17 +81,14 @@ li {
 }
 
 // Estilo para referencias
-#tab-referencias {
+.tab-referencias {
 	ul {
 		list-style: none;
 		padding-left: 1.4em;
 		text-indent: -1.4em;
 	
 		a {
-			overflow-wrap: break-word;
-			word-wrap: break-word;
-			/* Adds a hyphen where the word breaks */
-			hyphens: auto;
+			@include word-wrap;
 		}
 	}
 }

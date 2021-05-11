@@ -47,7 +47,7 @@ defined('ABSPATH') || exit();
 	<?php if (get_field('lp_referencias')) : ?>
 
 		<!-- Custom tab panel Referencias -->
-		<div class="accordion" id="tab-referencias">
+		<div class="accordion tab-referencias">
 
 			<button class="accordion-control">Referencias</button>
 			<div class="accordion-panel">
@@ -61,7 +61,7 @@ defined('ABSPATH') || exit();
 	<?php if (get_field('lp_creditos')) : ?>
 
 		<!-- Custom tab panel Creditos -->
-		<div class="accordion" id="tab-creditos">
+		<div class="accordion tab-creditos">
 			<button class="accordion-control">Créditos</button>
 			<div class="accordion-panel">
 				<?php the_field('lp_creditos'); ?>

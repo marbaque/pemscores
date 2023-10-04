@@ -20,8 +20,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php echo file_get_contents('https://www.uned.ac.cr/menu/menu_1366.html'); ?>
-</div> <!-- El menu inst esta roto, este /div es para cerrar el div class="nav_uned" -->
+<?php echo file_get_contents('cintillo_uned_azul/cintillo_uned_simple.html'); ?>
+<!-- El menu inst esta roto, este /div es para cerrar el div class="nav_uned" -->
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Omitir e ir al contenido', 'pemscores' ); ?></a>

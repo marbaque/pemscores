@@ -132,7 +132,7 @@ function pemscores_fonts_url()
 }
 
 /**
- * Add preconnect for Google Fonts.
+ * Add preconnect for Google Fonts/Type kit.
  *
  * @since Twenty Seventeen 1.0
  *

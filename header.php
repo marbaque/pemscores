@@ -20,8 +20,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php echo file_get_contents('cintillo_uned_azul/cintillo_uned_simple.html'); ?>
-<!-- El menu inst esta roto, este /div es para cerrar el div class="nav_uned" -->
+<!-- Menu institucional 2023 -->
+<div class="contenedor_cintillo">
+  <div class="cintillo">
+	<div class="cintillo-svg"><a href="https://www.uned.ac.cr/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/uned_cintillo.svg" alt="UNED" border="0"></a></div>
+	<div class="cintillo-tx"><a href="https://www.uned.ac.cr/" target="_blank">Universidad Estatal a Distancia, Costa Rica</a></div>
+  </div>
+</div><!-- Menu institucional 2023 -->
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Omitir e ir al contenido', 'pemscores' ); ?></a>

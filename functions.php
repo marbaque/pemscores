@@ -326,7 +326,7 @@ function myprefix_load_superfish_scripts()
 	wp_enqueue_script('superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js');
 
 	//Cargar estilos del menú UNED
-	wp_enqueue_style('menu-uned', 'https://www.uned.ac.cr/menu/style_menu.css');
+	//wp_enqueue_style('menu-uned', 'https://www.uned.ac.cr/menu/style_menu.css');
 }
 add_action('wp_enqueue_scripts', 'myprefix_load_superfish_scripts');
 

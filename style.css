@@ -4,7 +4,7 @@ Theme URI: https://github.com/marbaque/pemscores/tree/saps
 Author: Mario Badilla, PEM, UNED
 Author URI: https://mariobadilla.com/
 Description: Tema para recursos y contenido educativo, basado en el tema hecho por Morten Rand-Hendriksen para el curso "Building Themes From Scratch Using Underscores".
-Version: 3.5
+Version: 3.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pemscores
@@ -2320,62 +2320,15 @@ ul.menu_Inst {
   background: #fff;
 }
 
-#footer-sub #footer {
-  background: inherit;
-  font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-  position: relative;
-}
-#footer-sub #footer #iconos {
-  float: none;
-  margin: 0;
-  position: absolute;
-  right: 4px;
-  top: 0px;
-}
-
-#footer {
-  color: #666;
-  font-size: 0.8em;
-  height: 38px;
-  font-weight: 500;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  padding-top: 3px;
-  padding-bottom: 8px;
-  text-align: center;
-  max-width: 1340px;
-  background: rgba(255, 255, 255, 0.8) !important;
-}
-
-#footer a {
-  color: #666;
-  text-decoration: underline;
-}
-
-#footer a:hover {
-  color: #333;
-  text-decoration: underline;
-}
-
-#footer-inner {
-  background-attachment: scroll;
-  background-clip: border-box;
-  background-image: none;
-  background-origin: padding-box;
-  background-position: 0 0;
-  background-repeat: repeat;
-  background-size: auto auto;
-}
-
-#footer-inner,
-#footer {
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
+.footer-sub {
   max-width: 1280px;
+  margin: 0 auto;
+  background-color: none;
+  font-family: "futura-pt", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 0.9rem;
+}
+.footer-sub p {
+  text-align: center;
 }
 
 /*--------------------------------------------------------------

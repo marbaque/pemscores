@@ -11,53 +11,59 @@
 
 ?>
 
-	</div><!-- #content -->
+</div><!-- #content -->
 
-	<?php get_sidebar( 'footer' ); ?>
+<?php get_sidebar('footer'); ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-footer__wrap">
-			<?php
-			// Make sure there is a social menu to display.
-			if ( has_nav_menu( 'social' ) ) { ?>
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="site-footer__wrap">
+		<?php
+		// Make sure there is a social menu to display.
+		if (has_nav_menu('social')) { ?>
 			<nav class="social-menu">
 				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'social',
-						'menu_class'     => 'social-links-menu',
-						'depth'          => 1,
-						'link_before'    => '<span class="screen-reader-text">',
-						'link_after'     => '</span>' . pemscores_get_svg( array( 'icon' => 'chain' ) ),
-					) );
+				wp_nav_menu(array(
+					'theme_location' => 'social',
+					'menu_class' => 'social-links-menu',
+					'depth' => 1,
+					'link_before' => '<span class="screen-reader-text">',
+					'link_after' => '</span>' . pemscores_get_svg(array('icon' => 'chain')),
+				));
 				?>
 			</nav><!-- .social-menu -->
-			<?php } ?>
+		<?php } ?>
 
-			<div class="site-info">
-				<nav class="info-menu">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'info',
-							'menu_class'     => 'social-links-menu',
-							'depth'          => 1,
-						) );
-					?>
-				</nav><!-- .social-menu -->
-			</div><!-- .site-info -->
-		</div><!-- .site-footer__wrap -->
+		<div class="site-info">
+			<nav class="info-menu">
+				<?php
+				wp_nav_menu(array(
+					'theme_location' => 'info',
+					'menu_class' => 'social-links-menu',
+					'depth' => 1,
+				));
+				?>
+			</nav><!-- .social-menu -->
+		</div><!-- .site-info -->
+	</div><!-- .site-footer__wrap -->
 
-		<div class="creditos">
-			<p>
-				<a href="https://uned.ac.cr" title="Sitio web de la UNED">Universidad Estatal a Distancia ©<?= date("Y"); ?></a> | 
-				<a href="https://multimedia.uned.ac.cr/index.php" title="Sitio web de Multimedia UNED">Producción Electrónica Multimedial</a></p>
-		</div>
-	</footer><!-- #colophon -->
+	<div class="creditos">
+		<p>
+			<a href="https://uned.ac.cr" title="Sitio web de la UNED">Universidad Estatal a Distancia
+				©<?= date("Y"); ?></a> |
+			<a href="https://multimedia.uned.ac.cr/index.php" title="Sitio web de Multimedia UNED">Producción
+				Electrónica Multimedial</a>
+		</p>
+	</div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<div id="footer-sub">
-<?php echo file_get_contents('https://www.uned.ac.cr/menu/pie.html'); ?>
+<div class="footer-sub">
+	<p>UNED, Costa Rica. Teléfono: <a href="tel:+506 2527-2000">+506 2527-2000</a> | <a href="https://www.uned.ac.cr/contacto">Contacto</a> | <a
+			href="https://www.uned.ac.cr/mapa-sedes">Sedes</a> | <a href="https://www.uned.ac.cr/aviso-legal">Aviso
+			legal</a></p>
 </div>
-<?php pemscores_get_svg( array( 'icon' => 'chevron-down', 'fallback' => true ) ); ?>
+<?php pemscores_get_svg(array('icon' => 'chevron-down', 'fallback' => true)); ?>
 </body>
+
 </html>
